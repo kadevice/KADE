@@ -1,0 +1,2552 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Dual Strike Documentation (Firmware 3.3)</title>
+
+<style type="text/css">ol{margin:0;padding:0}.c68{vertical-align:top;width:60pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c46{vertical-align:top;width:132pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c26{vertical-align:top;width:93.8pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c62{vertical-align:top;width:53.2pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c48{vertical-align:top;width:70.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c19{vertical-align:top;width:63.8pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c27{vertical-align:top;width:80.2pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c17{vertical-align:top;width:66.8pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c57{vertical-align:top;width:59.7pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c41{vertical-align:top;width:61.8pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:1pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c8{vertical-align:top;width:68.2pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c43{vertical-align:top;width:44.2pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c31{vertical-align:top;width:38.2pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c33{vertical-align:top;width:383.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:1pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c14{vertical-align:top;width:156pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c20{vertical-align:top;width:55.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c40{vertical-align:top;width:40.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c15{vertical-align:top;width:61.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c47{vertical-align:top;width:86.2pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c25{vertical-align:top;width:40.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c29{vertical-align:top;width:59.2pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c30{vertical-align:top;width:67.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c23{vertical-align:top;width:47.2pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c37{vertical-align:top;width:72.8pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c59{vertical-align:top;width:52.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c50{vertical-align:top;width:58.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c56{vertical-align:top;width:67.5pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c11{vertical-align:top;width:87pt;border-style:solid;background-color:#ffffff;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c61{vertical-align:top;width:208.5pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c99{vertical-align:top;width:40.5pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c66{vertical-align:top;width:55.5pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c72{vertical-align:top;width:68.2pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c54{vertical-align:top;width:44.2pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c21{vertical-align:middle;width:80.2pt;border-style:solid;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c74{vertical-align:top;width:70.5pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c87{vertical-align:top;width:58.5pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c81{vertical-align:top;width:67.5pt;border-style:solid;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c63{vertical-align:top;width:135pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c39{vertical-align:top;width:72.8pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c77{vertical-align:top;width:63.8pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c76{vertical-align:top;width:61.8pt;border-style:solid;border-color:#000000;border-width:1pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c84{vertical-align:middle;width:61.5pt;border-style:solid;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c89{vertical-align:top;width:204.8pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c69{vertical-align:middle;width:86.2pt;border-style:solid;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c96{vertical-align:middle;width:40.5pt;border-style:solid;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c79{vertical-align:top;width:66.8pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c92{vertical-align:top;width:383.5pt;border-style:solid;border-color:#000000;border-width:1pt;padding:2pt 2pt 2pt 2pt}.c65{vertical-align:top;width:38.2pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c95{vertical-align:top;width:145.5pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c85{vertical-align:top;width:53.2pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c80{vertical-align:top;width:156pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c78{vertical-align:middle;width:67.5pt;border-style:solid;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c73{vertical-align:top;width:67.5pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c34{vertical-align:top;width:59.2pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c58{vertical-align:top;width:61.8pt;border-style:solid;border-color:#000000;border-width:1pt;padding:5pt 5pt 5pt 5pt}.c94{vertical-align:top;width:47.2pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c83{vertical-align:middle;width:132pt;border-style:solid;border-color:#000000;border-width:1pt;padding:1.4pt 1.4pt 1.4pt 1.4pt}.c86{vertical-align:top;width:60pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c53{vertical-align:top;width:93.8pt;border-style:solid;border-color:#000000;border-width:0.8pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c60{vertical-align:top;width:383.5pt;border-style:solid;border-color:#000000;border-width:1pt;padding:2.2pt 2.2pt 2.2pt 2.2pt}.c1{line-height:1.15;padding-top:0pt;direction:ltr;padding-bottom:0pt}.c70{list-style-type:square;margin:0;padding:0}.c9{list-style-type:disc;margin:0;padding:0}.c36{list-style-type:circle;margin:0;padding:0}.c88{list-style-type:decimal;margin:0;padding:0}.c82{height:14pt;padding-bottom:12pt}.c3{padding-top:0pt;padding-bottom:0pt}.c24{color:#000099;text-decoration:underline}.c38{color:#0000ee;text-decoration:underline}.c32{padding-top:0pt;padding-bottom:12pt}.c97{max-width:468pt;padding:72pt 72pt 72pt 72pt}.c12{color:inherit;text-decoration:inherit}.c16{padding-left:0pt;margin-left:60pt}.c7{height:0pt}.c13{text-align:center}.c90{font-size:24pt}.c42{font-family:"Courier New"}.c52{margin-left:72pt}.c55{margin-left:90pt}.c100{padding-bottom:12pt}.c51{color:#ffffff}.c71{height:11pt}.c0{font-weight:bold}.c101{background-color:#000000}.c10{border-collapse:collapse}.c44{padding-top:0pt}.c45{font-size:11pt}.c91{padding-bottom:12.8pt}.c75{background-color:#ffffff}.c4{font-style:italic}.c64{margin-left:54pt}.c5{text-align:right}.c102{height:23pt}.c6{margin-left:36pt}.c22{height:18pt}.c49{margin-left:18pt}.c67{padding-bottom:11.2pt}.c18{padding-left:0pt}.c93{height:15pt}.c28{height:10pt}.c2{direction:ltr}.c35{margin-left:30pt}.c98{height:16pt}.title{padding-top:24pt;line-height:1.0;text-align:left;color:#000000;font-size:36pt;background-color:#ffffff;font-family:"Verdana";font-weight:bold;padding-bottom:6pt}.subtitle{padding-top:18pt;line-height:1.0;text-align:left;color:#666666;font-style:italic;font-size:24pt;background-color:#ffffff;font-family:"Georgia";padding-bottom:4pt}p{color:#000000;font-size:10pt;background-color:#ffffff;margin:0;font-family:"Verdana"}h1{padding-top:12pt;line-height:1.0;text-align:left;color:#000000;font-size:18pt;background-color:#ffffff;font-family:"Verdana";font-weight:bold;padding-bottom:12pt}h2{padding-top:11.2pt;line-height:1.0;text-align:left;color:#000000;font-size:14pt;background-color:#ffffff;font-family:"Verdana";font-weight:bold;padding-bottom:11.2pt}h3{padding-top:12pt;line-height:1.0;text-align:left;color:#000000;font-size:12pt;background-color:#ffffff;font-family:"Verdana";font-weight:bold;padding-bottom:12pt}h4{padding-top:12.8pt;line-height:1.0;text-align:left;color:#000000;font-size:10pt;background-color:#ffffff;font-family:"Verdana";font-weight:bold;padding-bottom:12.8pt}h5{padding-top:12.8pt;line-height:1.0;text-align:left;color:#000000;font-size:8pt;background-color:#ffffff;font-family:"Verdana";font-weight:bold;padding-bottom:12.8pt}h6{padding-top:18pt;line-height:1.0;text-align:left;color:#000000;font-size:8pt;background-color:#ffffff;font-family:"Verdana";font-weight:bold;padding-bottom:18pt}</style>
+</head>
+<body>
+<p class="c3 c2"><span style="color: red;">EZ-Loader for DualStrike Hardware</span></p>
+<h1 style="text-align: center; font-weight: bold; font-style: italic; color: red; text-decoration: underline;"><span>Using
+KADE Loader with Dual Strike</span></h1>
+<p class="c3 c2"><span><span style="color: red;">To
+load the&nbsp;firmware to
+your device, &nbsp;simply connect the Dual Strike&nbsp;to a USB
+port and click the "Program Device with Selected Firmware"
+button.&nbsp;</span></span></p>
+<p class="c3 c2"><span><span style="color: red;">Be
+sure to select a firmware that is
+compatible with your
+Dual Strike device.</span><br style="color: red;">
+<br style="color: red;">
+<span style="color: red;">Dual Strike documentation is
+included below for convenience.</span></span></p>
+<p class="c3 c2"><span><span style="color: red;"></span><br style="color: red;">
+<span style="color: red;">Thanks for using KADE Loader.</span><br>
+</span></p>
+<a href="#" name="id.148d18f787e8"></a>
+<h1 style="text-align: center; font-weight: bold;"><span>Dual
+Strike Documentation</span></h1>
+<p class="c3 c13 c2"><span>Copyright 2009 Jochen
+Zurborg and Michael Pohl</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c13 c2"><span class="c38"><a class="c12" href="http://www.zurborg.info">http://www.zurborg.info</a></span></p>
+<p class="c3 c28 c2"><span class="c38"></span></p>
+<p class="c3 c2"><span>The firmwares and other files
+of this project are released under the GNU General Public License V3,
+if they were not previously released under a different license.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>This is the documentation for
+the Dual Strike with firmware version 3.3. This document assume
+hardware based on the ArcadeForge </span><span class="c24"><a class="c12" href="http://wp1114205.wp150.webpack.hosteurope.de/xtcmodified/product_info.php?products_id=17">Dual
+Strike PCB.</a></span><span>&nbsp;ArcadeForge`s
+Dual Strike PCBs are available at </span><span class="c24"><a class="c12" href="http://www.arcadeforge.de">http://www.arcadeforge.de</a></span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c49 c2"><span class="c24"><a class="c12" href="#h.b6fbc2cd4f1e">Introduction</a></span></p>
+<p class="c49 c2"><span class="c24"><a class="c12" href="#h.7f11b87a4023">Features</a></span></p>
+<p class="c49 c2"><span class="c24"><a class="c12" href="#h.1c275d3ebe60">Installation</a></span></p>
+<p class="c49 c2"><span class="c24"><a class="c12" href="#h.d3bca7d7a6fc">Startup and
+Working Behavior</a></span></p>
+<p class="c6 c2"><span class="c24"><a class="c12" href="#h.74d9f714b757">Mode Selection</a></span></p>
+<p class="c2 c6"><span class="c24"><a class="c12" href="#h.ad25259f1ba1">Meta Button</a></span></p>
+<p class="c6 c2"><span class="c24"><a class="c12" href="#h.a15c475fd10a">Joystick
+Function/MAME Mode Switching</a></span></p>
+<p class="c49 c2"><span class="c24"><a class="c12" href="#h.96130da661d7">Configuration
+Editor</a></span></p>
+<p class="c49 c2"><span class="c24"><a class="c12" href="#h.1c412156efb9">Working Modes</a></span></p>
+<p class="c6 c2"><span class="c24"><a class="c12" href="#h.fee0a0c19eb4">PS3</a></span></p>
+<p class="c6 c2"><span class="c24"><a class="c12" href="#h.7ba2d55a51ed">PC</a></span></p>
+<p class="c6 c2"><span class="c24"><a class="c12" href="#h.35a0f3c6f1b6">MAME</a></span></p>
+<p class="c2 c64"><span class="c24"><a class="c12" href="#h.55bd4c91123d">Game Modes</a></span></p>
+<p class="c52 c2"><span class="c24"><a class="c12" href="#h.8bfeb007567d">Default Button
+Layout 1</a></span></p>
+<p class="c2 c52"><span class="c24"><a class="c12" href="#h.86885b9a441e">Default Button
+Layout 2</a></span></p>
+<p class="c52 c2"><span class="c24"><a class="c12" href="#h.905c57eb836c">Default Button
+Layout 3</a></span></p>
+<p class="c52 c2"><span class="c24"><a class="c12" href="#h.1eae3b4842c9">Default Button
+Layout 4</a></span></p>
+<p class="c64 c2"><span class="c24"><a class="c12" href="#h.ab532e96467c">Control Mode</a></span></p>
+<p class="c6 c2"><span class="c24"><a class="c12" href="#h.4f5177482dac">XBox</a></span></p>
+<p class="c64 c2"><span class="c24"><a class="c12" href="#h.cf9aed68b892">XBox-to-USB Adapter</a></span></p>
+<p class="c6 c2"><span class="c24"><a class="c12" href="#h.n6vjviuhr7dg">Pass-Through</a></span></p>
+<p class="c49 c2"><span class="c24"><a class="c12" href="#h.5crnr37mxpbw">Advanced
+configuration</a></span></p>
+<p class="c6 c2"><span class="c24"><a class="c12" href="#h.71c6ddebad57">S3/S4 Functions</a></span></p>
+<p class="c2 c49"><span class="c24"><a class="c12" href="#h.791cba2b84e6">Firmware Update</a></span></p>
+<p class="c49 c2"><span class="c24"><a class="c12" href="#h.tr9613yzbsew">History</a></span></p>
+<p><span></span></p>
+<h1 class="c44 c22 c2"><a name="h.8eo4nhg8orj"></a></h1>
+<h1 class="c44 c2"><a name="h.10di7bjdyi7z"></a><span>Introduction</span></h1>
+<p class="c2 c32"><span>The Dual Strike PCB is a
+completely solderless controller board for your arcade stick. Every
+connection to buttons or directions screw in directly to the side of
+the board, so installation requires nothing more than a screwdriver.
+The Dual Strike works on PC, Playstation 3 and XBox1 as a game
+controller as well as a MAME compliant keyboard encoder. It also has a
+pass-through dual mod function supporting USB interfaces (or similar)
+like XBox360 or Dreamcast.</span></p>
+<p class="c32 c2"><span>This makes the Dual Strike
+the perfect solution for customers who want to build or dual mod an
+arcade stick.</span></p>
+<p class="c32 c2"><span>The pin names of the Dual
+Strike are written in </span><span class="c4">italics</span><span>&nbsp;throughout
+this document.</span></p>
+<h1 class="c44 c2"><a name="h.7f11b87a4023"></a><span>Features</span></h1>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>Software:</span></li>
+</ol>
+<ol class="c36" start="1">
+<li class="c3 c16 c2"><span>Auto-detect of
+connected game console: PS3, XBox one, PC or pass-through PCB (normally
+Xbox360)</span></li>
+<li class="c3 c2 c16"><span>Works as a game
+controller on Playstation 3:</span></li>
+</ol>
+<ol class="c70" start="1">
+<li class="c3 c55 c18 c2"><span>PS is supported
+and can be emulated, too (configurable).</span></li>
+<li class="c3 c55 c18 c2"><span>L3 and R3 buttons
+are supported either by emulation or as buttons.</span></li>
+<li class="c3 c55 c18 c2"><span>L1 and L2 can be
+emulated (useful for 6-button arcade stick layouts).</span></li>
+<li class="c3 c55 c18 c2"><span>Digital Pad, LS
+and RS supported, changeable either by button-joystick combination or a
+with a dedicated switch.</span></li>
+</ol>
+<ol class="c36" start="3">
+<li class="c3 c16 c2"><span>Works as a game
+controller on PCs with an operating system supporting HID-compatible
+USB devices (including Windows 7/Vista/XP/2K/98, Mac OSX and Linux).</span></li>
+<li class="c3 c16 c2"><span>Works as a MAME
+keyboard encoder with four configurable button mappings selectable on
+runtime.</span></li>
+<li class="c3 c16 c2"><span>Works as a XBox one
+gamepad. Digital pad, left and right analogue joysticks supported,
+changeable either by button-joystick combination or with a dedicated
+switch.</span></li>
+<li class="c3 c16 c2"><span>Switchless or
+automatic selection of pass-through device:</span></li>
+</ol>
+<ol class="c70" start="1">
+<li class="c3 c55 c18 c2"><span>Supports any USB
+interface (or similar) like XBox360 or Dreamcast.</span></li>
+<li class="c3 c55 c18 c2"><span class="c4">Home</span><span>&nbsp;(on
+XBox360 Guide) can be emulated (configurable).</span></li>
+<li class="c3 c55 c18 c2"><span class="c4">4K</span><span>&nbsp;and&nbsp;</span><span class="c4">4P</span><span>&nbsp;(on XBox360
+LB and LT) can be emulated (configurable).</span></li>
+<li class="c3 c55 c18 c2"><span>Inverted (active
+high) triggers or a joystick mode switch can be emulated (configurable).</span></li>
+</ol>
+<ol class="c36" start="7">
+<li class="c3 c16 c2"><span>Firmware update is
+supported for Windows systems, on other systems by compiling the source.</span></li>
+<li class="c3 c16 c2"><span>Configuration from a
+PC (needs a Java 6 Runtime Environment), works out of the box for
+Windows, needs custom compilation on other systems like Linux.</span></li>
+</ol>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>Hardware:</span></li>
+</ol>
+<ol class="c36" start="1">
+<li class="c3 c16 c2"><span>20 screw terminal
+ports for connecting all of your wires.</span></li>
+<li class="c3 c16 c2"><span>No soldering required.</span></li>
+<li class="c3 c16 c2"><span>USB type B jack for
+connecting any standard USB cable.</span></li>
+<li class="c3 c16 c2"><span>Piggyback interface
+for even easier installation of pass-through PCBs.</span></li>
+<li class="c3 c16 c2"><span>Integrated switch
+interface for USB pass-through functionality. Any two wire protcoll can
+be supplied to the switch.</span></li>
+<li class="c3 c16 c2"><span>Separate connection
+points for all power lines and signals.</span></li>
+<li class="c3 c16 c2"><span>Mounting holes for
+easy installation inside your arcade board.</span></li>
+</ol>
+<ol class="c36" start="1">
+<li class="c3 c16 c2"><span>Extra connectors (</span><span class="c4">S3</span><span>&nbsp;and </span><span class="c4">S4</span><span>) to have one of the
+following:</span></li>
+</ol>
+<ol class="c70" start="1">
+<li class="c3 c55 c18 c2"><span>joystick mode
+switch support (like on MadCatz Fightsticks and Fightpads)</span></li>
+<li class="c3 c55 c18 c2"><span>emulation of a
+joystick mode switch for the pass-through device (like MadCatz
+Fightstick and Fightpad PCBs)</span></li>
+<li class="c3 c55 c18 c2"><span>pass-through PCBs
+with inverted (active high) triggers</span></li>
+<li class="c3 c55 c18 c2"><span>L3/R3 Button in
+PS3 mode</span></li>
+</ol>
+<h1 class="c22 c2"><a name="h.5lhg2rdfqqz0"></a></h1>
+<hr style="page-break-before: always; display: none;">
+<h1 class="c22 c2"><a name="h.2wsaw2b7iqxs"></a></h1>
+<h1 class="c2"><a name="h.1c275d3ebe60"></a><span>Installation</span></h1>
+<p class="c3 c2"><span class="c0">IMPORTANT:</span><span>&nbsp;Be
+sure to ground yourself before handling electronic components. This can
+be done for example by touching a radiator of a central heating system.
+Always be sure not to connect VCC and Ground to each other and not to
+mix these lines.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>Connect all wires/pins to the
+buttons and the joystick and connect the USB lines to the PCB to pass
+through (e.g. by soldering).</span></p>
+<a href="#" name="f33f057ccb9b24edbfa7176e9cebb8d3dea7ab4e"></a><a href="#" name="0"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p class="c1 c28"><span></span></p>
+<a href="#" name="b2a3c1aef4087503e42f762302b757e5c034fa16"></a><a href="#" name="1"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="c21">
+<p class="c1 c13"><span class="c0">Piggy-back
+Pin Number</span></p>
+</td>
+<td class="c83">
+<p class="c1 c13"><span class="c0">Screw
+Connector Name</span></p>
+</td>
+<td class="c69">
+<p class="c1 c13"><span class="c0">Bemu
+Slang</span></p>
+</td>
+<td class="c84">
+<p class="c1 c13"><span class="c0">XBox360</span></p>
+</td>
+<td class="c96">
+<p class="c1 c13"><span class="c0">PS3</span></p>
+</td>
+<td class="c78">
+<p class="c1 c13"><span class="c0">USB</span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>1</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>5V</span></p>
+</td>
+<td class="c47">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c15">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1"><span>VCC (red)</span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>2</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>HP</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Hard Punch</span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>RB</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>R1</span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>3</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>DW</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Down</span></p>
+</td>
+<td class="c15">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>4</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>UP</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Up</span></p>
+</td>
+<td class="c15">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>5</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>RG</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Right</span></p>
+</td>
+<td class="c15">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>6</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>LF</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Left</span></p>
+</td>
+<td class="c15">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>7</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>LK</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Light Kick</span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>A</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>&#9747;</span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>8</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>LP</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Light Punch</span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>X</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>&#9744;</span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>9</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>MK</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Medium Kick</span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>B</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>&#9711;</span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>10</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>MP</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Medium Punch</span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>Y</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>&#9651;</span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>11</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>SEL</span></p>
+</td>
+<td class="c47">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>Back</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>Select</span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>12</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>STA</span></p>
+</td>
+<td class="c47">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>Start</span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>13</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>HK</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>Hard Kick</span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>RT</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>R2</span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>14</span></p>
+</td>
+<td class="c46">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c47">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c15">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1"><span>D- (white)</span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>15</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>GND</span></p>
+</td>
+<td class="c47">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c15">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1"><span>GND (black)</span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>16</span></p>
+</td>
+<td class="c46">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c47">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c15">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1"><span>D+ (green)</span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>17</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>4K</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>4th Kick</span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>LT</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>L2</span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>18</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>4P</span></p>
+</td>
+<td class="c47">
+<p class="c1"><span>4th Punch</span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>LB</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>L1</span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr>
+<td class="c27">
+<p class="c1 c5"><span>19</span></p>
+</td>
+<td class="c46">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c47">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c15">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c25">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c56">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+<tr class="c22">
+<td class="c27">
+<p class="c1 c5"><span>20</span></p>
+</td>
+<td class="c46">
+<p class="c1"><span>HOME</span></p>
+</td>
+<td class="c47">
+<p class="c1 c28"><span></span></p>
+</td>
+<td class="c15">
+<p class="c1"><span>Guide</span></p>
+</td>
+<td class="c25">
+<p class="c1"><span>PS</span></p>
+</td>
+<td class="c81">
+<p class="c1 c28"><span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h1 class="c22 c2"><a name="h.brc4szx5po4s"></a></h1>
+<hr style="page-break-before: always; display: none;">
+<h1 class="c2"><a name="h.57nntsjuceki"></a><span>Startup
+and Working Behavior</span></h1>
+<h2 class="c44 c2"><a name="h.74d9f714b757"></a><span>Mode
+Selection</span></h2>
+<p class="c3 c2"><span>The Dual Strike offers
+different working modes for playing games as well as the </span><span class="c24"><a class="c12" href="#h.96130da661d7">configuration
+mode</a></span><span>&nbsp;to change settings and
+the </span><span class="c24"><a class="c12" href="#h.791cba2b84e6">firmware update mode</a></span><span>&nbsp;to
+install a newer (or older) software on the Dual Strike. The </span><span class="c24"><a class="c12" href="#h.1c412156efb9">working
+modes</a></span><span>&nbsp;are PS3 gamepad, PC
+gamepad, MAME keyboard encoder, XBox1 gamepad and pass-trough (e.g.
+XBox360). The working modes can be en- and disabled using the </span><span class="c24"><a class="c12" href="#h.96130da661d7">Configuration
+Editor</a></span><span>&nbsp;and it can be chosen
+if auto-detection or a default working mode is entered.</span></p>
+<p class="c3 c2 c28"><span></span></p>
+<p class="c3 c2"><span>If no button is pressed on
+activating the Dual Strike (e.g. by plugging in):</span></p>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>if auto-detection
+is enabled it tries to detect which working mode to use in the sequence
+PS3&#8594;PC&#8594;XBox&#8594;pass-through for enabled working modes (may take some
+seconds)</span></li>
+<li class="c3 c18 c2 c35"><span>otherwise it
+enters the set default working mode</span></li>
+</ol>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c2 c35"><span>By pressing a button or
+joystick direction while the Dual Strike gets activated, it can be set
+into the different modes:</span></p>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>If the </span><span class="c4">Select</span><span>&nbsp;button
+is pressed, then </span><span class="c24"><a class="c12" href="#h.96130da661d7">configuration mode</a></span><span>&nbsp;is
+entered.</span></li>
+<li class="c3 c18 c2 c35"><span>If the </span><span class="c4">Start</span><span>&nbsp;button is
+pressed, then </span><span class="c24"><a class="c12" href="#h.791cba2b84e6">firmware update
+mode</a></span><span>&nbsp;is entered.</span></li>
+<li class="c3 c18 c2 c35"><span>The working modes
+can be activated as follows:</span></li>
+</ol>
+<ol class="c36" start="1">
+<li class="c3 c16 c2"><span>If only one working
+mode is enabled, then this working mode will be activated in any case.</span></li>
+<li class="c3 c16 c2"><span>If two working modes
+are enabled and one of the buttons </span><span class="c4">LK</span><span>,
+</span><span class="c4">MK</span><span>,
+</span><span class="c4">LP</span><span>,
+</span><span class="c4">MP</span><span>,
+</span><span class="c4">HP</span><span>&nbsp;and
+</span><span class="c4">4P</span><span>&nbsp;is
+pressed, then the non-default mode is activated.</span></li>
+<li class="c3 c16 c2"><span>If more than two
+working modes are enabled,:</span></li>
+</ol>
+<ol class="c70" start="1">
+<li class="c3 c55 c18 c2"><span>the button </span><span class="c4">LK</span><span>&nbsp;is pressed
+and the </span><span class="c38"><a class="c12" href="#h.fee0a0c19eb4">PS3 mode</a></span><span><a class="c12" href="#h.fee0a0c19eb4">&nbsp;</a></span><span>is
+enabled, then the PS3 mode is activated.</span></li>
+<li class="c3 c55 c18 c2"><span>the button </span><span class="c4">MK</span><span>&nbsp;is pressed
+and the </span><span class="c24"><a class="c12" href="#h.35a0f3c6f1b6">MAME mode</a></span><span>&nbsp;is
+enabled, then the MAME mode is activated.</span></li>
+<li class="c3 c55 c18 c2"><span>the button </span><span class="c4">HK</span><span>&nbsp;is pressed
+and the </span><span class="c24"><a class="c12" href="#h.7ba2d55a51ed">PC mode</a></span><span>&nbsp;is
+enabled, then the PC mode is activated.</span></li>
+<li class="c3 c18 c2 c55"><span>the button </span><span class="c4">LP</span><span>&nbsp;is pressed
+and the </span><span class="c24"><a class="c12" href="#h.4f5177482dac">XBox mode</a></span><span>&nbsp;is
+enabled, then the XBox mode is activated.</span></li>
+<li class="c3 c55 c18 c2"><span>the button </span><span class="c4">MP</span><span>&nbsp;is pressed
+and the </span><span class="c24"><a class="c12" href="#h.n6vjviuhr7dg">pass-through mode</a></span><span>&nbsp;is
+enabled, then the pass-through mode is activated.</span></li>
+</ol>
+<h2 class="c2"><a name="h.ad25259f1ba1"></a><span>Meta
+Button</span></h2>
+<p class="c44 c67 c2"><span>To allow for changing
+the behavior of the Dual Strike while it is plugged in one button is
+designated the "Meta" button. Pressing it and special buttons or
+joystick directions changes the Dual Strike's behavior depending on the
+active </span><span class="c24"><a class="c12" href="#h.1c412156efb9">working mode</a></span><span>&nbsp;and
+the configuration settings. The Meta button can be either </span><span class="c4">Start</span><span>&nbsp;(default)
+or </span><span class="c4">Select</span><span>,
+use the </span><span class="c24"><a class="c12" href="#h.96130da661d7">Configuration Editor</a></span><span>&nbsp;to
+change this. If the Meta button functionality is active, that is in the
+current working mode with the current settings a combination using the
+Meta button is available, the data for this button is only sent to the
+host on release if no combination containing the Meta button was
+pressed.</span></p>
+<h2 class="c44 c2"><a name="h.a15c475fd10a"></a><span>Joystick
+Function/MAME Mode Switching</span></h2>
+<p class="c3 c2"><span>The joystick works either as
+a digital pad (factory default), left analogue stick or right analogue
+stick in the PS3, PC and XBox working modes. In the MAME working mode
+there are three modes, the game modes for player 1 and 2 and the
+control mode. You have different options how to set or change these
+modes:</span></p>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>Change the default
+joystick/MAME player mode with the </span><span class="c24"><a class="c12" href="#h.96130da661d7">configuration
+editor.</a></span></li>
+<li class="c3 c18 c2 c35"><span>On startup press a
+joystick direction to select a joystick mode, MAME starts in the
+default player mode:</span></li>
+</ol>
+<ol class="c36" start="1">
+<li class="c3 c16 c2"><span class="c4">Up</span><span>:digital
+pad</span></li>
+<li class="c3 c16 c2"><span class="c4">Left</span><span>:
+left analogue joystick</span></li>
+<li class="c3 c16 c2"><span class="c4">Right</span><span>:
+right analogue switch</span></li>
+</ol>
+<ol class="c9" start="3">
+<li class="c3 c18 c2 c35"><span>If activated in
+the configuration (default is disabled), you can use on-the-fly
+joystick and MAME mode switching. See the table below for the
+button-joystick-combination to use.</span></li>
+<li class="c3 c18 c2 c35"><span>If joystick switch
+reading is activated, the setting of the switch determines which
+joystick behavior/MAME mode is active.</span></li>
+</ol>
+<p class="c3 c28 c2"><span></span></p>
+<a href="#" name="e6cebc3a6639d030df5fec7be0d4006e009a8dc6"></a><a href="#" name="2"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c53">
+<p class="c3 c13 c2"><span class="c0">On-the-Fly-<br>
+Switching: Meta+</span></p>
+</td>
+<td class="c63">
+<p class="c3 c13 c2"><span class="c0">SPDT
+Switch Setting</span></p>
+<p class="c3 c13 c2"><span class="c0">(connected
+against ground)</span></p>
+</td>
+<td class="c53">
+<p class="c3 c13 c2"><span class="c0">PS3,
+PC and XBox Joystick Behavior</span></p>
+</td>
+<td class="c95">
+<p class="c3 c13 c2"><span class="c0">MAME
+Mode</span></p>
+</td>
+</tr>
+<tr class="c102">
+<td class="c26">
+<p class="c3 c2"><span class="c4">Up</span><span>&nbsp;[precedence]</span></p>
+</td>
+<td class="c63 c75">
+<p><span></span></p>
+</td>
+<td class="c26">
+<p class="c3 c2"><span>digital pad [default]</span></p>
+</td>
+<td class="c75 c95">
+<p class="c3 c2"><span>control mode</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c26">
+<p class="c3 c2"><span class="c4">Left</span></p>
+</td>
+<td class="c63 c75">
+<p class="c3 c2"><span>S3</span></p>
+</td>
+<td class="c26">
+<p class="c3 c2"><span>left analogue stick</span></p>
+</td>
+<td class="c95 c75">
+<p class="c3 c2"><span>player 1 game mode
+[default]</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c26">
+<p class="c3 c2"><span class="c4">Right</span></p>
+</td>
+<td class="c63 c75">
+<p class="c3 c2"><span>S4</span></p>
+</td>
+<td class="c26">
+<p class="c3 c2"><span>right analogue stick</span></p>
+</td>
+<td class="c95 c75">
+<p class="c3 c2"><span>player 2 game mode</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h1 class="c2"><a name="h.gssbuq43fxkv"></a><span><br>
+</span><span>Configuration Editor</span></h1>
+<p class="c3 c2"><span>In the configuration mode the
+behavior of the Dual Strike can be changed. </span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span class="c0">Prerequisites
+</span></p>
+<p class="c3 c2"><span>To run the configuration
+editor you need a Java 6 Runtime Environment (for example </span><span class="c38"><a class="c12" href="http://www.java.com/download/">Oracle Java</a></span><span>)
+installed on your PC. You also need to download the configuration
+editor and unpack the archive.</span></p>
+<p class="c3 c2"><span>To start the configuration
+editor on Windows double-click on the executable file </span><span class="c42">mcc-1.2.0.exe</span><span>.<br>
+</span></p>
+<hr style="page-break-before: always; display: none;">
+<p></p>
+<p class="c3 c2"><span class="c0">Step by
+Step Procedure</span></p>
+<ol class="c88" start="1">
+<li class="c3 c6 c18 c2"><span>Download the
+configuration editor and take the prerequsites into account.</span></li>
+<li class="c3 c6 c18 c2"><span>Start the
+Configuration Editor. Check the red lamp in the lower right corner of
+the configuration editor window.</span></li>
+<li class="c3 c6 c18 c2"><span>Press Select Button
+and hold.</span></li>
+<li class="c3 c6 c18 c2"><span>While holding
+select Button plug in your USB cable to the desktop. Expected behaviour
+is a green lamp in the lower right corner of the configuration editor
+window.</span></li>
+<li class="c3 c6 c18 c2"><span>Check your setting
+and adapt them.</span></li>
+<li class="c3 c6 c18 c2"><span>Save your setting
+by clicking the Save button.</span></li>
+<li class="c3 c6 c18 c2"><span>You`re done.</span></li>
+</ol>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>See the tooltips for
+additional help on controls and settings.</span></p>
+<h1 class="c22 c2"><a name="h.dskkmy6f2mbm"></a></h1>
+<hr style="page-break-before: always; display: none;">
+<h1 class="c2 c22"><a name="h.hqbx7r3p7s7h"></a></h1>
+<h1 class="c2"><a name="h.1c412156efb9"></a><span>Working
+Modes</span></h1>
+<h2 class="c2 c44"><a name="h.fee0a0c19eb4"></a><span>PS3</span></h2>
+<p class="c3 c2"><span>In the PS3 working mode the
+Dual Strike works as a game controller for PS3 (not on PC).</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span class="c0">IMPORTANT:</span><span>&nbsp;The
+</span><span class="c24"><a class="c12" href="#h.ad25259f1ba1">Meta Button</a></span><span>&nbsp;is
+activated by button release, if no combination containing it was
+pressed.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>The joystick directions are
+sent to the host as either digital pad, left analogue stick or right
+analogue stick directions, see </span><span class="c24"><a class="c12" href="#h.a15c475fd10a">Joystick
+Function/MAME Mode Switching</a></span><span>&nbsp;for
+how to change it. The other mappings are:</span></p>
+<a href="#" name="ba95d4b7e71144f8a6ec1f8cc321355f96a2668a"></a><a href="#" name="3"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c94">
+<p class="c3 c13 c2"><span class="c0">Button</span></p>
+</td>
+<td class="c99">
+<p class="c3 c13 c2"><span class="c0">PS3</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">LK</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>&#9747;</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">MK</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>&#9711;</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">HK</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>R2</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">4K</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>L2</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">LP</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>&#9744;</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">MP</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>&#9651;</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">HP</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>R1</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">4P</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>L1</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">Select</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>Select</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">Start</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>Start</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">Home</span></p>
+</td>
+<td class="c40">
+<p class="c3 c2"><span>PS</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>If 4P/4K emulation is
+activated, then Meta</span><span class="c4">+HK</span><span>&nbsp;means
+L1 and Meta</span><span class="c4">+HK</span><span>&nbsp;means
+L2.</span></p>
+<p class="c3 c2"><span>If L3/R3 reading is not
+activated, then Meta</span><span class="c4">+LK</span><span>&nbsp;means
+L3 and and Meta</span><span class="c4">+MK</span><span>&nbsp;means
+R3. Otherwise a&nbsp;</span><span class="c4">S3</span><span>&nbsp;button
+press means L3 and </span><span class="c4">S4</span><span>&nbsp;means
+R3.&nbsp;</span></p>
+<p class="c44 c2 c67"><span>If </span><span class="c4">Start+Select=Home</span><span>&nbsp;is
+activated, then </span><span class="c4">Start+Select</span><span>&nbsp;means
+PS.</span></p>
+<h2 class="c44 c2"><a name="h.7ba2d55a51ed"></a><span>PC</span></h2>
+<p class="c3 c2"><span>In the PC working mode the
+Dual Strike works as a game controller for PCs with an operating system
+supporting HID (e.g. Windows 7/Vista/XP/2K/98, Mac OSX and Linux), no
+separate drivers are needed. To use it the first time with enabled
+working mode auto-detection you have to explicitly start the PC mode to
+install the drivers (see </span><span class="c38"><a class="c12" href="#h.74d9f714b757">Mode Selection</a></span><span><a class="c12" href="#h.74d9f714b757">)</a></span><span>.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>The joystick directions are
+sent to the host as a digital pad. The joystick directions are sent to
+the device as either digital pad (Windows: POV hat), left analogue
+stick (Windows: X and Y axis) or right analogue stick (Windows: Z axis
+and Z rotation) directions, see </span><span class="c24">Joystick
+Function/MAME Mode Switching</span><span>&nbsp;for how
+to change it. The other mappings are:</span></p>
+<hr style="page-break-before: always; display: none;">
+<p class="c3 c28 c2"><span></span></p>
+<a href="#" name="577abe9fad499da8e3d181f69bc5a9b94c693a3b"></a><a href="#" name="4"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c54">
+<p class="c3 c13 c2"><span class="c0">Button</span></p>
+</td>
+<td class="c34">
+<p class="c3 c13 c2"><span class="c0">Windows</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">LK</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>1</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">MK</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>2</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">HK</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>3</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">4K</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>4</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">LP</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>5</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">MP</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>6</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">HP</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>7</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">4P</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>8</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">S3</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>9</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">S4</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>10</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">Start</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>11</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">Select</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>12</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c43">
+<p class="c3 c2"><span class="c4">Home</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>13</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 class="c2"><a name="h.35a0f3c6f1b6"></a><span><br>
+</span><span>MAME</span></h2>
+<p class="c3 c2"><span>In the MAME working mode </span><span>(</span><span class="c24"><a class="c12" href="#id.rldjmn16bnct">not
+available for ATmega8</a></span><span>) </span><span>the
+Dual Strike works as a HID compliant keyboard (i.e. on operating
+systems like Windows 7/Vista/XP/2K/98, Mac OSX and Linux) with the </span><span class="c38"><a class="c12" href="http://mamedev.org/">MAME</a></span><span>&nbsp;default
+keys mapped to the stick buttons, thus it is a MAME keyboard encoder.
+Three modes are available:</span></p>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>the game modes
+(meant for playing your games) for player 1 as well as for player 2</span></li>
+<li class="c3 c18 c2 c35"><span>and the control
+mode (for configuring game specific options).</span></li>
+</ol>
+<p class="c3 c2"><span>To switch between them, use
+Meta</span><span class="c4">+Left</span><span>&nbsp;for
+player 1 and Meta</span><span class="c4">+Right</span><span>&nbsp;for
+player 2 game mode and Meta</span><span class="c4">+Up</span><span>&nbsp;for
+control mode or an appropiate switch, see </span><span class="c24"><a class="c12" href="#h.a15c475fd10a">Joystick
+Function/MAME Mode Switching</a></span><span>&nbsp;for
+details.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c32 c2"><span class="c0">IMPORTANT:</span><span>&nbsp;The
+key for the </span><span class="c24"><a class="c12" href="#h.ad25259f1ba1">Meta Button</a></span><span>&nbsp;is
+activated by button release, if no combination containing it was
+pressed.</span></p>
+<hr style="page-break-before: always; display: none;">
+<p></p>
+<h3 class="c2"><a name="h.55bd4c91123d"></a><span>Game
+Modes</span></h3>
+<p class="c3 c2"><span>The inputs are generated
+either for player 1 or player 2.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>The direction and special
+inputs in the game modes are:</span></p>
+<a href="#" name="a5ad26ffb6bd6697b868ebed31c5796195831964"></a><a href="#" name="5"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c73">
+<p class="c3 c13 c2"><span class="c0">Dual
+Strike</span></p>
+</td>
+<td class="c77">
+<p class="c3 c13 c2"><span class="c0">MAME</span></p>
+</td>
+<td class="c86">
+<p class="c3 c13 c2"><span class="c0">Player
+1</span></p>
+<p class="c3 c13 c2"><span class="c0">Keyboard</span></p>
+</td>
+<td class="c34">
+<p class="c3 c13 c2"><span class="c0">Player
+2</span></p>
+<p class="c3 c13 c2"><span class="c0">Keyboard</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">Up</span></p>
+</td>
+<td class="c19">
+<p class="c3 c2"><span>Up</span></p>
+</td>
+<td class="c68">
+<p class="c3 c2"><span>Up</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>R</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">Right</span></p>
+</td>
+<td class="c19">
+<p class="c3 c2"><span>Right</span></p>
+</td>
+<td class="c68">
+<p class="c3 c2"><span>Right</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>G</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">Down</span></p>
+</td>
+<td class="c19">
+<p class="c3 c2"><span>Down</span></p>
+</td>
+<td class="c68">
+<p class="c3 c2"><span>Down</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>F</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">Left</span></p>
+</td>
+<td class="c19">
+<p class="c3 c2"><span>Left</span></p>
+</td>
+<td class="c68">
+<p class="c3 c2"><span>Left</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>D</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">Select</span></p>
+</td>
+<td class="c19">
+<p class="c3 c2"><span>Coin</span></p>
+</td>
+<td class="c68">
+<p class="c3 c2"><span>5</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>6</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">Start</span></p>
+</td>
+<td class="c19">
+<p class="c3 c2"><span>Start</span></p>
+</td>
+<td class="c68">
+<p class="c3 c2"><span>1</span></p>
+</td>
+<td class="c29">
+<p class="c3 c2"><span>2</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">Home</span></p>
+</td>
+<td class="c19">
+<p class="c3 c2"><span>Pause</span></p>
+</td>
+<td class="c68">
+<p class="c3 c13 c2"><span>P</span></p>
+</td>
+<td class="c29">
+<p><span></span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span>Meta+</span><span class="c4">LK</span></p>
+</td>
+<td class="c19">
+<p class="c3 c2"><span>Enter</span></p>
+</td>
+<td class="c68">
+<p class="c3 c13 c2"><span>Enter</span></p>
+</td>
+<td class="c29">
+<p><span></span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span>Meta+</span><span class="c4">MK</span></p>
+</td>
+<td class="c19">
+<p class="c3 c2"><span>Leave/Quit</span></p>
+</td>
+<td class="c68">
+<p class="c3 c13 c2"><span>Escape</span></p>
+</td>
+<td class="c29">
+<p><span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="c3 c2"><span>If </span><span class="c4">Start+Select=Home</span><span>&nbsp;is
+activated, then </span><span class="c4">Start+Select</span><span>&nbsp;means
+P.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>The standard MAME key
+assignments are assumed for the buttons:</span></p>
+<a href="#" name="be8603bcb2b145986263e28d022ec5f6ccc93fc7"></a><a href="#" name="6"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c80">
+<p class="c3 c13 c2"><span class="c0">MAME</span></p>
+</td>
+<td class="c80">
+<p class="c3 c13 c2"><span class="c0">Player
+1</span></p>
+<p class="c3 c13 c2"><span class="c0">Keyboard</span></p>
+</td>
+<td class="c80">
+<p class="c3 c13 c2"><span class="c0">Player
+2</span></p>
+<p class="c3 c13 c2"><span class="c0">Keyboard</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c14">
+<p class="c3 c2"><span>Button 1</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>LCTRL</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>A</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c14">
+<p class="c3 c2"><span>Button 2</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>LALT</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>S</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c14">
+<p class="c3 c2"><span>Button 3</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>Space</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>Q</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c14">
+<p class="c3 c2"><span>Button 4</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>LShift</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>W</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c14">
+<p class="c3 c2"><span>Button 5</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>X</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>K</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c14">
+<p class="c3 c2"><span>Button 6</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>Y</span></p>
+</td>
+<td class="c14">
+<p class="c3 c2"><span>I</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="c44 c2 c91"><span><br>
+</span><span>How these MAME buttons are mapped to the stick
+buttons </span><span class="c4">LK</span><span>,
+</span><span class="c4">MK</span><span>,
+</span><span class="c4">HK</span><span>,
+</span><span class="c4">4K</span><span>,
+</span><span class="c4">LP</span><span>,
+</span><span class="c4">MP</span><span>,
+</span><span class="c4">HP</span><span>&nbsp;and
+</span><span class="c4">4P</span><span>&nbsp;is
+determined by the configuration of the Dual Strike. There are four
+button mapping sets. A set is activated by pressing Meta+</span><span class="c4">LP</span><span>&nbsp;together
+with a joystick direction. The first is activated by </span><span class="c4">Up</span><span>, the second by </span><span class="c4">Right</span><span>, the third by </span><span class="c4">Down</span><span>&nbsp;and the
+fourth by </span><span class="c4">Left</span><span>.
+You can use the configuration editor to change these. The default
+button mappings are given below.</span></p>
+<h4 class="c71 c2"><a name="h.bbr1lfyzmuw6"></a></h4>
+<hr style="page-break-before: always; display: none;">
+<h4 class="c2 c71"><a name="h.ahn6jted65h"></a></h4>
+<h4 class="c2"><a name="h.8bfeb007567d"></a><span>Default
+Button Layout 1</span></h4>
+<p class="c3 c2"><span>This layout is activated by
+pressing Meta+</span><span class="c4">LP</span><span>+</span><span class="c4">Up</span><span>.</span></p>
+<a href="#" name="68d358c09e38a5c847875e31986d66d4e5221a7a"></a><a href="#" name="7"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c72">
+<p class="c3 c13 c2"><span class="c0">Dual
+Strike</span></p>
+</td>
+<td class="c85">
+<p class="c3 c13 c2"><span class="c0">MAME</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">LK</span></p>
+</td>
+<td class="c62">
+<p class="c3 c2"><span>Button 3</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">MK</span></p>
+</td>
+<td class="c62">
+<p class="c3 c2"><span>Button 4</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">HK</span></p>
+</td>
+<td class="c62">
+<p class="c3 c2"><span>Button 6</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">4K</span></p>
+</td>
+<td class="c62">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">LP</span></p>
+</td>
+<td class="c62">
+<p class="c3 c2"><span>Button 1</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">MP</span></p>
+</td>
+<td class="c62">
+<p class="c3 c2"><span>Button 2</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">HP</span></p>
+</td>
+<td class="c62">
+<p class="c3 c2"><span>Button 5</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">4P</span></p>
+</td>
+<td class="c62">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4 class="c2"><a name="h.p6lk7c7n3qd5"></a><span><br>
+</span><span>Default Button Layout 2</span></h4>
+<p class="c3 c2"><span>This layout is activated by
+pressing Meta+</span><span class="c4">LP</span><span>+</span><span class="c4">Right</span><span>.</span></p>
+<a href="#" name="e1eab1768f3b65f3c3cb81cca242a1721e3b224e"></a><a href="#" name="8"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c72">
+<p class="c3 c13 c2"><span class="c0">Dual
+Strike</span></p>
+</td>
+<td class="c66">
+<p class="c3 c13 c2"><span class="c0">MAME</span></p>
+</td>
+</tr>
+<tr class="c98">
+<td class="c8">
+<p class="c3 c2"><span class="c4">LK</span></p>
+</td>
+<td class="c20">
+<p class="c3 c2"><span>Button 4</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">MK</span></p>
+</td>
+<td class="c20">
+<p class="c3 c2"><span>Button 5</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">HK</span></p>
+</td>
+<td class="c20">
+<p class="c3 c2"><span>Button 6</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">4K</span></p>
+</td>
+<td class="c20">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">LP</span></p>
+</td>
+<td class="c20">
+<p class="c3 c2"><span>Button 1</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">MP</span></p>
+</td>
+<td class="c20">
+<p class="c3 c2"><span>Button 2</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">HP</span></p>
+</td>
+<td class="c20">
+<p class="c3 c2"><span>Button 3</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">4P</span></p>
+</td>
+<td class="c20">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4 class="c2"><a name="h.905c57eb836c"></a><span><br>
+</span><span>Default Button Layout 3</span></h4>
+<p class="c3 c2"><span>This layout is activated by
+pressing Meta+</span><span class="c4">LP</span><span>+</span><span class="c4">Down</span><span>.</span></p>
+<a href="#" name="cfb2c73adbb5c2deccf4516c290d054d745703d0"></a><a href="#" name="9"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c73">
+<p class="c3 c13 c2"><span class="c0">Dual
+Strike</span></p>
+</td>
+<td class="c87">
+<p class="c3 c13 c2"><span class="c0">MAME</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">LK</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 5</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">MK</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 6</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">HK</span></p>
+</td>
+<td class="c50">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">4K</span></p>
+</td>
+<td class="c50">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">LP</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 1</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">MP</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 2</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">HP</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 3</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c30">
+<p class="c3 c2"><span class="c4">4P</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 4</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4 class="c71 c2"><a name="h.5865lfadfsk4"></a></h4>
+<h4 class="c2"><a name="h.1eae3b4842c9"></a><span>Default
+Button Layout 4</span></h4>
+<p class="c3 c2"><span>This layout is activated by
+pressing Meta+</span><span class="c4">LP</span><span>+</span><span class="c4">Left</span><span>.</span></p>
+<a href="#" name="841181e1d938b4ec2be2911c7f8d94f8d362f845"></a><a href="#" name="10"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c72">
+<p class="c3 c13 c2"><span class="c0">Dual
+Strike</span></p>
+</td>
+<td class="c87">
+<p class="c3 c13 c2"><span class="c0">MAME</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">LK</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 4</span></p>
+</td>
+</tr>
+<tr class="c93">
+<td class="c8">
+<p class="c3 c2"><span class="c4">MK</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 5</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">HK</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 6</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">4K</span></p>
+</td>
+<td class="c50">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">LP</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 1</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">MP</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 2</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">HP</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 3</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c8">
+<p class="c3 c2"><span class="c4">4P</span></p>
+</td>
+<td class="c50">
+<p class="c3 c2"><span>Button 4</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 class="c2"><a name="h.ab532e96467c"></a><span><br>
+</span><span>Control Mode</span></h3>
+<p class="c3 c2"><span>The following input mappings
+apply to the control mode:</span></p>
+<a href="#" name="946d2d6ac2479a39bf6e0f2f278416df1bd2433f"></a><a href="#" name="11"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c39">
+<p class="c3 c13 c2"><span class="c0">Dual
+Strike</span></p>
+</td>
+<td class="c74">
+<p class="c3 c13 c2"><span class="c0">MAME</span></p>
+</td>
+<td class="c79">
+<p class="c3 c2 c13"><span class="c0">Keyboard</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">Up</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Up</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>Up</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">Right</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Right</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>Right</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">Down</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Down</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>Down</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">Left</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Left</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>Left</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">LK</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Test</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>F2</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">MK</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Reset</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>F3</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">HK</span></p>
+</td>
+<td class="c48">
+<p><span class="c4"></span></p>
+</td>
+<td class="c17">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">4K</span></p>
+</td>
+<td class="c48">
+<p><span class="c4"></span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>Volume Down</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">LP</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Enter</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>Enter</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">MP</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Leave</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>Escape</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">HP</span></p>
+</td>
+<td class="c48">
+<p><span class="c4"></span></p>
+</td>
+<td class="c17">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">4P</span></p>
+</td>
+<td class="c48">
+<p><span class="c4"></span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>Volume Up</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">Select</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Service Coin</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>9</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">Start</span></p>
+</td>
+<td class="c48">
+<p class="c3 c2"><span>Menu</span></p>
+</td>
+<td class="c17">
+<p class="c3 c2"><span>TAB</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c37">
+<p class="c3 c2"><span class="c4">Home</span></p>
+</td>
+<td class="c48">
+<p><span class="c4"></span></p>
+</td>
+<td class="c17">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 class="c2"><a name="h.4f5177482dac"></a><span><br>
+</span><span>XBox</span></h2>
+<p class="c3 c2"><span>In the XBox working mode (</span><span class="c24"><a class="c12" href="#id.rldjmn16bnct">not
+available for ATmega8</a></span><span>) the Dual
+Strike works as a game controller for the XBox one (with an </span><span class="c24"><a class="c12" href="#h.cf9aed68b892">adapter</a></span><span>&nbsp;from
+USB to XBox or a XBox cable connected to the USB lines) but NOT for PC
+with appropiate drivers (e.g. </span><span class="c38"><a class="c12" href="http://www.redcl0ud.com/xbcd.html">XBCD</a></span><span>).
+The joystick directions are sent to the device as either digital pad,
+left analogue stick or right analogue stick directions, see </span><span class="c24"><a class="c12" href="#h.a15c475fd10a">Joystick
+Function/MAME Mode Switching</a></span><span>&nbsp;for
+how to change it.</span></p>
+<p class="c3 c2"><span class="c0">IMPORTANT:</span><span>&nbsp;The
+key for the </span><span class="c24"><a class="c12" href="#h.ad25259f1ba1">Meta Button</a></span><span>&nbsp;is
+activated by button release, if no combination containing it was
+pressed. It is working normal if a joystick mode switch is used and
+4P/4K emulation is not enabled.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>The other mappings are:</span></p>
+<a href="#" name="dfb40a5b59309e48bac31ada4ec988fc69a7a093"></a><a href="#" name="12"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c94">
+<p class="c3 c13 c2"><span class="c0">Button</span></p>
+</td>
+<td class="c65">
+<p class="c3 c13 c2"><span class="c0">XBox</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">LK</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>A</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">MK</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>B</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">HK</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>White</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c2 c3"><span class="c4">4K</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>RT</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">LP</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>X</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">MP</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>Y</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">HP</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>Black</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">4P</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>LT</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">Select</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>Back</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">Start</span></p>
+</td>
+<td class="c31">
+<p class="c3 c2"><span>Start</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c23">
+<p class="c3 c2"><span class="c4">Home</span></p>
+</td>
+<td class="c31">
+<p><span class="c4"></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 class="c2"><a name="h.cf9aed68b892"></a><span><br>
+</span><span>XBox-to-USB Adapter</span></h3>
+<p class="c3 c2"><span>You need an adapter to
+connect a Dual Strike to a XBox. Below are some tables explaining the
+different lines, the mentioned colors might differ. If you are unsure
+which connectors/plugs you have or which lines to connect, please read
+more about USB (e.g. </span><span class="c38"><a class="c12" href="http://en.wikipedia.org/wiki/USB#USB_standard_connectors">USB
+standard connectors in the USB article in Wikipedia</a></span><span>)
+and XBox connectors (e.g. this </span><span class="c38"><a class="c12" href="http://www.velocityreviews.com/forums/t482-guide-xbox-controller-to-usb-adapter.html">Guide
+for building a XBox-to-USB adapter</a></span><span>)
+or buy a preassembled adapter.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>XBox connector as seen when
+looking at the plug:</span></p>
+<a href="#" name="cf360509d4083b2ff17c04e4de4f01c179ddbcd5"></a><a href="#" name="13"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c57">
+<p class="c3 c13 c2"><span>VCC</span></p>
+<p class="c3 c13 c2"><span>(red)</span></p>
+</td>
+<td class="c57">
+<p class="c3 c13 c2"><span>Data-</span></p>
+<p class="c3 c13 c2"><span>(white)</span></p>
+</td>
+<td class="c57">
+<p class="c3 c13 c2"><span>Data+</span></p>
+<p class="c3 c13 c2"><span>(green)</span></p>
+</td>
+<td class="c57">
+<p class="c3 c13 c2"><span>Video Sync</span></p>
+<p class="c3 c13 c2"><span>(yellow)</span></p>
+</td>
+<td class="c57">
+<p class="c3 c13 c2"><span>Ground</span></p>
+<p class="c3 c13 c2"><span>(black)</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>USB type A connector as seen
+when looking at the plug:</span></p>
+<a href="#" name="1ddae8845736bc9421c368c079e7417d28340c78"></a><a href="#" name="14"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c59">
+<p class="c3 c13 c2"><span>VCC</span></p>
+<p class="c3 c13 c2"><span>(red)</span></p>
+</td>
+<td class="c59">
+<p class="c3 c13 c2"><span>Data-</span></p>
+<p class="c3 c13 c2"><span>(white)</span></p>
+</td>
+<td class="c59">
+<p class="c3 c13 c2"><span>Data+</span></p>
+<p class="c3 c13 c2"><span>(green)</span></p>
+</td>
+<td class="c59">
+<p class="c3 c13 c2"><span>Ground</span></p>
+<p class="c3 c13 c2"><span>(black)</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c2"><span>USB type B connector as seen
+when looking at the plug:</span></p>
+<a href="#" name="45b3031dbacf6cfa831599623bbfb21b40928438"></a><a href="#" name="15"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c11">
+<p class="c3 c13 c2"><span>VCC</span></p>
+<p class="c3 c13 c2"><span>(red)</span></p>
+</td>
+<td class="c11">
+<p class="c3 c13 c2"><span>Data-</span></p>
+<p class="c3 c13 c2"><span>(white)</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c11">
+<p class="c3 c13 c2"><span>Data+</span></p>
+<p class="c3 c13 c2"><span>(green)</span></p>
+</td>
+<td class="c11">
+<p class="c3 c13 c2"><span>Ground</span></p>
+<p class="c3 c13 c2"><span>(black)</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 class="c82 c2"><a name="h.nuccxt86ssmf"></a></h2>
+<hr style="page-break-before: always; display: none;">
+<h2 class="c2 c82"><a name="h.pxj2c42m8bw5"></a></h2>
+<h2 class="c2 c100"><a name="h.n6vjviuhr7dg"></a><span>Pass-Through</span></h2>
+<p class="c32 c2"><span>In the pass-through mode the
+USB connector data lines are routed to the D+ and D- pins and thus a
+properly connected PCB will be used by the host device (like a PC or
+gaming console).</span></p>
+<p class="c32 c2"><span>If </span><span class="c4">Start+Select=Home</span><span>&nbsp;is
+activated, then </span><span class="c4">Start+Select</span><span>&nbsp;makes
+the </span><span class="c4">Home</span><span>&nbsp;pin
+low (activating this button for a connected common ground PCB),
+otherwise it is high.</span></p>
+<p class="c32 c2"><span>If inverted triggers are
+activated and </span><span class="c4">HK</span><span>&nbsp;or
+</span><span class="c4">HP</span><span>&nbsp;is
+pressed, then S3 or S4 respectively are pulled high (activating
+connected active high trigger pins), otherwise they are low.</span></p>
+<p class="c32 c2"><span>If&nbsp;</span><span class="c4">4K/4P </span><span>emulation is
+activated, then Meta</span><span class="c4">+HK</span><span>&nbsp;pulls
+</span><span class="c4">4K</span><span>&nbsp;and
+</span><span class="c4">Start+HK</span><span>&nbsp;pulls
+</span><span class="c4">4P</span><span>&nbsp;low
+(making these buttons pressed for a connected common ground PCB).</span></p>
+<p class="c32 c2"><span>If joystick switch emulation
+is enabled, S3 is pulled low if the left analogue joystick is activated
+(by pressing Meta</span><span class="c4">+Left</span><span>),
+S4 is pulled low if the right analogue joystick is activated (by
+pressing Meta</span><span class="c4">+Right</span><span>)
+or both pins are left alone if the digital pad is activated (by
+pressing Meta</span><span class="c4">+Up</span><span>).</span></p>
+<p class="c32 c2"><span>See </span><span class="c24"><a class="c12" href="#h.96130da661d7">Configuration
+Editor</a></span><span>&nbsp;and </span><span class="c24"><a class="c12" href="#h.a15c475fd10a">Joystick
+Function</a></span><span>&nbsp;for more details.</span></p>
+<h1 class="c44 c2"><a name="h.5crnr37mxpbw"></a><span>Advanced
+configuration</span></h1>
+<h2 class="c44 c2"><a name="h.71c6ddebad57"></a><span>S3/S4
+Functions</span></h2>
+<p class="c3 c2"><span>For the pins S3 and S4 you
+have four options:</span></p>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>Leave them
+unconnected.</span></li>
+</ol>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>Connect them to
+the pins of a common ground SPCO switch (S3=left stick, S3=right stick)
+to read the setting. These switches can be found for example on MadCatz
+Fightsticks, there the switch positions are labeled LS/DP/RS.</span></li>
+</ol>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>Connect them to
+the pins on the pass-through PCB of a common ground joystick mode
+switch (S3=left stick, S4=right stick) to emulate the switch. These
+switches are the same as the ones mentioned directly above.</span></li>
+</ol>
+<ol class="c9" start="1">
+<li class="c3 c18 c2 c35"><span>Connect them to
+the trigger pins on a pass-through PCB with active high triggers
+(S3=left trigger, S4=right trigger).</span></li>
+<li class="c3 c18 c2 c35"><span>Connect them to
+common ground buttons to have dedicated L3 and R3 buttons in PS3 mode.</span></li>
+</ol>
+<p class="c32 c2"><span>You have to configure which
+function is active from a PC with the </span><span class="c24"><a class="c12" href="#h.96130da661d7">Configuration
+Editor</a></span><span>.</span></p>
+<p class="c3 c28 c2"><span></span></p>
+<h1 class="c44 c22 c2"><a name="h.7y91ud6juwnw"></a></h1>
+<hr style="page-break-before: always; display: none;">
+<h1 class="c44 c22 c2"><a name="h.n9fi18777f56"></a></h1>
+<h1 class="c44 c2"><a name="h.791cba2b84e6"></a><span>Firmware
+Update</span></h1>
+<p class="c3 c2"><span>Firmware update is supported
+for Windows systems, it is possible on other systems like Linux with
+custom compilation.</span></p>
+<p class="c3 c2"><span>To update the firmware of
+your Dual Strike execute the following steps (assuming you already
+downloaded and unpacked the firmware update archive and you are using a
+Windows system):</span></p>
+<ol class="c88" start="1">
+<li class="c3 c18 c2 c35"><span>Press and hold </span><span class="c4">Start</span><span>&nbsp;while
+plugging in to switch to the firmware update mode.</span></li>
+<li class="c3 c18 c2 c35"><span>Execute the
+firmware update batch file (see below).</span></li>
+<li class="c3 c18 c2 c35"><span>After updating the
+firmware from firmware versions prior to version 2 enter configuration
+mode and load the defaults. If updated from firmware version 2 the
+defaults are automatically loaded, so you might have to reconfigure.</span></li>
+</ol>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span>The firmware update files are
+the following:</span></p>
+<a href="#" name="9b411d6a6a0d90261d8e21554e7f6e830d4fdec6"></a><a href="#" name="16"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr class="c7">
+<td class="c89">
+<p class="c3 c13 c2"><span class="c0">Dual
+Strike Type</span></p>
+</td>
+<td class="c61">
+<p class="c3 c13 c2"><span class="c0">Filename</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c89 c75">
+<p class="c3 c2"><span>Dual Strike V2</span><span>&nbsp;and
+newer,</span><span>&nbsp;TEasy Strike</span></p>
+</td>
+<td class="c61 c75">
+<p class="c3 c2"><span class="c42">update_firmware_atmega168.bat</span></p>
+</td>
+</tr>
+<tr class="c7">
+<td class="c89 c75">
+<p class="c3 c2"><span>Dual Strike SMD with </span><span>ATMega168</span></p>
+</td>
+<td class="c61 c75">
+<p class="c3 c2"><span class="c42">update_firmware_atmega168_smd.bat</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h1 class="c2"><a name="h.tr9613yzbsew"></a><span><br>
+</span><span>History</span></h1>
+<p class="c3 c28 c2"><span class="c45"></span></p>
+<a href="#" name="1219c153b60804f6d816f145cd693c158ecd2b6c"></a><a href="#" name="17"></a>
+<table class="c10" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="c58">
+<p class="c1 c13"><span class="c0">Version
+Number</span></p>
+</td>
+<td class="c92">
+<p class="c1 c13"><span class="c0">Changes</span></p>
+</td>
+</tr>
+<tr>
+<td class="c76">
+<p class="c3 c2"><span>3.3.1</span></p>
+</td>
+<td class="c60">
+<ol class="c9" start="1">
+<li class="c3 c6 c18 c2"><span>fixed: meta
+button not working in PC mode</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c76">
+<p class="c1"><span>3.3.0</span></p>
+</td>
+<td class="c60">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>added: in PC
+mode the directions can be set to work as an analogue joystick</span></li>
+<li class="c1 c6 c18"><span>changed: if
+opposing directions are activated simultaneously the last activated one
+is sent to the host</span></li>
+<li class="c1 c6 c18"><span>removed: support
+for ATmega8 based Dual Strikes</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>3.2.0</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>added: disabling
+of on-the-fly joystick/MAME mode switching (default)</span></li>
+<li class="c1 c6 c18"><span>improved: longer
+timeouts for auto-detection</span></li>
+<li class="c1 c6 c18"><span>updated
+configuration editor to version 1.2.0</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>3.1.0</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>added:
+auto-detection of working mode</span></li>
+<li class="c1 c6 c18"><span>added: PC mode</span></li>
+<li class="c1 c6 c18"><span>added: Meta
+button selection</span></li>
+<li class="c1 c6 c18"><span>improved: PS3
+mode is sending data in one transfer which means less lag, but the PS3
+mode no longer works on PC</span></li>
+<li class="c1 c6 c18"><span>removed: stick
+based configuration</span></li>
+<li class="c1 c6 c18"><span>updated
+configuration editor to version 1.1.1</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>3.0.0</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>added: MAME
+working mode (not available for ATmega8)</span></li>
+<li class="c1 c6 c18"><span>added: XBox
+working mode (not available for ATmega8)</span></li>
+<li class="c1 c6 c18"><span>added: disabling
+of working modes</span></li>
+<li class="c1 c6 c18"><span>added: 4K/4P
+emulation</span></li>
+<li class="c1 c6 c18"><span>added: L3/R3
+support</span></li>
+<li class="c1 c6 c18"><span>added:
+on-the-fly joystick switching without dedicated switch</span></li>
+<li class="c1 c6 c18"><span>improved: Home
+button emulation for pass-through devices</span></li>
+<li class="c1 c6 c18"><span>improved:
+joystick switch emulation for pass-through devices</span></li>
+<li class="c1 c6 c18"><span>updated
+configuration editor to version 1.1</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>2.0.1</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>fixed: default
+mode switching didn't work as documented</span></li>
+<li class="c1 c6 c18"><span>fixed:
+pass-through device not working after configuration mode</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>2.0.0</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>USB
+configuration mode, allowing configuration from a PC</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.7.1</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>Bug Fixes</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.7.0</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>PS3 mode: added
+support for analogue button/dpad values (like in SSFIITHDR and the
+on-screen keyboard)</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.6.2</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>merged SMD
+design code into source code</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.6.1</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>fixed: triggers
+not working after being used to switch to non-default mode</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.6</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>changed
+configuration mode behaviour again</span></li>
+<li class="c1 c6 c18"><span>re-introduced
+inverted trigger configurablity</span></li>
+<li class="c1 c6 c18"><span>added: joystick
+mode switch support</span></li>
+<li class="c1 c6 c18"><span>added: joystick
+mode switch emulation</span></li>
+<li class="c1 c6 c18"><span>PS3 USB polling
+interval is now 1ms</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.5</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>changed
+configuration mode behaviour</span></li>
+<li class="c1 c6 c18"><span>added
+possibility to reset to the defaults</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.4</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>added: right
+stick support</span></li>
+<li class="c1 c6 c18"><span>removed
+configuration possibility of inverted triggers</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.3</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>added:
+configuration capabilities</span></li>
+<li class="c1 c6 c18"><span>PS3 Home Button
+support</span></li>
+<li class="c1 c6 c18"><span>inverted trigger
+support removed from build, still usable through recompilation</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.2</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>HID Device
+extended</span></li>
+<li class="c1 c6 c18"><span>Inverted Trigger
+Support</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.1</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>HID Device
+extended</span></li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="c41">
+<p class="c1"><span>1.0</span></p>
+</td>
+<td class="c33">
+<ol class="c9" start="1">
+<li class="c1 c6 c18"><span>initial release</span></li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="c3 c28 c2"><span class="c45"></span></p>
+<p class="c3 c28 c2"><span></span></p>
+<p class="c3 c2"><span class="c0">Side Note:</span><span>&nbsp;For
+this firmware an ATmega168 microcontroller (like on the Dual Strike V2)
+is required. The Dual Strike V1 boards come assembled with a ATMega8
+microcontroller, but can be upgraded with a ATMega168 (available on</span><span><a class="c12" href="http://www.arcadeforge.de/">&nbsp;</a></span><span class="c38"><a class="c12" href="http://www.arcadeforge.de/">http://www.arcadeforge.de</a></span><span>).
+The older Dual Strike SMD had an ATmega8, newer ones come with an
+ATmega168.</span></p>
+</body></html>

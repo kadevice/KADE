@@ -1,0 +1,39 @@
+This file documents changes in the software and firmware of bootloaderHID.
+New entries are always appended to the end of the file. Scroll down to the
+bottom to see the most recent changes.
+
+
+* Release 2007-06-25
+
+- Added command line option to leave boot loader.
+- Added compile time option in firmware whether "-r" option is supported.
+  Saves code size if not supported.
+- Define USB_PUBLIC to static and include usbdrv.c in order to save code size
+  This is necessary so that even gcc 4 generated code fits into 2k flash.
+- Fixed FLASHEND computation for >32k devices (cast to long).
+- Updated to newest version of driver.
+
+* Release 2007-10-23
+
+- Updated to newest USB driver.
+- Ported back some improvements from USBaspLoader.
+- Code size optimization to make this boot loader usable with the 12.8 MHz
+  module.
+
+* Release 2008-10-22
+
+- Code size improvements.
+- Don't add 0x20 if I/O registers are in memory addressable area in usbconfig.h
+- Example config should check jumper status on PIND, not PORTD.
+
+* Release 2008-11-26
+
+- Allow option "-r" to bootloadHID alone, even without uploading a file.
+- Added optimizations for gcc 4.3.
+
+* Release 2010-07-29
+
+- Updated to latest driver.
+- Fixed compiler errors in latest gcc/avr-libc.
+
+* Release 2012-12-08

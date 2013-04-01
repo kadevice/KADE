@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+h2, h3 {
+	color:#202020
+}
+
+/* pimmap is the pan mapping table */
+
+#pinmap {
+	
+	width:100%;
+	border-collapse:collapse;
+}
+#pinmap td, #pinmap th {
+	font-size:0.8em;
+	border:1px solid #333333;
+	padding:3px 7px 2px 7px;
+}
+#pinmap th {
+	font-size:1.0em;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:4px;
+}
+
+
+#pinmap tr.alt td 
+{
+	background-color:#CCCCCC;
+}
+
+#pinmap td.notused, #pinmap tr.alt td.notused
+{
+	background-color:#333333;
+	color:#CCCCCC;
+}
+
+#pinmap td.note, #pinmap tr.alt td.note 
+{
+	background-color:#D8DE8C;
+}
+
+#pinmap td.input, #pinmap tr.alt td.input
+{
+	background-color:#B36C65;
+}
+
+/* heaer colors for each device*/
+
+#pinmap th.xbox {
+
+	background-color:#1C3106;
+	color:#E1EE68;
+}
+
+#pinmap th.generic {
+	background-color:#262626;
+	color:#FFFFFF;
+}
+
+#pinmap th.psx {
+	background-color:#000000;
+	color:#A0A3AE;
+}
+
+#pinmap th.psx {
+	background-color:#000000;
+	color:#A0A3AE;
+}
+#pinmap th.ps3 {
+	background-color:#4E0F16;
+	color:#A0A3AE;
+}
+#pinmap th.pin {
+	background-color:#784821;
+	color:#0E0B06;
+}
+#pinmap th.mame {
+	background-color:#1A3965;
+	color:#8CCAF9;
+}
+#pinmap th.joy {
+	background-color:#3B4046;
+	color:#B7C1BF;
+}
+#pinmap th.wii {
+	background-color:#FFFFFF;
+	color:#8F8C8E;
+}
+#pinmap th.windows {
+	background-color:#050EAA;
+	color:#FFFFFF;
+}
+
+#pinmap th.kade {
+	background-color:#CC0000;
+	color:#FFFFFF;
+}
+#pinmap th.linux {
+	background-color:#DFB628;
+	color:#FFFFFF;
+}
+#pinmap th.android {
+	background-color:#A3BF45;
+	color:#FFFFFF;
+}

@@ -1,0 +1,1 @@
+"c:\python26\python" build.py py2exe

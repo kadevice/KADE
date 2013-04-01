@@ -1,0 +1,193 @@
+/* 
+ * KADE - Kick Ass Dynamic Encoder
+ * Copyright (c) 2012 Bruno Freitas - bootsector@ig.com.br
+ *                    Jon Wilson    - degenatrons@gmail.com
+ *                    Kevin Mackett - kevin@sharpfork.com
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+------------------------------------------------------------------------------
+20 Input USB Keyboard Encoder with Switchable Modes
+By Degenatrons, April 2012.
+https://sites.google.com/site/degenatrons/
+------------------------------------------------------------------------------
+Version 1.5 (Refer to changes.txt file for changes)
+------------------------------------------------------------------------------
+Designed for use with the Minimus AVR Development Board http://minimususb.com
+Compatible with all USB keyboard input systems (Windows, Linux, Mac)
+
+All modern operating systems support USB keyboards. 
+No special drivers need to be loaded.
+Full keyboard emulation. No ghosting and no blocking.
+
+This code also supports the keyboard "boot protocol" for compatability with 
+the BIOS before an operating system has loaded. 
+------------------------------------------------------------------------------
+Refer to key_mapping XLS and PDF for descripion of preset key mappings
+
+HWB button (and pin) used to toggle the keymapping mapping groups and modes.
+Active mapping is stored in EEPROM and is remembered when powered off.
+------------------------------------------------------------------------------
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+Based on the MAME Controller Project by Dane Gardner - which uses Teensy
+------------------------------------------------------------------------------
+*/
+#include <avr/io.h>
+#include <avr/eeprom.h>
+#include <avr/pgmspace.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+#include "usb_keyboard.h"
+
+//LED flash
+#include <avr/wdt.h>
+#include <avr/power.h>
+#define LED_A 6
+#define LED_B 5
+
+//sound
+#define F_CPU 2000000UL
+#define INT_PER_SEC 15000
+
+//eeprom
+#define read_eeprom_byte(address) eeprom_read_byte ((const uint8_t*)address)
+#define write_eeprom_byte(address,value) eeprom_write_byte ((uint8_t*)address,(uint8_t)value)
+uint8_t	ee_byte;
+uint8_t	ee_group; //(added v1.4)
+
+uint8_t map[21];
+uint8_t flashes = 1;   //(added v1.1) get int from hex, 
+uint8_t g_flashes = 1;   //(added v1.4) get int from hex, 
+
+#include "mappings.c"
+#include "routines.c"
+
+//Main Program
+int main(void)
+{
+uint8_t b_prev=0xFF, c_prev=0xFF, d_prev=0xFF;
+
+// set for 16 MHz clock
+CLKPR = 0x80, CLKPR = 0;
+
+// Configure all ports as inputs with pullup resistors.
+DDRB = 0x00;
+DDRC = 0x00;
+DDRD = 0x00;
+PORTB = 0xFF;
+PORTC = 0xFF;
+PORTD = 0xFF;
+
+//Initialise LED timings (added v1.1)
+clock_prescale_set(clock_div_1);
+MCUSR &= ~(1 << WDRF);
+wdt_disable();
+
+//Read eeprom to get active group and mode
+ee_byte=read_eeprom_byte(1);
+ee_group=read_eeprom_byte(2);  //(added v1.4) for group
+set_active_group();
+set_active_mode();
+
+flash_leds();
+
+// Initialize the USB
+usb_init();
+
+while(!usb_configured());
+
+// Wait for host to load drivers
+_delay_ms(1000);
+
+
+while(1) {
+    uint8_t b = PINB;
+    uint8_t c = PINC;
+    uint8_t d = PIND;
+
+    if(b != b_prev || c != c_prev || d != d_prev ) {
+      uint8_t keycount = 0;
+	  uint8_t modecount = 0;  //HWB to toggle active mode
+	  uint8_t groupcount = 0;  //HWB to toggle active mode	  
+
+      if(!(c & 0x10)) { keyboard_keys[keycount++] = map[19]; } //PIN B10
+      if(!(c & 0x20)) { keyboard_keys[keycount++] = map[18]; } //PIN B9
+      if(!(c & 0x40)) { keyboard_keys[keycount++] = map[17]; } //PIN B8
+      if(!(c & 0x80)) { keyboard_keys[keycount++] = map[16]; } //PIN B7
+      if(!(b & 0x80)) { keyboard_keys[keycount++] = map[15]; } //PIN B6
+      if(!(b & 0x40)) { keyboard_keys[keycount++] = map[14]; } //PIN B5
+      if(!(b & 0x20)) { keyboard_keys[keycount++] = map[13]; } //PIN B4
+      if(!(b & 0x10)) { keyboard_keys[keycount++] = map[12]; } //PIN B3
+      if(!(b & 0x08)) { keyboard_keys[keycount++] = map[11]; } //PIN B2
+      if(!(b & 0x04)) { keyboard_keys[keycount++] = map[10]; } //PIN B1
+      if(!(b & 0x02)) { keyboard_keys[keycount++] = map[9]; }  //PIN A10
+      if(!(b & 0x01)) { keyboard_keys[keycount++] = map[8]; }  //PIN A9
+      if(!(d & 0x40)) { keyboard_keys[keycount++] = map[7]; }  //PIN A8
+      if(!(d & 0x20)) { keyboard_keys[keycount++] = map[6]; }  //PIN A7
+      if(!(d & 0x10)) { keyboard_keys[keycount++] = map[5]; }  //PIN A6
+      if(!(d & 0x08)) { keyboard_keys[keycount++] = map[4]; }  //PIN A5
+      if(!(d & 0x04)) { keyboard_keys[keycount++] = map[3]; }  //PIN A4
+      if(!(d & 0x02)) { keyboard_keys[keycount++] = map[2]; }  //PIN A3
+      if(!(d & 0x01)) { keyboard_keys[keycount++] = map[1]; }  //PIN A2
+      if(!(c & 0x04)) { keyboard_keys[keycount++] = map[0]; }  //PIN A1
+	  
+      if(!(d & 0x80)) {                                            //HWB PIN 
+	    //(added v1.4) Detect long or short press to toggle group or mode
+  	    uint8_t longcount = 0;        
+	    while (!(d & 0x80)) {
+          d = PIND;
+		  _delay_ms(100);      //wait for 1/10th second
+		  longcount ++;		
+		}
+		if (longcount < 15) {  //20 = 2 seconds, but slightly less is good
+		  //short press
+  	      modecount++;
+		} else {
+		  //long press
+		  groupcount++;
+		}
+	  }                        			  
+      	  
+      while(keycount < sizeof(keyboard_keys)) {
+        keyboard_keys[keycount++] = KEY_NONE;
+      }
+
+      usb_keyboard_send();
+
+      b_prev = b;
+      c_prev = c;
+      d_prev = d;
+	  
+	  if (modecount>0){
+	    switch_mode();
+	  }
+	  
+	  if (groupcount>0){
+	    switch_group();
+	  }
+
+    }
+    _delay_ms(2); // Debounce
+}
+}

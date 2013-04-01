@@ -1,0 +1,1145 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_mulhi3.o)
+                              main.o (__mulhi3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+                              LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_clear_bss.o)
+                              ../shared/trackball/trackBall.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eerd_byte_at90usb162.o)
+                              main.o (__eerd_byte_usb162)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eeupd_byte_at90usb162.o)
+                              LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o (__eeupd_byte_usb162)
+
+Allocating common symbols
+Common symbol       size              file
+
+vertSignBit         0x1               ../shared/trackball/trackBall.o
+USB_IsInitialized   0x1               LUFA/Drivers/USB/Core/USBTask.o
+ps2_y               0x1               main.o
+horizSignBit        0x1               ../shared/trackball/trackBall.o
+USB_DeviceState     0x1               LUFA/Drivers/USB/Core/USBTask.o
+USB_Device_ConfigurationNumber
+                    0x1               LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ps2_x               0x1               main.o
+gamepad_state       0x24              XBOXPad.o
+USB_Device_CurrentlySelfPowered
+                    0x1               LUFA/Drivers/USB/Core/DeviceStandardReq.o
+USB_ControlRequest  0x8               LUFA/Drivers/USB/Core/USBTask.o
+ps2_i               0x1               main.o
+ps2data             0x3               main.o
+USB_Device_RemoteWakeupEnabled
+                    0x1               LUFA/Drivers/USB/Core/DeviceStandardReq.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+ .text          0x00000000        0x0 ../shared/trackball/pstwo.o
+ .data          0x00000000        0x0 ../shared/trackball/pstwo.o
+ .bss           0x00000000        0x0 ../shared/trackball/pstwo.o
+ .text          0x00000000        0x0 ../shared/trackball/trackBall.o
+ .data          0x00000000        0x0 ../shared/trackball/trackBall.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .text.ledOn    0x00000000        0x0 main.o
+ .text.ledOff   0x00000000        0x0 main.o
+ .text          0x00000000        0x0 Descriptors.o
+ .data          0x00000000        0x0 Descriptors.o
+ .bss           0x00000000        0x0 Descriptors.o
+ .text          0x00000000        0x0 XBOXPad.o
+ .data          0x00000000        0x0 XBOXPad.o
+ .text.xbox_pad_detected
+                0x00000000        0x0 XBOXPad.o
+ .text.xbox_set_detected_callback
+                0x00000000        0x0 XBOXPad.o
+ .text.xbox_set_connect_callback
+                0x00000000        0x0 XBOXPad.o
+ .text.xbox_set_disconnect_callback
+                0x00000000        0x0 XBOXPad.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .text.USB_Device_SendRemoteWakeup
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .text.Endpoint_ConfigureEndpointTable
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .text.Endpoint_ClearEndpoints
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Control_Stream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Control_Stream_LE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Control_Stream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Control_PStream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Control_EStream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Control_EStream_LE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Control_EStream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Control_EStream_LE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Null_Stream
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Discard_Stream
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_EStream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_EStream_LE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_EStream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_EStream_LE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_PStream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_PStream_LE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Stream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Stream_LE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Stream_BE
+                0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text.USB_GetNextDescriptorOfType
+                0x00000000        0x0 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text.USB_GetNextDescriptorOfTypeBefore
+                0x00000000        0x0 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text.USB_GetNextDescriptorOfTypeAfter
+                0x00000000        0x0 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text.USB_GetNextDescriptorComp
+                0x00000000        0x0 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/Events.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/Events.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/Events.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/HostStandardReq.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/HostStandardReq.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/HostStandardReq.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Core/USBTask.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Core/USBTask.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Core/USBTask.o
+ .text          0x00000000        0x0 LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .data          0x00000000        0x0 LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .bss           0x00000000        0x0 LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text.USB_GetHIDReportItemInfo
+                0x00000000        0x0 LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text.USB_SetHIDReportItemInfo
+                0x00000000        0x0 LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text.USB_GetHIDReportSize
+                0x00000000        0x0 LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text.USB_ProcessHIDReport
+                0x00000000        0x0 LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_mulhi3.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_mulhi3.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_mulhi3.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eerd_byte_at90usb162.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eerd_byte_at90usb162.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eerd_byte_at90usb162.o)
+ .text          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eeupd_byte_at90usb162.o)
+ .data          0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eeupd_byte_at90usb162.o)
+ .bss           0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eeupd_byte_at90usb162.o)
+ .text.avr-libc
+                0x00000000        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eeupd_byte_at90usb162.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libm.a
+LOAD ../shared/trackball/pstwo.o
+LOAD ../shared/trackball/trackBall.o
+LOAD main.o
+LOAD Descriptors.o
+LOAD XBOXPad.o
+LOAD LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+LOAD LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+LOAD LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+LOAD LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+LOAD LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+LOAD LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+LOAD LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+LOAD LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+LOAD LUFA/Drivers/USB/Core/ConfigDescriptors.o
+LOAD LUFA/Drivers/USB/Core/DeviceStandardReq.o
+LOAD LUFA/Drivers/USB/Core/Events.o
+LOAD LUFA/Drivers/USB/Core/HostStandardReq.o
+LOAD LUFA/Drivers/USB/Core/USBTask.o
+LOAD LUFA/Drivers/USB/Class/Common/HIDParser.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x205a
+ *(.vectors)
+ .vectors       0x00000000       0x74 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000074       0x94 Descriptors.o
+                0x000000aa                ManufacturerString
+                0x000000a6                LanguageString
+                0x00000074                DeviceDescriptor
+                0x000000c6                ProductString
+                0x00000086                ConfigurationDescriptor
+                0x00000108                . = ALIGN (0x2)
+                0x00000108                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000108        0x0 linker stubs
+ *(.trampolines*)
+                0x00000108                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000108                __ctors_start = .
+ *(.ctors)
+                0x00000108                __ctors_end = .
+                0x00000108                __dtors_start = .
+ *(.dtors)
+                0x00000108                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000108        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+                0x00000108                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000108        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+ *(.init2)
+ *(.init3)
+ .init3         0x00000114       0x36 main.o
+                0x00000114                Bootloader_Jump_Check
+ *(.init3)
+ *(.init4)
+ .init4         0x0000014a       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+                0x0000014a                __do_copy_data
+ .init4         0x00000160       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_clear_bss.o)
+                0x00000160                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000170        0x6 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+ *(.init9)
+ *(.text)
+ .text          0x00000176        0x2 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+                0x00000176                __vector_22
+                0x00000176                __vector_28
+                0x00000176                __vector_1
+                0x00000176                __vector_24
+                0x00000176                __vector_12
+                0x00000176                __bad_interrupt
+                0x00000176                __vector_6
+                0x00000176                __vector_3
+                0x00000176                __vector_23
+                0x00000176                __vector_25
+                0x00000176                __vector_13
+                0x00000176                __vector_17
+                0x00000176                __vector_19
+                0x00000176                __vector_7
+                0x00000176                __vector_27
+                0x00000176                __vector_5
+                0x00000176                __vector_4
+                0x00000176                __vector_9
+                0x00000176                __vector_2
+                0x00000176                __vector_21
+                0x00000176                __vector_15
+                0x00000176                __vector_8
+                0x00000176                __vector_26
+                0x00000176                __vector_14
+                0x00000176                __vector_10
+                0x00000176                __vector_16
+                0x00000176                __vector_18
+                0x00000176                __vector_20
+                0x00000178                . = ALIGN (0x2)
+ *(.text.*)
+ .text.data     0x00000178       0x12 ../shared/trackball/pstwo.o
+                0x00000178                data
+ .text.clk      0x0000018a       0x12 ../shared/trackball/pstwo.o
+                0x0000018a                clk
+ .text.serout   0x0000019c       0x14 ../shared/trackball/pstwo.o
+                0x0000019c                serout
+ .text.serin    0x000001b0       0x1e ../shared/trackball/pstwo.o
+                0x000001b0                serin
+ .text.oparity  0x000001ce       0x78 ../shared/trackball/pstwo.o
+                0x000001ce                oparity
+ .text.send_packet
+                0x00000246       0xf0 ../shared/trackball/pstwo.o
+                0x00000246                send_packet
+ .text.read_packet
+                0x00000336       0x8c ../shared/trackball/pstwo.o
+                0x00000336                read_packet
+ .text.calcMovement
+                0x000003c2       0x36 ../shared/trackball/trackBall.o
+                0x000003c2                calcMovement
+ .text.readTrackBall
+                0x000003f8       0x30 ../shared/trackball/trackBall.o
+                0x000003f8                readTrackBall
+ .text.initTrackBall
+                0x00000428       0x98 ../shared/trackball/trackBall.o
+                0x00000428                initTrackBall
+ .text.Jump_To_Bootloader
+                0x000004c0       0x48 main.o
+                0x000004c0                Jump_To_Bootloader
+ .text.main     0x00000508     0x10ac main.o
+                0x00000508                main
+ .text.CALLBACK_USB_GetDescriptor
+                0x000015b4       0x5c Descriptors.o
+                0x000015b4                CALLBACK_USB_GetDescriptor
+ .text.EVENT_USB_Device_Connect
+                0x00001610       0x10 XBOXPad.o
+                0x00001610                EVENT_USB_Device_Connect
+ .text.EVENT_USB_Device_Disconnect
+                0x00001620       0x10 XBOXPad.o
+                0x00001620                EVENT_USB_Device_Disconnect
+ .text.xbox_reset_watchdog
+                0x00001630        0x4 XBOXPad.o
+                0x00001630                xbox_reset_watchdog
+ .text.xbox_reset_pad_status
+                0x00001634       0x4e XBOXPad.o
+                0x00001634                xbox_reset_pad_status
+ .text.xbox_init
+                0x00001682       0x34 XBOXPad.o
+                0x00001682                xbox_init
+ .text.HID_Task
+                0x000016b6       0x30 XBOXPad.o
+                0x000016b6                HID_Task
+ .text.xbox_send_pad_state
+                0x000016e6        0x4 XBOXPad.o
+                0x000016e6                xbox_send_pad_state
+ .text.EVENT_USB_Device_ControlRequest
+                0x000016ea       0x76 XBOXPad.o
+                0x000016ea                EVENT_USB_Device_ControlRequest
+ .text.EVENT_USB_Device_ConfigurationChanged
+                0x00001760        0x8 XBOXPad.o
+                0x00001760                EVENT_USB_Device_ConfigurationChanged
+ .text.Endpoint_ConfigureEndpoint_Prv
+                0x00001768       0x70 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x00001768                Endpoint_ConfigureEndpoint_Prv
+ .text.Endpoint_ClearStatusStage
+                0x000017d8       0x42 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x000017d8                Endpoint_ClearStatusStage
+ .text.Endpoint_WaitUntilReady
+                0x0000181a       0x64 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x0000181a                Endpoint_WaitUntilReady
+ .text.USB_Disable
+                0x0000187e       0x2a LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                0x0000187e                USB_Disable
+ .text.USB_ResetInterface
+                0x000018a8       0xc0 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                0x000018a8                USB_ResetInterface
+ .text.USB_Init
+                0x00001968       0x12 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                0x00001968                USB_Init
+ .text.USB_INT_DisableAllInterrupts
+                0x0000197a        0x6 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x0000197a                USB_INT_DisableAllInterrupts
+ .text.USB_INT_ClearAllInterrupts
+                0x00001980        0x6 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x00001980                USB_INT_ClearAllInterrupts
+ .text.__vector_11
+                0x00001986      0x162 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x00001986                __vector_11
+ .text.Endpoint_Write_Control_Stream_LE
+                0x00001ae8       0xca LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x00001ae8                Endpoint_Write_Control_Stream_LE
+ .text.Endpoint_Write_Control_PStream_LE
+                0x00001bb2       0xca LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x00001bb2                Endpoint_Write_Control_PStream_LE
+ .text.Endpoint_Write_Stream_LE
+                0x00001c7c       0xa4 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x00001c7c                Endpoint_Write_Stream_LE
+ .text.USB_Device_ProcessControlRequest
+                0x00001d20      0x2d6 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                0x00001d20                USB_Device_ProcessControlRequest
+ .text.USB_Event_Stub
+                0x00001ff6        0x2 LUFA/Drivers/USB/Core/Events.o
+                0x00001ff6                EVENT_USB_Device_WakeUp
+                0x00001ff6                USB_Event_Stub
+                0x00001ff6                EVENT_USB_Device_Suspend
+                0x00001ff6                EVENT_USB_Device_StartOfFrame
+                0x00001ff6                EVENT_USB_Device_Reset
+ .text.USB_USBTask
+                0x00001ff8       0x2a LUFA/Drivers/USB/Core/USBTask.o
+                0x00001ff8                USB_USBTask
+ .text.libgcc   0x00002022       0x24 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_mulhi3.o)
+                0x00002022                __mulhi3
+ .text.avr-libc
+                0x00002046       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eerd_byte_at90usb162.o)
+                0x00002046                __eerd_byte_usb162
+                0x00002056                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00002056        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_exit.o)
+                0x00002056                exit
+                0x00002056                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00002056        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000205a                _etext = .
+
+.data           0x00800100        0x2 load address 0x0000205a
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x1 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x00800100                USB_Device_ControlEndpointSize
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800102                . = ALIGN (0x2)
+ *fill*         0x00800101        0x1 00
+                0x00800102                _edata = .
+                0x00800102                PROVIDE (__data_end, .)
+
+.bss            0x00800102       0x43
+                0x00800102                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800102        0x2 ../shared/trackball/trackBall.o
+                0x00800102                posVert
+                0x00800103                posHoriz
+ .bss           0x00800104        0x8 XBOXPad.o
+                0x00800106                padUSBConnectEventCallback
+                0x00800104                padDetectedCallback
+                0x00800108                padUSBDisconnectEventCallback
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0080010c        0x2 ../shared/trackball/trackBall.o
+                0x0080010c                vertSignBit
+                0x0080010d                horizSignBit
+ COMMON         0x0080010e        0x6 main.o
+                0x0080010e                ps2_y
+                0x0080010f                ps2_x
+                0x00800110                ps2_i
+                0x00800111                ps2data
+ COMMON         0x00800114       0x24 XBOXPad.o
+                0x00800114                gamepad_state
+ COMMON         0x00800138        0x3 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                0x00800138                USB_Device_ConfigurationNumber
+                0x00800139                USB_Device_CurrentlySelfPowered
+                0x0080013a                USB_Device_RemoteWakeupEnabled
+ COMMON         0x0080013b        0xa LUFA/Drivers/USB/Core/USBTask.o
+                0x0080013b                USB_IsInitialized
+                0x0080013c                USB_DeviceState
+                0x0080013d                USB_ControlRequest
+                0x00800145                PROVIDE (__bss_end, .)
+                0x0000205a                __data_load_start = LOADADDR (.data)
+                0x0000205c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800145        0x4
+                0x00800145                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+ .noinit        0x00800145        0x4 main.o
+                0x00800145                Boot_Key
+                0x00800149                PROVIDE (__noinit_end, .)
+                0x00800149                _end = .
+                0x00800149                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x3b8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x50 ../shared/trackball/pstwo.o
+ .debug_aranges
+                0x00000050       0x30 ../shared/trackball/trackBall.o
+ .debug_aranges
+                0x00000080       0x40 main.o
+ .debug_aranges
+                0x000000c0       0x20 Descriptors.o
+ .debug_aranges
+                0x000000e0       0x80 XBOXPad.o
+ .debug_aranges
+                0x00000160       0x20 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_aranges
+                0x00000180       0x40 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_aranges
+                0x000001c0       0x30 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_aranges
+                0x000001f0       0x30 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_aranges
+                0x00000220       0xc8 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_aranges
+                0x000002e8       0x38 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_aranges
+                0x00000320       0x20 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_aranges
+                0x00000340       0x20 LUFA/Drivers/USB/Core/Events.o
+ .debug_aranges
+                0x00000360       0x20 LUFA/Drivers/USB/Core/USBTask.o
+ .debug_aranges
+                0x00000380       0x38 LUFA/Drivers/USB/Class/Common/HIDParser.o
+
+.debug_pubnames
+                0x00000000      0xac9
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x64 ../shared/trackball/pstwo.o
+ .debug_pubnames
+                0x00000064       0x81 ../shared/trackball/trackBall.o
+ .debug_pubnames
+                0x000000e5       0x98 main.o
+ .debug_pubnames
+                0x0000017d       0x9e Descriptors.o
+ .debug_pubnames
+                0x0000021b      0x1e1 XBOXPad.o
+ .debug_pubnames
+                0x000003fc       0x32 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_pubnames
+                0x0000042e       0xd2 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_pubnames
+                0x00000500       0x46 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_pubnames
+                0x00000546       0x62 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_pubnames
+                0x000005a8      0x2df LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_pubnames
+                0x00000887       0x9b LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_pubnames
+                0x00000922       0xa1 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_pubnames
+                0x000009c3       0x25 LUFA/Drivers/USB/Core/Events.o
+ .debug_pubnames
+                0x000009e8       0x63 LUFA/Drivers/USB/Core/USBTask.o
+ .debug_pubnames
+                0x00000a4b       0x7e LUFA/Drivers/USB/Class/Common/HIDParser.o
+
+.debug_info     0x00000000     0x5ac0
+ *(.debug_info)
+ .debug_info    0x00000000      0x2a4 ../shared/trackball/pstwo.o
+ .debug_info    0x000002a4      0x168 ../shared/trackball/trackBall.o
+ .debug_info    0x0000040c      0xb57 main.o
+ .debug_info    0x00000f63      0x578 Descriptors.o
+ .debug_info    0x000014db      0x5ef XBOXPad.o
+ .debug_info    0x00001aca       0xc8 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_info    0x00001b92      0x608 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_info    0x0000219a       0x65 LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .debug_info    0x000021ff       0x65 LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .debug_info    0x00002264      0x63e LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_info    0x000028a2      0x529 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_info    0x00002dcb     0x1574 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_info    0x0000433f       0x65 LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .debug_info    0x000043a4      0x34f LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_info    0x000046f3      0x9f1 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_info    0x000050e4       0x7d LUFA/Drivers/USB/Core/Events.o
+ .debug_info    0x00005161        0x0 LUFA/Drivers/USB/Core/HostStandardReq.o
+ .debug_info    0x00005161      0x26f LUFA/Drivers/USB/Core/USBTask.o
+ .debug_info    0x000053d0      0x6f0 LUFA/Drivers/USB/Class/Common/HIDParser.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000     0x1737
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x16f ../shared/trackball/pstwo.o
+ .debug_abbrev  0x0000016f       0xb1 ../shared/trackball/trackBall.o
+ .debug_abbrev  0x00000220      0x1f4 main.o
+ .debug_abbrev  0x00000414      0x156 Descriptors.o
+ .debug_abbrev  0x0000056a      0x21b XBOXPad.o
+ .debug_abbrev  0x00000785       0x7b LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_abbrev  0x00000800      0x20e LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_abbrev  0x00000a0e       0x35 LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .debug_abbrev  0x00000a43       0x35 LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .debug_abbrev  0x00000a78      0x1df LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_abbrev  0x00000c57      0x19b LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_abbrev  0x00000df2      0x1d7 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_abbrev  0x00000fc9       0x35 LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .debug_abbrev  0x00000ffe      0x15e LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_abbrev  0x0000115c      0x22f LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_abbrev  0x0000138b       0x4c LUFA/Drivers/USB/Core/Events.o
+ .debug_abbrev  0x000013d7        0x1 LUFA/Drivers/USB/Core/HostStandardReq.o
+ .debug_abbrev  0x000013d8      0x176 LUFA/Drivers/USB/Core/USBTask.o
+ .debug_abbrev  0x0000154e      0x1e9 LUFA/Drivers/USB/Class/Common/HIDParser.o
+
+.debug_line     0x00000000     0xac93
+ *(.debug_line)
+ .debug_line    0x00000000      0x485 ../shared/trackball/pstwo.o
+ .debug_line    0x00000485      0x35f ../shared/trackball/trackBall.o
+ .debug_line    0x000007e4     0x1a96 main.o
+ .debug_line    0x0000227a      0xaea Descriptors.o
+ .debug_line    0x00002d64      0xdaa XBOXPad.o
+ .debug_line    0x00003b0e      0x80f LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_line    0x0000431d      0xaa3 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_line    0x00004dc0      0x373 LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .debug_line    0x00005133      0x373 LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .debug_line    0x000054a6      0x80a LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_line    0x00005cb0      0x9c3 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_line    0x00006673     0x1d1a LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_line    0x0000838d      0x379 LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .debug_line    0x00008706      0x7ba LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_line    0x00008ec0      0xa4d LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_line    0x0000990d      0x368 LUFA/Drivers/USB/Core/Events.o
+ .debug_line    0x00009c75       0x5c LUFA/Drivers/USB/Core/HostStandardReq.o
+ .debug_line    0x00009cd1      0x6df LUFA/Drivers/USB/Core/USBTask.o
+ .debug_line    0x0000a3b0      0x8e3 LUFA/Drivers/USB/Class/Common/HIDParser.o
+
+.debug_frame    0x00000000      0x590
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x80 ../shared/trackball/pstwo.o
+ .debug_frame   0x00000080       0x40 ../shared/trackball/trackBall.o
+ .debug_frame   0x000000c0       0x60 main.o
+ .debug_frame   0x00000120       0x20 Descriptors.o
+ .debug_frame   0x00000140       0xe0 XBOXPad.o
+ .debug_frame   0x00000220       0x20 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_frame   0x00000240       0x60 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_frame   0x000002a0       0x40 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_frame   0x000002e0       0x40 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_frame   0x00000320      0x170 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_frame   0x00000490       0x50 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_frame   0x000004e0       0x20 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_frame   0x00000500       0x20 LUFA/Drivers/USB/Core/Events.o
+ .debug_frame   0x00000520       0x20 LUFA/Drivers/USB/Core/USBTask.o
+ .debug_frame   0x00000540       0x50 LUFA/Drivers/USB/Class/Common/HIDParser.o
+
+.debug_str      0x00000000     0x26d6
+ *(.debug_str)
+ .debug_str     0x00000000      0x142 ../shared/trackball/pstwo.o
+                                0x188 (size before relaxing)
+ .debug_str     0x00000142       0x9d ../shared/trackball/trackBall.o
+                                0x16c (size before relaxing)
+ .debug_str     0x000001df      0x65e main.o
+                                0x7ba (size before relaxing)
+ .debug_str     0x0000083d      0x413 Descriptors.o
+                                0x561 (size before relaxing)
+ .debug_str     0x00000c50      0x3b3 XBOXPad.o
+                                0x540 (size before relaxing)
+ .debug_str     0x00001003       0x71 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+                                0x137 (size before relaxing)
+ .debug_str     0x00001074      0x2e6 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                0x580 (size before relaxing)
+ .debug_str     0x0000135a       0x27 LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+                                 0xe7 (size before relaxing)
+ .debug_str     0x00001381       0x27 LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+                                 0xe7 (size before relaxing)
+ .debug_str     0x000013a8      0x217 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                0x61a (size before relaxing)
+ .debug_str     0x000015bf       0xd0 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                0x3b8 (size before relaxing)
+ .debug_str     0x0000168f      0x4fe LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                0x784 (size before relaxing)
+ .debug_str     0x00001b8d       0x2d LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+                                 0xed (size before relaxing)
+ .debug_str     0x00001bba      0x217 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+                                0x305 (size before relaxing)
+ .debug_str     0x00001dd1      0x3e8 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                0x82c (size before relaxing)
+ .debug_str     0x000021b9       0x2e LUFA/Drivers/USB/Core/Events.o
+                                 0xee (size before relaxing)
+ .debug_str     0x000021e7       0x64 LUFA/Drivers/USB/Core/USBTask.o
+                                0x2a5 (size before relaxing)
+ .debug_str     0x0000224b      0x48b LUFA/Drivers/USB/Class/Common/HIDParser.o
+                                0x5dc (size before relaxing)
+
+.debug_loc      0x00000000     0x2d67
+ *(.debug_loc)
+ .debug_loc     0x00000000       0xa0 ../shared/trackball/pstwo.o
+ .debug_loc     0x000000a0       0x50 ../shared/trackball/trackBall.o
+ .debug_loc     0x000000f0      0x6d4 main.o
+ .debug_loc     0x000007c4      0x160 Descriptors.o
+ .debug_loc     0x00000924       0x1e XBOXPad.o
+ .debug_loc     0x00000942      0x11c LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_loc     0x00000a5e       0x62 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_loc     0x00000ac0       0x2b LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_loc     0x00000aeb     0x187a LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_loc     0x00002365      0x2c7 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_loc     0x0000262c      0x25a LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_loc     0x00002886      0x4e1 LUFA/Drivers/USB/Class/Common/HIDParser.o
+
+.debug_macinfo  0x00000000    0xc13de
+ *(.debug_macinfo)
+ .debug_macinfo
+                0x00000000     0x4956 ../shared/trackball/pstwo.o
+ .debug_macinfo
+                0x00004956     0x5047 ../shared/trackball/trackBall.o
+ .debug_macinfo
+                0x0000999d    0x1115a main.o
+ .debug_macinfo
+                0x0001aaf7    0x104d9 Descriptors.o
+ .debug_macinfo
+                0x0002afd0    0x10df5 XBOXPad.o
+ .debug_macinfo
+                0x0003bdc5     0x9fc6 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_macinfo
+                0x00045d8b     0x9fce LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_macinfo
+                0x0004fd59     0x952f LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .debug_macinfo
+                0x00059288     0x952f LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .debug_macinfo
+                0x000627b7     0x9fc9 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_macinfo
+                0x0006c780     0x9fba LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_macinfo
+                0x0007673a     0xbea5 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_macinfo
+                0x000825df     0x952f LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .debug_macinfo
+                0x0008bb0e     0xa14a LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_macinfo
+                0x00095c58     0x9fa1 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_macinfo
+                0x0009fbf9     0x9561 LUFA/Drivers/USB/Core/Events.o
+ .debug_macinfo
+                0x000a915a      0xc5e LUFA/Drivers/USB/Core/HostStandardReq.o
+ .debug_macinfo
+                0x000a9db8     0x9fce LUFA/Drivers/USB/Core/USBTask.o
+ .debug_macinfo
+                0x000b3d86     0xd658 LUFA/Drivers/USB/Class/Common/HIDParser.o
+OUTPUT(KADE-XBOX-CUSTOM-T.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000      0x668
+ .debug_ranges  0x00000000       0xc0 ../shared/trackball/pstwo.o
+ .debug_ranges  0x000000c0       0x28 ../shared/trackball/trackBall.o
+ .debug_ranges  0x000000e8       0xc8 main.o
+ .debug_ranges  0x000001b0       0x18 Descriptors.o
+ .debug_ranges  0x000001c8       0x78 XBOXPad.o
+ .debug_ranges  0x00000240       0x18 LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_ranges  0x00000258       0x50 LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_ranges  0x000002a8       0x40 LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_ranges  0x000002e8       0x28 LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_ranges  0x00000310      0x1e0 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_ranges  0x000004f0       0x30 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_ranges  0x00000520       0x78 LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_ranges  0x00000598       0x18 LUFA/Drivers/USB/Core/Events.o
+ .debug_ranges  0x000005b0       0x18 LUFA/Drivers/USB/Core/USBTask.o
+ .debug_ranges  0x000005c8       0xa0 LUFA/Drivers/USB/Class/Common/HIDParser.o
+
+Cross Reference Table
+
+Symbol                                            File
+Boot_Key                                          main.o
+Bootloader_Jump_Check                             main.o
+CALLBACK_HIDParser_FilterHIDReportItem            LUFA/Drivers/USB/Class/Common/HIDParser.o
+CALLBACK_USB_GetDescriptor                        Descriptors.o
+                                                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ConfigurationDescriptor                           Descriptors.o
+DeviceDescriptor                                  Descriptors.o
+EVENT_USB_Device_ConfigurationChanged             XBOXPad.o
+                                                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+EVENT_USB_Device_Connect                          XBOXPad.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+EVENT_USB_Device_ControlRequest                   XBOXPad.o
+                                                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+EVENT_USB_Device_Disconnect                       XBOXPad.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+EVENT_USB_Device_Reset                            LUFA/Drivers/USB/Core/Events.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+EVENT_USB_Device_StartOfFrame                     LUFA/Drivers/USB/Core/Events.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+EVENT_USB_Device_Suspend                          LUFA/Drivers/USB/Core/Events.o
+EVENT_USB_Device_WakeUp                           LUFA/Drivers/USB/Core/Events.o
+Endpoint_ClearEndpoints                           LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+Endpoint_ClearStatusStage                         LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+Endpoint_ConfigureEndpointTable                   LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+Endpoint_ConfigureEndpoint_Prv                    LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  XBOXPad.o
+Endpoint_Discard_Stream                           LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Null_Stream                              LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Control_EStream_BE                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Control_EStream_LE                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Control_Stream_BE                   LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Control_Stream_LE                   LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_EStream_BE                          LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_EStream_LE                          LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Stream_BE                           LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Stream_LE                           LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_WaitUntilReady                           LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_EStream_BE                 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_EStream_LE                 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_PStream_BE                 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_PStream_LE                 LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+Endpoint_Write_Control_Stream_BE                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_Stream_LE                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  XBOXPad.o
+Endpoint_Write_EStream_BE                         LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_EStream_LE                         LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_PStream_BE                         LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_PStream_LE                         LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Stream_BE                          LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Stream_LE                          LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  XBOXPad.o
+HID_Task                                          XBOXPad.o
+Jump_To_Bootloader                                main.o
+LanguageString                                    Descriptors.o
+ManufacturerString                                Descriptors.o
+ProductString                                     Descriptors.o
+USB_ControlRequest                                LUFA/Drivers/USB/Core/USBTask.o
+                                                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  XBOXPad.o
+USB_DeviceState                                   LUFA/Drivers/USB/Core/USBTask.o
+                                                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  XBOXPad.o
+USB_Device_ConfigurationNumber                    LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_Device_ControlEndpointSize                    LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_Device_CurrentlySelfPowered                   LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_Device_ProcessControlRequest                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  LUFA/Drivers/USB/Core/USBTask.o
+USB_Device_RemoteWakeupEnabled                    LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_Device_SendRemoteWakeup                       LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+USB_Disable                                       LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  main.o
+USB_Event_Stub                                    LUFA/Drivers/USB/Core/Events.o
+USB_GetHIDReportItemInfo                          LUFA/Drivers/USB/Class/Common/HIDParser.o
+USB_GetHIDReportSize                              LUFA/Drivers/USB/Class/Common/HIDParser.o
+USB_GetNextDescriptorComp                         LUFA/Drivers/USB/Core/ConfigDescriptors.o
+USB_GetNextDescriptorOfType                       LUFA/Drivers/USB/Core/ConfigDescriptors.o
+USB_GetNextDescriptorOfTypeAfter                  LUFA/Drivers/USB/Core/ConfigDescriptors.o
+USB_GetNextDescriptorOfTypeBefore                 LUFA/Drivers/USB/Core/ConfigDescriptors.o
+USB_INT_ClearAllInterrupts                        LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_INT_DisableAllInterrupts                      LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_Init                                          LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  XBOXPad.o
+USB_IsInitialized                                 LUFA/Drivers/USB/Core/USBTask.o
+                                                  LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_ProcessHIDReport                              LUFA/Drivers/USB/Class/Common/HIDParser.o
+USB_ResetInterface                                LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_SetHIDReportItemInfo                          LUFA/Drivers/USB/Class/Common/HIDParser.o
+USB_USBTask                                       LUFA/Drivers/USB/Core/USBTask.o
+                                                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  XBOXPad.o
+__bad_interrupt                                   c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__bss_end                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_clear_bss.o)
+__bss_start                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_clear_bss.o)
+__data_end                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+__data_load_start                                 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+__data_start                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+__do_clear_bss                                    c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_clear_bss.o)
+                                                  LUFA/Drivers/USB/Core/USBTask.o
+                                                  LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  XBOXPad.o
+                                                  main.o
+                                                  ../shared/trackball/trackBall.o
+__do_copy_data                                    c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_copy_data.o)
+                                                  LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+__eerd_byte_usb162                                c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eerd_byte_at90usb162.o)
+                                                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  main.o
+__eeupd_byte_usb162                               c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eeupd_byte_at90usb162.o)
+                                                  LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+__eeupd_r18_usb162                                c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35\libc.a(eeupd_byte_at90usb162.o)
+__heap_end                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__init                                            c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__mulhi3                                          c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_mulhi3.o)
+                                                  LUFA/Drivers/USB/Class/Common/HIDParser.o
+                                                  main.o
+__stack                                           c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_1                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_10                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_11                                       LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_12                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_13                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_14                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_15                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_16                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_17                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_18                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_19                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_2                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_20                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_21                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_22                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_23                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_24                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_25                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_26                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_27                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_28                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_3                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_4                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_5                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_6                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_7                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_8                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_9                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vector_default                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+__vectors                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+_exit                                             c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_exit.o)
+calcMovement                                      ../shared/trackball/trackBall.o
+                                                  main.o
+clk                                               ../shared/trackball/pstwo.o
+data                                              ../shared/trackball/pstwo.o
+exit                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr35\libgcc.a(_exit.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+gamepad_state                                     XBOXPad.o
+                                                  main.o
+horizSignBit                                      ../shared/trackball/trackBall.o
+initTrackBall                                     ../shared/trackball/trackBall.o
+                                                  main.o
+ledOff                                            main.o
+ledOn                                             main.o
+main                                              main.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr35/crtusb162.o
+oparity                                           ../shared/trackball/pstwo.o
+padDetectedCallback                               XBOXPad.o
+padUSBConnectEventCallback                        XBOXPad.o
+padUSBDisconnectEventCallback                     XBOXPad.o
+posHoriz                                          ../shared/trackball/trackBall.o
+posVert                                           ../shared/trackball/trackBall.o
+ps2_i                                             main.o
+                                                  ../shared/trackball/trackBall.o
+ps2_x                                             main.o
+                                                  ../shared/trackball/trackBall.o
+ps2_y                                             main.o
+                                                  ../shared/trackball/trackBall.o
+ps2data                                           main.o
+                                                  ../shared/trackball/trackBall.o
+readTrackBall                                     ../shared/trackball/trackBall.o
+                                                  main.o
+read_packet                                       ../shared/trackball/pstwo.o
+                                                  ../shared/trackball/trackBall.o
+send_packet                                       ../shared/trackball/pstwo.o
+                                                  ../shared/trackball/trackBall.o
+serin                                             ../shared/trackball/pstwo.o
+serout                                            ../shared/trackball/pstwo.o
+vertSignBit                                       ../shared/trackball/trackBall.o
+xbox_init                                         XBOXPad.o
+                                                  main.o
+xbox_pad_detected                                 XBOXPad.o
+xbox_reset_pad_status                             XBOXPad.o
+xbox_reset_watchdog                               XBOXPad.o
+                                                  main.o
+xbox_send_pad_state                               XBOXPad.o
+                                                  main.o
+xbox_set_connect_callback                         XBOXPad.o
+xbox_set_detected_callback                        XBOXPad.o
+xbox_set_disconnect_callback                      XBOXPad.o

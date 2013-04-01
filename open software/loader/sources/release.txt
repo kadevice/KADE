@@ -1,0 +1,264 @@
+KADE Loader Release Notes
+
+v1.0.1.0 30/03/2013
+  Improved driver installation using Driver Package Installer (DPInst) and wizard notifies user of driver installation progress.
+  Improved autodetection of AVR on application startup
+
+v1.0.0.0 02/03/2013 *** Public Release ***
+  Public release of software.  Version number set to v1.0.0.0
+  Location of update file moved from degenatrons site to kadevice site
+  Updated the programming instructions for KADE miniArcade and included an animated GIF to show how to put AVR into program mode.
+
+v0.1.4.4 22/02/2013
+  KADE board options renamed as:
+    KADE miniArcade (at90usb162)
+    KADE miniArcade (atmega32u2)
+  The beta Arduino board has been renamed as:
+    KADEuino (atmega328)
+  Keyboard tester updated to show 'Right-Upper Flipper' pinball function for US keyboards.
+
+v0.1.4.3 20/02/2013
+  Public and Beta versions of Loader made available. Beta users will have access to new bleeding edge developments. Public users will have a stable version (several releases behind the Beta).
+  New users are given the public setup program. An advanced menu can be used to switch loader to receive Beta updates.
+  All boards and firmware options are flagged as publically available (or Beta only). KADE set for public release.
+  All existing users are flagged as Public users.  Beta testers will need to switch to Beta mode.
+  Trackball options are made available in Beta.
+  Added help menu links for KADE web site and KADE forums
+
+v0.1.4.2 31/01/2013
+  Exclude Windows DLL's when building executable - "powrprof.dll" and "mswsock.dll"
+
+v0.1.4.1 31/01/2013
+  Automatic detection of KADE device when inserted into USB port and automatic selection of the
+    correct board option (available 16k and 32k AVR's).  Also detect on application start.
+  USB activity and detection messages are displayed on the bottom-right of loader screen.
+  Remove flashing LED's from the EZ-program firmware so USB device is immediately recognised when plugged.
+  Reduce duration of LED flash on startup to 1/2 second across all firmwares
+
+v0.1.4.0 30/01/2013
+  "Keyboard Input Tester" utility added to new "Utility" menu.
+  Option to test keyboard after successful programming of a keyboard type firmware.
+  Add trackball available setting to firmware database
+
+v0.1.3.9 19/01/2013
+  Improved third party device support:
+    Added latest version of PS360+ firmware (v1.3 released on 11/01/2013)
+    Added bootloadHID programmer
+    Added DualStrike hardware to the board options
+    Added DualStrike official firmware version 3.3.1 (and SMD version) with documentation
+
+v0.1.3.8 - 12/01/2013
+  Update KADE pin reference diagram to show new PCB
+  Refresh shifted pins in dropdown list after disabling then enabling connected PS/2 device. 
+  Add version info to PS360+ firmware
+
+v0.1.3.7 - 11/01/2013
+  Added GNU/GPL V3 license agreement to installer which must be accepted before install.
+  License file added to help menu and license info added to "About..." option.
+
+v0.1.3.6 - 10/01/2013
+  New menu option for "Load HEX File..." makes it possible to program other firmware to the selected board.
+  Add AVR drivers folder and help menu shortcut (useful if manual installation is necessary)
+  Added latest version of PS360+ firmware (v1.23 released on 05/01/2013)
+
+v0.1.3.5 - 04/01/2013
+  on xbox, initialise trackball before waiting for pad detection/acknowledgement
+    and vary debounce/timing when mouse or trackball connected e.g. Mouse is super
+    responsive and needs less time to collect data.  Trackball is the opposite.
+
+v0.1.3.4 - 28/12/2012
+  Minor bug fixes:
+    Fix B10 pin behaviour in custom PSX firmware - pin needed to be initialised.
+    Only display trackball options when supported by selected firmware
+    Add mouse control to right analog stick in xbox firmware
+    Slight adjustment to default trackball scaling
+
+v0.1.3.3 - 23/12/2012
+  Disable any reserved lines in customisation screen (e.g. 5 reserved wires for PSX)
+  Allow for quick key entry in custom keyboard encoder customisation.
+  Config button added to device inputs popup in customisation (as a shortcut). 
+
+v0.1.3.2 - 21/12/2012
+  Trackball, Mouse and Spinner device configuration added to peripherals menu.
+  Axis and button assignments for trackball devices added to customisation
+  Add trackball feature to Xbox, PS3 and USB/HID joystick firmwares
+  Device compatibility information link added to customising.
+  Trackball PS/2 wiring included in generated maps
+  Added firmware for customisable USB keyboard encoder with 108 key library.
+  Custom mapping and firmware added for pinball
+  Autofire timing added to customisation, defaults to 15ms delay, can be set between 5ms and 250ms
+  Improved responsiveness by reducing debounce across all encoder firmwares (from 10ms down to 2ms). Not that we needed to improve it.
+  Common functions are made generic and are included as standard with all encoder firmwares.  This improvement makes it easier to roll out new features across all firmwares.
+  Add right analog stick functions to PS3 and USB/HID Joystick
+
+v0.1.3.1 - 03/12/2012
+  Use WDK toolkit for more reliable driver installation.
+  Install x64 drivers too.  
+
+v0.1.3.0 - 02/12/2012
+  KADE Loader is now entirely free and all features are applied by default
+  Removed the registration process, exe protection and nag screens
+  About box now has a simple donate button for folks who want to help the project
+
+v0.1.2.9 - 08/11/2012
+  Added "Burn EZ-Program firmware" to the advanced menu.
+  Remember the last used board and use as default on startup.
+  Revised KADE instructions page and added pin reference diagrams.
+  Terminate loader process when upgrading - before directing to site
+  Updated PSX wiring diagram
+
+v0.1.2.8 - 30/10/2012
+  Minor tweaks to licenses
+
+v0.1.2.7 - 26/10/2012
+  Software licenses added. A splash screen now appears on application start and trial mode is set as default until product is unlocked.
+  Added unlock option and link to payment page
+  Remove standard/premium toggle (for testing) from advanced menu
+  Added registration info to "About" menu
+
+v0.1.2.6 - 20/10/2012
+  Added PS360+ Hardware to the board options
+  Added support for loading PS360+ official firmware version 1.2
+
+v0.1.2.5 - 14/10/2012
+  Added 9 advanced combo functions to xbox
+  Added combo help popup and HTML document to describe the various combos
+
+v0.1.2.4 - 12/10/2012
+  "KADE Program Mode" is now a mappable function. 
+  Added program mode to some firmwares (xbox, ps3 and usb joy).
+  KADE now auto-starts after programming firmware
+  MAME functions added
+  MAME presets for player 1, player 2, players 1&2 combined, players 3&4 combined
+
+v0.1.2.3 - 07/10/2012 
+  Playstation 1 and 2 (PSX) custom firmware and maps added
+  Reserved pins added to database (e.g. PSX wiring)
+  Original PSX firmware (minimus and arduino) removed
+  Customisable notes added to HTML templates
+  PSX wiring image added to HTML resources folder
+  Indicate when save is disabled and add donate button to custom mapping page
+
+v0.1.2.2 - 05/10/2012 
+  PS3 custom firmware and custom maps added
+  USB HID Joystick firmware and custom maps added
+  Original PS3 and USB Joy firmwares removed
+
+v0.1.2.1 - 04/10/2012 
+  Corrected the default Y-axis of analog sticks
+  Default import/export folder set to user documents rather than system root
+  Autofire-X and Autofire-Y added to xbox
+  Added CoinOPS System Switcher (white+black) to xbox
+  Added Donate to about box
+
+v0.1.2.0 - 03/10/2012 
+  Import/Export of custom maps added
+  HTML user mappings generated automatically
+  original xbox firmware removed 
+  xbox custom firmware enhanced
+  2-way restrict for both horizonal and vertical
+  Autofire-A and Autofire B added to custom mapping  
+  Delay timing is made precise. Minimum delay set to 3 seconds.
+  Debug/log file removed
+  Donate popup added in standard mode
+  
+v0.1.1.9 - 27/09/2012  
+  Implement external power delay in custom mappings
+  Further improvements to 4-way restrict logic
+  2-way restrict added (for completeness)
+  Disable the shift function assignment in customising when not relevant
+  Read default and preset mappings from database
+  Standard and Premium can be toggled via menu for testing.
+  Standard has default mapping only.  Save option is disabled.
+
+v0.1.1.8 - 24/09/2012  
+  Improved the 4-way restrict logic	
+  Shift LED (output) can be assigned in custom mappings	     
+
+v0.1.1.7 - 23/09/2012
+  Settings added to custom mapping builder:
+  For xbox: 4 way restrict and disable start+back
+  Eeprom flash added when programming custom firmware
+  Add xbox custom firmware
+  New KADE logo and icons
+
+v0.1.1.6 - 21/09/2012
+  Custom mapping builder added for use with custom firmwares
+
+v0.1.1.5 - 20/09/2012
+  Added update check on startup with option to switch it off
+  4x4 Keypad Matrix added as work in progress
+  Keypad category and icon added
+  Organised HTML documentation into sub folders
+
+v0.1.1.4 - 17/09/2012  PSX firmware and mapping added
+  LED sequence demo added
+  version.txt file added
+  
+v0.1.1.3 - 11/09/2012
+  Flash sequence added to all firmwares and shown when KADE initialises
+  Replace transparent icons, they don't work well on XP
+
+v0.1.1.2 - 10/09/2012
+  Replace PDF Reader with HTML container and add HTML mapping tables.  
+  Remove PDF documents.
+  Desktop and application icons added.
+  Add print and print preview options.
+  
+v0.1.1.1 - 08/09/2012
+  Arduino Serial/COM port detection added
+  Fix Centering of right analog stick on Xbox
+  Invert Y axis mode made sticky on Xbox
+  
+v0.1.1.0 - 07/09/2012
+  Update made available to test "check for updates"
+  
+v0.1.0.9 - 07/09/2012
+  Creation of setup and update programs.
+  Check for updates added.
+  Change location of binaries, data and resources
+  Use subprocess rather than shell to invoke the programmers
+  Prevent rapid clicking by adding short delay (1/4 sec) after each selection.
+  
+v0.1.0.8 - 05/09/2012
+  Test Mode added to advanced menu to enable test firmwares and test hex added to database
+  Category icons added to firmware list.
+  Added LED blink tests (as work in progress).
+  Work in progress firmwares appear in grey with (WIP) added.
+  Erase device button removed. Erase can be actioned via menu
+  Selected line made bold for better emphasis
+  Show busy cursor when doing stuff 
+  
+v0.1.0.7 - 03/09/2012
+  Category added to firmware as keyboard, console or joystick
+  Added kade-mame, kade-pin and kade-bas keyboard encoders
+  
+v0.1.0.6 - 03/09/2012
+  Detect adobe reader not installed and offer to download it.
+  
+v0.1.0.5 - 02/09/2012
+  Config option added to menu.  Arduino can be configured e.g.
+  Switch between m328 and m168 chip for testing.
+  Arduino Pro Mini fully supported
+  Supported boards and board families defined in DB
+  Logging added. "View Log" option added to help menu.
+  
+v0.1.0.4 - 30/08/2012
+  Added support for atmega32u2 (Minimus 32)
+  Updated dfu-programmer to version 0.54
+  AVRDude programmer added
+  
+v0.1.0.3 - 30/08/2012
+  Run in Window - not console.
+  Pipe response from dfu-programmers rather than stderr
+  
+v0.1.0.2 - 30/08/2012
+  Dependendant libraries for dfu-programmer added.
+  Minimus drivers included in package.
+  
+v0.1.0.1 - 30/08/2012
+  PS3 and USBHID Joystick firmware and documentation added.
+  Release notes added.
+  
+v0.1.0.0 - 28/08/2012
+  Initial release of KADE loader

@@ -1,0 +1,349 @@
+Playstation 2 (Dual Shock) controller protocol notes
+====================================================
+There are many sources for information on the basics of the
+Playstation controller protocol. There is frustratingly little,
+however, in the way of comprehensive documentation for the
+controller's full command set.
+
+This document is a rather loose collection of reverse-engineering
+notes, documenting a larger subset of the PS2 and Dual Shock
+protocols than I've seen elsewhere. The reader should already be
+familiar with the basics of the Playstation controller protocol.
+This document has three primary sources:
+
+  - Publicly available documents such as Playstation.txt
+  
+  - Traces from a homebrew PS2 controller/memory port sniffer
+  
+  - Interactively experimenting with a controller connected
+    to both the above port sniffer and an arbitrary packet
+    generator.
+	
+Since the Playstation always transmits and receives simultaneously,
+this document uses TX/RX notation, where "TX" is the hexidecimal
+command byte being transmitted to the controller and "RX" is the
+hexadecimal response byte. A "|" character is often used to separate
+the header from a command's payload, but it has no electrical
+significance.
+
+--Micah Dowty <micah@navi.cx>
+
+---------------------
+General packet format
+---------------------
+
+   01/     High nybble is device type, low nybble is port number
+      ff   N/A (Always FF)
+	  
+   42/     Command byte
+      41   High nybble is device mode/status, low nybble is the
+           number of 16-bit words of command-specific data.
+		   
+   00/     N/A (Always 0)
+      5a   N/A (Always 5a. End-of-header?)
+	  
+   .. command-specific data ..
+   (Last byte is not ACK'ed)
+   
+The byte 0x5A seems to be used as padding in several situations.
+Besides end-of-header, it seems to be sent by the PS2 when the
+controller (via the low nybble of the second response byte) indicates
+it has more data to reply with, but the PS2 has no more parameter
+data to send.
+
+Device modes:
+  0x4: Digital
+  0x7: Dual shock
+  0xF: Escape
+  
+Note that the command byte and the mode/length byte are transferred
+simultaneously. This means that the length of the reply cannot directly
+depend on the command you just sent! This is probably the reason why
+all escape-mode commands are the same length: the reply length can be
+calculated using only the current mode, without any need to know which
+command is being replied to.
+
+This means that the data dependencies between the command and the reply
+are quite small. The controller needs to process the command byte by the
+time the first command-specific reply byte is sent, and it needs to
+validate each byte in the header just enough to know whether that byte
+gets to be ACK'ed. There are no sub-byte data dependencies, and there is
+an entire byte of slack between the command and the command-specific
+data.
+
+-----------------
+Packet reference:
+-----------------
+
+0x40 Initialize pressure sensor
+===============================
+
+* Only ACK'ed when the controller is in escape mode (0xF)
+
+01/ff 40/f3 00/5a | 00/00 02/00 00/02 00/00 00/00 00/5a
+
+This command sets up parameters for a single pressure-sensitive
+button. Note that it is not required in order to use pressure
+sensitive buttons, and that this command by itself will not
+enable them. You still need to use command 0x4f to add them
+to the controller's results packet.
+
+Command data:
+  0. Button number (0x00 - 0x0b, in the same order that
+     the buttons are listed in the response packet)
+  1. 0x02 (?)
+  2. 0x00 (?)
+  3. 0x00 (?)
+  4. 0x00 (?)
+  5. 0x00 (?)
+  
+Response data:
+  0. 0x00 (?)
+  1. 0x00 (?)
+  2. 0x02 (?)
+  3. 0x00 (?)
+  4. 0x00 (?)
+  5. 0x5a (Padding?)
+  
+0x41 Get available polling results
+==================================
+
+* Only ACK'ed when the controller is in escape mode (0xF)
+
+01/ff 41/f3 00/5a | 5a/ff 5a/ff 5a/03 5a/00 5a/00 5a/5a
+
+Command data:
+  - None (Padded with 0x5a)
+  
+Response data:
+  - In digital mode, returns all zeroes
+  - In analog mode:
+  
+      0-4. Bitfield of available polling results.
+           (This bitfield can be given verbatim to
+            command 0x4f to enable all polling results)
+			
+      5. Always 0x5a (padding)
+	  
+0x42 Controller poll (Read buttons/axes, write actuators)
+=========================================================
+
+* Valid in escape (0xf) and non-escape modes
+
+01/ff 42/41 00/5a | 00/ff 00/ff
+
+Side effects:
+  Exits escape mode
+  
+Command data:
+  6 bytes of Actuator data (DualShock mode only)
+  See Command 0x4d for details on actuator data.
+  
+Response data:
+  The length of the response varies, depending on
+  the controller mode. The following data bytes are
+  available. The actual set of data sent during each
+  poll is controlled by Command 0x4f.
+  
+  Digital mode:
+     0. buttons (1)
+     1. buttons (2)
+	 
+  DualShock mode: (enabled by default)
+     2. right_analog_x
+     3. right_analog_y
+     4. left_analog_x
+     5. left_analog_y
+	 
+  DualShock mode: (disabled by default)
+     6. right_pressure
+     7. left_pressure
+     8. up_pressure
+     9. down_pressure
+     10. triangle_pressure
+     11. circle_pressure
+     12. cross_pressure
+     13. square_pressure
+     14. l1_pressure
+     15. r1_pressure
+     16. l2_pressure
+     17. r2_pressure
+	 
+0x43 Controller Read and Escape
+===============================
+
+* Valid in escape (0xf) and non-escape modes
+
+01/ff 43/41 00/5a | 01/ff 00/ff
+
+Command data:
+  0. 00 to exit escape mode, 01 to enter escape mode
+  1. Always zero?
+  
+Response data:
+  (Same as comand 0x42)
+  
+Hypothesis:
+ 
+  Command 0x43 is a controller read, like command 0x42, but the first
+PSX->controller byte indicates whether to put the controller into an
+escape mode. In escape mode, the controller's mode is reported as 0xF
+and several additional commands are available.
+
+0x44 Set major mode (DualShock/Digital)
+=======================================
+
+* Only ACK'ed when the controller is in escape mode (0xF)
+
+01/ff 44/f3 00/5a | 01/00 03/00 00/00 00/00 00/00 00/00
+
+Side effects:
+  - Disables pressure-sensitive buttons.
+  - When DualShock mode is enabled, the Analog light goes on.
+  - When DualShock mode is disabled, the Analog light goes off.
+  
+  WARNING: There is a watchdog timer on DualShock mode.
+           If the controller doesn't see the PSX polling
+           (Command 0x42) for a few seconds, it switches
+           back to Digital mode.
+		   
+Command data:
+  0. 0x01 to set DualShock mode, 0x00 to set Digital mode  
+  1. 0x03 (?)
+  2. 0x00 (?)
+  3. 0x00 (?)
+  4. 0x00 (?)
+  5. 0x00 (?)
+  
+Response data:
+  Always zero?
+  
+0x45 Read extended status 1
+===========================
+
+* Only ACK'ed when the controller is in escape mode (0xF)
+
+01/ff 45/f3 00/5a | 5a/03 5a/02 5a/01 5a/02 5a/01 5a/00
+
+Command data:
+  - None (Padded with 0x5a)
+  
+Response data:
+  - 0x03 (?) on Dual Shock controller, 0x01 (?) for Guitar Hero controller
+  - 0x02 (?)
+  - 0x01 if the "Analog" light is on, 0x00 if it's off.
+  - 0x02 (?)
+  - 0x01 (?)
+  - 0x00 (?)
+  
+0x46 Read constant 1
+====================
+
+* Only ACK'ed when the controller is in escape mode (0xF)
+
+01/ff 46/f3 00/5a | 00/00 5a/00 5a/01 5a/02 5a/00 5a/0a
+01/ff 46/f3 00/5a | 01/00 5a/00 5a/01 5a/01 5a/01 5a/14
+
+Command data:
+  0. Offset (0 or 1)
+  (Padded with 0x5A)
+  
+This command reads some unknown identifier or status block.
+The block is 10 bytes long, and has a constant value on
+every controller and operating mode I've tested:
+
+  00 01 02 00 0a
+  00 01 01 01 14
+  
+0x47 Read constant 2
+====================
+
+* Only ACK'ed when the controller is in escape mode (0xF)
+
+01/ff 47/f3 00/5a | 00/00 5a/00 5a/02 5a/00 5a/01 5a/00
+
+Command data:
+  0. Offset? (always 0)
+  (Padded with 0x5A)
+  
+This command reads some unknown identifier or status block.
+The block is 5 bytes long, and has a constant value on
+every controller and operating mode I've tested:
+
+  00 02 00 01 00
+  
+0x4c Read constant 3
+====================
+
+* Only ACK'ed when the controller is in escape mode (0xF)
+
+01/ff 4c/f3 00/5a | 00/00 5a/00 5a/00 5a/04 5a/00 5a/00
+01/ff 4c/f3 00/5a | 01/00 5a/00 5a/00 5a/07 5a/00 5a/00
+
+Command data:
+  0. Offset (0 or 1)
+  (Padded with 0x5A)
+  
+This command reads some unknown identifier or status block.
+The block is 10 bytes long, and has a constant value on
+every controller and operating mode I've tested:
+
+  00 00 04 00 00
+  00 00 07 00 10
+  
+0x4d Specify polling command format
+===================================
+
+* Only ACK'ed when the controller is in escape mode (0xF)
+
+01/ff 4d/f3 00/5a | 00/00 01/01 ff/ff ff/ff ff/ff ff/ff
+
+This command sets up a mapping between bytes in each
+controller poll (Command 0x42) and the controller's actuator
+channels. Each data byte in this command dictates the meaning
+of the corresponding data byte in command 0x42.
+
+For the Dual Shock controller, this command can specify
+the following actuator channels:
+
+  00: Small vibration motor, with no speed control.
+      If this channel is set to 0xFF, the small motor
+      turns on. Any other value turns it off.
+	  
+  01: Larger vibration motor, with 8-bit variable speed.
+  
+  ff: Disabled
+  
+The example packet above is typical for a Dual Shock
+controller.
+
+This command's response packet is the previous actuator
+mapping. By default all channels are disabled, so when
+this command is run immediately after switching into
+DualShock mode it will return all 0xFF.
+
+0x4f Specify polling result format
+==================================
+
+* Only ACK'ed when the controller is in escape mode (0xF)
+
+01/ff 4f/f3 00/5a | ff/00 ff/00 03/00 00/00 00/00 00/5a
+
+Command data:
+  Bitfield indicating which bytes in the response packet
+  should be included. This lets the host instruct the
+  controller to include more or less data than it would
+  by default. This command is used to enable pressure-
+  sensitive buttons, and it can be used to disable any of
+  the default response bytes.
+  
+Response data:
+  0. Always 0x00
+  1. Always 0x00
+  2. Always 0x00
+  3. Always 0x00
+  4. Always 0x00
+  5. Always 0x5a
+  
+--
+

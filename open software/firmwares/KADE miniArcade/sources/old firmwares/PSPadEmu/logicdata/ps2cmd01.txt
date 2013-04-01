@@ -1,0 +1,179 @@
+Mode Numbers
+41 --> Digital mode 
+73 --> analog mode
+F3 --> DS2 native mode
+
+****************************************************
+****************************************************
+<<QUERY_DS2_ANALOG_MODE>>
+CMD=01,41,00,5A,5A (5A,5A,5A,5A)
+DAT=--,ID,SS,WW,XX (YY,00,00,ZZ)
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+WW,XX,YY,ZZ=FF,FF,03,5A --> DS2 native mode
+WW,XX,YY,ZZ=00,00,00,00 --> not
+
+****************************************************
+****************************************************
+<<READ_DATA>>
+CMD=01,42,00,00,00 (,00,00,00,00) 
+DAT=--,ID,SS,XX,XX (,XX,XX,XX,XX) 
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+XX= button/stick data
+
+****************************************************
+****************************************************
+<<READ_DATA_AND_VIBRATE>>
+CMD=01,42,00,WW,PP (,00,00,00,00) 
+DAT=--,ID,SS,XX,XX (,XX,XX,XX,XX) 
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+WW=00 --> small motor off
+WW=01 --> small motor on
+
+PP=00-FF --> large motor speed
+
+XX=button/stick data
+
+****************************************************
+****************************************************
+<<READ_DATA_AND_VIBRATE_EX>>
+CMD=01,42,00,WW,PP (,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00) 
+DAT=--,ID,SS,XX,XX (,XX,XX,XX,XX,XX,XX,XX,XX,XX,XX,XX,XX,XX,XX,XX,XX,XX) 
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+WW=00 --> small motor off
+WW=01 --> small motor on
+
+PP=00-FF --> large motor speed
+
+XX= button/stick data
+
+****************************************************
+****************************************************
+<<CONFIG_MODE_ENTER>>
+CMD=01,43,00,01,00 (,00,00,00,00)
+DAT=--,ID,SS,XX,XX (,XX,XX,XX,XX)
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+XX= button/stick data
+
+****************************************************
+****************************************************
+<<CONFIG_MODE_EXIT>>
+CMD=01,43,00,00,00 (00,00,00,00)
+DAT=--,ID,SS,00,00 (00,00,00,00)
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+****************************************************
+****************************************************
+<<CONFIG_MODE_EXIT_DS2_NATIVE>>
+CMD=01,43,00,00,5A (5A,5A,5A,5A)
+DAT=--,ID,SS,00,00 (00,00,00,00)
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+****************************************************
+****************************************************
+<<SET_MODE_AND_LOCK>>
+CMD=01,44,00,XX,YY (00,00,00,00)
+DAT=--,ID,SS,00,00 (00,00,00,00)
+
+XX=01 --> analog mode 
+XX=00 --> digital mode 
+
+YY=03 --> lock mode.  Mode button on controller is locked
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+****************************************************
+****************************************************
+<<QUERY_MODEL_AND_MODE>>
+CMD=01,45,00,00,00 (00,00,00,00)
+DAT=--,ID,SS,01,02 (MM,VV,01,00)
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+VV=02 --> dual shock 
+MM=01 --> analog mode 
+MM=00 --> digital mode 
+
+VV=01 --> DS2 native
+MM=01 --> analog mode
+MM=00 --> digital mode
+
+****************************************************
+****************************************************
+<<VIBRATION_ENABLE>>
+CMD=01,4D,00,00,01 (FF,FF,FF,FF)
+DAT=--,ID,SS,XX,YY (FF,FF,FF,FF)
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+XX,YY=00,01: pad vibration enabled 
+XX,YY=FF,FF: pad vibration disabled
+
+****************************************************
+****************************************************
+<<VIBRATION_DISABLE>>
+CMD=01,4D,00,FF,FF,FF,FF,FF,FF
+DAT=--,ID,SS,XX,YY,FF,FF,FF,FF
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+XX,YY=00,01: pad vibration enabled 
+XX,YY=FF,FF: pad vibration disabled
+
+****************************************************
+****************************************************
+<<SET_DS2_NATIVE_MODE>>
+CMD=01,4F,00,FF,FF (03,00,00,00)
+CMD=--,ID,SS,00,00 (00,00,00,XX)
+
+ID=mode number
+
+SS=5A --> mode not changed
+SS=00 --> mode changed
+
+XX=5A --> OK
+XX=00 --> NG

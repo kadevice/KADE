@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html><head>
+<link href="../templates/css/mappingTablesAll.css" rel="stylesheet" type="text/css"><title>KADE xBox</title>
+
+</head>
+<body>
+<h2>xBox Gamepad Encoder (kade-xbox)</h2>
+<table id="pinmap">
+<tbody>
+<tr>
+<th class="xbox">pin</th>
+<th class="xbox">function</th>
+<th class="xbox">shifted function</th>
+<th class="xbox">notes</th>
+<th class="xbox">mapable input- advanced mode only</th>
+</tr>
+<tr>
+<td>A1</td>
+<td>Dpad up</td>
+<td>Analog Up </td>
+<td rowspan="4" class="note">Use shift to
+switch between dpad and left analog stick </td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td>A2</td>
+<td>Dpad down</td>
+<td>Analog Down </td>
+<td>y</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>Dpad left</td>
+<td>Analog Left </td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td>A4</td>
+<td>Dpad right</td>
+<td>Analog Right </td>
+<td>y</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>Trigger left</td>
+<td>Left Thumb Button </td>
+<td rowspan="2" class="note">Use shift to
+switch between triggers and thumb buttons </td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td>A6</td>
+<td>Trigger right</td>
+<td>Right Thumb Button </td>
+<td>y</td>
+</tr>
+<tr>
+<td>A7</td>
+<td class="connect4option">*Shift status LED</td>
+<td class="notused">&nbsp;</td>
+<td rowspan="2" class="note">Connect external
+LED to these pins </td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td>A8</td>
+<td class="connect4option">*Connectivity Status LED</td>
+<td class="notused">&nbsp;</td>
+<td>y</td>
+</tr>
+<tr>
+<td>A9</td>
+<td class="connect4option">*Analog Gaming in Shift
+Mode</td>
+<td class="notused">&nbsp;</td>
+<td class="note">Connecting a jumper wire between
+this pin and ground will enable analog gaming in shift mode. All
+buttons will map to normal functions with the exception of A1 to A4. </td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td class="alt">A10</td>
+<td class="connect4option">*Disable Start + Back</td>
+<td class="notused">&nbsp;</td>
+<td class="note">Connecting a jumper wire between
+this pin and ground will disable the start+back combination. The
+dedicated Exit Game pin is not effected. </td>
+<td>y</td>
+</tr>
+<tr>
+<td>B1</td>
+<td>A Button</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td>B2</td>
+<td>B Button</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>y</td>
+</tr>
+<tr>
+<td>B3</td>
+<td>X Button</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td>B4</td>
+<td>Y Button</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>y</td>
+</tr>
+<tr>
+<td>B5</td>
+<td>Black</td>
+<td>Invert Y Axis </td>
+<td class="note">Use shift+black to Invert Y axis on
+analog sticks </td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td>B6</td>
+<td>White</td>
+<td>Toggle Left/Right Stick </td>
+<td class="note">Use shift+white to toggle between
+controlling left and right analog sticks </td>
+<td>y</td>
+</tr>
+<tr>
+<td>B7</td>
+<td>Start</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td>B8</td>
+<td>Back</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>y</td>
+</tr>
+<tr>
+<td>B9</td>
+<td>Exit Game</td>
+<td>Exit to Dashboard</td>
+<td class="note">Dedicated game exit (simulates
+start+back) and dashboard exit (simulates LT+RT+black+back). This pin
+can also be held for 5 seconds to force Exit to Dashboard </td>
+<td>y</td>
+</tr>
+<tr class="alt">
+<td>B10</td>
+<td class="notused">&nbsp;</td>
+<td>&nbsp;</td>
+<td class="note">Unused</td>
+<td>y</td>
+</tr>
+<tr>
+<td>HWB</td>
+<td>Shift</td>
+<td class="notused">&nbsp;</td>
+<td class="note">Press to access shifted functions.
+Double click for shift lock </td>
+<td>n</td>
+</tr>
+<tr class="alt">
+<td>+5V </td>
+<td>+5V Power </td>
+<td class="notused">&nbsp;</td>
+<td class="note">+5V power for external peripherals </td>
+<td>n</td>
+</tr>
+<tr>
+<td>RST</td>
+<td>Reset</td>
+<td class="notused">&nbsp;</td>
+<td class="note">Restart the device</td>
+<td>n</td>
+</tr>
+<tr class="alt">
+<td>Ground</td>
+<td>Ground</td>
+<td class="notused">&nbsp;</td>
+<td class="note">Ground pin. Recommend a daisy chain
+ground harness is used for wiring controls.</td>
+<td>n</td>
+</tr>
+</tbody>
+</table>
+</body></html>
