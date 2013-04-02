@@ -16,6 +16,19 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * ADDITIONAL TERMS per GNU GPL Section 7
+ * No trademark or publicity rights are granted. This license does NOT give you 
+ * any right, title or interest in the KADE brand. You may not distribute any 
+ * modification of this program using the KADE name or KADE logo or claim any 
+ * affiliation or association with KADE or the KADE development team.
+ *
+ * Any propagation or conveyance of this program must include this copyright 
+ * notice and these terms.
+ *
+ * You may not misrepresent the origins of this program; modified versions of the 
+ * program must be marked as such and not identified as the original program.
+
 ------------------------------------------------------------------------------
  * Designed for the Minimus AVR Development Board http://minimususb.com
  * Compatible with all USB keyboard input systems (Windows, Linux, Mac)

@@ -1,3 +1,5 @@
+#maps.py
+
 def get_key_dictionary(obj, keyboard="UK"):
   #define keys displayed on the gui keyboard (by key code)    
   if keyboard == 0:

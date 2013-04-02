@@ -28,12 +28,13 @@
  and open source software.
 
  Open source software is licensed under GNU GPL v3.
- Open hardware is licensed under the Creative Commons 3.
+ Open hardware is licensed under Creative Commons 3.
+ Refer to license.txt in this folder.
 
- Derived products (software and hardware) must adhere to the same licenses 
- and KADE should be appropriately attributed.  
  We make our software and hardware open so that folks can contribute, 
  innovate, improve the technology and make things better for the community.
+ Derived products (software and hardware) must adhere to the same licenses 
+ and KADE should be appropriately attributed.  
 
  The KADE software sources will be posted within 90 days after new KADE 
  software is made available for public download.
