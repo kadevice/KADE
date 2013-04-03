@@ -672,3 +672,18 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <http://www.gnu.org/philosophy/why-not-lgpl.html>.
+
+----------------------------------------------------------------------------
+
+KADE supplements the GNU GPL license with additional terms per section 7:        
+
+No trademark or publicity rights are granted. This license does NOT give you 
+any right, title or interest in the KADE brand. You may not distribute any 
+modification of this program using the KADE name or KADE logo or claim any 
+affiliation or association with KADE or the KADE development team.
+
+Any propagation or conveyance of this program must include this copyright 
+notice and these terms.
+
+You may not misrepresent the origins of this program; modified versions of the 
+program must be marked as such and not identified as the original program.
