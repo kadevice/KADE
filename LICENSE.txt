@@ -30,9 +30,9 @@ notice and these terms.
 You may not misrepresent the origins of this program; modified versions of the 
 program must be marked as such and not identified as the original program.
 
+KADE hardware is licensed under Creative Commons BY-SA 3.0
+----------------------------------------------------------
 
-KADE hardware is licensed under Creative Commons 3.
---------------------------------------------------
 You are free:
 to copy, distribute and transmit the work
 to adapt the work
@@ -40,9 +40,18 @@ to make commercial use of the work
 
 Under the condition that you must attribute the work in the manner specified by
 the author or licensor (but not in any way that suggests that they endorse you 
-or your use of the work).
+or your use of the work). Refer to the KADE attribution paragraph below.
+
+If you alter, transform, or build upon this work, you may distribute the 
+resulting work only under the same or similar license to this one.
 
 For any reuse or distribution, you must make clear to others the license terms 
 of this work. The best way to do this is with a link to this web page.
 
-http://creativecommons.org/licenses/by/3.0/
+http://creativecommons.org/licenses/by-sa/3.0/
+
+KADE attribution
+No trademark or publicity rights are granted. This license does NOT give you 
+any right, title or interest in the KADE brand. You may not distribute any 
+modification of this hardware using the KADE name or KADE logo or claim any 
+affiliation or association with KADE or the KADE development team.
