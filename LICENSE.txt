@@ -1,6 +1,6 @@
 KADE License Information
 ------------------------
-
+ 
 We make our software and hardware open to encourage people to contribute, 
 innovate, improve the technology and make things better for the community.
 Derived products (software and hardware) must adhere to the following licenses 
