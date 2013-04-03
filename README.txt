@@ -1,4 +1,3 @@
-
       .k8GOGGNqkSFS5XkqXPSkSkkqXXFS5kSkSS15U22F2515U2uujuu1U1u2U1U2uUuFS.     
     :0qE     JS5uuJuuFFX51jU2SSk12jU2SSXF5uuu15SFS5k12ujj21S5kFS5S12jJYu11    
    5XS:        1UYYLu.   vUUX    U22r     SUF         SUF           ;YYLuU5   
@@ -18,9 +17,9 @@
 
  The KADE development team:
 
- Jon Wilson    - degenatrons@gmail.com
- Bruno Freitas - bootsector@ig.com.br
- Kevin Mackett - kevin@sharpfork.com
+ Jon Wilson    - jon@kadevice.com
+ Bruno Freitas - bruno@kadevice.com
+ Kevin Mackett - kevin@kadevice.com
 
  Our aim is to make it easy for arcade enthusiasts, stick builders and retro 
  gamers to interact with their computers, consoles and DIY arcade projects.  
