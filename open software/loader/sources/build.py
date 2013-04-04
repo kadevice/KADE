@@ -79,6 +79,9 @@ def import_hex(key, hex_path, test=False):
       sql_command('UPDATE firmwares SET hex_test = "%s" WHERE name = "%s"' % (data, key))
     else:
       sql_command('UPDATE firmwares SET hex = "%s" WHERE name = "%s"' % (data, key))
+      
+def refresh_params():
+  sql_command('UPDATE parameters SET value = ""')  
 
 #start with clean dist subfolders
 if os.path.exists('dist\\programmer'): os.system('rmdir dist\\programmer /S /Q')
@@ -114,6 +117,9 @@ import_hex("kade-xbox-custom",   os.path.join(sources_folder, "kade-xbox-custom\
 
 #import EZ-programming hex
 import_hex("kade-program",       os.path.join(sources_folder, "kade-program\\KADE-PROGRAM.hex"))
+
+#clear the parameters
+refresh_params()
 
 #copy folder structure
 shutil.copytree("programmer", "dist\\programmer")

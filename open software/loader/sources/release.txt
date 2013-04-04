@@ -1,8 +1,10 @@
 KADE Loader Release Notes
 
-v1.0.1.0 30/03/2013
+v1.0.1.0 04/04/2013
   Improved driver installation using Driver Package Installer (DPInst) and wizard notifies user of driver installation progress.
   Improved autodetection of AVR on application startup
+  Additions to KADE license file - license.txt
+  Added QuickStart Guide to help menu
 
 v1.0.0.0 02/03/2013 *** Public Release ***
   Public release of software.  Version number set to v1.0.0.0

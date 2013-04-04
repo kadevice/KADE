@@ -496,6 +496,9 @@ class kadeLoader( gui.loader ):
     
   def onKADEForum(self, event):
     browse("http://kadevice.com/forum")
+
+  def onQuickStartGuide(self, event):
+    browse("http://kadevice.com/?page_id=154")
     
   def onExit( self, event ):
     self.htmlWin.Destroy()

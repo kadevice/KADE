@@ -187,6 +187,11 @@ class loader ( wx.Frame ):
 		self.m_menuItem61 = wx.MenuItem( self.m_menu6, wx.ID_ANY, u"Instructions", wx.EmptyString, wx.ITEM_NORMAL )
 		self.m_menu6.AppendItem( self.m_menuItem61 )
 		
+		self.m_menuItem22 = wx.MenuItem( self.m_menu6, wx.ID_ANY, u"QuickStart Guide", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu6.AppendItem( self.m_menuItem22 )
+		
+		self.m_menu6.AppendSeparator()
+		
 		self.m_menuItem611 = wx.MenuItem( self.m_menu6, wx.ID_ANY, u"Release Notes", wx.EmptyString, wx.ITEM_NORMAL )
 		self.m_menu6.AppendItem( self.m_menuItem611 )
 		
@@ -244,6 +249,7 @@ class loader ( wx.Frame ):
 		self.Bind( wx.EVT_MENU, self.onBurnEZProgram, id = self.m_menu_ezprogram.GetId() )
 		self.Bind( wx.EVT_MENU, self.onBetaUpdates, id = self.m_menu_beta.GetId() )
 		self.Bind( wx.EVT_MENU, self.onInstructions, id = self.m_menuItem61.GetId() )
+		self.Bind( wx.EVT_MENU, self.onQuickStartGuide, id = self.m_menuItem22.GetId() )
 		self.Bind( wx.EVT_MENU, self.onNotes, id = self.m_menuItem611.GetId() )
 		self.Bind( wx.EVT_MENU, self.onLicense, id = self.m_menuItem17.GetId() )
 		self.Bind( wx.EVT_MENU, self.onAVRDrivers, id = self.m_menuItem15.GetId() )
@@ -308,6 +314,9 @@ class loader ( wx.Frame ):
 		event.Skip()
 	
 	def onInstructions( self, event ):
+		event.Skip()
+	
+	def onQuickStartGuide( self, event ):
 		event.Skip()
 	
 	def onNotes( self, event ):
