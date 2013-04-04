@@ -562,8 +562,7 @@ class kadeUpdate( gui.update ):
       mkdir(get_path("NOCHECK"))
     else:
       rmdir(get_path("NOCHECK"))
-    #openbrowser("https://sites.google.com/site/degenatrons/other-stuff/wip/update.zip")
-    openbrowser("https://sites.google.com/site/kadevice/loader/update.zip")    
+    openbrowser("http://kadevice.com/loader/update.zip")
     self.Close()
     
   def onCancel(self, event):

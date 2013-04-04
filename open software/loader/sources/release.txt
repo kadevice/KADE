@@ -1,5 +1,8 @@
 KADE Loader Release Notes
 
+v1.0.2.0 05/04/2013
+  Location of KADE Loader update files moved from Google Sites to kadevice.com.  Google Sites is not reliable.
+
 v1.0.1.0 04/04/2013
   Improved driver installation using Driver Package Installer (DPInst) and wizard notifies user of driver installation progress.
   Improved autodetection of AVR on application startup

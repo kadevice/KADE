@@ -87,8 +87,7 @@ def get_installed_version():
 
 def get_latest_version(beta=False):  
   try:
-    #site = "https://sites.google.com/site/degenatrons/other-stuff/wip/"
-    site = "https://sites.google.com/site/kadevice/loader/"    
+    site = "http://kadevice.com/loader/"    
     if beta:
       latest = urlopen(site+"version.txt", None, 2.5).read().split()[0]
     else:
