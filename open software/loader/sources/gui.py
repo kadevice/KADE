@@ -905,9 +905,9 @@ class custom ( wx.Dialog ):
 		bSizer511.Add( self.m_trackball2_map, 0, 0, 5 )
 		
 		
-		bSizer511.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
+		bSizer511.AddSpacer( ( 20, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_compatible_list = wx.HyperlinkCtrl( self.m_settings0, wx.ID_ANY, u"* Trackball and mouse compatibility information", wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.HL_DEFAULT_STYLE )
+		self.m_compatible_list = wx.HyperlinkCtrl( self.m_settings0, wx.ID_ANY, u"* Compatibility information", wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.HL_DEFAULT_STYLE )
 		bSizer511.Add( self.m_compatible_list, 0, wx.ALL, 5 )
 		
 		sbSizer11.Add( bSizer511, 1, wx.ALL|wx.EXPAND, 5 )
@@ -968,41 +968,41 @@ class custom ( wx.Dialog ):
 		sbSizer8.Fit( self.m_settings1 )
 		bSizer46.Add( self.m_settings1, 1, wx.ALL|wx.EXPAND, 5 )
 		
-		self.m_settings2 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.m_settings_presets = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer51 = wx.BoxSizer( wx.VERTICAL )
 		
-		sbSizer10 = wx.StaticBoxSizer( wx.StaticBox( self.m_settings2, wx.ID_ANY, u"MAME Presets" ), wx.HORIZONTAL )
+		sbSizer10 = wx.StaticBoxSizer( wx.StaticBox( self.m_settings_presets, wx.ID_ANY, u"Presets" ), wx.HORIZONTAL )
 		
 		
 		sbSizer10.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 		
-		self.m_MAME0 = wx.Button( self.m_settings2, wx.ID_ANY, u"MAME Player 1", wx.DefaultPosition, wx.Size( -1,20 ), 0 )
-		sbSizer10.Add( self.m_MAME0, 0, wx.ALL, 5 )
+		self.m_preset_list0 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 0", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
+		sbSizer10.Add( self.m_preset_list0, 0, wx.ALL, 5 )
 		
-		self.m_MAME1 = wx.Button( self.m_settings2, wx.ID_ANY, u"MAME Player 2", wx.DefaultPosition, wx.Size( -1,20 ), 0 )
-		sbSizer10.Add( self.m_MAME1, 0, wx.ALL, 5 )
+		self.m_preset_list1 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 1", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
+		sbSizer10.Add( self.m_preset_list1, 0, wx.ALL, 5 )
 		
-		self.m_MAME2 = wx.Button( self.m_settings2, wx.ID_ANY, u"MAME Player 3", wx.DefaultPosition, wx.Size( -1,20 ), 0 )
-		sbSizer10.Add( self.m_MAME2, 0, wx.ALL, 5 )
+		self.m_preset_list2 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 2", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
+		sbSizer10.Add( self.m_preset_list2, 0, wx.ALL, 5 )
 		
-		self.m_MAME3 = wx.Button( self.m_settings2, wx.ID_ANY, u"MAME Player 4", wx.DefaultPosition, wx.Size( -1,20 ), 0 )
-		sbSizer10.Add( self.m_MAME3, 0, wx.ALL, 5 )
+		self.m_preset_list3 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 3", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
+		sbSizer10.Add( self.m_preset_list3, 0, wx.ALL, 5 )
 		
-		self.m_MAME4 = wx.Button( self.m_settings2, wx.ID_ANY, u"MAME Players 1 && 2 Combined", wx.DefaultPosition, wx.Size( -1,20 ), 0 )
-		sbSizer10.Add( self.m_MAME4, 0, wx.ALL, 5 )
+		self.m_preset_list4 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 4", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
+		sbSizer10.Add( self.m_preset_list4, 0, wx.ALL, 5 )
 		
-		self.m_MAME5 = wx.Button( self.m_settings2, wx.ID_ANY, u"MAME Players 3 && 4 Combined", wx.DefaultPosition, wx.Size( -1,20 ), 0 )
-		sbSizer10.Add( self.m_MAME5, 0, wx.ALL, 5 )
+		self.m_preset_list5 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 5", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
+		sbSizer10.Add( self.m_preset_list5, 0, wx.ALL, 5 )
 		
 		
 		sbSizer10.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 		
 		bSizer51.Add( sbSizer10, 1, wx.EXPAND, 5 )
 		
-		self.m_settings2.SetSizer( bSizer51 )
-		self.m_settings2.Layout()
-		bSizer51.Fit( self.m_settings2 )
-		bSizer46.Add( self.m_settings2, 0, wx.ALL|wx.EXPAND, 5 )
+		self.m_settings_presets.SetSizer( bSizer51 )
+		self.m_settings_presets.Layout()
+		bSizer51.Fit( self.m_settings_presets )
+		bSizer46.Add( self.m_settings_presets, 0, wx.ALL|wx.EXPAND, 5 )
 		
 		bSizer30.Add( bSizer46, 0, wx.EXPAND, 5 )
 		
@@ -1077,12 +1077,12 @@ class custom ( wx.Dialog ):
 		self.m_trackball1_map.Bind( wx.EVT_BUTTON, self.onAssign1 )
 		self.m_trackball2.Bind( wx.EVT_CHECKBOX, self.onTrackball2 )
 		self.m_trackball2_map.Bind( wx.EVT_BUTTON, self.onAssign2 )
-		self.m_MAME0.Bind( wx.EVT_BUTTON, self.onPreset0 )
-		self.m_MAME1.Bind( wx.EVT_BUTTON, self.onPreset1 )
-		self.m_MAME2.Bind( wx.EVT_BUTTON, self.onPreset2 )
-		self.m_MAME3.Bind( wx.EVT_BUTTON, self.onPreset3 )
-		self.m_MAME4.Bind( wx.EVT_BUTTON, self.onPreset4 )
-		self.m_MAME5.Bind( wx.EVT_BUTTON, self.onPreset5 )
+		self.m_preset_list0.Bind( wx.EVT_BUTTON, self.onPreset0 )
+		self.m_preset_list1.Bind( wx.EVT_BUTTON, self.onPreset1 )
+		self.m_preset_list2.Bind( wx.EVT_BUTTON, self.onPreset2 )
+		self.m_preset_list3.Bind( wx.EVT_BUTTON, self.onPreset3 )
+		self.m_preset_list4.Bind( wx.EVT_BUTTON, self.onPreset4 )
+		self.m_preset_list5.Bind( wx.EVT_BUTTON, self.onPreset5 )
 		self.m_default.Bind( wx.EVT_BUTTON, self.onPreset0 )
 		self.m_preset1.Bind( wx.EVT_BUTTON, self.onPreset1 )
 		self.m_preset2.Bind( wx.EVT_BUTTON, self.onPreset2 )
@@ -1249,7 +1249,7 @@ class update ( wx.Dialog ):
 class about ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"About KADE Loader <version>", pos = wx.DefaultPosition, size = wx.Size( 375,585 ), style = wx.DEFAULT_DIALOG_STYLE )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"About KADE Loader <version>", pos = wx.DefaultPosition, size = wx.Size( 380,600 ), style = wx.DEFAULT_DIALOG_STYLE )
 		
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		
@@ -1275,23 +1275,27 @@ class about ( wx.Dialog ):
 		
 		self.m_staticText391 = wx.StaticText( self, wx.ID_ANY, u"KADE software licensed under GNU/GPL V3", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText391.Wrap( -1 )
-		self.m_staticText391.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
+		self.m_staticText391.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
 		
 		sbSizer14.Add( self.m_staticText391, 0, wx.LEFT|wx.RIGHT|wx.TOP, 5 )
 		
 		self.m_hyperlink3 = wx.HyperlinkCtrl( self, wx.ID_ANY, u"http://www.gnu.org/licenses/gpl.html", u"http://www.gnu.org/licenses/gpl.html", wx.DefaultPosition, wx.DefaultSize, wx.HL_DEFAULT_STYLE )
+		self.m_hyperlink3.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
 		sbSizer14.Add( self.m_hyperlink3, 0, wx.BOTTOM|wx.LEFT|wx.RIGHT, 5 )
 		
 		self.m_staticText3911 = wx.StaticText( self, wx.ID_ANY, u"KADE hardware licensed under Creative Commons (CC BY-SA 3.0)", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText3911.Wrap( -1 )
-		self.m_staticText3911.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
+		self.m_staticText3911.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
 		
 		sbSizer14.Add( self.m_staticText3911, 0, wx.LEFT|wx.RIGHT|wx.TOP, 5 )
 		
 		self.m_hyperlink4 = wx.HyperlinkCtrl( self, wx.ID_ANY, u"http://creativecommons.org/licenses/by-sa/3.0/", u"http://creativecommons.org/licenses/by-sa/3.0/", wx.DefaultPosition, wx.DefaultSize, wx.HL_DEFAULT_STYLE )
+		self.m_hyperlink4.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
 		sbSizer14.Add( self.m_hyperlink4, 0, wx.BOTTOM|wx.LEFT|wx.RIGHT, 5 )
 		
-		bSizer41.Add( sbSizer14, 1, wx.ALL|wx.EXPAND, 5 )
+		bSizer41.Add( sbSizer14, 0, wx.ALL|wx.EXPAND, 5 )
 		
 		bSizer39.Add( bSizer41, 1, wx.ALL|wx.EXPAND, 5 )
 		
@@ -1303,10 +1307,14 @@ class about ( wx.Dialog ):
 		bSizer38.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 		
 		self.m_donate = wx.Button( self, wx.ID_ANY, u"Donate", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_donate.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
 		bSizer38.Add( self.m_donate, 0, wx.ALL, 5 )
 		
 		self.m_ok = wx.Button( self, wx.ID_ANY, u"OK", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_ok.SetDefault() 
+		self.m_ok.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
 		bSizer38.Add( self.m_ok, 0, wx.ALL, 5 )
 		
 		bSizer37.Add( bSizer38, 0, wx.EXPAND, 5 )

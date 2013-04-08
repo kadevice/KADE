@@ -68,6 +68,7 @@ def sql_command(sql):
   result = cursor.fetchall()
   con.commit()
   con.close()
+  return result
 
 def import_hex(key, hex_path, test=False):
   if os.path.exists(hex_path):
@@ -80,6 +81,14 @@ def import_hex(key, hex_path, test=False):
     else:
       sql_command('UPDATE firmwares SET hex = "%s" WHERE name = "%s"' % (data, key))
       
+def generate_keymaps(firmware, out_path):
+  f = open(out_path,'w')
+  f.write('//Generated %s key mappings\n' % firmware)
+  library = sql_command('SELECT * FROM library WHERE system = "%s"' % firmware)
+  for func in library:
+    f.write('if (ass[pos]==%s){keyboard_keys[keycount++] = %s;}\n' % (func[1], func[5]))
+  f.close()
+      
 def refresh_params():
   sql_command('UPDATE parameters SET value = ""')  
 
@@ -90,10 +99,15 @@ if os.path.exists('dist\\templates'): os.system('rmdir dist\\templates /S /Q')
 if os.path.exists('dist\\images'): os.system('rmdir dist\\images /S /Q')
 os.system('del dist\\*.exe')
 
-#import latest hex into DB before building
 sources_folder = "..\\..\\firmwares\\KADE miniArcade\\sources"
+
+#generate key mappings for keyboard based firmwares -to do: add other firmwares
+generate_keymaps("kade-rotary-custom", os.path.join(sources_folder, "kade-rotary-custom\\keymaps.c"))
+
+#import latest hex into DB before building
 import_hex("kade-mame",          os.path.join(sources_folder, "kade-mame\\KADE-MAME.hex"))
 import_hex("kade-gen",           os.path.join(sources_folder, "kade-gen\\KADE-GEN.hex"))
+import_hex("kade-rotary-custom", os.path.join(sources_folder, "kade-rotary-custom\\KADE-ROTARY-CUSTOM.hex"))
 import_hex("kade-led-demo",      os.path.join(sources_folder, "kade-led-demo\\kade-led-demo.hex"))
 import_hex("kade-pin-custom",    os.path.join(sources_folder, "kade-pin-custom\\KADE-PIN-CUSTOM.hex"))
 import_hex("kade-xbox-custom",   os.path.join(sources_folder, "kade-xbox-custom\\KADE-XBOX-CUSTOM.hex"))

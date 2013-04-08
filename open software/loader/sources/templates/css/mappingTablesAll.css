@@ -94,6 +94,11 @@ h2, h3 {
 	background-color:#3B4046;
 	color:#B7C1BF;
 }
+#pinmap th.rotary {
+	background-color:#3B4046;
+	color:#B7C1BF;
+}
+
 #pinmap th.wii {
 	background-color:#FFFFFF;
 	color:#8F8C8E;

@@ -3176,7 +3176,7 @@
                 </object>
             </object>
         </object>
-        <object class="Dialog" expanded="0">
+        <object class="Dialog" expanded="1">
             <property name="BottomDockable">1</property>
             <property name="LeftDockable">1</property>
             <property name="RightDockable">1</property>
@@ -3272,16 +3272,16 @@
             <event name="OnSetFocus"></event>
             <event name="OnSize"></event>
             <event name="OnUpdateUI"></event>
-            <object class="wxBoxSizer" expanded="0">
+            <object class="wxBoxSizer" expanded="1">
                 <property name="minimum_size"></property>
                 <property name="name">bSizer28</property>
                 <property name="orient">wxVERTICAL</property>
                 <property name="permission">none</property>
-                <object class="sizeritem" expanded="0">
+                <object class="sizeritem" expanded="1">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND</property>
                     <property name="proportion">1</property>
-                    <object class="wxBoxSizer" expanded="0">
+                    <object class="wxBoxSizer" expanded="1">
                         <property name="minimum_size"></property>
                         <property name="name">bSizer30</property>
                         <property name="orient">wxVERTICAL</property>
@@ -9297,11 +9297,11 @@
                                 </object>
                             </object>
                         </object>
-                        <object class="sizeritem" expanded="0">
+                        <object class="sizeritem" expanded="1">
                             <property name="border">5</property>
                             <property name="flag">wxEXPAND</property>
                             <property name="proportion">0</property>
-                            <object class="wxBoxSizer" expanded="0">
+                            <object class="wxBoxSizer" expanded="1">
                                 <property name="minimum_size"></property>
                                 <property name="name">bSizer46</property>
                                 <property name="orient">wxVERTICAL</property>
@@ -9770,11 +9770,11 @@
                                                     <object class="sizeritem" expanded="0">
                                                         <property name="border">5</property>
                                                         <property name="flag">wxEXPAND</property>
-                                                        <property name="proportion">1</property>
+                                                        <property name="proportion">0</property>
                                                         <object class="spacer" expanded="0">
                                                             <property name="height">0</property>
                                                             <property name="permission">protected</property>
-                                                            <property name="width">0</property>
+                                                            <property name="width">20</property>
                                                         </object>
                                                     </object>
                                                     <object class="sizeritem" expanded="0">
@@ -9807,7 +9807,7 @@
                                                             <property name="hidden">0</property>
                                                             <property name="hover_color"></property>
                                                             <property name="id">wxID_ANY</property>
-                                                            <property name="label">* Trackball and mouse compatibility information</property>
+                                                            <property name="label">* Compatibility information</property>
                                                             <property name="layer"></property>
                                                             <property name="max_size"></property>
                                                             <property name="maximize_button">0</property>
@@ -10626,11 +10626,11 @@
                                         </object>
                                     </object>
                                 </object>
-                                <object class="sizeritem" expanded="0">
+                                <object class="sizeritem" expanded="1">
                                     <property name="border">5</property>
                                     <property name="flag">wxALL|wxEXPAND</property>
                                     <property name="proportion">0</property>
-                                    <object class="wxPanel" expanded="0">
+                                    <object class="wxPanel" expanded="1">
                                         <property name="BottomDockable">1</property>
                                         <property name="LeftDockable">1</property>
                                         <property name="RightDockable">1</property>
@@ -10663,7 +10663,7 @@
                                         <property name="minimize_button">0</property>
                                         <property name="minimum_size"></property>
                                         <property name="moveable">1</property>
-                                        <property name="name">m_settings2</property>
+                                        <property name="name">m_settings_presets</property>
                                         <property name="pane_border">1</property>
                                         <property name="pane_position"></property>
                                         <property name="pane_size"></property>
@@ -10708,18 +10708,18 @@
                                         <event name="OnSetFocus"></event>
                                         <event name="OnSize"></event>
                                         <event name="OnUpdateUI"></event>
-                                        <object class="wxBoxSizer" expanded="0">
+                                        <object class="wxBoxSizer" expanded="1">
                                             <property name="minimum_size"></property>
                                             <property name="name">bSizer51</property>
                                             <property name="orient">wxVERTICAL</property>
                                             <property name="permission">none</property>
-                                            <object class="sizeritem" expanded="0">
+                                            <object class="sizeritem" expanded="1">
                                                 <property name="border">5</property>
                                                 <property name="flag">wxEXPAND</property>
                                                 <property name="proportion">1</property>
-                                                <object class="wxStaticBoxSizer" expanded="0">
+                                                <object class="wxStaticBoxSizer" expanded="1">
                                                     <property name="id">wxID_ANY</property>
-                                                    <property name="label">MAME Presets</property>
+                                                    <property name="label">Presets</property>
                                                     <property name="minimum_size"></property>
                                                     <property name="name">sbSizer10</property>
                                                     <property name="orient">wxHORIZONTAL</property>
@@ -10765,7 +10765,7 @@
                                                             <property name="gripper">0</property>
                                                             <property name="hidden">0</property>
                                                             <property name="id">wxID_ANY</property>
-                                                            <property name="label">MAME Player 1</property>
+                                                            <property name="label">Preset 0</property>
                                                             <property name="layer"></property>
                                                             <property name="max_size"></property>
                                                             <property name="maximize_button">0</property>
@@ -10774,7 +10774,7 @@
                                                             <property name="minimize_button">0</property>
                                                             <property name="minimum_size"></property>
                                                             <property name="moveable">1</property>
-                                                            <property name="name">m_MAME0</property>
+                                                            <property name="name">m_preset_list0</property>
                                                             <property name="pane_border">1</property>
                                                             <property name="pane_position"></property>
                                                             <property name="pane_size"></property>
@@ -10785,7 +10785,7 @@
                                                             <property name="resize">Resizable</property>
                                                             <property name="row"></property>
                                                             <property name="show">1</property>
-                                                            <property name="size">-1,20</property>
+                                                            <property name="size">125,20</property>
                                                             <property name="style"></property>
                                                             <property name="subclass"></property>
                                                             <property name="toolbar_pane">0</property>
@@ -10853,7 +10853,7 @@
                                                             <property name="gripper">0</property>
                                                             <property name="hidden">0</property>
                                                             <property name="id">wxID_ANY</property>
-                                                            <property name="label">MAME Player 2</property>
+                                                            <property name="label">Preset 1</property>
                                                             <property name="layer"></property>
                                                             <property name="max_size"></property>
                                                             <property name="maximize_button">0</property>
@@ -10862,7 +10862,7 @@
                                                             <property name="minimize_button">0</property>
                                                             <property name="minimum_size"></property>
                                                             <property name="moveable">1</property>
-                                                            <property name="name">m_MAME1</property>
+                                                            <property name="name">m_preset_list1</property>
                                                             <property name="pane_border">1</property>
                                                             <property name="pane_position"></property>
                                                             <property name="pane_size"></property>
@@ -10873,7 +10873,7 @@
                                                             <property name="resize">Resizable</property>
                                                             <property name="row"></property>
                                                             <property name="show">1</property>
-                                                            <property name="size">-1,20</property>
+                                                            <property name="size">125,20</property>
                                                             <property name="style"></property>
                                                             <property name="subclass"></property>
                                                             <property name="toolbar_pane">0</property>
@@ -10941,7 +10941,7 @@
                                                             <property name="gripper">0</property>
                                                             <property name="hidden">0</property>
                                                             <property name="id">wxID_ANY</property>
-                                                            <property name="label">MAME Player 3</property>
+                                                            <property name="label">Preset 2</property>
                                                             <property name="layer"></property>
                                                             <property name="max_size"></property>
                                                             <property name="maximize_button">0</property>
@@ -10950,7 +10950,7 @@
                                                             <property name="minimize_button">0</property>
                                                             <property name="minimum_size"></property>
                                                             <property name="moveable">1</property>
-                                                            <property name="name">m_MAME2</property>
+                                                            <property name="name">m_preset_list2</property>
                                                             <property name="pane_border">1</property>
                                                             <property name="pane_position"></property>
                                                             <property name="pane_size"></property>
@@ -10961,7 +10961,7 @@
                                                             <property name="resize">Resizable</property>
                                                             <property name="row"></property>
                                                             <property name="show">1</property>
-                                                            <property name="size">-1,20</property>
+                                                            <property name="size">125,20</property>
                                                             <property name="style"></property>
                                                             <property name="subclass"></property>
                                                             <property name="toolbar_pane">0</property>
@@ -11029,7 +11029,7 @@
                                                             <property name="gripper">0</property>
                                                             <property name="hidden">0</property>
                                                             <property name="id">wxID_ANY</property>
-                                                            <property name="label">MAME Player 4</property>
+                                                            <property name="label">Preset 3</property>
                                                             <property name="layer"></property>
                                                             <property name="max_size"></property>
                                                             <property name="maximize_button">0</property>
@@ -11038,7 +11038,7 @@
                                                             <property name="minimize_button">0</property>
                                                             <property name="minimum_size"></property>
                                                             <property name="moveable">1</property>
-                                                            <property name="name">m_MAME3</property>
+                                                            <property name="name">m_preset_list3</property>
                                                             <property name="pane_border">1</property>
                                                             <property name="pane_position"></property>
                                                             <property name="pane_size"></property>
@@ -11049,7 +11049,7 @@
                                                             <property name="resize">Resizable</property>
                                                             <property name="row"></property>
                                                             <property name="show">1</property>
-                                                            <property name="size">-1,20</property>
+                                                            <property name="size">125,20</property>
                                                             <property name="style"></property>
                                                             <property name="subclass"></property>
                                                             <property name="toolbar_pane">0</property>
@@ -11117,7 +11117,7 @@
                                                             <property name="gripper">0</property>
                                                             <property name="hidden">0</property>
                                                             <property name="id">wxID_ANY</property>
-                                                            <property name="label">MAME Players 1 &amp;&amp; 2 Combined</property>
+                                                            <property name="label">Preset 4</property>
                                                             <property name="layer"></property>
                                                             <property name="max_size"></property>
                                                             <property name="maximize_button">0</property>
@@ -11126,7 +11126,7 @@
                                                             <property name="minimize_button">0</property>
                                                             <property name="minimum_size"></property>
                                                             <property name="moveable">1</property>
-                                                            <property name="name">m_MAME4</property>
+                                                            <property name="name">m_preset_list4</property>
                                                             <property name="pane_border">1</property>
                                                             <property name="pane_position"></property>
                                                             <property name="pane_size"></property>
@@ -11137,7 +11137,7 @@
                                                             <property name="resize">Resizable</property>
                                                             <property name="row"></property>
                                                             <property name="show">1</property>
-                                                            <property name="size">-1,20</property>
+                                                            <property name="size">125,20</property>
                                                             <property name="style"></property>
                                                             <property name="subclass"></property>
                                                             <property name="toolbar_pane">0</property>
@@ -11205,7 +11205,7 @@
                                                             <property name="gripper">0</property>
                                                             <property name="hidden">0</property>
                                                             <property name="id">wxID_ANY</property>
-                                                            <property name="label">MAME Players 3 &amp;&amp; 4 Combined</property>
+                                                            <property name="label">Preset 5</property>
                                                             <property name="layer"></property>
                                                             <property name="max_size"></property>
                                                             <property name="maximize_button">0</property>
@@ -11214,7 +11214,7 @@
                                                             <property name="minimize_button">0</property>
                                                             <property name="minimum_size"></property>
                                                             <property name="moveable">1</property>
-                                                            <property name="name">m_MAME5</property>
+                                                            <property name="name">m_preset_list5</property>
                                                             <property name="pane_border">1</property>
                                                             <property name="pane_position"></property>
                                                             <property name="pane_size"></property>
@@ -11225,7 +11225,7 @@
                                                             <property name="resize">Resizable</property>
                                                             <property name="row"></property>
                                                             <property name="show">1</property>
-                                                            <property name="size">-1,20</property>
+                                                            <property name="size">125,20</property>
                                                             <property name="style"></property>
                                                             <property name="subclass"></property>
                                                             <property name="toolbar_pane">0</property>
@@ -12822,7 +12822,7 @@
             <property name="resize">Resizable</property>
             <property name="row"></property>
             <property name="show">1</property>
-            <property name="size">375,585</property>
+            <property name="size">380,600</property>
             <property name="style">wxDEFAULT_DIALOG_STYLE</property>
             <property name="subclass"></property>
             <property name="title">About KADE Loader &lt;version&gt;</property>
@@ -13079,7 +13079,7 @@
                                 <object class="sizeritem" expanded="1">
                                     <property name="border">5</property>
                                     <property name="flag">wxALL|wxEXPAND</property>
-                                    <property name="proportion">1</property>
+                                    <property name="proportion">0</property>
                                     <object class="wxStaticBoxSizer" expanded="1">
                                         <property name="id">wxID_ANY</property>
                                         <property name="label">License Info</property>
@@ -13113,7 +13113,7 @@
                                                 <property name="enabled">1</property>
                                                 <property name="fg"></property>
                                                 <property name="floatable">1</property>
-                                                <property name="font">,90,90,-1,70,0</property>
+                                                <property name="font">,90,90,8,70,0</property>
                                                 <property name="gripper">0</property>
                                                 <property name="hidden">0</property>
                                                 <property name="id">wxID_ANY</property>
@@ -13200,7 +13200,7 @@
                                                 <property name="enabled">1</property>
                                                 <property name="fg"></property>
                                                 <property name="floatable">1</property>
-                                                <property name="font"></property>
+                                                <property name="font">,90,90,8,70,0</property>
                                                 <property name="gripper">0</property>
                                                 <property name="hidden">0</property>
                                                 <property name="hover_color"></property>
@@ -13291,7 +13291,7 @@
                                                 <property name="enabled">1</property>
                                                 <property name="fg"></property>
                                                 <property name="floatable">1</property>
-                                                <property name="font">,90,90,-1,70,0</property>
+                                                <property name="font">,90,90,8,70,0</property>
                                                 <property name="gripper">0</property>
                                                 <property name="hidden">0</property>
                                                 <property name="id">wxID_ANY</property>
@@ -13378,7 +13378,7 @@
                                                 <property name="enabled">1</property>
                                                 <property name="fg"></property>
                                                 <property name="floatable">1</property>
-                                                <property name="font"></property>
+                                                <property name="font">,90,90,8,70,0</property>
                                                 <property name="gripper">0</property>
                                                 <property name="hidden">0</property>
                                                 <property name="hover_color"></property>
@@ -13495,7 +13495,7 @@
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="floatable">1</property>
-                                <property name="font"></property>
+                                <property name="font">,90,90,8,70,0</property>
                                 <property name="gripper">0</property>
                                 <property name="hidden">0</property>
                                 <property name="id">wxID_ANY</property>
@@ -13583,7 +13583,7 @@
                                 <property name="enabled">1</property>
                                 <property name="fg"></property>
                                 <property name="floatable">1</property>
-                                <property name="font"></property>
+                                <property name="font">,90,90,8,70,0</property>
                                 <property name="gripper">0</property>
                                 <property name="hidden">0</property>
                                 <property name="id">wxID_ANY</property>

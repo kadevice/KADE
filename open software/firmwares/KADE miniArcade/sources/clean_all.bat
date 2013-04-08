@@ -33,6 +33,9 @@ make clean
 cd %working_dir%\kade-xbox-custom
 make clean
 
+cd %working_dir%\kade-rotary-custom
+make clean
+
 cd %working_dir%\tests\minimus
 make clean
 

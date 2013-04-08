@@ -1,7 +1,4 @@
 /*
-DEGENATRONS ARCADE ENCODER: Configurable 20 Input Keyboard Encoder 
-https://sites.google.com/site/degenatrons/
-
 In the arrays, 0-9 is A1-A10 and 10-19 is B1-B10
 */
 

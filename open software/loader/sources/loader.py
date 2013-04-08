@@ -595,7 +595,7 @@ class kadeProgrammed( gui.programmed ):
   def __init__( self, parent, firmware ):
     gui.programmed.__init__( self, parent )
     category = sql_single('SELECT category FROM firmwares WHERE name = "%s"' % firmware)    
-    if category <> 'keyboard':
+    if category <> 'keyboard' and firmware <> 'kade-rotary-custom':
       self.m_kit.Hide()              
       
   def onOK(self, event):
@@ -632,22 +632,38 @@ class kadeCustom( gui.custom ):
     else: 
       self.m_xbox_disable.Hide()
       self.m_xbox_combos.Hide()
+  
+    #Display named presets if they exist in DB
+    preset_list = sql_command('SELECT preset, name FROM preset_names WHERE system = "%s"' % (self.firmware))
+    if preset_list:
+      #hide the basic presets
+      self.m_preset1.Hide()
+      self.m_preset2.Hide()
+      #show the named presets
+      self.m_settings_presets.Show()
+      self.m_settings_presets.Layout()
+      
+      buttons = self.m_preset_list0, self.m_preset_list1, self.m_preset_list2, self.m_preset_list3, self.m_preset_list4, self.m_preset_list5
+      for i in range(0,6):
+        buttons[i].Hide()
+      for preset in preset_list:
+        buttons[preset[0]].SetLabel(preset[1])
+        buttons[preset[0]].Show()
+    else:
+      self.m_settings_presets.Hide()
+      #do we show a 2nd preset?
+      if sql_command('SELECT position FROM presets WHERE system = "%s" AND preset = "2"' % (self.firmware)):
+        self.m_preset2.Show()      
+      
+    #----------------------------------------------------------------------------------------
     
-    if self.firmware == 'kade-mame-custom' or self.firmware == 'kade-key-custom' or self.firmware == 'kade-pin-custom':
+    # TO DO: settings to be added to DB
+    if self.firmware == 'kade-mame-custom' or self.firmware == 'kade-key-custom' or self.firmware == 'kade-pin-custom' or self.firmware == 'kade-rotary-custom':
       self.m_settings0.Hide()
       self.m_settings1.Hide()
       
-    if self.firmware == 'kade-mame-custom':
-      self.m_preset1.Hide()
-      self.m_settings2.Show()
-      self.m_settings2.Layout()
-    else:
-      self.m_settings2.Hide()
-  
-    #do we show a 2nd preset?
-    if sql_command('SELECT position FROM presets WHERE system = "%s" AND preset = "2"' % (self.firmware)):
-      self.m_preset2.Show()
-    
+    #----------------------------------------------------------------------------------------
+      
     #Update any reserved pins
     for rsv in get_reserved(self.firmware):
       try:
