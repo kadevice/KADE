@@ -623,7 +623,7 @@
                                                         <object class="sizeritem" expanded="0">
                                                             <property name="border">5</property>
                                                             <property name="flag">wxALL</property>
-                                                            <property name="proportion">0</property>
+                                                            <property name="proportion">1</property>
                                                             <object class="wxButton" expanded="0">
                                                                 <property name="BottomDockable">1</property>
                                                                 <property name="LeftDockable">1</property>
@@ -670,8 +670,8 @@
                                                                 <property name="resize">Resizable</property>
                                                                 <property name="row"></property>
                                                                 <property name="show">1</property>
-                                                                <property name="size">220,-1</property>
-                                                                <property name="style"></property>
+                                                                <property name="size">-1,-1</property>
+                                                                <property name="style">wxBU_EXACTFIT</property>
                                                                 <property name="subclass"></property>
                                                                 <property name="toolbar_pane">0</property>
                                                                 <property name="tooltip"></property>
@@ -1692,7 +1692,7 @@
                 </object>
             </object>
         </object>
-        <object class="Dialog" expanded="0">
+        <object class="Dialog" expanded="1">
             <property name="BottomDockable">1</property>
             <property name="LeftDockable">1</property>
             <property name="RightDockable">1</property>
@@ -1727,7 +1727,7 @@
             <property name="maximum_size"></property>
             <property name="min_size"></property>
             <property name="minimize_button">0</property>
-            <property name="minimum_size">300,350</property>
+            <property name="minimum_size">350,400</property>
             <property name="moveable">1</property>
             <property name="name">config</property>
             <property name="pane_border">1</property>
@@ -1739,7 +1739,7 @@
             <property name="resize">Resizable</property>
             <property name="row"></property>
             <property name="show">1</property>
-            <property name="size">300,350</property>
+            <property name="size">350,400</property>
             <property name="style">wxDEFAULT_DIALOG_STYLE</property>
             <property name="subclass"></property>
             <property name="title">Board Configuation</property>
@@ -1788,16 +1788,16 @@
             <event name="OnSetFocus"></event>
             <event name="OnSize"></event>
             <event name="OnUpdateUI"></event>
-            <object class="wxBoxSizer" expanded="0">
+            <object class="wxBoxSizer" expanded="1">
                 <property name="minimum_size"></property>
                 <property name="name">bSizer9</property>
                 <property name="orient">wxVERTICAL</property>
                 <property name="permission">none</property>
-                <object class="sizeritem" expanded="0">
+                <object class="sizeritem" expanded="1">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND</property>
                     <property name="proportion">1</property>
-                    <object class="wxBoxSizer" expanded="0">
+                    <object class="wxBoxSizer" expanded="1">
                         <property name="minimum_size"></property>
                         <property name="name">bSizer10</property>
                         <property name="orient">wxVERTICAL</property>
@@ -1910,7 +1910,7 @@
                         <object class="sizeritem" expanded="0">
                             <property name="border">5</property>
                             <property name="flag">wxALL|wxEXPAND</property>
-                            <property name="proportion">0</property>
+                            <property name="proportion">1</property>
                             <object class="wxStaticBoxSizer" expanded="0">
                                 <property name="id">wxID_ANY</property>
                                 <property name="label">Settings</property>
@@ -3148,8 +3148,8 @@
                         </object>
                         <object class="sizeritem" expanded="0">
                             <property name="border">5</property>
-                            <property name="flag">wxEXPAND</property>
-                            <property name="proportion">1</property>
+                            <property name="flag">wxALL|wxEXPAND</property>
+                            <property name="proportion">0</property>
                             <object class="wxStdDialogButtonSizer" expanded="0">
                                 <property name="Apply">0</property>
                                 <property name="Cancel">1</property>
@@ -3208,7 +3208,7 @@
             <property name="layer"></property>
             <property name="max_size"></property>
             <property name="maximize_button">0</property>
-            <property name="maximum_size"></property>
+            <property name="maximum_size">1000,700</property>
             <property name="min_size"></property>
             <property name="minimize_button">0</property>
             <property name="minimum_size">800,600</property>
@@ -3224,7 +3224,7 @@
             <property name="row"></property>
             <property name="show">1</property>
             <property name="size">850,600</property>
-            <property name="style">wxDEFAULT_DIALOG_STYLE</property>
+            <property name="style">wxDEFAULT_DIALOG_STYLE|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxRESIZE_BORDER</property>
             <property name="subclass"></property>
             <property name="title">Custom Mapping Builder</property>
             <property name="toolbar_pane">0</property>

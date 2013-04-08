@@ -54,8 +54,8 @@ class loader ( wx.Frame ):
 		
 		bSizer13 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_load = wx.Button( self.m_panel3, wx.ID_ANY, u"Program KADE with Selected Firmware", wx.DefaultPosition, wx.Size( 220,-1 ), 0 )
-		bSizer13.Add( self.m_load, 0, wx.ALL, 5 )
+		self.m_load = wx.Button( self.m_panel3, wx.ID_ANY, u"Program KADE with Selected Firmware", wx.DefaultPosition, wx.Size( -1,-1 ), wx.BU_EXACTFIT )
+		bSizer13.Add( self.m_load, 1, wx.ALL, 5 )
 		
 		bSizer4.Add( bSizer13, 0, wx.ALL|wx.EXPAND, 5 )
 		
@@ -348,9 +348,9 @@ class loader ( wx.Frame ):
 class config ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Board Configuation", pos = wx.DefaultPosition, size = wx.Size( 300,350 ), style = wx.DEFAULT_DIALOG_STYLE )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Board Configuation", pos = wx.DefaultPosition, size = wx.Size( 350,400 ), style = wx.DEFAULT_DIALOG_STYLE )
 		
-		self.SetSizeHintsSz( wx.Size( 300,350 ), wx.DefaultSize )
+		self.SetSizeHintsSz( wx.Size( 350,400 ), wx.DefaultSize )
 		
 		bSizer9 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -471,7 +471,7 @@ class config ( wx.Dialog ):
 		
 		sbSizer5.Add( bSizer21, 1, wx.ALL|wx.EXPAND, 5 )
 		
-		bSizer10.Add( sbSizer5, 0, wx.ALL|wx.EXPAND, 5 )
+		bSizer10.Add( sbSizer5, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		m_sdbSizer1 = wx.StdDialogButtonSizer()
 		self.m_sdbSizer1OK = wx.Button( self, wx.ID_OK )
@@ -479,7 +479,7 @@ class config ( wx.Dialog ):
 		self.m_sdbSizer1Cancel = wx.Button( self, wx.ID_CANCEL )
 		m_sdbSizer1.AddButton( self.m_sdbSizer1Cancel )
 		m_sdbSizer1.Realize();
-		bSizer10.Add( m_sdbSizer1, 1, wx.EXPAND, 5 )
+		bSizer10.Add( m_sdbSizer1, 0, wx.ALL|wx.EXPAND, 5 )
 		
 		bSizer9.Add( bSizer10, 1, wx.EXPAND, 5 )
 		
@@ -511,9 +511,9 @@ class config ( wx.Dialog ):
 class custom ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Custom Mapping Builder", pos = wx.DefaultPosition, size = wx.Size( 850,600 ), style = wx.DEFAULT_DIALOG_STYLE )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Custom Mapping Builder", pos = wx.DefaultPosition, size = wx.Size( 850,600 ), style = wx.DEFAULT_DIALOG_STYLE|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.RESIZE_BORDER )
 		
-		self.SetSizeHintsSz( wx.Size( 800,600 ), wx.DefaultSize )
+		self.SetSizeHintsSz( wx.Size( 800,600 ), wx.Size( 1000,700 ) )
 		
 		bSizer28 = wx.BoxSizer( wx.VERTICAL )
 		
