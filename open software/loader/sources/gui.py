@@ -31,8 +31,8 @@ class loader ( wx.Frame ):
 		self.m_panel3 = wx.Panel( self.m_panel1, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		bSizer4 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_bitmap1 = wx.StaticBitmap( self.m_panel3, wx.ID_ANY, wx.Bitmap( u"images/KADE.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer4.Add( self.m_bitmap1, 0, wx.ALL|wx.EXPAND, 5 )
+		self.m_bitmap1 = wx.StaticBitmap( self.m_panel3, wx.ID_ANY, wx.Bitmap( u"images/KADE.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.Size( 265,-1 ), wx.FULL_REPAINT_ON_RESIZE )
+		bSizer4.Add( self.m_bitmap1, 0, wx.ALL, 5 )
 		
 		sbSizer3 = wx.StaticBoxSizer( wx.StaticBox( self.m_panel3, wx.ID_ANY, u"Board Options" ), wx.VERTICAL )
 		
@@ -54,8 +54,8 @@ class loader ( wx.Frame ):
 		
 		bSizer13 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_load = wx.Button( self.m_panel3, wx.ID_ANY, u"Program KADE with Selected Firmware", wx.DefaultPosition, wx.Size( 220,-1 ), 0 )
-		bSizer13.Add( self.m_load, 0, wx.ALL, 5 )
+		self.m_load = wx.Button( self.m_panel3, wx.ID_ANY, u"Program KADE with Selected Firmware", wx.DefaultPosition, wx.Size( -1,-1 ), 0 )
+		bSizer13.Add( self.m_load, 1, wx.ALL, 5 )
 		
 		bSizer4.Add( bSizer13, 0, wx.ALL|wx.EXPAND, 5 )
 		
@@ -511,9 +511,9 @@ class config ( wx.Dialog ):
 class custom ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Custom Mapping Builder", pos = wx.DefaultPosition, size = wx.Size( 850,600 ), style = wx.DEFAULT_DIALOG_STYLE )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Custom Mapping Builder", pos = wx.DefaultPosition, size = wx.Size( 850,615 ), style = wx.DEFAULT_DIALOG_STYLE|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.RESIZE_BORDER )
 		
-		self.SetSizeHintsSz( wx.Size( 800,600 ), wx.DefaultSize )
+		self.SetSizeHintsSz( wx.Size( 800,615 ), wx.Size( 900,-1 ) )
 		
 		bSizer28 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -556,12 +556,12 @@ class custom ( wx.Dialog ):
 		A1Choices = []
 		self.A1 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A1Choices, 0 )
 		self.A1.SetSelection( -1 )
-		fgSizer1.Add( self.A1, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A1, 0, wx.ALL, 2 )
 		
 		A1sChoices = []
 		self.A1s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A1sChoices, 0 )
 		self.A1s.SetSelection( 0 )
-		fgSizer1.Add( self.A1s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A1s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextA2 = wx.StaticText( self, wx.ID_ANY, u"A2", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextA2.Wrap( -1 )
@@ -570,12 +570,12 @@ class custom ( wx.Dialog ):
 		A2Choices = []
 		self.A2 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A2Choices, 0 )
 		self.A2.SetSelection( -1 )
-		fgSizer1.Add( self.A2, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A2, 0, wx.ALL, 2 )
 		
 		A2sChoices = []
 		self.A2s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A2sChoices, 0 )
 		self.A2s.SetSelection( 0 )
-		fgSizer1.Add( self.A2s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A2s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextA3 = wx.StaticText( self, wx.ID_ANY, u"A3", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextA3.Wrap( -1 )
@@ -584,12 +584,12 @@ class custom ( wx.Dialog ):
 		A3Choices = []
 		self.A3 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A3Choices, 0 )
 		self.A3.SetSelection( -1 )
-		fgSizer1.Add( self.A3, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A3, 0, wx.ALL, 2 )
 		
 		A3sChoices = []
 		self.A3s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A3sChoices, 0 )
 		self.A3s.SetSelection( 0 )
-		fgSizer1.Add( self.A3s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A3s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextA4 = wx.StaticText( self, wx.ID_ANY, u"A4", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextA4.Wrap( -1 )
@@ -598,12 +598,12 @@ class custom ( wx.Dialog ):
 		A4Choices = []
 		self.A4 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A4Choices, 0 )
 		self.A4.SetSelection( 0 )
-		fgSizer1.Add( self.A4, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A4, 0, wx.ALL, 2 )
 		
 		A4sChoices = []
 		self.A4s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A4sChoices, 0 )
 		self.A4s.SetSelection( 0 )
-		fgSizer1.Add( self.A4s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A4s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextA5 = wx.StaticText( self, wx.ID_ANY, u"A5", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextA5.Wrap( -1 )
@@ -612,12 +612,12 @@ class custom ( wx.Dialog ):
 		A5Choices = []
 		self.A5 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A5Choices, 0 )
 		self.A5.SetSelection( -1 )
-		fgSizer1.Add( self.A5, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A5, 0, wx.ALL, 2 )
 		
 		A5sChoices = []
 		self.A5s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A5sChoices, 0 )
 		self.A5s.SetSelection( 0 )
-		fgSizer1.Add( self.A5s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A5s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextA6 = wx.StaticText( self, wx.ID_ANY, u"A6", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextA6.Wrap( -1 )
@@ -626,12 +626,12 @@ class custom ( wx.Dialog ):
 		A6Choices = []
 		self.A6 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A6Choices, 0 )
 		self.A6.SetSelection( 0 )
-		fgSizer1.Add( self.A6, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A6, 0, wx.ALL, 2 )
 		
 		A6sChoices = []
 		self.A6s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A6sChoices, 0 )
 		self.A6s.SetSelection( 0 )
-		fgSizer1.Add( self.A6s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A6s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextA7 = wx.StaticText( self, wx.ID_ANY, u"A7", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextA7.Wrap( -1 )
@@ -640,12 +640,12 @@ class custom ( wx.Dialog ):
 		A7Choices = []
 		self.A7 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A7Choices, 0 )
 		self.A7.SetSelection( 0 )
-		fgSizer1.Add( self.A7, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A7, 0, wx.ALL, 2 )
 		
 		A7sChoices = []
 		self.A7s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A7sChoices, 0 )
 		self.A7s.SetSelection( 0 )
-		fgSizer1.Add( self.A7s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A7s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextA8 = wx.StaticText( self, wx.ID_ANY, u"A8", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextA8.Wrap( -1 )
@@ -654,12 +654,12 @@ class custom ( wx.Dialog ):
 		A8Choices = []
 		self.A8 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A8Choices, 0 )
 		self.A8.SetSelection( 0 )
-		fgSizer1.Add( self.A8, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A8, 0, wx.ALL, 2 )
 		
 		A8sChoices = []
 		self.A8s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A8sChoices, 0 )
 		self.A8s.SetSelection( 0 )
-		fgSizer1.Add( self.A8s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A8s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextA9 = wx.StaticText( self, wx.ID_ANY, u"A9", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextA9.Wrap( -1 )
@@ -668,12 +668,12 @@ class custom ( wx.Dialog ):
 		A9Choices = []
 		self.A9 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A9Choices, 0 )
 		self.A9.SetSelection( 0 )
-		fgSizer1.Add( self.A9, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A9, 0, wx.ALL, 2 )
 		
 		A9sChoices = []
 		self.A9s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A9sChoices, 0 )
 		self.A9s.SetSelection( 0 )
-		fgSizer1.Add( self.A9s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A9s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextA10 = wx.StaticText( self, wx.ID_ANY, u"A10", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextA10.Wrap( -1 )
@@ -682,12 +682,12 @@ class custom ( wx.Dialog ):
 		A10Choices = []
 		self.A10 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A10Choices, 0 )
 		self.A10.SetSelection( 0 )
-		fgSizer1.Add( self.A10, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A10, 0, wx.ALL, 2 )
 		
 		A10sChoices = []
 		self.A10s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), A10sChoices, 0 )
 		self.A10s.SetSelection( 0 )
-		fgSizer1.Add( self.A10s, 0, wx.ALL, 5 )
+		fgSizer1.Add( self.A10s, 0, wx.ALL, 2 )
 		
 		bSizer3011.Add( fgSizer1, 1, wx.EXPAND, 5 )
 		
@@ -725,12 +725,12 @@ class custom ( wx.Dialog ):
 		B1Choices = []
 		self.B1 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B1Choices, 0 )
 		self.B1.SetSelection( -1 )
-		fgSizer2.Add( self.B1, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B1, 0, wx.ALL, 2 )
 		
 		B1sChoices = []
 		self.B1s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B1sChoices, 0 )
 		self.B1s.SetSelection( 0 )
-		fgSizer2.Add( self.B1s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B1s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextB2 = wx.StaticText( self, wx.ID_ANY, u"B2", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextB2.Wrap( -1 )
@@ -739,12 +739,12 @@ class custom ( wx.Dialog ):
 		B2Choices = []
 		self.B2 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B2Choices, 0 )
 		self.B2.SetSelection( 0 )
-		fgSizer2.Add( self.B2, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B2, 0, wx.ALL, 2 )
 		
 		B2sChoices = []
 		self.B2s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B2sChoices, 0 )
 		self.B2s.SetSelection( -1 )
-		fgSizer2.Add( self.B2s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B2s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextB3 = wx.StaticText( self, wx.ID_ANY, u"B3", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextB3.Wrap( -1 )
@@ -753,12 +753,12 @@ class custom ( wx.Dialog ):
 		B3Choices = []
 		self.B3 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B3Choices, 0 )
 		self.B3.SetSelection( 0 )
-		fgSizer2.Add( self.B3, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B3, 0, wx.ALL, 2 )
 		
 		B3sChoices = []
 		self.B3s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B3sChoices, 0 )
 		self.B3s.SetSelection( 0 )
-		fgSizer2.Add( self.B3s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B3s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextB4 = wx.StaticText( self, wx.ID_ANY, u"B4", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextB4.Wrap( -1 )
@@ -767,12 +767,12 @@ class custom ( wx.Dialog ):
 		B4Choices = []
 		self.B4 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B4Choices, 0 )
 		self.B4.SetSelection( 0 )
-		fgSizer2.Add( self.B4, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B4, 0, wx.ALL, 2 )
 		
 		B4sChoices = []
 		self.B4s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B4sChoices, 0 )
 		self.B4s.SetSelection( 0 )
-		fgSizer2.Add( self.B4s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B4s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextB5 = wx.StaticText( self, wx.ID_ANY, u"B5", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextB5.Wrap( -1 )
@@ -781,12 +781,12 @@ class custom ( wx.Dialog ):
 		B5Choices = []
 		self.B5 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B5Choices, 0 )
 		self.B5.SetSelection( 0 )
-		fgSizer2.Add( self.B5, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B5, 0, wx.ALL, 2 )
 		
 		B5sChoices = []
 		self.B5s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B5sChoices, 0 )
 		self.B5s.SetSelection( 0 )
-		fgSizer2.Add( self.B5s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B5s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextB6 = wx.StaticText( self, wx.ID_ANY, u"B6", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextB6.Wrap( -1 )
@@ -795,12 +795,12 @@ class custom ( wx.Dialog ):
 		B6Choices = []
 		self.B6 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B6Choices, 0 )
 		self.B6.SetSelection( 0 )
-		fgSizer2.Add( self.B6, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B6, 0, wx.ALL, 2 )
 		
 		B6sChoices = []
 		self.B6s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B6sChoices, 0 )
 		self.B6s.SetSelection( 0 )
-		fgSizer2.Add( self.B6s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B6s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextB7 = wx.StaticText( self, wx.ID_ANY, u"B7", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextB7.Wrap( -1 )
@@ -809,12 +809,12 @@ class custom ( wx.Dialog ):
 		B7Choices = []
 		self.B7 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B7Choices, 0 )
 		self.B7.SetSelection( 0 )
-		fgSizer2.Add( self.B7, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B7, 0, wx.ALL, 2 )
 		
 		B7sChoices = []
 		self.B7s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B7sChoices, 0 )
 		self.B7s.SetSelection( 0 )
-		fgSizer2.Add( self.B7s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B7s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextB8 = wx.StaticText( self, wx.ID_ANY, u"B8", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextB8.Wrap( -1 )
@@ -823,12 +823,12 @@ class custom ( wx.Dialog ):
 		B8Choices = []
 		self.B8 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B8Choices, 0 )
 		self.B8.SetSelection( 0 )
-		fgSizer2.Add( self.B8, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B8, 0, wx.ALL, 2 )
 		
 		B8sChoices = []
 		self.B8s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B8sChoices, 0 )
 		self.B8s.SetSelection( 0 )
-		fgSizer2.Add( self.B8s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B8s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextB9 = wx.StaticText( self, wx.ID_ANY, u"B9", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextB9.Wrap( -1 )
@@ -837,12 +837,12 @@ class custom ( wx.Dialog ):
 		B9Choices = []
 		self.B9 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B9Choices, 0 )
 		self.B9.SetSelection( 0 )
-		fgSizer2.Add( self.B9, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B9, 0, wx.ALL, 2 )
 		
 		B9sChoices = []
 		self.B9s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B9sChoices, 0 )
 		self.B9s.SetSelection( 0 )
-		fgSizer2.Add( self.B9s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B9s, 0, wx.ALL, 2 )
 		
 		self.m_staticTextB10 = wx.StaticText( self, wx.ID_ANY, u"B10", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticTextB10.Wrap( -1 )
@@ -851,12 +851,12 @@ class custom ( wx.Dialog ):
 		B10Choices = []
 		self.B10 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B10Choices, 0 )
 		self.B10.SetSelection( 0 )
-		fgSizer2.Add( self.B10, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B10, 0, wx.ALL, 2 )
 		
 		B10sChoices = []
 		self.B10s = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), B10sChoices, 0 )
 		self.B10s.SetSelection( 0 )
-		fgSizer2.Add( self.B10s, 0, wx.ALL, 5 )
+		fgSizer2.Add( self.B10s, 0, wx.ALL, 2 )
 		
 		bSizer3011.Add( fgSizer2, 1, wx.EXPAND, 5 )
 		
@@ -868,13 +868,18 @@ class custom ( wx.Dialog ):
 		bSizer52.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 		
 		self.m_xbox_combos = wx.HyperlinkCtrl( self, wx.ID_ANY, u"Help with advanced xbox combos", wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.HL_DEFAULT_STYLE )
+		self.m_xbox_combos.SetFont( wx.Font( 7, 70, 90, 90, True, wx.EmptyString ) )
+		
 		bSizer52.Add( self.m_xbox_combos, 0, wx.ALL, 5 )
+		
+		
+		bSizer52.AddSpacer( ( 15, 0), 0, wx.EXPAND, 5 )
 		
 		bSizer301.Add( bSizer52, 0, wx.EXPAND, 5 )
 		
 		sbSizer6.Add( bSizer301, 1, wx.EXPAND, 5 )
 		
-		bSizer30.Add( sbSizer6, 1, wx.ALL|wx.EXPAND, 5 )
+		bSizer30.Add( sbSizer6, 0, wx.ALL|wx.EXPAND, 5 )
 		
 		bSizer46 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -883,7 +888,7 @@ class custom ( wx.Dialog ):
 		
 		bSizer511 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_trackball1 = wx.CheckBox( self.m_settings0, wx.ID_ANY, u"Connect trackball* to pins A3/A7", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_trackball1 = wx.CheckBox( self.m_settings0, wx.ID_ANY, u"Connect trackball to A3/A7", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer511.Add( self.m_trackball1, 0, wx.ALL, 5 )
 		
 		self.m_trackball1_map = wx.Button( self.m_settings0, wx.ID_ANY, u"Assign Inputs", wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -894,7 +899,7 @@ class custom ( wx.Dialog ):
 		
 		bSizer511.AddSpacer( ( 20, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_trackball2 = wx.CheckBox( self.m_settings0, wx.ID_ANY, u"Connect trackball* to pins A4/A8", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_trackball2 = wx.CheckBox( self.m_settings0, wx.ID_ANY, u"Connect trackball to A4/A8", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_trackball2.Enable( False )
 		
 		bSizer511.Add( self.m_trackball2, 0, wx.ALL, 5 )
@@ -905,10 +910,15 @@ class custom ( wx.Dialog ):
 		bSizer511.Add( self.m_trackball2_map, 0, 0, 5 )
 		
 		
-		bSizer511.AddSpacer( ( 20, 0), 0, wx.EXPAND, 5 )
+		bSizer511.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 		
-		self.m_compatible_list = wx.HyperlinkCtrl( self.m_settings0, wx.ID_ANY, u"* Compatibility information", wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.HL_DEFAULT_STYLE )
+		self.m_compatible_list = wx.HyperlinkCtrl( self.m_settings0, wx.ID_ANY, u"Compatibility information", wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.HL_DEFAULT_STYLE )
+		self.m_compatible_list.SetFont( wx.Font( 7, 70, 90, 90, True, wx.EmptyString ) )
+		
 		bSizer511.Add( self.m_compatible_list, 0, wx.ALL, 5 )
+		
+		
+		bSizer511.AddSpacer( ( 15, 0), 0, wx.EXPAND, 5 )
 		
 		sbSizer11.Add( bSizer511, 1, wx.ALL|wx.EXPAND, 5 )
 		

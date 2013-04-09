@@ -1,9 +1,13 @@
 KADE Loader Release Notes
 
-v1.0.2.1 08/04/2013 (Private Beta for now)
-  Add mechanical rotary joystick firmware to support devices like this one: http://na.suzohapp.com/joysticks/rotary_optical_joy.htm . Thanks go to PL1 for defining the techical requirements.
-  Created 3 preset firmwares for the mechanical rotary joystick (P1 Rotary, P2 Rotary and 2 Player Rotary)
+v1.0.3.0 09/04/2013
+  Add mechanical rotary joystick firmware to support devices like these: 
+    http://www.arcadeshop.de/Seimitsu-Joysticks-Rotary-Joystick-SNK_538.html 
+    http://na.suzohapp.com/joysticks/rotary_optical_joy.htm
+    Thanks to PL1 for defining the technical requirements.
+  Created 3 mapping presets for the mechanical rotary joystick (P1 Rotary, P2 Rotary and 2 Player Rotary).
   Remove LED output options from default custom mappings as a precaution against short circuit for those unfamiliar with wiring requirements.  Existing users will be unaffected unless selecting to revert back to default map in the customiser.
+  Improved GUI for Windows 8 compatibility
   
 v1.0.2.0 05/04/2013
   Location of KADE Loader update files moved from Google Sites to kadevice.com.  Google Sites is not reliable.

@@ -594,8 +594,8 @@ class kadeAbout( gui.about ):
 class kadeProgrammed( gui.programmed ):
   def __init__( self, parent, firmware ):
     gui.programmed.__init__( self, parent )
-    category = sql_single('SELECT category FROM firmwares WHERE name = "%s"' % firmware)    
-    if category <> 'keyboard' and firmware <> 'kade-rotary-custom':
+    test_tool = sql_single('SELECT test_tool FROM firmwares WHERE name = "%s"' % firmware)    
+    if test_tool <> 'keytest':
       self.m_kit.Hide()              
       
   def onOK(self, event):
