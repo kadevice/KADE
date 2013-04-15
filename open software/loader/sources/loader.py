@@ -60,6 +60,8 @@ from trackball import *
 from helpers import *
 import usbevent
 
+INSTALL_DIR = os.getcwd()
+
 class kadeLoader( gui.loader ):
   def __init__( self, parent ):
     gui.loader.__init__( self, parent )
@@ -73,13 +75,15 @@ class kadeLoader( gui.loader ):
     self.m_list.SetColumnWidth(0, 240)
     self.m_list.SetColumnWidth(1, 0)    
     self.m_menu_testing.SetCheckable(True)
-            
+ 
+    os.chdir(INSTALL_DIR)
+    
     #set application icon
     favicon = wx.Icon('images\\icons.ico', wx.BITMAP_TYPE_ICO, 16,16)
     self.SetIcon(favicon)
         
     #load icons for list
-    self.image_lookup = ['console', 'joystick', 'keyboard', 'led', 'test', 'keypad', 'user']
+    self.image_lookup = ['console', 'joystick', 'keyboard', 'led', 'test', 'keypad', 'user', 'ipad']
     self.il = wx.ImageList(18, 16)
     for i in self.image_lookup:
       try:
@@ -158,22 +162,23 @@ class kadeLoader( gui.loader ):
       self.family = family_data[0][0]
       data = sql_command('SELECT desc, name, category, status, hex_test FROM firmwares WHERE family = "%s" AND status != "Admin" AND status != "Removed" ORDER BY category, sort' % self.family)
       for row in data:
-        image = row[2]
-        mode = ""
-        if self.m_menu_testing.IsChecked() and row[4]: 
-          mode = " (Test)"
-          image = "test"
-        elif row[3] == "WIP": 
-          mode = " (WIP)"   
-        item = self.m_list.Append((row[0] + mode, row[1]))
-        
-        if row[3] == "WIP": self.m_list.SetItemTextColour(item, wx.Colour(120,120,120))
-        if image == "TEST": self.m_list.SetItemTextColour(item, wx.RED)
+        if row[3] == "Ready" or self.beta:
+          image = row[2]
+          mode = ""
+          if self.m_menu_testing.IsChecked() and row[4]: 
+            mode = " (Test)"
+            image = "test"
+          elif row[3] == "WIP": 
+            mode = " (WIP)"   
+          item = self.m_list.Append((row[0] + mode, row[1]))
           
-        try:
-          self.m_list.SetItemImage(item, self.image_lookup.index(image))
-        except ValueError:
-          pass
+          if row[3] == "WIP": self.m_list.SetItemTextColour(item, wx.Colour(120,120,120))
+          if image == "TEST": self.m_list.SetItemTextColour(item, wx.RED)
+            
+          try:
+            self.m_list.SetItemImage(item, self.image_lookup.index(image))
+          except ValueError:
+            pass
     return read_param("default_firmware")                
 
   def getProduct(self):

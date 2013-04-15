@@ -36,6 +36,9 @@ make clean
 cd %working_dir%\kade-rotary-custom
 make clean
 
+cd %working_dir%\kade-icade
+make clean
+
 cd %working_dir%\tests\minimus
 make clean
 

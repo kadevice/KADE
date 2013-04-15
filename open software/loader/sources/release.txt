@@ -1,5 +1,10 @@
 KADE Loader Release Notes
 
+v1.0.4.0 16/04/2013
+  Added Beta version of iCADE firmware
+  Mechanical Rotary Joystick moved to Beta
+  Fix Missing firmware icons in Windows XP
+
 v1.0.3.0 09/04/2013
   Add mechanical rotary joystick firmware to support devices like these: 
     http://www.arcadeshop.de/Seimitsu-Joysticks-Rotary-Joystick-SNK_538.html 

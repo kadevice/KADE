@@ -1185,9 +1185,9 @@ class custom ( wx.Dialog ):
 class update ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"KADE Loader Update", pos = wx.DefaultPosition, size = wx.Size( 425,150 ), style = wx.DEFAULT_DIALOG_STYLE )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"KADE Loader Update", pos = wx.DefaultPosition, size = wx.Size( 475,150 ), style = wx.DEFAULT_DIALOG_STYLE )
 		
-		self.SetSizeHintsSz( wx.Size( 425,150 ), wx.DefaultSize )
+		self.SetSizeHintsSz( wx.Size( 475,150 ), wx.DefaultSize )
 		
 		bSizer24 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -1259,7 +1259,7 @@ class update ( wx.Dialog ):
 class about ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"About KADE Loader <version>", pos = wx.DefaultPosition, size = wx.Size( 380,600 ), style = wx.DEFAULT_DIALOG_STYLE )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"About KADE Loader <version>", pos = wx.DefaultPosition, size = wx.Size( 400,600 ), style = wx.DEFAULT_DIALOG_STYLE )
 		
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		
@@ -1270,16 +1270,16 @@ class about ( wx.Dialog ):
 		bSizer41 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.m_bitmap2 = wx.StaticBitmap( self, wx.ID_ANY, wx.Bitmap( u"images/KADE.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer41.Add( self.m_bitmap2, 0, wx.ALIGN_CENTER_HORIZONTAL, 5 )
+		bSizer41.Add( self.m_bitmap2, 0, wx.ALIGN_CENTER_HORIZONTAL, 0 )
 		
 		
-		bSizer41.AddSpacer( ( 0, 10), 0, wx.EXPAND, 5 )
+		bSizer41.AddSpacer( ( 0, 5), 0, wx.EXPAND, 5 )
 		
 		self.m_staticText39 = wx.StaticText( self, wx.ID_ANY, u"A firmware programming utility for KADE devices \nby Jon Wilson\n\nKADE Development Team:\n• Jon Wilson (degenatrons@gmail.com)\n• Bruno Freitas (bootsector@ig.com.br)\n• Kevin Mackett (kevin@sharpfork.com)\n\nTesters and Contributors:\n• Rodney Black\n• Scott Hutchinson\n• John McNaught\n\nIf you like our open source software and hardware\nthen please consider making a small donation to help \nus improve KADE.\n", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText39.Wrap( -1 )
-		self.m_staticText39.SetFont( wx.Font( 10, 70, 90, 90, False, wx.EmptyString ) )
+		self.m_staticText39.SetFont( wx.Font( 9, 70, 90, 90, False, wx.EmptyString ) )
 		
-		bSizer41.Add( self.m_staticText39, 0, wx.LEFT, 10 )
+		bSizer41.Add( self.m_staticText39, 0, wx.EXPAND|wx.LEFT, 10 )
 		
 		sbSizer14 = wx.StaticBoxSizer( wx.StaticBox( self, wx.ID_ANY, u"License Info" ), wx.VERTICAL )
 		
@@ -1305,7 +1305,7 @@ class about ( wx.Dialog ):
 		
 		sbSizer14.Add( self.m_hyperlink4, 0, wx.BOTTOM|wx.LEFT|wx.RIGHT, 5 )
 		
-		bSizer41.Add( sbSizer14, 0, wx.ALL|wx.EXPAND, 5 )
+		bSizer41.Add( sbSizer14, 0, wx.EXPAND|wx.LEFT|wx.RIGHT, 5 )
 		
 		bSizer39.Add( bSizer41, 1, wx.ALL|wx.EXPAND, 5 )
 		
@@ -1735,7 +1735,7 @@ class trackball_inputs ( wx.Dialog ):
 class programmed ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Congratulations", pos = wx.DefaultPosition, size = wx.Size( 395,270 ), style = wx.CAPTION )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Congratulations", pos = wx.DefaultPosition, size = wx.Size( 450,270 ), style = wx.CAPTION )
 		
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		self.SetBackgroundColour( wx.Colour( 209, 255, 164 ) )
