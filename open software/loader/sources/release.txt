@@ -1,9 +1,12 @@
 KADE Loader Release Notes
 
-v1.0.4.0 16/04/2013
-  Added Beta version of iCADE firmware
-  Mechanical Rotary Joystick moved to Beta
-  Fix Missing firmware icons in Windows XP
+v1.0.5.0 17/04/2013
+  Default mapping file for rotary joystick firmware added - to fix issue with users unable to program firmware.
+
+v1.0.4.0 17/04/2013
+  Added Beta version of iCade firmware with basic mapping sheet including all 12 functions provided for iCade, iCade Core, iCade Jr and iCade Mobile.
+  Mechanical Rotary Joystick moved to Beta.
+  Fix missing firmware icons in Windows XP
 
 v1.0.3.0 09/04/2013
   Add mechanical rotary joystick firmware to support devices like these: 

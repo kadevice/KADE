@@ -130,12 +130,13 @@ int main(void)
 		if(((d & 0x02))&&(!(d_prev & 0x02))) { keyboard_keys[keycount++] = map[22]; }  //PIN A3
 		if(((d & 0x01))&&(!(d_prev & 0x01))) { keyboard_keys[keycount++] = map[21]; }  //PIN A2
 		if(((c & 0x04))&&(!(c_prev & 0x04))) { keyboard_keys[keycount++] = map[20]; }  //PIN A1
-		  			  
+  			  
 		while(keycount < sizeof(keyboard_keys)) {
 			keyboard_keys[keycount++] = KEY_NONE;
 		}
 
 		usb_keyboard_send();
+
 
 		b_prev = b;
 		c_prev = c;

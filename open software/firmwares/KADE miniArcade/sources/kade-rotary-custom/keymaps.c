@@ -10,8 +10,8 @@ if (ass[pos]==7){keyboard_keys[keycount++] = KEY_LEFT_CTRL;}
 if (ass[pos]==8){keyboard_keys[keycount++] = KEY_LEFT_ALT;}
 if (ass[pos]==9){keyboard_keys[keycount++] = KEY_SPACE;}
 if (ass[pos]==10){keyboard_keys[keycount++] = KEY_LEFT_SHIFT;}
-if (ass[pos]==11){keyboard_keys[keycount++] = KEY_Z;}
-if (ass[pos]==12){keyboard_keys[keycount++] = KEY_X;}
+if (ass[pos]==11){keyboard_keys[keycount++] = KEY_C;}
+if (ass[pos]==12){keyboard_keys[keycount++] = KEY_V;}
 if (ass[pos]==13){keyboard_keys[keycount++] = KEY_2;}
 if (ass[pos]==14){keyboard_keys[keycount++] = KEY_6;}
 if (ass[pos]==15){keyboard_keys[keycount++] = KEY_R;}
