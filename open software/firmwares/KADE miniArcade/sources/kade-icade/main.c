@@ -104,18 +104,18 @@ int main(void)
 		keycount = 0;
 
 		//down
-		if(!(c & 0x40)) { keyboard_keys[keycount++] = map[17]; } //PIN B8
-		if(!(c & 0x80)) { keyboard_keys[keycount++] = map[16]; } //PIN B7
-		if(!(b & 0x80)) { keyboard_keys[keycount++] = map[15]; } //PIN B6
-		if(!(b & 0x40)) { keyboard_keys[keycount++] = map[14]; } //PIN B5
-		if(!(b & 0x20)) { keyboard_keys[keycount++] = map[13]; } //PIN B4
-		if(!(b & 0x10)) { keyboard_keys[keycount++] = map[12]; } //PIN B3
-		if(!(b & 0x08)) { keyboard_keys[keycount++] = map[11]; } //PIN B2
-		if(!(b & 0x04)) { keyboard_keys[keycount++] = map[10]; } //PIN B1
-		if(!(d & 0x04)) { keyboard_keys[keycount++] = map[3]; }  //PIN A4
-		if(!(d & 0x02)) { keyboard_keys[keycount++] = map[2]; }  //PIN A3
-		if(!(d & 0x01)) { keyboard_keys[keycount++] = map[1]; }  //PIN A2
-		if(!(c & 0x04)) { keyboard_keys[keycount++] = map[0]; }  //PIN A1
+		if((!(c & 0x40))&&((c_prev & 0x40))) { keyboard_keys[keycount++] = map[17]; } //PIN B8
+		if((!(c & 0x80))&&((c_prev & 0x80))) { keyboard_keys[keycount++] = map[16]; } //PIN B7
+		if((!(b & 0x80))&&((b_prev & 0x80))) { keyboard_keys[keycount++] = map[15]; } //PIN B6
+		if((!(b & 0x40))&&((b_prev & 0x40))) { keyboard_keys[keycount++] = map[14]; } //PIN B5
+		if((!(b & 0x20))&&((b_prev & 0x20))) { keyboard_keys[keycount++] = map[13]; } //PIN B4
+		if((!(b & 0x10))&&((b_prev & 0x10))) { keyboard_keys[keycount++] = map[12]; } //PIN B3
+		if((!(b & 0x08))&&((b_prev & 0x08))) { keyboard_keys[keycount++] = map[11]; } //PIN B2
+		if((!(b & 0x04))&&((b_prev & 0x04))) { keyboard_keys[keycount++] = map[10]; } //PIN B1
+		if((!(d & 0x04))&&((d_prev & 0x04))) { keyboard_keys[keycount++] = map[3]; }  //PIN A4
+		if((!(d & 0x02))&&((d_prev & 0x02))) { keyboard_keys[keycount++] = map[2]; }  //PIN A3
+		if((!(d & 0x01))&&((d_prev & 0x01))) { keyboard_keys[keycount++] = map[1]; }  //PIN A2
+		if((!(c & 0x04))&&((c_prev & 0x04))) { keyboard_keys[keycount++] = map[0]; }  //PIN A1
 
 		//up
 		if(((c & 0x40))&&(!(c_prev & 0x40))) { keyboard_keys[keycount++] = map[37]; } //PIN B8

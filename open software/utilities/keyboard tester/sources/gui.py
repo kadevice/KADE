@@ -17,9 +17,9 @@ import wx.xrc
 class keytest ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,305 ), style = wx.CAPTION|wx.DEFAULT_FRAME_STYLE|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,315 ), style = wx.CAPTION|wx.DEFAULT_FRAME_STYLE|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
 		
-		self.SetSizeHintsSz( wx.Size( 800,305 ), wx.Size( 800,-1 ) )
+		self.SetSizeHintsSz( wx.Size( 800,315 ), wx.Size( 800,-1 ) )
 		
 		bSizer19 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -29,8 +29,6 @@ class keytest ( wx.Frame ):
 		bSizer24 = wx.BoxSizer( wx.VERTICAL )
 		
 		self.m_uk = wx.Panel( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_uk.Hide()
-		
 		bSizer65 = wx.BoxSizer( wx.VERTICAL )
 		
 		bSizer65.SetMinSize( wx.Size( -1,232 ) ) 
@@ -44,11 +42,11 @@ class keytest ( wx.Frame ):
 		
 		bSizer67 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_escape = wx.Button( self.m_uk, wx.ID_ANY, u"Esc", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_escape = wx.Button( self.m_uk, wx.ID_ANY, u"Esc", wx.DefaultPosition, wx.Size( 36,35 ), 0 )
 		bSizer67.Add( self.m_escape, 0, wx.ALL, 0 )
 		
 		
-		bSizer67.AddSpacer( ( 19, 0), 0, wx.EXPAND, 5 )
+		bSizer67.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
 		
 		self.m_f1 = wx.Button( self.m_uk, wx.ID_ANY, u"F1", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer67.Add( self.m_f1, 0, wx.ALL, 0 )
@@ -63,7 +61,7 @@ class keytest ( wx.Frame ):
 		bSizer67.Add( self.m_f4, 0, wx.ALL, 0 )
 		
 		
-		bSizer67.AddSpacer( ( 19, 0), 0, wx.EXPAND, 5 )
+		bSizer67.AddSpacer( ( 15, 0), 0, wx.EXPAND, 5 )
 		
 		self.m_f5 = wx.Button( self.m_uk, wx.ID_ANY, u"F5", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer67.Add( self.m_f5, 0, wx.ALL, 0 )
@@ -78,7 +76,7 @@ class keytest ( wx.Frame ):
 		bSizer67.Add( self.m_f8, 0, wx.ALL, 0 )
 		
 		
-		bSizer67.AddSpacer( ( 19, 0), 0, wx.EXPAND, 5 )
+		bSizer67.AddSpacer( ( 15, 0), 0, wx.EXPAND, 5 )
 		
 		self.m_f9 = wx.Button( self.m_uk, wx.ID_ANY, u"F9", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer67.Add( self.m_f9, 0, wx.ALL, 0 )
@@ -93,20 +91,20 @@ class keytest ( wx.Frame ):
 		bSizer67.Add( self.m_f12, 0, wx.ALL, 0 )
 		
 		
-		bSizer67.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer67.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_print = wx.Button( self.m_uk, wx.ID_ANY, u"PrtScn\nSysRq", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_print = wx.Button( self.m_uk, wx.ID_ANY, u"PrtScn\nSysRq", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_print.SetFont( wx.Font( 6, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer67.Add( self.m_print, 0, wx.ALL, 0 )
 		
-		self.m_scroll = wx.Button( self.m_uk, wx.ID_ANY, u"ScrLk", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_scroll = wx.Button( self.m_uk, wx.ID_ANY, u"ScrLk", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_scroll.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer67.Add( self.m_scroll, 0, wx.ALL, 0 )
 		
-		self.m_break = wx.Button( self.m_uk, wx.ID_ANY, u"Pause\nBreak", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
-		self.m_break.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
+		self.m_break = wx.Button( self.m_uk, wx.ID_ANY, u"Pause\nBreak", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
+		self.m_break.SetFont( wx.Font( 6, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer67.Add( self.m_break, 0, wx.ALL, 0 )
 		
@@ -125,7 +123,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer68 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_squiggle = wx.Button( self.m_uk, wx.ID_ANY, u"`\n¬", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_squiggle = wx.Button( self.m_uk, wx.ID_ANY, u"`\n¬", wx.DefaultPosition, wx.Size( 36,35 ), 0 )
 		bSizer68.Add( self.m_squiggle, 0, wx.ALL, 0 )
 		
 		self.m_1 = wx.Button( self.m_uk, wx.ID_ANY, u"!\n1", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
@@ -164,46 +162,46 @@ class keytest ( wx.Frame ):
 		self.m_plus = wx.Button( self.m_uk, wx.ID_ANY, u"+\n=", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer68.Add( self.m_plus, 0, wx.ALL, 0 )
 		
-		self.m_backspace = wx.Button( self.m_uk, wx.ID_ANY, u"Backspace", wx.DefaultPosition, wx.Size( 57,35 ), 0 )
+		self.m_backspace = wx.Button( self.m_uk, wx.ID_ANY, u"Back\nSpace", wx.DefaultPosition, wx.Size( 46,35 ), 0 )
 		bSizer68.Add( self.m_backspace, 0, wx.ALL, 0 )
 		
 		
-		bSizer68.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer68.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_insert = wx.Button( self.m_uk, wx.ID_ANY, u"Ins", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_insert = wx.Button( self.m_uk, wx.ID_ANY, u"Ins", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_insert.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68.Add( self.m_insert, 0, wx.ALL, 0 )
 		
-		self.m_home = wx.Button( self.m_uk, wx.ID_ANY, u"Home", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_home = wx.Button( self.m_uk, wx.ID_ANY, u"Home", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_home.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68.Add( self.m_home, 0, wx.ALL, 0 )
 		
-		self.m_page_up = wx.Button( self.m_uk, wx.ID_ANY, u"Page\nUp", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_page_up = wx.Button( self.m_uk, wx.ID_ANY, u"Page\nUp", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_page_up.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68.Add( self.m_page_up, 0, wx.ALL, 0 )
 		
 		
-		bSizer68.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
+		bSizer68.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_numlock = wx.Button( self.m_uk, wx.ID_ANY, u"Num\nLock", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_numlock = wx.Button( self.m_uk, wx.ID_ANY, u"Num\nLock", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_numlock.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68.Add( self.m_numlock, 0, wx.ALL, 0 )
 		
-		self.m_num_slash = wx.Button( self.m_uk, wx.ID_ANY, u"/", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num_slash = wx.Button( self.m_uk, wx.ID_ANY, u"/", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num_slash.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68.Add( self.m_num_slash, 0, wx.ALL, 0 )
 		
-		self.m_num_asterix = wx.Button( self.m_uk, wx.ID_ANY, u"*", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num_asterix = wx.Button( self.m_uk, wx.ID_ANY, u"*", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num_asterix.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68.Add( self.m_num_asterix, 0, wx.ALL, 0 )
 		
-		self.m_num_minus = wx.Button( self.m_uk, wx.ID_ANY, u"-", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num_minus = wx.Button( self.m_uk, wx.ID_ANY, u"-", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num_minus.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68.Add( self.m_num_minus, 0, wx.ALL, 0 )
@@ -216,7 +214,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer8 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_tab = wx.Button( self.m_uk, wx.ID_ANY, u"Tab", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_tab = wx.Button( self.m_uk, wx.ID_ANY, u"Tab", wx.DefaultPosition, wx.Size( 36,35 ), 0 )
 		bSizer8.Add( self.m_tab, 0, wx.ALL, 0 )
 		
 		self.m_q = wx.Button( self.m_uk, wx.ID_ANY, u"Q", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
@@ -259,7 +257,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer81 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_caps_lock = wx.Button( self.m_uk, wx.ID_ANY, u"Caps\nLock", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_caps_lock = wx.Button( self.m_uk, wx.ID_ANY, u"Caps\nLock", wx.DefaultPosition, wx.Size( 36,35 ), 0 )
 		bSizer81.Add( self.m_caps_lock, 0, wx.ALL, 0 )
 		
 		self.m_a = wx.Button( self.m_uk, wx.ID_ANY, u"A", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
@@ -302,7 +300,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer9.Add( bSizer11, 0, wx.EXPAND, 5 )
 		
-		self.m_enter = wx.Button( self.m_uk, wx.ID_ANY, u"Enter", wx.DefaultPosition, wx.Size( 57,70 ), 0 )
+		self.m_enter = wx.Button( self.m_uk, wx.ID_ANY, u"Enter", wx.DefaultPosition, wx.Size( 46,70 ), 0 )
 		bSizer9.Add( self.m_enter, 0, wx.ALL, 0 )
 		
 		bSizer15 = wx.BoxSizer( wx.VERTICAL )
@@ -310,37 +308,37 @@ class keytest ( wx.Frame ):
 		bSizer681 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		
-		bSizer681.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer681.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_delete = wx.Button( self.m_uk, wx.ID_ANY, u"Del", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_delete = wx.Button( self.m_uk, wx.ID_ANY, u"Del", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_delete.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681.Add( self.m_delete, 0, wx.ALL, 0 )
 		
-		self.m_end = wx.Button( self.m_uk, wx.ID_ANY, u"End", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_end = wx.Button( self.m_uk, wx.ID_ANY, u"End", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_end.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681.Add( self.m_end, 0, wx.ALL, 0 )
 		
-		self.m_page_down = wx.Button( self.m_uk, wx.ID_ANY, u"Page\nDown", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_page_down = wx.Button( self.m_uk, wx.ID_ANY, u"Page\nDwn", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_page_down.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681.Add( self.m_page_down, 0, wx.ALL, 0 )
 		
 		
-		bSizer681.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
+		bSizer681.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_num7 = wx.Button( self.m_uk, wx.ID_ANY, u"7\nHome", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num7 = wx.Button( self.m_uk, wx.ID_ANY, u"7\nHme", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num7.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681.Add( self.m_num7, 0, wx.ALL, 0 )
 		
-		self.m_num8 = wx.Button( self.m_uk, wx.ID_ANY, u"8\n˄", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num8 = wx.Button( self.m_uk, wx.ID_ANY, u"8\n˄", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num8.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681.Add( self.m_num8, 0, wx.ALL, 0 )
 		
-		self.m_num9 = wx.Button( self.m_uk, wx.ID_ANY, u"9\nPgUp", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num9 = wx.Button( self.m_uk, wx.ID_ANY, u"9\nPgUp", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num9.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681.Add( self.m_num9, 0, wx.ALL, 0 )
@@ -350,19 +348,19 @@ class keytest ( wx.Frame ):
 		bSizer6811 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		
-		bSizer6811.AddSpacer( ( 135, 0), 0, wx.EXPAND, 5 )
+		bSizer6811.AddSpacer( ( 130, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_num4 = wx.Button( self.m_uk, wx.ID_ANY, u"4\n˂", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num4 = wx.Button( self.m_uk, wx.ID_ANY, u"4\n˂", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num4.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6811.Add( self.m_num4, 0, wx.ALL, 0 )
 		
-		self.m_num5 = wx.Button( self.m_uk, wx.ID_ANY, u"5", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num5 = wx.Button( self.m_uk, wx.ID_ANY, u"5", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num5.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6811.Add( self.m_num5, 0, wx.ALL, 0 )
 		
-		self.m_num6 = wx.Button( self.m_uk, wx.ID_ANY, u"6\n˃", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num6 = wx.Button( self.m_uk, wx.ID_ANY, u"6\n˃", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num6.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6811.Add( self.m_num6, 0, wx.ALL, 0 )
@@ -371,7 +369,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer9.Add( bSizer15, 0, wx.EXPAND, 0 )
 		
-		self.m_num_plus = wx.Button( self.m_uk, wx.ID_ANY, u"+", wx.DefaultPosition, wx.Size( 34,70 ), 0 )
+		self.m_num_plus = wx.Button( self.m_uk, wx.ID_ANY, u"+", wx.DefaultPosition, wx.Size( 38,70 ), 0 )
 		self.m_num_plus.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer9.Add( self.m_num_plus, 0, wx.ALL, 0 )
@@ -384,7 +382,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer82 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_left_shift = wx.Button( self.m_uk, wx.ID_ANY, u"Shift", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_left_shift = wx.Button( self.m_uk, wx.ID_ANY, u"Shift", wx.DefaultPosition, wx.Size( 36,35 ), 0 )
 		bSizer82.Add( self.m_left_shift, 0, wx.ALL, 0 )
 		
 		self.m_backslash = wx.Button( self.m_uk, wx.ID_ANY, u"|\n\\", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
@@ -420,14 +418,14 @@ class keytest ( wx.Frame ):
 		self.m_question = wx.Button( self.m_uk, wx.ID_ANY, u"?\n/", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer82.Add( self.m_question, 0, wx.ALL, 0 )
 		
-		self.m_right_shift = wx.Button( self.m_uk, wx.ID_ANY, u"Shift", wx.DefaultPosition, wx.Size( 92,35 ), 0 )
+		self.m_right_shift = wx.Button( self.m_uk, wx.ID_ANY, u"Shift", wx.DefaultPosition, wx.Size( 80,35 ), 0 )
 		bSizer82.Add( self.m_right_shift, 0, wx.ALL, 0 )
 		
 		bSizer111.Add( bSizer82, 0, wx.EXPAND, 5 )
 		
 		bSizer811 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_left_ctrl = wx.Button( self.m_uk, wx.ID_ANY, u"Ctrl", wx.DefaultPosition, wx.Size( 48,35 ), 0 )
+		self.m_left_ctrl = wx.Button( self.m_uk, wx.ID_ANY, u"Ctrl", wx.DefaultPosition, wx.Size( 50,35 ), 0 )
 		bSizer811.Add( self.m_left_ctrl, 0, wx.ALL, 0 )
 		
 		self.m_left_windows = wx.Button( self.m_uk, wx.ID_ANY, u"Win\nKey", wx.DefaultPosition, wx.Size( 54,35 ), 0 )
@@ -438,13 +436,13 @@ class keytest ( wx.Frame ):
 		self.m_left_alt = wx.Button( self.m_uk, wx.ID_ANY, u"Alt", wx.DefaultPosition, wx.Size( 51,35 ), 0 )
 		bSizer811.Add( self.m_left_alt, 0, wx.ALL, 0 )
 		
-		self.m_space = wx.Button( self.m_uk, wx.ID_ANY, u"Space", wx.DefaultPosition, wx.Size( 136,35 ), 0 )
+		self.m_space = wx.Button( self.m_uk, wx.ID_ANY, u"Space", wx.DefaultPosition, wx.Size( 130,35 ), 0 )
 		bSizer811.Add( self.m_space, 0, wx.ALL, 0 )
 		
 		self.m_right_alt = wx.Button( self.m_uk, wx.ID_ANY, u"Alt", wx.DefaultPosition, wx.Size( 51,35 ), 0 )
 		bSizer811.Add( self.m_right_alt, 0, wx.ALL, 0 )
 		
-		self.m_right_windows = wx.Button( self.m_uk, wx.ID_ANY, u"Win\nKey", wx.DefaultPosition, wx.Size( 55,35 ), 0 )
+		self.m_right_windows = wx.Button( self.m_uk, wx.ID_ANY, u"Win\nKey", wx.DefaultPosition, wx.Size( 54,35 ), 0 )
 		self.m_right_windows.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer811.Add( self.m_right_windows, 0, wx.ALL, 0 )
@@ -454,7 +452,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer811.Add( self.m_menu, 0, wx.ALL, 0 )
 		
-		self.m_right_ctrl = wx.Button( self.m_uk, wx.ID_ANY, u"Ctrl", wx.DefaultPosition, wx.Size( 55,35 ), 0 )
+		self.m_right_ctrl = wx.Button( self.m_uk, wx.ID_ANY, u"Ctrl", wx.DefaultPosition, wx.Size( 50,35 ), 0 )
 		bSizer811.Add( self.m_right_ctrl, 0, wx.ALL, 0 )
 		
 		bSizer111.Add( bSizer811, 0, wx.EXPAND, 5 )
@@ -466,33 +464,33 @@ class keytest ( wx.Frame ):
 		bSizer6812 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		
-		bSizer6812.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer6812.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
 		
-		bSizer6812.AddSpacer( ( 34, 0), 0, wx.EXPAND, 0 )
+		bSizer6812.AddSpacer( ( 38, 0), 0, wx.EXPAND, 0 )
 		
-		self.m_up = wx.Button( self.m_uk, wx.ID_ANY, u"Up", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_up = wx.Button( self.m_uk, wx.ID_ANY, u"Up", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_up.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6812.Add( self.m_up, 0, wx.ALL, 0 )
 		
 		
-		bSizer6812.AddSpacer( ( 34, 0), 0, wx.EXPAND, 5 )
+		bSizer6812.AddSpacer( ( 38, 0), 0, wx.EXPAND, 5 )
 		
 		
-		bSizer6812.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
+		bSizer6812.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_num1 = wx.Button( self.m_uk, wx.ID_ANY, u"1\nEnd", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num1 = wx.Button( self.m_uk, wx.ID_ANY, u"1\nEnd", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num1.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6812.Add( self.m_num1, 0, wx.ALL, 0 )
 		
-		self.m_num2 = wx.Button( self.m_uk, wx.ID_ANY, u"2\n˅", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num2 = wx.Button( self.m_uk, wx.ID_ANY, u"2\n˅", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num2.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6812.Add( self.m_num2, 0, wx.ALL, 0 )
 		
-		self.m_num3 = wx.Button( self.m_uk, wx.ID_ANY, u"3\nPgDn", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num3 = wx.Button( self.m_uk, wx.ID_ANY, u"3\nPgDn", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num3.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6812.Add( self.m_num3, 0, wx.ALL, 0 )
@@ -502,32 +500,32 @@ class keytest ( wx.Frame ):
 		bSizer68111 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		
-		bSizer68111.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer68111.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_left = wx.Button( self.m_uk, wx.ID_ANY, u"Left", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_left = wx.Button( self.m_uk, wx.ID_ANY, u"Left", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_left.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68111.Add( self.m_left, 0, wx.ALL, 0 )
 		
-		self.m_down = wx.Button( self.m_uk, wx.ID_ANY, u"Down", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_down = wx.Button( self.m_uk, wx.ID_ANY, u"Down", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_down.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68111.Add( self.m_down, 0, wx.ALL, 0 )
 		
-		self.m_right = wx.Button( self.m_uk, wx.ID_ANY, u"Right", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_right = wx.Button( self.m_uk, wx.ID_ANY, u"Right", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_right.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68111.Add( self.m_right, 0, wx.ALL, 0 )
 		
 		
-		bSizer68111.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
+		bSizer68111.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.m_num0 = wx.Button( self.m_uk, wx.ID_ANY, u"0\nIns", wx.DefaultPosition, wx.Size( 68,35 ), 0 )
+		self.m_num0 = wx.Button( self.m_uk, wx.ID_ANY, u"0\nIns", wx.DefaultPosition, wx.Size( 76,35 ), 0 )
 		self.m_num0.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68111.Add( self.m_num0, 0, wx.ALL, 0 )
 		
-		self.m_num_period = wx.Button( self.m_uk, wx.ID_ANY, u".\nDel", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.m_num_period = wx.Button( self.m_uk, wx.ID_ANY, u".\nDel", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.m_num_period.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68111.Add( self.m_num_period, 0, wx.ALL, 0 )
@@ -536,7 +534,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer91.Add( bSizer151, 0, wx.EXPAND, 0 )
 		
-		self.m_num_enter = wx.Button( self.m_uk, wx.ID_ANY, u"Enter", wx.DefaultPosition, wx.Size( 34,70 ), 0 )
+		self.m_num_enter = wx.Button( self.m_uk, wx.ID_ANY, u"Enter", wx.DefaultPosition, wx.Size( 38,70 ), 0 )
 		self.m_num_enter.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer91.Add( self.m_num_enter, 0, wx.ALL, 0 )
@@ -549,6 +547,8 @@ class keytest ( wx.Frame ):
 		bSizer24.Add( self.m_uk, 0, wx.EXPAND, 5 )
 		
 		self.m_us = wx.Panel( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_us.Hide()
+		
 		bSizer651 = wx.BoxSizer( wx.VERTICAL )
 		
 		bSizer651.SetMinSize( wx.Size( -1,232 ) ) 
@@ -566,7 +566,7 @@ class keytest ( wx.Frame ):
 		bSizer671.Add( self.mus_escape, 0, wx.ALL, 0 )
 		
 		
-		bSizer671.AddSpacer( ( 19, 0), 0, wx.EXPAND, 5 )
+		bSizer671.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
 		
 		self.mus_f1 = wx.Button( self.m_us, wx.ID_ANY, u"F1", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer671.Add( self.mus_f1, 0, wx.ALL, 0 )
@@ -581,7 +581,7 @@ class keytest ( wx.Frame ):
 		bSizer671.Add( self.mus_f4, 0, wx.ALL, 0 )
 		
 		
-		bSizer671.AddSpacer( ( 19, 0), 0, wx.EXPAND, 5 )
+		bSizer671.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
 		
 		self.mus_f5 = wx.Button( self.m_us, wx.ID_ANY, u"F5", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer671.Add( self.mus_f5, 0, wx.ALL, 0 )
@@ -596,7 +596,7 @@ class keytest ( wx.Frame ):
 		bSizer671.Add( self.mus_f8, 0, wx.ALL, 0 )
 		
 		
-		bSizer671.AddSpacer( ( 19, 0), 0, wx.EXPAND, 5 )
+		bSizer671.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
 		
 		self.mus_f9 = wx.Button( self.m_us, wx.ID_ANY, u"F9", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer671.Add( self.mus_f9, 0, wx.ALL, 0 )
@@ -611,20 +611,20 @@ class keytest ( wx.Frame ):
 		bSizer671.Add( self.mus_f12, 0, wx.ALL, 0 )
 		
 		
-		bSizer671.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer671.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.mus_print = wx.Button( self.m_us, wx.ID_ANY, u"PrtScn\nSysRq", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_print = wx.Button( self.m_us, wx.ID_ANY, u"PrtScn\nSysRq", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_print.SetFont( wx.Font( 6, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer671.Add( self.mus_print, 0, wx.ALL, 0 )
 		
-		self.mus_scroll = wx.Button( self.m_us, wx.ID_ANY, u"ScrLk", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_scroll = wx.Button( self.m_us, wx.ID_ANY, u"ScrLk", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_scroll.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer671.Add( self.mus_scroll, 0, wx.ALL, 0 )
 		
-		self.mus_break = wx.Button( self.m_us, wx.ID_ANY, u"Pause\nBreak", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
-		self.mus_break.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
+		self.mus_break = wx.Button( self.m_us, wx.ID_ANY, u"Pause\nBreak", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
+		self.mus_break.SetFont( wx.Font( 6, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer671.Add( self.mus_break, 0, wx.ALL, 0 )
 		
@@ -643,7 +643,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer682 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.mus_squiggle = wx.Button( self.m_us, wx.ID_ANY, u"~\n`", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_squiggle = wx.Button( self.m_us, wx.ID_ANY, u"~\n`", wx.DefaultPosition, wx.Size( 32,35 ), 0 )
 		bSizer682.Add( self.mus_squiggle, 0, wx.ALL, 0 )
 		
 		self.mus_1 = wx.Button( self.m_us, wx.ID_ANY, u"!\n1", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
@@ -676,52 +676,52 @@ class keytest ( wx.Frame ):
 		self.mus_0 = wx.Button( self.m_us, wx.ID_ANY, u")\n0", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer682.Add( self.mus_0, 0, wx.ALL, 0 )
 		
-		self.mus_minus = wx.Button( self.m_us, wx.ID_ANY, u"_\n-", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_minus = wx.Button( self.m_us, wx.ID_ANY, u"_\n-", wx.DefaultPosition, wx.Size( 33,35 ), 0 )
 		bSizer682.Add( self.mus_minus, 0, wx.ALL, 0 )
 		
-		self.mus_plus = wx.Button( self.m_us, wx.ID_ANY, u"+\n=", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_plus = wx.Button( self.m_us, wx.ID_ANY, u"+\n=", wx.DefaultPosition, wx.Size( 33,35 ), 0 )
 		bSizer682.Add( self.mus_plus, 0, wx.ALL, 0 )
 		
-		self.mus_backspace = wx.Button( self.m_us, wx.ID_ANY, u"Backspace", wx.DefaultPosition, wx.Size( 57,35 ), 0 )
+		self.mus_backspace = wx.Button( self.m_us, wx.ID_ANY, u"Back\nSpace", wx.DefaultPosition, wx.Size( 52,35 ), 0 )
 		bSizer682.Add( self.mus_backspace, 0, wx.ALL, 0 )
 		
 		
-		bSizer682.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer682.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.mus_insert = wx.Button( self.m_us, wx.ID_ANY, u"Ins", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_insert = wx.Button( self.m_us, wx.ID_ANY, u"Ins", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_insert.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer682.Add( self.mus_insert, 0, wx.ALL, 0 )
 		
-		self.mus_home = wx.Button( self.m_us, wx.ID_ANY, u"Home", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_home = wx.Button( self.m_us, wx.ID_ANY, u"Home", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_home.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer682.Add( self.mus_home, 0, wx.ALL, 0 )
 		
-		self.mus_page_up = wx.Button( self.m_us, wx.ID_ANY, u"Page\nUp", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_page_up = wx.Button( self.m_us, wx.ID_ANY, u"Page\nUp", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_page_up.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer682.Add( self.mus_page_up, 0, wx.ALL, 0 )
 		
 		
-		bSizer682.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
+		bSizer682.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.mus_numlock = wx.Button( self.m_us, wx.ID_ANY, u"Num\nLock", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_numlock = wx.Button( self.m_us, wx.ID_ANY, u"Num\nLock", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_numlock.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer682.Add( self.mus_numlock, 0, wx.ALL, 0 )
 		
-		self.mus_num_slash = wx.Button( self.m_us, wx.ID_ANY, u"/", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num_slash = wx.Button( self.m_us, wx.ID_ANY, u"/", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num_slash.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer682.Add( self.mus_num_slash, 0, wx.ALL, 0 )
 		
-		self.mus_num_asterix = wx.Button( self.m_us, wx.ID_ANY, u"*", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num_asterix = wx.Button( self.m_us, wx.ID_ANY, u"*", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num_asterix.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer682.Add( self.mus_num_asterix, 0, wx.ALL, 0 )
 		
-		self.mus_num_minus = wx.Button( self.m_us, wx.ID_ANY, u"-", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num_minus = wx.Button( self.m_us, wx.ID_ANY, u"-", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num_minus.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer682.Add( self.mus_num_minus, 0, wx.ALL, 0 )
@@ -734,7 +734,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer83 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.mus_tab = wx.Button( self.m_us, wx.ID_ANY, u"Tab", wx.DefaultPosition, wx.Size( 51,35 ), 0 )
+		self.mus_tab = wx.Button( self.m_us, wx.ID_ANY, u"Tab", wx.DefaultPosition, wx.Size( 48,35 ), 0 )
 		bSizer83.Add( self.mus_tab, 0, wx.ALL, 0 )
 		
 		self.mus_q = wx.Button( self.m_us, wx.ID_ANY, u"Q", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
@@ -773,14 +773,14 @@ class keytest ( wx.Frame ):
 		self.mus_right_brace = wx.Button( self.m_us, wx.ID_ANY, u"}\n]", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer83.Add( self.mus_right_brace, 0, wx.ALL, 0 )
 		
-		self.mus_backslash = wx.Button( self.m_us, wx.ID_ANY, u"|\n\\", wx.DefaultPosition, wx.Size( 40,35 ), 0 )
+		self.mus_backslash = wx.Button( self.m_us, wx.ID_ANY, u"|\n\\", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer83.Add( self.mus_backslash, 0, wx.ALL, 0 )
 		
 		bSizer112.Add( bSizer83, 0, wx.EXPAND, 5 )
 		
 		bSizer812 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.mus_caps_lock = wx.Button( self.m_us, wx.ID_ANY, u"Caps\nLock", wx.DefaultPosition, wx.Size( 65,35 ), 0 )
+		self.mus_caps_lock = wx.Button( self.m_us, wx.ID_ANY, u"Caps\nLock", wx.DefaultPosition, wx.Size( 58,35 ), 0 )
 		bSizer812.Add( self.mus_caps_lock, 0, wx.ALL, 0 )
 		
 		self.mus_a = wx.Button( self.m_us, wx.ID_ANY, u"A", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
@@ -816,7 +816,7 @@ class keytest ( wx.Frame ):
 		self.mus_at = wx.Button( self.m_us, wx.ID_ANY, u"\"\n'", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer812.Add( self.mus_at, 0, wx.ALL, 0 )
 		
-		self.mus_enter = wx.Button( self.m_us, wx.ID_ANY, u"Enter", wx.DefaultPosition, wx.Size( 60,35 ), 0 )
+		self.mus_enter = wx.Button( self.m_us, wx.ID_ANY, u"Enter", wx.DefaultPosition, wx.Size( 58,35 ), 0 )
 		bSizer812.Add( self.mus_enter, 0, wx.ALL, 0 )
 		
 		bSizer112.Add( bSizer812, 0, wx.EXPAND, 5 )
@@ -828,37 +828,37 @@ class keytest ( wx.Frame ):
 		bSizer6813 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		
-		bSizer6813.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer6813.AddSpacer( ( 8, 0), 0, wx.EXPAND, 0 )
 		
-		self.mus_delete = wx.Button( self.m_us, wx.ID_ANY, u"Del", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_delete = wx.Button( self.m_us, wx.ID_ANY, u"Del", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_delete.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6813.Add( self.mus_delete, 0, wx.ALL, 0 )
 		
-		self.mus_end = wx.Button( self.m_us, wx.ID_ANY, u"End", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_end = wx.Button( self.m_us, wx.ID_ANY, u"End", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_end.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6813.Add( self.mus_end, 0, wx.ALL, 0 )
 		
-		self.mus_page_down = wx.Button( self.m_us, wx.ID_ANY, u"Page\nDown", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_page_down = wx.Button( self.m_us, wx.ID_ANY, u"Page\nDwn", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_page_down.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6813.Add( self.mus_page_down, 0, wx.ALL, 0 )
 		
 		
-		bSizer6813.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
+		bSizer6813.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.mus_num7 = wx.Button( self.m_us, wx.ID_ANY, u"7\nHome", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num7 = wx.Button( self.m_us, wx.ID_ANY, u"7\nHme", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num7.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6813.Add( self.mus_num7, 0, wx.ALL, 0 )
 		
-		self.mus_num8 = wx.Button( self.m_us, wx.ID_ANY, u"8\n˄", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num8 = wx.Button( self.m_us, wx.ID_ANY, u"8\n˄", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num8.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6813.Add( self.mus_num8, 0, wx.ALL, 0 )
 		
-		self.mus_num9 = wx.Button( self.m_us, wx.ID_ANY, u"9\nPgUp", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num9 = wx.Button( self.m_us, wx.ID_ANY, u"9\nPgUp", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num9.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer6813.Add( self.mus_num9, 0, wx.ALL, 0 )
@@ -868,19 +868,19 @@ class keytest ( wx.Frame ):
 		bSizer68112 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		
-		bSizer68112.AddSpacer( ( 135, 0), 0, wx.EXPAND, 5 )
+		bSizer68112.AddSpacer( ( 130, 0), 0, wx.EXPAND, 5 )
 		
-		self.mus_num4 = wx.Button( self.m_us, wx.ID_ANY, u"4\n˂", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num4 = wx.Button( self.m_us, wx.ID_ANY, u"4\n˂", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num4.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68112.Add( self.mus_num4, 0, wx.ALL, 0 )
 		
-		self.mus_num5 = wx.Button( self.m_us, wx.ID_ANY, u"5", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num5 = wx.Button( self.m_us, wx.ID_ANY, u"5", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num5.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68112.Add( self.mus_num5, 0, wx.ALL, 0 )
 		
-		self.mus_num6 = wx.Button( self.m_us, wx.ID_ANY, u"6\n˃", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num6 = wx.Button( self.m_us, wx.ID_ANY, u"6\n˃", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num6.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68112.Add( self.mus_num6, 0, wx.ALL, 0 )
@@ -889,7 +889,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer92.Add( bSizer152, 0, wx.EXPAND, 0 )
 		
-		self.mus_num_plus = wx.Button( self.m_us, wx.ID_ANY, u"+", wx.DefaultPosition, wx.Size( 34,70 ), 0 )
+		self.mus_num_plus = wx.Button( self.m_us, wx.ID_ANY, u"+", wx.DefaultPosition, wx.Size( 38,70 ), 0 )
 		self.mus_num_plus.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer92.Add( self.mus_num_plus, 0, wx.ALL, 0 )
@@ -902,7 +902,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer821 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.mus_left_shift = wx.Button( self.m_us, wx.ID_ANY, u"Shift", wx.DefaultPosition, wx.Size( 80,35 ), 0 )
+		self.mus_left_shift = wx.Button( self.m_us, wx.ID_ANY, u"Shift", wx.DefaultPosition, wx.Size( 75,35 ), 0 )
 		bSizer821.Add( self.mus_left_shift, 0, wx.ALL, 0 )
 		
 		self.mus_z = wx.Button( self.m_us, wx.ID_ANY, u"Z", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
@@ -935,7 +935,7 @@ class keytest ( wx.Frame ):
 		self.mus_question = wx.Button( self.m_us, wx.ID_ANY, u"?\n/", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
 		bSizer821.Add( self.mus_question, 0, wx.ALL, 0 )
 		
-		self.mus_right_shift = wx.Button( self.m_us, wx.ID_ANY, u"Shift", wx.DefaultPosition, wx.Size( 79,35 ), 0 )
+		self.mus_right_shift = wx.Button( self.m_us, wx.ID_ANY, u"Shift", wx.DefaultPosition, wx.Size( 75,35 ), 0 )
 		bSizer821.Add( self.mus_right_shift, 0, wx.ALL, 0 )
 		
 		bSizer1111.Add( bSizer821, 0, wx.EXPAND, 5 )
@@ -945,7 +945,7 @@ class keytest ( wx.Frame ):
 		self.mus_left_ctrl = wx.Button( self.m_us, wx.ID_ANY, u"Ctrl", wx.DefaultPosition, wx.Size( 48,35 ), 0 )
 		bSizer8111.Add( self.mus_left_ctrl, 0, wx.ALL, 0 )
 		
-		self.mus_left_windows = wx.Button( self.m_us, wx.ID_ANY, u"Win\nKey", wx.DefaultPosition, wx.Size( 54,35 ), 0 )
+		self.mus_left_windows = wx.Button( self.m_us, wx.ID_ANY, u"Win\nKey", wx.DefaultPosition, wx.Size( 53,35 ), 0 )
 		self.mus_left_windows.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer8111.Add( self.mus_left_windows, 0, wx.ALL, 0 )
@@ -953,13 +953,13 @@ class keytest ( wx.Frame ):
 		self.mus_left_alt = wx.Button( self.m_us, wx.ID_ANY, u"Alt", wx.DefaultPosition, wx.Size( 51,35 ), 0 )
 		bSizer8111.Add( self.mus_left_alt, 0, wx.ALL, 0 )
 		
-		self.mus_space = wx.Button( self.m_us, wx.ID_ANY, u"Space", wx.DefaultPosition, wx.Size( 136,35 ), 0 )
+		self.mus_space = wx.Button( self.m_us, wx.ID_ANY, u"Space", wx.DefaultPosition, wx.Size( 134,35 ), 0 )
 		bSizer8111.Add( self.mus_space, 0, wx.ALL, 0 )
 		
 		self.mus_right_alt = wx.Button( self.m_us, wx.ID_ANY, u"Alt", wx.DefaultPosition, wx.Size( 51,35 ), 0 )
 		bSizer8111.Add( self.mus_right_alt, 0, wx.ALL, 0 )
 		
-		self.mus_right_windows = wx.Button( self.m_us, wx.ID_ANY, u"Win\nKey", wx.DefaultPosition, wx.Size( 55,35 ), 0 )
+		self.mus_right_windows = wx.Button( self.m_us, wx.ID_ANY, u"Win\nKey", wx.DefaultPosition, wx.Size( 53,35 ), 0 )
 		self.mus_right_windows.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer8111.Add( self.mus_right_windows, 0, wx.ALL, 0 )
@@ -969,7 +969,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer8111.Add( self.mus_menu, 0, wx.ALL, 0 )
 		
-		self.mus_right_ctrl = wx.Button( self.m_us, wx.ID_ANY, u"Ctrl", wx.DefaultPosition, wx.Size( 55,35 ), 0 )
+		self.mus_right_ctrl = wx.Button( self.m_us, wx.ID_ANY, u"Ctrl", wx.DefaultPosition, wx.Size( 50,35 ), 0 )
 		bSizer8111.Add( self.mus_right_ctrl, 0, wx.ALL, 0 )
 		
 		bSizer1111.Add( bSizer8111, 0, wx.EXPAND, 5 )
@@ -981,33 +981,33 @@ class keytest ( wx.Frame ):
 		bSizer68121 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		
-		bSizer68121.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer68121.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
 		
-		bSizer68121.AddSpacer( ( 34, 0), 0, wx.EXPAND, 0 )
+		bSizer68121.AddSpacer( ( 38, 0), 0, wx.EXPAND, 0 )
 		
-		self.mus_up = wx.Button( self.m_us, wx.ID_ANY, u"Up", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_up = wx.Button( self.m_us, wx.ID_ANY, u"Up", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_up.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68121.Add( self.mus_up, 0, wx.ALL, 0 )
 		
 		
-		bSizer68121.AddSpacer( ( 34, 0), 0, wx.EXPAND, 5 )
+		bSizer68121.AddSpacer( ( 38, 0), 0, wx.EXPAND, 5 )
 		
 		
-		bSizer68121.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
+		bSizer68121.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.mus_num1 = wx.Button( self.m_us, wx.ID_ANY, u"1\nEnd", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num1 = wx.Button( self.m_us, wx.ID_ANY, u"1\nEnd", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num1.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68121.Add( self.mus_num1, 0, wx.ALL, 0 )
 		
-		self.mus_num2 = wx.Button( self.m_us, wx.ID_ANY, u"2\n˅", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num2 = wx.Button( self.m_us, wx.ID_ANY, u"2\n˅", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num2.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68121.Add( self.mus_num2, 0, wx.ALL, 0 )
 		
-		self.mus_num3 = wx.Button( self.m_us, wx.ID_ANY, u"3\nPgDn", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num3 = wx.Button( self.m_us, wx.ID_ANY, u"3\nPgDn", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num3.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer68121.Add( self.mus_num3, 0, wx.ALL, 0 )
@@ -1017,32 +1017,32 @@ class keytest ( wx.Frame ):
 		bSizer681111 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		
-		bSizer681111.AddSpacer( ( 17, 0), 0, wx.EXPAND, 5 )
+		bSizer681111.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.mus_left = wx.Button( self.m_us, wx.ID_ANY, u"Left", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_left = wx.Button( self.m_us, wx.ID_ANY, u"Left", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_left.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681111.Add( self.mus_left, 0, wx.ALL, 0 )
 		
-		self.mus_down = wx.Button( self.m_us, wx.ID_ANY, u"Down", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_down = wx.Button( self.m_us, wx.ID_ANY, u"Down", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_down.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681111.Add( self.mus_down, 0, wx.ALL, 0 )
 		
-		self.mus_right = wx.Button( self.m_us, wx.ID_ANY, u"Right", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_right = wx.Button( self.m_us, wx.ID_ANY, u"Right", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_right.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681111.Add( self.mus_right, 0, wx.ALL, 0 )
 		
 		
-		bSizer681111.AddSpacer( ( 16, 0), 0, wx.EXPAND, 5 )
+		bSizer681111.AddSpacer( ( 8, 0), 0, wx.EXPAND, 5 )
 		
-		self.mus_num0 = wx.Button( self.m_us, wx.ID_ANY, u"0\nIns", wx.DefaultPosition, wx.Size( 68,35 ), 0 )
+		self.mus_num0 = wx.Button( self.m_us, wx.ID_ANY, u"0\nIns", wx.DefaultPosition, wx.Size( 76,35 ), 0 )
 		self.mus_num0.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681111.Add( self.mus_num0, 0, wx.ALL, 0 )
 		
-		self.mus_num_period = wx.Button( self.m_us, wx.ID_ANY, u".\nDel", wx.DefaultPosition, wx.Size( 34,35 ), 0 )
+		self.mus_num_period = wx.Button( self.m_us, wx.ID_ANY, u".\nDel", wx.DefaultPosition, wx.Size( 38,35 ), 0 )
 		self.mus_num_period.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer681111.Add( self.mus_num_period, 0, wx.ALL, 0 )
@@ -1051,7 +1051,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer911.Add( bSizer1511, 0, wx.EXPAND, 0 )
 		
-		self.mus_num_enter = wx.Button( self.m_us, wx.ID_ANY, u"Enter", wx.DefaultPosition, wx.Size( 34,70 ), 0 )
+		self.mus_num_enter = wx.Button( self.m_us, wx.ID_ANY, u"Enter", wx.DefaultPosition, wx.Size( 38,70 ), 0 )
 		self.mus_num_enter.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer911.Add( self.mus_num_enter, 0, wx.ALL, 0 )
@@ -1066,7 +1066,7 @@ class keytest ( wx.Frame ):
 		bSizer23 = wx.BoxSizer( wx.VERTICAL )
 		
 		
-		bSizer23.AddSpacer( ( 0, 5), 0, wx.ALL|wx.EXPAND, 0 )
+		bSizer23.AddSpacer( ( 0, 10), 0, wx.ALL|wx.EXPAND, 0 )
 		
 		self.m_list = wx.ListCtrl( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), wx.LC_HRULES|wx.LC_REPORT|wx.LC_SINGLE_SEL|wx.SIMPLE_BORDER )
 		self.m_list.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
@@ -1078,11 +1078,11 @@ class keytest ( wx.Frame ):
 		self.m_show_log = wx.Button( self.m_panel, wx.ID_ANY, u"Show Activity Log", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_show_log.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		self.m_show_log.SetToolTipString( u"Show the keyboard activity log" )
-		self.m_show_log.SetMinSize( wx.Size( 95,20 ) )
+		self.m_show_log.SetMinSize( wx.Size( 120,20 ) )
 		
 		bSizer26.Add( self.m_show_log, 0, wx.ALL, 2 )
 		
-		self.m_clear_list = wx.Button( self.m_panel, wx.ID_ANY, u"Clear Log", wx.DefaultPosition, wx.Size( 60,20 ), 0 )
+		self.m_clear_list = wx.Button( self.m_panel, wx.ID_ANY, u"Clear Log", wx.DefaultPosition, wx.Size( 90,20 ), 0 )
 		self.m_clear_list.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		self.m_clear_list.Enable( False )
 		self.m_clear_list.SetToolTipString( u"Clear the keyboard activity log" )
@@ -1097,55 +1097,35 @@ class keytest ( wx.Frame ):
 		bSizer26.Add( self.m_show_up, 0, wx.ALL, 5 )
 		
 		self.m_staticline1 = wx.StaticLine( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_VERTICAL )
-		bSizer26.Add( self.m_staticline1, 0, wx.EXPAND|wx.RIGHT, 5 )
+		bSizer26.Add( self.m_staticline1, 0, wx.ALL|wx.EXPAND, 5 )
 		
 		m_keyboardChoices = [ u"UK Keyboard", u"US Keyboard" ]
-		self.m_keyboard = wx.Choice( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.Size( 80,18 ), m_keyboardChoices, 0 )
+		self.m_keyboard = wx.Choice( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.Size( 120,18 ), m_keyboardChoices, 0 )
 		self.m_keyboard.SetSelection( 0 )
 		self.m_keyboard.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer26.Add( self.m_keyboard, 0, wx.ALL, 2 )
 		
-		self.m_staticline2 = wx.StaticLine( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_VERTICAL )
-		bSizer26.Add( self.m_staticline2, 0, wx.EXPAND|wx.LEFT|wx.RIGHT, 5 )
-		
-		self.m_staticText3 = wx.StaticText( self.m_panel, wx.ID_ANY, u"Last Key Code:", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText3 = wx.StaticText( self.m_panel, wx.ID_ANY, u"Last Key:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText3.Wrap( -1 )
 		self.m_staticText3.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
-		bSizer26.Add( self.m_staticText3, 0, wx.BOTTOM|wx.TOP, 5 )
+		bSizer26.Add( self.m_staticText3, 0, wx.ALL, 5 )
 		
-		self.m_last_key = wx.TextCtrl( self.m_panel, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 70,18 ), wx.TE_READONLY )
+		self.m_last_key = wx.TextCtrl( self.m_panel, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 95,18 ), wx.TE_READONLY )
 		self.m_last_key.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		self.m_last_key.SetBackgroundColour( wx.Colour( 224, 224, 224 ) )
 		
-		bSizer26.Add( self.m_last_key, 0, wx.LEFT|wx.TOP, 2 )
+		bSizer26.Add( self.m_last_key, 0, wx.ALL, 2 )
 		
 		
-		bSizer26.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
+		bSizer26.AddSpacer( ( 10, 0), 1, wx.EXPAND, 5 )
 		
-		self.m_note1 = wx.StaticText( self.m_panel, wx.ID_ANY, u"Keyboard Input Tester for ", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_note1.Wrap( -1 )
-		self.m_note1.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
-		self.m_note1.SetForegroundColour( wx.Colour( 30, 30, 30 ) )
+		self.m_staticText2 = wx.StaticText( self.m_panel, wx.ID_ANY, u"Developed for KADE\nby Degenatrons", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_RIGHT )
+		self.m_staticText2.Wrap( -1 )
+		self.m_staticText2.SetFont( wx.Font( 6, 74, 90, 90, False, wx.EmptyString ) )
 		
-		bSizer26.Add( self.m_note1, 0, wx.BOTTOM|wx.TOP, 5 )
-		
-		self.m_hyperlink1 = wx.HyperlinkCtrl( self.m_panel, wx.ID_ANY, u"KADE", u"http://kadevice.com", wx.DefaultPosition, wx.DefaultSize, wx.HL_DEFAULT_STYLE )
-		
-		self.m_hyperlink1.SetHoverColour( wx.Colour( 0, 0, 255 ) )
-		self.m_hyperlink1.SetNormalColour( wx.Colour( 204, 0, 0 ) )
-		self.m_hyperlink1.SetVisitedColour( wx.Colour( 204, 0, 0 ) )
-		self.m_hyperlink1.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
-		
-		bSizer26.Add( self.m_hyperlink1, 0, wx.BOTTOM|wx.TOP, 5 )
-		
-		self.m_note2 = wx.StaticText( self.m_panel, wx.ID_ANY, u" by Degenatrons", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_note2.Wrap( -1 )
-		self.m_note2.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
-		self.m_note2.SetForegroundColour( wx.Colour( 30, 30, 30 ) )
-		
-		bSizer26.Add( self.m_note2, 0, wx.BOTTOM|wx.TOP, 5 )
+		bSizer26.Add( self.m_staticText2, 5, wx.ALIGN_BOTTOM|wx.ALIGN_RIGHT|wx.RIGHT, 0 )
 		
 		bSizer23.Add( bSizer26, 0, wx.EXPAND, 0 )
 		

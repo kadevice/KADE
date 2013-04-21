@@ -100,8 +100,13 @@ class keyTest( gui.keytest ):
     self.height = self.Size[1]
     
     #set the default keyboard
-    self.setKeyboard([False,True].index(os.path.exists("us_key")), True)    
-
+    self.setKeyboard([False,True].index(os.path.exists("us_key")), True)
+        
+  def setFontSize(self, field, size):
+    font = field.GetFont()
+    font.SetPointSize(size)
+    field.SetFont(font)     
+    
   def OnKeyboardEvent(self, event):
     gui_object = self.getGUIObject(event.KeyID, event.Extended)
     if gui_object:
@@ -193,7 +198,7 @@ class keyTest( gui.keytest ):
   def UI(self):
     if self.height != self.Size[1]:
       self.height = self.Size[1]
-      if self.Size[1] < 310:
+      if self.Size[1] < 345:
         self.m_clear_list.Disable()
         self.m_show_up.Disable()
         self.m_show_log.SetLabel("Show Activity Log")
@@ -206,10 +211,10 @@ class keyTest( gui.keytest ):
       self.Layout()
 
   def onLog(self, event):
-    if self.Size[1] < 310:
-      self.SetSize((800, 500))
+    if self.Size[1] < 345:
+      self.SetSize((800, 580))
     else:
-      self.SetSize((800, 300)) 
+      self.SetSize((800, 305)) 
     self.m_dummy.SetFocus() 
 
   def onUI(self, event):
@@ -232,7 +237,6 @@ class keyTest( gui.keytest ):
     from webbrowser import open as browse
     browse("http://kadevice.com")
     
-
 #==========================================================================================
 # Main
 
