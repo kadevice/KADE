@@ -1,5 +1,8 @@
 KADE Loader Release Notes
 
+v1.0.7.0 26/04/2013
+  Validate the version information that is returned from kadevice website during update checks.
+
 v1.0.6.0 21/04/2013
   Minor improvements to iCade emulation
   Keyboard test utility updated to v0.1.0.4. This has improved UI for compatibility with Windows 8

@@ -337,7 +337,7 @@ class kadeLoader( gui.loader ):
       else:
         if not initial: 
           self.popup("noupdate")
-    
+      
   def popup(self, messageID, subst=""):
     row = sql_command('SELECT msgtext, type FROM messages WHERE id = "%s"' % messageID)
     if row:
@@ -452,16 +452,8 @@ class kadeLoader( gui.loader ):
     else:
       self.popup("notcompatible")      
     
-  def onBetaUpdates(self, event):  
-    if self.beta:
-      msg = "Please confirm that you no longer wish to receive Beta updates of this software.\n\n" + \
-        "Reverting to public updates will remove board and firmware options that are currently flagged as Beta.\n\n" + \
-        "Click OK to receive Public updates only."
-    else:
-      msg = "Please confirm that you wish to receive Beta updates of this software. " + \
-        "Beta versions provide you with early access to new features, before the software is released to the general public.\n\n" + \
-        "Please note that a Beta version is NOT the final version of the product and therefore we cannot guarantee it will be free from errors.\n\n" + \
-        "Click OK to receive Beta."
+  def onBetaUpdates(self, event):
+    msg = (get_message("switch_beta"),get_message("switch_public"))[b2i(self.beta)]
     dlg = wx.MessageDialog(self, msg, "Beta Updates", wx.OK|wx.CANCEL|wx.ICON_QUESTION)
     if dlg.ShowModal() == wx.ID_OK:      
       if os.path.exists(get_path("BETA")):

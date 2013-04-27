@@ -87,11 +87,10 @@ def get_installed_version():
 
 def get_latest_version(beta=False):  
   try:
-    site = "http://kadevice.com/loader/"    
-    if beta:
-      latest = urlopen(site+"version.txt", None, 2.5).read().split()[0]
-    else:
-      latest = urlopen(site+"version_public.txt", None, 2.5).read().split()[0]
+    version_file = "http://kadevice.com/loader/" + ("version_public.txt", "version.txt")[b2i(beta)]
+    latest = urlopen(version_file, None, 2.5).read().split()[0].replace(" ","")
+    if not latest.replace(".","").isdigit():
+      latest = "0.0.0.0"
   except:
     latest = "0.0.0.0"
   return latest
@@ -113,6 +112,9 @@ def sql_single(sql):
   else:
     value = ""
   return value
+
+def get_message(messageID):
+  return sql_single('SELECT msgtext FROM messages WHERE id = "%s"' % messageID)
 
 def read_param(key):
   return sql_single('SELECT value FROM parameters WHERE key = "%s"' % key)
@@ -271,18 +273,7 @@ def read_data_keys(datafile):
   return records
 
 def donate_link():
-  from urllib2 import quote as q
-  from base64 import b64decode as d
-  BUS = d(d(d('U20xS01XTXliSFZhV0U1NlVGWkdURkl4VGxWUFZURkVUV3RLUmxGck5EMD0=')))
-  try:
-    url = 'https://www.paypal.com/cgi-bin/webscr'
-    url += '?cmd=_xclick'
-    url += BUS
-    url += '&currency_code=GBP'
-    url += '&item_name=%s' % q('I would like to support the KADE project')
-    browse(url)
-  except:
-    pass
+  browse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EXQQ6WC5VR666")
   
 def program_label(family):
   return "Program %s with Selected Firmware" % ("Device", "KADE")[b2i(family=="minimus")]
@@ -300,4 +291,4 @@ def call_keyboard_test():
   if os.path.exists("dist\keytest.exe"):  #dev environment      
     open_file("dist\keytest.exe")
   else:
-    open_file("keytest.exe")  
+    open_file("keytest.exe")
