@@ -17,11 +17,28 @@ import wx.xrc
 class keytest ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,315 ), style = wx.CAPTION|wx.DEFAULT_FRAME_STYLE|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,315 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.RESIZE_BORDER|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.Size( 800,315 ), wx.Size( 800,-1 ) )
 		
 		bSizer19 = wx.BoxSizer( wx.VERTICAL )
+		
+		self.m_panel4 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer44 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		
+		bSizer44.AddSpacer( ( 0, 0), 1, wx.EXPAND, 0 )
+		
+		self.m_button213 = wx.Button( self.m_panel4, wx.ID_ANY, u"X", wx.DefaultPosition, wx.Size( 22,16 ), wx.BU_EXACTFIT )
+		self.m_button213.SetFont( wx.Font( 7, 70, 90, 92, False, wx.EmptyString ) )
+		self.m_button213.SetForegroundColour( wx.Colour( 202, 0, 0 ) )
+		
+		bSizer44.Add( self.m_button213, 0, 0, 0 )
+		
+		self.m_panel4.SetSizer( bSizer44 )
+		self.m_panel4.Layout()
+		bSizer44.Fit( self.m_panel4 )
+		bSizer19.Add( self.m_panel4, 0, wx.EXPAND, 5 )
 		
 		self.m_panel = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.WANTS_CHARS )
 		bSizer21 = wx.BoxSizer( wx.VERTICAL )
@@ -1149,6 +1166,7 @@ class keytest ( wx.Frame ):
 		self.Bind( wx.EVT_CLOSE, self.onClose )
 		self.Bind( wx.EVT_SIZE, self.onUI )
 		self.Bind( wx.EVT_UPDATE_UI, self.onUI )
+		self.m_button213.Bind( wx.EVT_BUTTON, self.onClose )
 		self.m_escape.Bind( wx.EVT_BUTTON, self.onButton )
 		self.m_f1.Bind( wx.EVT_BUTTON, self.onButton )
 		self.m_f2.Bind( wx.EVT_BUTTON, self.onButton )
@@ -1377,6 +1395,7 @@ class keytest ( wx.Frame ):
 	
 	def onUI( self, event ):
 		event.Skip()
+	
 	
 	
 	def onButton( self, event ):
@@ -1642,18 +1661,11 @@ class aboutBox ( wx.Dialog ):
 		
 		bSizer40.Add( bSizer41, 1, wx.ALL|wx.EXPAND, 5 )
 		
-		bSizer42 = wx.BoxSizer( wx.HORIZONTAL )
-		
-		
-		bSizer42.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
-		
-		self.m_button2131 = wx.Button( self, wx.ID_ANY, u"Donate", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer42.Add( self.m_button2131, 0, wx.ALIGN_RIGHT|wx.ALL, 5 )
-		
-		self.m_button213 = wx.Button( self, wx.ID_ANY, u"OK", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer42.Add( self.m_button213, 0, wx.ALIGN_RIGHT|wx.ALL, 5 )
-		
-		bSizer40.Add( bSizer42, 0, wx.EXPAND, 5 )
+		m_sdbSizer1 = wx.StdDialogButtonSizer()
+		self.m_sdbSizer1OK = wx.Button( self, wx.ID_OK )
+		m_sdbSizer1.AddButton( self.m_sdbSizer1OK )
+		m_sdbSizer1.Realize();
+		bSizer40.Add( m_sdbSizer1, 0, wx.EXPAND, 5 )
 		
 		self.SetSizer( bSizer40 )
 		self.Layout()
@@ -1661,17 +1673,13 @@ class aboutBox ( wx.Dialog ):
 		self.Centre( wx.BOTH )
 		
 		# Connect Events
-		self.m_button2131.Bind( wx.EVT_BUTTON, self.onDonate )
-		self.m_button213.Bind( wx.EVT_BUTTON, self.onOK )
+		self.m_sdbSizer1OK.Bind( wx.EVT_BUTTON, self.onOK )
 	
 	def __del__( self ):
 		pass
 	
 	
 	# Virtual event handlers, overide them in your derived class
-	def onDonate( self, event ):
-		event.Skip()
-	
 	def onOK( self, event ):
 		event.Skip()
 	

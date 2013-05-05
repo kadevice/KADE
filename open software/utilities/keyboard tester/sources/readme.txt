@@ -19,6 +19,9 @@ Visit http://kadevice.com and http://kadevice.com/forum/ for more information.
 
 VERSION HISTORY:
 
+v0.1.0.6 - 06/05/2013
+  Removed the system menu and replaced with simple close icon.  The menu was being invoked by "Alt" and other key presses.
+
 v0.1.0.5 - 05/05/2013
   Added speech option to speak the pressed keys or functions.  Useful for testing input without watching screen.
   Speech module provided by krolik.net - http://krolik.net/wsvn/wsvn/public/Say%2B%2B/

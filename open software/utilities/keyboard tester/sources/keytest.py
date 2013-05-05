@@ -231,7 +231,7 @@ class keyTest( gui.keytest ):
   def UI(self):
     if self.height != self.Size[1]:
       self.height = self.Size[1]
-      if self.height < 345:
+      if self.height < 362:
         self.m_clear_list.Disable()
         self.m_show_up.Disable()
         self.m_show_log.SetLabel("Show Activity Log")
@@ -245,10 +245,10 @@ class keyTest( gui.keytest ):
 
   def onLog(self, event):
     #adjust the window height to hide/show the activity log
-    if self.Size[1] < 345:
-      self.SetSize((800, 580))
+    if self.Size[1] < 362:
+      self.SetSize((800, 600))
     else:
-      self.SetSize((800, 305)) 
+      self.SetSize((800, 322)) 
     self.m_dummy.SetFocus() 
 
   def onUI(self, event):
@@ -291,11 +291,6 @@ class aboutBox( gui.aboutBox ):
         
   def onOK(self, event):
     self.Close()    
-    
-  def onDonate(self, event):
-    from webbrowser import open as browse
-    browse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EXQQ6WC5VR666")
-  
     
 #==========================================================================================
 # Main
