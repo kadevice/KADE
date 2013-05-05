@@ -17,9 +17,9 @@ import wx.xrc
 class keytest ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,320 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.RESIZE_BORDER|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,326 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.RESIZE_BORDER|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
 		
-		self.SetSizeHintsSz( wx.Size( 800,320 ), wx.Size( 800,-1 ) )
+		self.SetSizeHintsSz( wx.Size( 800,326 ), wx.Size( 800,-1 ) )
 		
 		bSizer19 = wx.BoxSizer( wx.VERTICAL )
 		
@@ -1083,7 +1083,7 @@ class keytest ( wx.Frame ):
 		bSizer23 = wx.BoxSizer( wx.VERTICAL )
 		
 		
-		bSizer23.AddSpacer( ( 0, 10), 0, wx.ALL|wx.EXPAND, 0 )
+		bSizer23.AddSpacer( ( 0, 15), 0, wx.ALL|wx.EXPAND, 0 )
 		
 		self.m_list = wx.ListCtrl( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.Size( -1,-1 ), wx.LC_HRULES|wx.LC_REPORT|wx.LC_SINGLE_SEL|wx.SIMPLE_BORDER )
 		self.m_list.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
