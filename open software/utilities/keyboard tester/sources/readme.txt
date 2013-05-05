@@ -21,7 +21,8 @@ VERSION HISTORY:
 
 v0.1.0.5 - 05/05/2013
   Added speech option to speak the pressed keys or functions.  Useful for testing input without watching screen.
-  Added an about box
+  Speech module provided by krolik.net - http://krolik.net/wsvn/wsvn/public/Say%2B%2B/
+  Added an about box with donate button - for those using the software that would like to contribute.
 
 v0.1.0.4 - 21/04/2013
   Improve UI for compatibility with Windows 8
