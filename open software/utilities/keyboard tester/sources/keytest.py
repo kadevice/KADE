@@ -248,7 +248,7 @@ class keyTest( gui.keytest ):
     if self.Size[1] < 372:
       self.SetSize((800, 597))
     else:
-      self.SetSize((800, 322)) 
+      self.SetSize((800, 327)) 
     self.m_dummy.SetFocus() 
 
   def onUI(self, event):

@@ -17,9 +17,9 @@ import wx.xrc
 class keytest ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,326 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.RESIZE_BORDER|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,327 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.RESIZE_BORDER|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
 		
-		self.SetSizeHintsSz( wx.Size( 800,326 ), wx.Size( 800,-1 ) )
+		self.SetSizeHintsSz( wx.Size( 800,327 ), wx.Size( 800,-1 ) )
 		
 		bSizer19 = wx.BoxSizer( wx.VERTICAL )
 		
