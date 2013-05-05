@@ -231,7 +231,7 @@ class keyTest( gui.keytest ):
   def UI(self):
     if self.height != self.Size[1]:
       self.height = self.Size[1]
-      if self.height < 362:
+      if self.height < 372:
         self.m_clear_list.Disable()
         self.m_show_up.Disable()
         self.m_show_log.SetLabel("Show Activity Log")
@@ -245,10 +245,10 @@ class keyTest( gui.keytest ):
 
   def onLog(self, event):
     #adjust the window height to hide/show the activity log
-    if self.Size[1] < 362:
-      self.SetSize((800, 600))
+    if self.Size[1] < 372:
+      self.SetSize((800, 597))
     else:
-      self.SetSize((800, 322)) 
+      self.SetSize((800, 320)) 
     self.m_dummy.SetFocus() 
 
   def onUI(self, event):

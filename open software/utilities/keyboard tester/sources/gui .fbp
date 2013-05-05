@@ -57,7 +57,7 @@
             <property name="maximum_size">800,-1</property>
             <property name="min_size"></property>
             <property name="minimize_button">0</property>
-            <property name="minimum_size">800,315</property>
+            <property name="minimum_size">800,320</property>
             <property name="moveable">1</property>
             <property name="name">keytest</property>
             <property name="pane_border">1</property>
@@ -69,7 +69,7 @@
             <property name="resize">Resizable</property>
             <property name="row"></property>
             <property name="show">1</property>
-            <property name="size">800,315</property>
+            <property name="size">800,320</property>
             <property name="style">wxCAPTION|wxCLOSE_BOX|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxRESIZE_BORDER|wxSTAY_ON_TOP</property>
             <property name="subclass"></property>
             <property name="title">Keyboard Input Tester</property>
