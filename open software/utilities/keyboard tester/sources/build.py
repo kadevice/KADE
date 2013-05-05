@@ -64,6 +64,7 @@ setup(
                   (r'', glob.glob(r'version.txt')),
                   (r'', glob.glob(r'readme.txt')),
                   (r'', glob.glob(r'license.txt')),
+                  (r'', glob.glob(r'saystatic.exe')),
                   (r'', glob.glob(r'kade.jpg'))],
     
     options = {"py2exe": {"compressed": 1,

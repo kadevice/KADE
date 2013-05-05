@@ -53,6 +53,9 @@ import wx
 import gui
 import pyHook
 import maps
+import subprocess
+from win32process import CREATE_NO_WINDOW
+
 
 #can use to get keyboard LED status - if we want to do that:
 #from win32api import GetKeyState
@@ -101,7 +104,10 @@ class keyTest( gui.keytest ):
     
     #set the default keyboard
     self.setKeyboard([False,True].index(os.path.exists("us_key")), True)
-        
+
+    #initialise the speech engine
+    self.say()
+    
   def setFontSize(self, field, size):
     font = field.GetFont()
     font.SetPointSize(size)
@@ -119,23 +125,50 @@ class keyTest( gui.keytest ):
       if self.m_show_up.GetValue() or "down" in event.MessageName:
         try:
           #insert item in list.  catch exception to handle any odd info in the descriptives
+          mame_function = self.getFunction("MAME", event.KeyID)
+          pin_function = self.getFunction("PIN", event.KeyID)
+          
           self.m_list.InsertStringItem(0, "%s (%s)" % (str(event.Key), str(event.KeyID)))
           self.m_list.SetStringItem(0, 1, "%s (%s)" % (chr(event.Ascii), str(event.Ascii)))
           self.m_list.SetStringItem(0, 2, str(event.ScanCode))  
           self.m_list.SetStringItem(0, 3, str(event.Extended))  
           self.m_list.SetStringItem(0, 4, event.WindowName) 
           self.m_list.SetStringItem(0, 5, event.MessageName.title().replace("Sys ",""))
-          self.m_list.SetStringItem(0, 6, self.getFunction("MAME", event.KeyID))
-          self.m_list.SetStringItem(0, 7, self.getFunction("PIN", event.KeyID))
+          self.m_list.SetStringItem(0, 6, mame_function)
+          self.m_list.SetStringItem(0, 7, pin_function)
 
           #update last key field
           self.m_last_key.SetValue("%s (%s)" % (str(event.Key), str(event.KeyID)))          
+
+          #speak the key pressed
+          speak_func = self.m_speak.GetSelection()
+          if speak_func > 0:
+            if speak_func == 1: word = str(event.Key)
+            if speak_func == 2: word = mame_function
+            if speak_func == 3: word = pin_function
+            word = word.split("|")[0].split("(")[0]      #<- only speak the first descriptive
+            word = word.replace("Return","Enter")        #<- to fix in the DB
+            word = word.replace("Capital","Caps Lock")   #<- to fix in the DB
+            self.say(word)
         except:
           pass
                 
     self.last_event = (event.KeyID, event.MessageName) 
     return True
 
+
+  def say(self, word=""):
+    try:
+      #abruptly stop any other speech
+      self.p.terminate()
+    except:
+      pass
+    try:
+      #speak the given word
+      self.p = subprocess.Popen("saystatic.exe %s" % word, creationflags = CREATE_NO_WINDOW)
+    except WindowsError:
+      pass
+    
   def getGUIObject(self, code, extended):
     obj = None
     for item in self.key_dict:
@@ -198,7 +231,7 @@ class keyTest( gui.keytest ):
   def UI(self):
     if self.height != self.Size[1]:
       self.height = self.Size[1]
-      if self.Size[1] < 345:
+      if self.height < 345:
         self.m_clear_list.Disable()
         self.m_show_up.Disable()
         self.m_show_log.SetLabel("Show Activity Log")
@@ -211,6 +244,7 @@ class keyTest( gui.keytest ):
       self.Layout()
 
   def onLog(self, event):
+    #adjust the window height to hide/show the activity log
     if self.Size[1] < 345:
       self.SetSize((800, 580))
     else:
@@ -233,9 +267,35 @@ class keyTest( gui.keytest ):
     self.setKeyboard(self.m_keyboard.GetSelection())
     self.clearGUI()
 
+  def onSpeakFunction(self, event):
+    self.clearGUI()
+
   def onKADE(self, event):
     from webbrowser import open as browse
     browse("http://kadevice.com")
+
+  def onAbout(self, event):
+    about = aboutBox(None)
+    about.ShowModal()
+    about.Destroy() 
+    
+  def onClose(self, event):
+    self.Destroy()
+    
+#==========================================================================================
+# About
+
+class aboutBox( gui.aboutBox ):
+  def __init__( self, parent ):
+    gui.aboutBox.__init__( self, parent )
+        
+  def onOK(self, event):
+    self.Close()    
+    
+  def onDonate(self, event):
+    from webbrowser import open as browse
+    browse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EXQQ6WC5VR666")
+  
     
 #==========================================================================================
 # Main

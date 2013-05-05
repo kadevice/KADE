@@ -19,6 +19,10 @@ Visit http://kadevice.com and http://kadevice.com/forum/ for more information.
 
 VERSION HISTORY:
 
+v0.1.0.5 - 05/05/2013
+  Added speech option to speak the pressed keys or functions.  Useful for testing input without watching screen.
+  Added an about box
+
 v0.1.0.4 - 21/04/2013
   Improve UI for compatibility with Windows 8
 

@@ -1082,7 +1082,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer26.Add( self.m_show_log, 0, wx.ALL, 2 )
 		
-		self.m_clear_list = wx.Button( self.m_panel, wx.ID_ANY, u"Clear Log", wx.DefaultPosition, wx.Size( 90,20 ), 0 )
+		self.m_clear_list = wx.Button( self.m_panel, wx.ID_ANY, u"Clear Log", wx.DefaultPosition, wx.Size( 75,20 ), 0 )
 		self.m_clear_list.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		self.m_clear_list.Enable( False )
 		self.m_clear_list.SetToolTipString( u"Clear the keyboard activity log" )
@@ -1096,15 +1096,19 @@ class keytest ( wx.Frame ):
 		
 		bSizer26.Add( self.m_show_up, 0, wx.ALL, 5 )
 		
-		self.m_staticline1 = wx.StaticLine( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_VERTICAL )
-		bSizer26.Add( self.m_staticline1, 0, wx.ALL|wx.EXPAND, 5 )
-		
 		m_keyboardChoices = [ u"UK Keyboard", u"US Keyboard" ]
-		self.m_keyboard = wx.Choice( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.Size( 120,18 ), m_keyboardChoices, 0 )
+		self.m_keyboard = wx.Choice( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.Size( 100,18 ), m_keyboardChoices, 0 )
 		self.m_keyboard.SetSelection( 0 )
 		self.m_keyboard.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		
 		bSizer26.Add( self.m_keyboard, 0, wx.ALL, 2 )
+		
+		m_speakChoices = [ u"No speech", u"Say Key", u"Say MAME", u"Say Pinball" ]
+		self.m_speak = wx.Choice( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.Size( 90,18 ), m_speakChoices, 0 )
+		self.m_speak.SetSelection( 0 )
+		self.m_speak.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
+		
+		bSizer26.Add( self.m_speak, 0, wx.ALL, 2 )
 		
 		self.m_staticText3 = wx.StaticText( self.m_panel, wx.ID_ANY, u"Last Key:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText3.Wrap( -1 )
@@ -1116,16 +1120,14 @@ class keytest ( wx.Frame ):
 		self.m_last_key.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		self.m_last_key.SetBackgroundColour( wx.Colour( 224, 224, 224 ) )
 		
-		bSizer26.Add( self.m_last_key, 0, wx.ALL, 2 )
+		bSizer26.Add( self.m_last_key, 1, wx.ALL, 3 )
 		
+		self.m_about = wx.Button( self.m_panel, wx.ID_ANY, u"About", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_about.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
+		self.m_about.SetToolTipString( u"Show the keyboard activity log" )
+		self.m_about.SetMinSize( wx.Size( 55,20 ) )
 		
-		bSizer26.AddSpacer( ( 10, 0), 1, wx.EXPAND, 5 )
-		
-		self.m_staticText2 = wx.StaticText( self.m_panel, wx.ID_ANY, u"Developed for KADE\nby Degenatrons", wx.DefaultPosition, wx.DefaultSize, wx.ALIGN_RIGHT )
-		self.m_staticText2.Wrap( -1 )
-		self.m_staticText2.SetFont( wx.Font( 6, 74, 90, 90, False, wx.EmptyString ) )
-		
-		bSizer26.Add( self.m_staticText2, 5, wx.ALIGN_BOTTOM|wx.ALIGN_RIGHT|wx.RIGHT, 0 )
+		bSizer26.Add( self.m_about, 0, wx.ALL, 2 )
 		
 		bSizer23.Add( bSizer26, 0, wx.EXPAND, 0 )
 		
@@ -1144,6 +1146,8 @@ class keytest ( wx.Frame ):
 		self.Centre( wx.BOTH )
 		
 		# Connect Events
+		self.Bind( wx.EVT_CLOSE, self.onClose )
+		self.Bind( wx.EVT_SIZE, self.onUI )
 		self.Bind( wx.EVT_UPDATE_UI, self.onUI )
 		self.m_escape.Bind( wx.EVT_BUTTON, self.onButton )
 		self.m_f1.Bind( wx.EVT_BUTTON, self.onButton )
@@ -1360,14 +1364,20 @@ class keytest ( wx.Frame ):
 		self.m_clear_list.Bind( wx.EVT_BUTTON, self.onClear )
 		self.m_show_up.Bind( wx.EVT_CHECKBOX, self.onGUIClick )
 		self.m_keyboard.Bind( wx.EVT_CHOICE, self.onKeyboardLayout )
+		self.m_speak.Bind( wx.EVT_CHOICE, self.onSpeakFunction )
+		self.m_about.Bind( wx.EVT_BUTTON, self.onAbout )
 	
 	def __del__( self ):
 		pass
 	
 	
 	# Virtual event handlers, overide them in your derived class
+	def onClose( self, event ):
+		event.Skip()
+	
 	def onUI( self, event ):
 		event.Skip()
+	
 	
 	def onButton( self, event ):
 		event.Skip()
@@ -1594,6 +1604,75 @@ class keytest ( wx.Frame ):
 		event.Skip()
 	
 	def onKeyboardLayout( self, event ):
+		event.Skip()
+	
+	def onSpeakFunction( self, event ):
+		event.Skip()
+	
+	def onAbout( self, event ):
+		event.Skip()
+	
+
+###########################################################################
+## Class aboutBox
+###########################################################################
+
+class aboutBox ( wx.Dialog ):
+	
+	def __init__( self, parent ):
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"About Keyboard Tester", pos = wx.DefaultPosition, size = wx.Size( 365,310 ), style = wx.DEFAULT_DIALOG_STYLE|wx.STAY_ON_TOP )
+		
+		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+		
+		bSizer40 = wx.BoxSizer( wx.VERTICAL )
+		
+		bSizer41 = wx.BoxSizer( wx.VERTICAL )
+		
+		self.m_bitmap1 = wx.StaticBitmap( self, wx.ID_ANY, wx.Bitmap( u"images/keyboard.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer41.Add( self.m_bitmap1, 0, wx.ALIGN_CENTER_HORIZONTAL|wx.ALL, 10 )
+		
+		self.m_staticText2 = wx.StaticText( self, wx.ID_ANY, u"A general purpose keyboard test utility by Degenatrons.\nDeveloped for use with KADE Loader.\n\nKADE software is open and is licensed under GNU GPL V3.  \n\nPlease visit our site for more information about our software.\n", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText2.Wrap( 340 )
+		bSizer41.Add( self.m_staticText2, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 5 )
+		
+		self.m_hyperlink2 = wx.HyperlinkCtrl( self, wx.ID_ANY, u"kadevice.com", u"kadevice.com", wx.DefaultPosition, wx.DefaultSize, wx.HL_DEFAULT_STYLE )
+		self.m_hyperlink2.SetFont( wx.Font( 11, 70, 90, 90, False, wx.EmptyString ) )
+		
+		bSizer41.Add( self.m_hyperlink2, 0, wx.ALIGN_CENTER_HORIZONTAL|wx.ALL, 5 )
+		
+		bSizer40.Add( bSizer41, 1, wx.ALL|wx.EXPAND, 5 )
+		
+		bSizer42 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		
+		bSizer42.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
+		
+		self.m_button2131 = wx.Button( self, wx.ID_ANY, u"Donate", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer42.Add( self.m_button2131, 0, wx.ALIGN_RIGHT|wx.ALL, 5 )
+		
+		self.m_button213 = wx.Button( self, wx.ID_ANY, u"OK", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer42.Add( self.m_button213, 0, wx.ALIGN_RIGHT|wx.ALL, 5 )
+		
+		bSizer40.Add( bSizer42, 0, wx.EXPAND, 5 )
+		
+		self.SetSizer( bSizer40 )
+		self.Layout()
+		
+		self.Centre( wx.BOTH )
+		
+		# Connect Events
+		self.m_button2131.Bind( wx.EVT_BUTTON, self.onDonate )
+		self.m_button213.Bind( wx.EVT_BUTTON, self.onOK )
+	
+	def __del__( self ):
+		pass
+	
+	
+	# Virtual event handlers, overide them in your derived class
+	def onDonate( self, event ):
+		event.Skip()
+	
+	def onOK( self, event ):
 		event.Skip()
 	
 
