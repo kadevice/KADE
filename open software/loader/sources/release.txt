@@ -1,7 +1,8 @@
 KADE Loader Release Notes
 
-v1.0.7.0 26/04/2013
+v1.0.7.0 06/05/2013
   Validate the version information that is returned from kadevice website during update checks.
+  Added about box and speech option to the keyboard test utility.
 
 v1.0.6.0 21/04/2013
   Minor improvements to iCade emulation

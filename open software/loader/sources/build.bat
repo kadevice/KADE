@@ -13,6 +13,7 @@ echo *** Building executables - output to dist folder ***
 
 echo *** Include the keyboard testing utility (you can grab latest build from utilities folder) ***
 copy keytest.exe dist
+copy saystatic.exe dist
 
 echo *** Packaging files into installers ***
 %nsis_path% setup.nsi
