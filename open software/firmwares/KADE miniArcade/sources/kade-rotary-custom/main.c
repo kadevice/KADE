@@ -69,6 +69,7 @@ S21  XJj88  0u  1uY2.        X2k           .    k11E   v    7;ii:JuJvLvLvJ2:
 uint8_t map[21];
 uint8_t key[77];
 uint8_t keycount = 0;
+uint8_t tim1 = 20; tim2 = 20;
 
 //Main Program
 int main(void)
@@ -96,7 +97,7 @@ int main(void)
 	
 	//initialise the rotary joysticks
 	uint8_t rot1 = 2, rot2 = 2;
-	
+		
     //Flash LEDs
 	#include "..\shared\disco.c"
 
@@ -135,12 +136,23 @@ int main(void)
 					#include "keymaps.c"					
 				
 					//check for rotary movement
-					if (ass[pos]==49){set_rotary(1, 1, rot1); rot1=1;}
-					if (ass[pos]==50){set_rotary(1, 2, rot1); rot1=2;}
-					if (ass[pos]==51){set_rotary(1, 3, rot1); rot1=3;}
-					if (ass[pos]==52){set_rotary(2, 1, rot2); rot2=1;}
-					if (ass[pos]==53){set_rotary(2, 2, rot2); rot2=2;}
-					if (ass[pos]==54){set_rotary(2, 3, rot2); rot2=3;}
+					if (tim1 > 2){
+						tim1 = 0;
+						switch (ass[pos]){
+							case 49: set_rotary(1, 1, rot1); rot1=1; break;
+							case 50: set_rotary(1, 2, rot1); rot1=2; break;
+							case 51: set_rotary(1, 3, rot1); rot1=3; break;
+						}
+					}
+						
+					if (tim2 > 2){
+						tim2 = 0;
+						switch (ass[pos]){
+							case 52: set_rotary(2, 1, rot2); rot2=1; break;
+							case 53: set_rotary(2, 2, rot2); rot2=2; break;
+							case 54: set_rotary(2, 3, rot2); rot2=3; break;
+						}
+					}
 				}	
 			}
 		}
@@ -151,6 +163,11 @@ int main(void)
 
 		usb_keyboard_send();
 		_delay_ms(2); // Debounce
+		
+		//Update timers.  timers ensure that we debounce the rotary inputs effectively with more cycles
+		tim1 += 1; tim2 += 1;
+		if (tim1 > 99){ tim1 = 99; }
+		if (tim2 > 99){ tim2 = 99; }
 	}
 }
 
@@ -172,5 +189,5 @@ void set_rotary(int num, int current, int prev){
 	if ((prev==2)&&(current==1)){dir = keyleft;}
 	if ((prev==3)&&(current==1)){dir = keyright;}
 	if ((prev==3)&&(current==2)){dir = keyleft;}
-	keyboard_keys[keycount++] = dir;
+	keyboard_keys[keycount++] = dir;	
 }

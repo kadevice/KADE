@@ -1,8 +1,9 @@
 echo *** Build script for KADE Loader 
 echo ***
-echo *** Define local paths to your Python and NSIS programs ***
+echo *** Define local paths to your Python, NSIS and ECM signcode programs ***
 set python_path="c:\python26\python"
 set nsis_path="c:\program files\nsis\makensis"
+set sign_path="c:\program files\nsis\signcode"
 
 echo *** Make version information available to install scripts ***
 echo !define PRODUCTVERSION > nsis.tmp \
