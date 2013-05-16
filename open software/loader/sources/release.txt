@@ -1,5 +1,13 @@
 KADE Loader Release Notes
 
+v1.0.8.0 16/05/2013
+  Rotary joystick encoder has 2 player support and is optimised for MAME
+  Recommend that MAME analog controls are configured as:
+    Positional Digital Speed = 0
+    Positional Reverse       = On
+    Positional Sensitivity   = 100
+  Thanks to Brian74 for his help with testing
+
 v1.0.7.0 13/05/2013
   Validate version information that is returned from kadevice website during update checks.
   Added an about box and a speech option to the keyboard test utility.

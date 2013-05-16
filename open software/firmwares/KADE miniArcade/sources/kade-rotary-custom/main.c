@@ -69,7 +69,6 @@ S21  XJj88  0u  1uY2.        X2k           .    k11E   v    7;ii:JuJvLvLvJ2:
 uint8_t map[21];
 uint8_t key[77];
 uint8_t keycount = 0;
-uint8_t tim1 = 20; tim2 = 20;
 
 //Main Program
 int main(void)
@@ -96,7 +95,8 @@ int main(void)
 	uint8_t shift=0, shift_last=0, shift_count=0, shift_lock=0;
 	
 	//initialise the rotary joysticks
-	uint8_t rot1 = 2, rot2 = 2;
+	uint8_t rot1 = 2,  rot2 = 2;
+	uint8_t cyc1 = 10, cyc2 = 10;
 		
     //Flash LEDs
 	#include "..\shared\disco.c"
@@ -136,21 +136,21 @@ int main(void)
 					#include "keymaps.c"					
 				
 					//check for rotary movement
-					if (tim1 > 2){
-						tim1 = 0;
+					if (cyc1 > 2){
 						switch (ass[pos]){
 							case 49: set_rotary(1, 1, rot1); rot1=1; break;
 							case 50: set_rotary(1, 2, rot1); rot1=2; break;
 							case 51: set_rotary(1, 3, rot1); rot1=3; break;
 						}
+						cyc1 = 0;
 					}
 						
-					if (tim2 > 2){
-						tim2 = 0;
+					if (cyc2 > 2){
 						switch (ass[pos]){
 							case 52: set_rotary(2, 1, rot2); rot2=1; break;
 							case 53: set_rotary(2, 2, rot2); rot2=2; break;
 							case 54: set_rotary(2, 3, rot2); rot2=3; break;
+						cyc2 = 0;
 						}
 					}
 				}	
@@ -162,12 +162,12 @@ int main(void)
 		}
 
 		usb_keyboard_send();
-		_delay_ms(2); // Debounce
+		_delay_ms(22); // Debounce
 		
-		//Update timers.  timers ensure that we debounce the rotary inputs effectively with more cycles
-		tim1 += 1; tim2 += 1;
-		if (tim1 > 99){ tim1 = 99; }
-		if (tim2 > 99){ tim2 = 99; }
+		//ensure that we debounce the rotary inputs effectively by adding extra cycles
+		cyc1 += 1; cyc2 += 1;
+		if (cyc1 > 10){ cyc1 = 10; }
+		if (cyc2 > 10){ cyc2 = 10; }
 	}
 }
 
@@ -183,11 +183,12 @@ void set_rotary(int num, int current, int prev){
 	}
 	  
 	uint8_t dir = "KEY_NONE";
-	if ((prev==1)&&(current==2)){dir = keyright;}
-	if ((prev==1)&&(current==3)){dir = keyleft;}
-	if ((prev==2)&&(current==3)){dir = keyright;}
-	if ((prev==2)&&(current==1)){dir = keyleft;}
-	if ((prev==3)&&(current==1)){dir = keyright;}
-	if ((prev==3)&&(current==2)){dir = keyleft;}
+	if ((prev==1)&&(current==2)){dir = keyleft;}
+	if ((prev==1)&&(current==3)){dir = keyright;}
+	if ((prev==2)&&(current==3)){dir = keyleft;}
+	if ((prev==2)&&(current==1)){dir = keyright;}
+	if ((prev==3)&&(current==1)){dir = keyleft;}
+	if ((prev==3)&&(current==2)){dir = keyright;}
+	
 	keyboard_keys[keycount++] = dir;	
 }
