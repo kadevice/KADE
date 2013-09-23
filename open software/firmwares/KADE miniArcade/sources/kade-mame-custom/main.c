@@ -94,6 +94,10 @@ int main(void)
 	//handle shift and shift lock
 	uint8_t shift=0, shift_last=0, shift_count=0, shift_lock=0;
 	
+	//extended mode flags - use to detect if key combos are pressed
+	uint8_t p1, p2, p3, p4;
+	uint8_t ext_inputs, ext_func_block, ext_func;
+	
     //Flash LEDs
 	#include "..\shared\disco.c"
 
@@ -106,6 +110,7 @@ int main(void)
 			#include "..\shared\outputs.c"		
 		}*/		
 	}
+	
 
 	// Initialize the USB
 	usb_init();
@@ -121,6 +126,8 @@ int main(void)
 	
 		//loop through pins checking for inputs from those that are assigned a function
 		keycount = 0;
+		p1=0; p2=0; p3=0; p4=0;
+		
 		for(cnt=0;cnt<20;cnt++) {
 			pos=cnt;					
 			if (!(state[cnt])) {
@@ -129,10 +136,53 @@ int main(void)
 				
 				if (ass[pos]>0) {
 					//there is an assignment to a function
-					#include "keymaps.c"					
-				}
+					#include "keymaps.c"
+
+					//check for extended mode inputs
+					if (ass[pos]==3 ||ass[pos]==4 ){ p1 += 1; }
+					if (ass[pos]==5 ||ass[pos]==6 ){ p1 += 3; }
+					if (ass[pos]==17||ass[pos]==18){ p2 += 1; }
+					if (ass[pos]==19||ass[pos]==20){ p2 += 3; }
+					if (ass[pos]==25||ass[pos]==26){ p3 += 1; }
+					if (ass[pos]==27||ass[pos]==28){ p3 += 3; }
+					if (ass[pos]==43||ass[pos]==44){ p4 += 1; }
+					if (ass[pos]==45||ass[pos]==46){ p4 += 3; }
+				}				
 			}
 		}
+   
+		//Cycle players and process extended maps
+		//ext_func_block: sets the start position of the extended functions read from eeprom
+		//ext_inputs:     the calculated combo value between 0 and 8.
+		//         0:     .
+		//         1:     .
+		//         2:     left+right
+		//         3:     .
+		//         4:     .
+		//         5:     left+right
+		//         6:     up+down
+		//         7:     up+down
+		//         8:     up+down+left+right
+		for(cnt=0;cnt<4;cnt++) {
+			if(cnt==0){ext_inputs = p1; ext_func_block = 69;} 
+			if(cnt==1){ext_inputs = p2; ext_func_block = 72;} 
+			if(cnt==2){ext_inputs = p3; ext_func_block = 75;} 
+			if(cnt==3){ext_inputs = p4; ext_func_block = 78;} 
+			if (ext_inputs==2||ext_inputs>=5){ 
+				//extended combo is detected
+				if (ext_inputs==8){ext_func=ext_func_block+2;}                     //(u+d+l+r)
+				else if (ext_inputs==2||ext_inputs==5){ext_func=ext_func_block;}   //(u+d)
+				else if (ext_inputs==6||ext_inputs==7){ext_func=ext_func_block+1;} //(l+r)
+				
+				//shifted function are higher in eeprom
+				if (shift==1){ext_func=ext_func+12;}
+				
+				ass[pos] = read_eeprom_byte(ext_func);
+				#include "keymaps.c"
+			}
+		}
+
+
    
 		while(keycount < sizeof(keyboard_keys)) {
 			keyboard_keys[keycount++] = KEY_NONE;

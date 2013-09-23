@@ -7,7 +7,13 @@ http://www.fourwalledcubicle.com/files/LUFA/Doc/100807/html/_page__software_boot
 #include <LUFA/Drivers/USB/USB.h>
 uint32_t Boot_Key ATTR_NO_INIT;
 #define MAGIC_BOOT_KEY            0xDC42ACCA
+
+//Bootloader location varies for MCU (Added JW 29/07/2013)
+#if defined (__AVR_AT90USB162__)
+#define BOOTLOADER_START_ADDRESS  0x1800
+#else
 #define BOOTLOADER_START_ADDRESS  0xF000
+#endif
 
 void Bootloader_Jump_Check(void) ATTR_INIT_SECTION(3);
 void Bootloader_Jump_Check(void)

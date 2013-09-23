@@ -120,6 +120,14 @@ int main(void) {
 		gamepad_state.r2_btn=0x00;
 		gamepad_state.l3_btn=0x00;
 		gamepad_state.r3_btn=0x00;
+		gamepad_state.square_axis=0x00;
+		gamepad_state.cross_axis=0x00;
+		gamepad_state.circle_axis=0x00;
+		gamepad_state.triangle_axis=0x00;
+		gamepad_state.l1_axis=0x00;
+		gamepad_state.r1_axis=0x00;
+		gamepad_state.l2_axis=0x00;
+		gamepad_state.r2_axis=0x00;
 		gamepad_state.select_btn=0x00;
 		gamepad_state.start_btn=0x00;
 		gamepad_state.ps_btn=0x00;		
