@@ -218,7 +218,8 @@ class kadeLoader( gui.loader ):
     user_html_file = os.path.join(get_path("ROOT"), "%s.htm" % firmware)
     if not os.path.exists(user_html_file):
       mappings = sql_command('SELECT a.position, a.function, b.long_description FROM presets AS a, library AS b WHERE a. function = b.function and a.system = b.system and a.system = "%s" and a.preset = "0" ORDER BY a.position' % firmware)
-      if mappings: generate_html(firmware, mappings)
+      if mappings: 
+        generate_html(firmware, mappings)
     return user_html_file
   
   def loadHTML(self, firmware="kade-instructions-minimus"):
@@ -695,6 +696,12 @@ class kadeCustom( gui.custom ):
     else:
       self.m_settings0.Hide()
       
+    #Allow extended maps?
+    extend = sql_command('SELECT extend_maps FROM firmwares WHERE name = "%s" AND extend_maps = "True"' % self.firmware)
+    if not extend:
+      self.m_extend.Hide()
+      self.m_staticline_extend.Hide()
+      
   def getFunctions(self):
     self.choices = []
     self.shifted_choices = []
@@ -772,7 +779,7 @@ class kadeCustom( gui.custom ):
         for i in range(55, 62):
           self.trackball1_map.append(int(mappings[i]))
       except:
-        self.trackball1_map = list((0,0,0,0,0,0,0))
+        self.trackball1_map = [0] * 7
       
       #Trackball 2 mappings
       self.trackball2_map = []
@@ -780,11 +787,20 @@ class kadeCustom( gui.custom ):
         for i in range(62, 69):
           self.trackball2_map.append(int(mappings[i]))
       except:
-        self.trackball2_map = list((0,0,0,0,0,0,0))
-      
+        self.trackball2_map = [0] * 7
+
+      #Extended mappings (3 additional maps for each of 4 players)
+      self.extended_map = []
+      try:
+        for i in range(69, 93):
+          self.extended_map.append(int(mappings[i]))
+      except:
+        self.extended_map = [0] * 24
+        
     else:
-      self.trackball1_map = list((0,0,0,0,0,0,0))
-      self.trackball2_map = list((0,0,0,0,0,0,0))
+      self.trackball1_map = [0] * 7
+      self.trackball2_map = [0] * 7
+      self.extended_map = [0] * 24
       self.populatePresets(0)
 
   def save(self, filename):
@@ -875,10 +891,14 @@ class kadeCustom( gui.custom ):
       for mapping in self.trackball2_map:
         f.write(str(mapping)+"\n")
 
+      #69 to 92: Extended mode (impossible combinations make extra inputs) 
+      for mapping in self.extended_map:
+        f.write(str(mapping)+"\n")
+        
       #End of settings
       f.close()
       if mappings:
-        generate_html(self.firmware, mappings, extra)
+        generate_html(self.firmware, mappings, extra, self.extended_map)
         
     except:
       pass
@@ -993,13 +1013,13 @@ class kadeCustom( gui.custom ):
 
   def assign_trackball_inputs(self, name, maps):
     array = []
-    trackballs = kadeTrackballInputs(None, name, self.choices, self.keys, maps)
-    trackballs.ShowModal()    
-    trackball_controls = trackballs.BUT1, trackballs.BUT2, trackballs.BUT3, trackballs.BUT1s, trackballs.BUT2s, trackballs.BUT3s       
-    array.append(b2i(trackballs.m_left.GetValue()==False))
-    for control in trackball_controls:
+    tb = kadeTrackballInputs(None, name, self.choices, self.keys, maps)
+    tb.ShowModal()    
+    tb_controls = tb.BUT1, tb.BUT2, tb.BUT3, tb.BUT1s, tb.BUT2s, tb.BUT3s       
+    array.append(b2i(tb.m_left.GetValue()==False))
+    for control in tb_controls:
       array.append(self.functions[control.GetSelection()][0])
-    trackballs.Destroy()      
+    tb.Destroy()      
     return array    
       
   def onAssign1(self, event):
@@ -1008,6 +1028,45 @@ class kadeCustom( gui.custom ):
   def onAssign2(self, event):
     self.trackball2_map = self.assign_trackball_inputs("Trackball 2", self.trackball2_map)
     
+  def onExtend(self, event):
+    array = []
+    e = kadeExtendedInputs(None, self.choices, self.keys, self.extended_map)
+    e.ShowModal()    
+    ext_controls = e.P1_1,e.P1_2,e.P1_3,e.P2_1,e.P2_2,e.P2_3,e.P3_1,e.P3_2,e.P3_3,e.P4_1,e.P4_2,e.P4_3, \
+      e.P1_1S,e.P1_2S,e.P1_3S,e.P2_1S,e.P2_2S,e.P2_3S,e.P3_1S,e.P3_2S,e.P3_3S,e.P4_1S,e.P4_2S,e.P4_3S       
+    for control in ext_controls:
+      array.append(self.functions[control.GetSelection()][0])
+    self.extended_map = array   
+    
+class kadeExtendedInputs( gui.extended_inputs ):
+  def __init__( self, parent, choices, keys, maps ):
+    gui.extended_inputs.__init__( self, parent )
+    s = self
+    self.normal = s.P1_1,s.P1_2,s.P1_3,s.P2_1,s.P2_2,s.P2_3,s.P3_1,s.P3_2,s.P3_3,s.P4_1,s.P4_2,s.P4_3
+    self.shifted = s.P1_1S,s.P1_2S,s.P1_3S,s.P2_1S,s.P2_2S,s.P2_3S,s.P3_1S,s.P3_2S,s.P3_3S,s.P4_1S,s.P4_2S,s.P4_3S
+    
+    #load values
+    i = 0
+    for control in self.normal: 
+      control.SetItems(choices)
+      control.SetSelection(keys.index(maps[i]))
+      i += 1            
+    for control in self.shifted: 
+      control.SetItems(choices)  
+      control.SetSelection(keys.index(maps[i]))
+      i += 1
+
+  def onClear(self, event):
+    for control in self.normal + self.shifted:
+      control.SetSelection(0)
+      
+  def onOK(self, event):
+    self.Destroy()
+    
+  def onCancel(self, event):
+    self.Destroy()      
+  
+
 
 #==========================================================================================
 # Main

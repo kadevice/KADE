@@ -1,5 +1,12 @@
 KADE Loader Release Notes
 
+v1.0.8.4 23/09/2013
+  Add extended mappings to custom MAME firmware to provide additional inputs per player by utilising impossible input combination.
+    e.g. Up+Down for player 1 could be assigned to "P1 Start".  Requires non-standard wiring.
+    Option is accessed via a new "Extended Mappings" button in the customisation screen.
+  For PS3 (and US/HID) set the axis values for pressure sensitive buttons (L and R triggers, cross, circle, triangle and square).
+  Fix problem with program mode function on AT90USB162 due to an incorrectly set location for bootloader.
+
 v1.0.8.0 16/05/2013
   Rotary joystick encoder has 2 player support and is optimised for MAME
   Recommend that MAME analog controls are configured as:

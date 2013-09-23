@@ -1046,6 +1046,12 @@ class custom ( wx.Dialog ):
 		self.m_export = wx.Button( self, wx.ID_ANY, u"Export", wx.DefaultPosition, wx.Size( 60,-1 ), 0 )
 		bSizer37.Add( self.m_export, 0, 0, 5 )
 		
+		self.m_staticline_extend = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_VERTICAL )
+		bSizer37.Add( self.m_staticline_extend, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_extend = wx.Button( self, wx.ID_ANY, u"Extended Mappings", wx.DefaultPosition, wx.Size( 120,-1 ), 0 )
+		bSizer37.Add( self.m_extend, 0, 0, 5 )
+		
 		
 		bSizer37.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 		
@@ -1099,6 +1105,7 @@ class custom ( wx.Dialog ):
 		self.m_clear.Bind( wx.EVT_BUTTON, self.onClear )
 		self.m_import.Bind( wx.EVT_BUTTON, self.onImport )
 		self.m_export.Bind( wx.EVT_BUTTON, self.onExport )
+		self.m_extend.Bind( wx.EVT_BUTTON, self.onExtend )
 		self.m_save.Bind( wx.EVT_BUTTON, self.onSave )
 		self.m_cancel.Bind( wx.EVT_BUTTON, self.onCancel )
 	
@@ -1169,6 +1176,9 @@ class custom ( wx.Dialog ):
 		event.Skip()
 	
 	def onExport( self, event ):
+		event.Skip()
+	
+	def onExtend( self, event ):
 		event.Skip()
 	
 	def onSave( self, event ):
@@ -1667,21 +1677,21 @@ class trackball_inputs ( wx.Dialog ):
 		bSizer55 = wx.BoxSizer( wx.HORIZONTAL )
 		
 		self.m_button28 = wx.Button( self, wx.ID_ANY, u"Clear", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer55.Add( self.m_button28, 0, wx.ALL, 5 )
+		bSizer55.Add( self.m_button28, 0, wx.RIGHT, 5 )
 		
 		self.m_button281 = wx.Button( self, wx.ID_ANY, u"Configure Device...", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_button281.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 90, False, wx.EmptyString ) )
 		
-		bSizer55.Add( self.m_button281, 0, wx.ALL, 5 )
+		bSizer55.Add( self.m_button281, 0, 0, 5 )
 		
 		
 		bSizer55.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 		
 		self.m_button29 = wx.Button( self, wx.ID_ANY, u"OK", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer55.Add( self.m_button29, 0, wx.ALL, 5 )
+		bSizer55.Add( self.m_button29, 0, wx.RIGHT, 5 )
 		
 		self.m_button30 = wx.Button( self, wx.ID_ANY, u"Cancel", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer55.Add( self.m_button30, 0, wx.ALL, 5 )
+		bSizer55.Add( self.m_button30, 0, 0, 5 )
 		
 		bSizer54.Add( bSizer55, 0, wx.ALL|wx.EXPAND, 5 )
 		
@@ -1796,6 +1806,357 @@ class programmed ( wx.Dialog ):
 	
 	# Virtual event handlers, overide them in your derived class
 	def onOK( self, event ):
+		event.Skip()
+	
+
+###########################################################################
+## Class extended_inputs
+###########################################################################
+
+class extended_inputs ( wx.Dialog ):
+	
+	def __init__( self, parent ):
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Extended Mappings", pos = wx.DefaultPosition, size = wx.Size( 460,480 ), style = wx.DEFAULT_DIALOG_STYLE )
+		
+		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+		
+		bSizer56 = wx.BoxSizer( wx.VERTICAL )
+		
+		sbSizer15 = wx.StaticBoxSizer( wx.StaticBox( self, wx.ID_ANY, u"Assignments" ), wx.VERTICAL )
+		
+		fgSizer3 = wx.FlexGridSizer( 4, 3, 0, 0 )
+		fgSizer3.SetFlexibleDirection( wx.BOTH )
+		fgSizer3.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+		
+		self.m_staticText24 = wx.StaticText( self, wx.ID_ANY, u"Combo", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText24.Wrap( -1 )
+		self.m_staticText24.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 92, True, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticText24, 0, wx.ALL, 8 )
+		
+		self.m_staticText251 = wx.StaticText( self, wx.ID_ANY, u"Function", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText251.Wrap( -1 )
+		self.m_staticText251.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 92, True, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticText251, 0, wx.ALL, 8 )
+		
+		self.m_staticText261 = wx.StaticText( self, wx.ID_ANY, u"Shifted Function", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText261.Wrap( -1 )
+		self.m_staticText261.SetFont( wx.Font( wx.NORMAL_FONT.GetPointSize(), 70, 90, 92, True, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticText261, 0, wx.ALL, 8 )
+		
+		self.m_staticTextBUT1 = wx.StaticText( self, wx.ID_ANY, u"P1 Up+Down    ", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT1.Wrap( -1 )
+		self.m_staticTextBUT1.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT1, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P1_1Choices = []
+		self.P1_1 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P1_1Choices, 0 )
+		self.P1_1.SetSelection( 0 )
+		fgSizer3.Add( self.P1_1, 0, wx.ALL, 2 )
+		
+		P1_1SChoices = []
+		self.P1_1S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P1_1SChoices, 0 )
+		self.P1_1S.SetSelection( -1 )
+		fgSizer3.Add( self.P1_1S, 0, wx.ALL, 2 )
+		
+		self.m_staticTextBUT2 = wx.StaticText( self, wx.ID_ANY, u"P1 Left+Right", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT2.Wrap( -1 )
+		self.m_staticTextBUT2.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT2, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P1_2Choices = []
+		self.P1_2 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P1_2Choices, 0 )
+		self.P1_2.SetSelection( 0 )
+		fgSizer3.Add( self.P1_2, 0, wx.ALL, 2 )
+		
+		P1_2SChoices = []
+		self.P1_2S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P1_2SChoices, 0 )
+		self.P1_2S.SetSelection( 0 )
+		fgSizer3.Add( self.P1_2S, 0, wx.ALL, 2 )
+		
+		self.m_staticTextBUT21 = wx.StaticText( self, wx.ID_ANY, u"P1 U+D+L+R", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT21.Wrap( -1 )
+		self.m_staticTextBUT21.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT21, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P1_3Choices = []
+		self.P1_3 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P1_3Choices, 0 )
+		self.P1_3.SetSelection( 0 )
+		fgSizer3.Add( self.P1_3, 0, wx.ALL, 2 )
+		
+		P1_3SChoices = []
+		self.P1_3S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P1_3SChoices, 0 )
+		self.P1_3S.SetSelection( 0 )
+		fgSizer3.Add( self.P1_3S, 0, wx.ALL, 2 )
+		
+		self.m_staticline6 = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
+		fgSizer3.Add( self.m_staticline6, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_staticline5 = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
+		fgSizer3.Add( self.m_staticline5, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_staticline4 = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
+		fgSizer3.Add( self.m_staticline4, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_staticTextBUT11 = wx.StaticText( self, wx.ID_ANY, u"P2 Up+Down    ", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT11.Wrap( -1 )
+		self.m_staticTextBUT11.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT11, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P2_1Choices = []
+		self.P2_1 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P2_1Choices, 0 )
+		self.P2_1.SetSelection( 0 )
+		fgSizer3.Add( self.P2_1, 0, wx.ALL, 2 )
+		
+		P2_1SChoices = []
+		self.P2_1S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P2_1SChoices, 0 )
+		self.P2_1S.SetSelection( 0 )
+		fgSizer3.Add( self.P2_1S, 0, wx.ALL, 2 )
+		
+		self.m_staticTextBUT111 = wx.StaticText( self, wx.ID_ANY, u"P2 Left+Right", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT111.Wrap( -1 )
+		self.m_staticTextBUT111.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT111, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P2_2Choices = []
+		self.P2_2 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P2_2Choices, 0 )
+		self.P2_2.SetSelection( 0 )
+		fgSizer3.Add( self.P2_2, 0, wx.ALL, 2 )
+		
+		P2_2SChoices = []
+		self.P2_2S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P2_2SChoices, 0 )
+		self.P2_2S.SetSelection( 0 )
+		fgSizer3.Add( self.P2_2S, 0, wx.ALL, 2 )
+		
+		self.m_staticTextBUT1112 = wx.StaticText( self, wx.ID_ANY, u"P2 U+D+L+R", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT1112.Wrap( -1 )
+		self.m_staticTextBUT1112.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT1112, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P2_3Choices = []
+		self.P2_3 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P2_3Choices, 0 )
+		self.P2_3.SetSelection( 0 )
+		fgSizer3.Add( self.P2_3, 0, wx.ALL, 2 )
+		
+		P2_3SChoices = []
+		self.P2_3S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P2_3SChoices, 0 )
+		self.P2_3S.SetSelection( 0 )
+		fgSizer3.Add( self.P2_3S, 0, wx.ALL, 2 )
+		
+		self.m_staticline7 = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
+		fgSizer3.Add( self.m_staticline7, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_staticline8 = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
+		fgSizer3.Add( self.m_staticline8, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_staticline9 = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
+		fgSizer3.Add( self.m_staticline9, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_staticTextBUT112 = wx.StaticText( self, wx.ID_ANY, u"P3 Up+Down    ", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT112.Wrap( -1 )
+		self.m_staticTextBUT112.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT112, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P3_1Choices = []
+		self.P3_1 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P3_1Choices, 0 )
+		self.P3_1.SetSelection( 0 )
+		fgSizer3.Add( self.P3_1, 0, wx.ALL, 2 )
+		
+		P3_1SChoices = []
+		self.P3_1S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P3_1SChoices, 0 )
+		self.P3_1S.SetSelection( 0 )
+		fgSizer3.Add( self.P3_1S, 0, wx.ALL, 2 )
+		
+		self.m_staticTextBUT1111 = wx.StaticText( self, wx.ID_ANY, u"P3 Left+Right", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT1111.Wrap( -1 )
+		self.m_staticTextBUT1111.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT1111, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P3_2Choices = []
+		self.P3_2 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P3_2Choices, 0 )
+		self.P3_2.SetSelection( 0 )
+		fgSizer3.Add( self.P3_2, 0, wx.ALL, 2 )
+		
+		P3_2SChoices = []
+		self.P3_2S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P3_2SChoices, 0 )
+		self.P3_2S.SetSelection( 0 )
+		fgSizer3.Add( self.P3_2S, 0, wx.ALL, 2 )
+		
+		self.m_staticTextBUT11112 = wx.StaticText( self, wx.ID_ANY, u"P3 U+D+L+R", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT11112.Wrap( -1 )
+		self.m_staticTextBUT11112.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT11112, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P3_3Choices = []
+		self.P3_3 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P3_3Choices, 0 )
+		self.P3_3.SetSelection( 0 )
+		fgSizer3.Add( self.P3_3, 0, wx.ALL, 2 )
+		
+		P3_3SChoices = []
+		self.P3_3S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P3_3SChoices, 0 )
+		self.P3_3S.SetSelection( 0 )
+		fgSizer3.Add( self.P3_3S, 0, wx.ALL, 2 )
+		
+		self.m_staticline10 = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
+		fgSizer3.Add( self.m_staticline10, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_staticline11 = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
+		fgSizer3.Add( self.m_staticline11, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_staticline12 = wx.StaticLine( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.LI_HORIZONTAL )
+		fgSizer3.Add( self.m_staticline12, 0, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_staticTextBUT1121 = wx.StaticText( self, wx.ID_ANY, u"P4 Up+Down    ", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT1121.Wrap( -1 )
+		self.m_staticTextBUT1121.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT1121, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P4_1Choices = []
+		self.P4_1 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P4_1Choices, 0 )
+		self.P4_1.SetSelection( 0 )
+		fgSizer3.Add( self.P4_1, 0, wx.ALL, 2 )
+		
+		P4_1SChoices = []
+		self.P4_1S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P4_1SChoices, 0 )
+		self.P4_1S.SetSelection( 0 )
+		fgSizer3.Add( self.P4_1S, 0, wx.ALL, 2 )
+		
+		self.m_staticTextBUT11111 = wx.StaticText( self, wx.ID_ANY, u"P4 Left+Right", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT11111.Wrap( -1 )
+		self.m_staticTextBUT11111.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT11111, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P4_2Choices = []
+		self.P4_2 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P4_2Choices, 0 )
+		self.P4_2.SetSelection( 0 )
+		fgSizer3.Add( self.P4_2, 0, wx.ALL, 2 )
+		
+		P4_2SChoices = []
+		self.P4_2S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P4_2SChoices, 0 )
+		self.P4_2S.SetSelection( 0 )
+		fgSizer3.Add( self.P4_2S, 0, wx.ALL, 2 )
+		
+		self.m_staticTextBUT111121 = wx.StaticText( self, wx.ID_ANY, u"P4 U+D+L+R", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticTextBUT111121.Wrap( -1 )
+		self.m_staticTextBUT111121.SetFont( wx.Font( 8, 70, 90, 90, False, wx.EmptyString ) )
+		
+		fgSizer3.Add( self.m_staticTextBUT111121, 0, wx.ALIGN_CENTER_VERTICAL|wx.ALL, 2 )
+		
+		P4_3Choices = []
+		self.P4_3 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P4_3Choices, 0 )
+		self.P4_3.SetSelection( 0 )
+		fgSizer3.Add( self.P4_3, 0, wx.ALL, 2 )
+		
+		P4_3SChoices = []
+		self.P4_3S = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 160,-1 ), P4_3SChoices, 0 )
+		self.P4_3S.SetSelection( 0 )
+		fgSizer3.Add( self.P4_3S, 0, wx.ALL, 2 )
+		
+		sbSizer15.Add( fgSizer3, 1, wx.ALL|wx.EXPAND, 5 )
+		
+		bSizer56.Add( sbSizer15, 1, wx.ALL|wx.EXPAND, 5 )
+		
+		bSizer57 = wx.BoxSizer( wx.HORIZONTAL )
+		
+		self.m_button32 = wx.Button( self, wx.ID_ANY, u"Clear", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer57.Add( self.m_button32, 0, 0, 5 )
+		
+		
+		bSizer57.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
+		
+		self.m_button33 = wx.Button( self, wx.ID_ANY, u"OK", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer57.Add( self.m_button33, 0, wx.RIGHT, 5 )
+		
+		self.m_button34 = wx.Button( self, wx.ID_ANY, u"Cancel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer57.Add( self.m_button34, 0, 0, 5 )
+		
+		bSizer56.Add( bSizer57, 0, wx.ALL|wx.EXPAND, 5 )
+		
+		self.SetSizer( bSizer56 )
+		self.Layout()
+		
+		self.Centre( wx.BOTH )
+		
+		# Connect Events
+		self.P1_1.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P1_1S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P1_2.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P1_2S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P1_3.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P1_3S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P2_1.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P2_1S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P2_2.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P2_2S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P2_3.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P2_3S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P3_1.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P3_1S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P3_2.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P3_2S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P3_3.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P3_3S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P4_1.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P4_1S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P4_2.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P4_2S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P4_3.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.P4_3S.Bind( wx.EVT_CHOICE, self.onChoice )
+		self.m_button32.Bind( wx.EVT_BUTTON, self.onClear )
+		self.m_button33.Bind( wx.EVT_BUTTON, self.onOK )
+		self.m_button34.Bind( wx.EVT_BUTTON, self.onCancel )
+	
+	def __del__( self ):
+		pass
+	
+	
+	# Virtual event handlers, overide them in your derived class
+	def onChoice( self, event ):
+		event.Skip()
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	def onClear( self, event ):
+		event.Skip()
+	
+	def onOK( self, event ):
+		event.Skip()
+	
+	def onCancel( self, event ):
 		event.Skip()
 	
 

@@ -50,28 +50,28 @@ S21  XJj88  0u  1uY2.        X2k           .    k11E   v    7;ii:JuJvLvLvJ2:
 */ 
  
 //A, B, X, Y
-if (action==5){gamepad_state.square_btn=0xFF;}
-if (action==6){gamepad_state.cross_btn=0xFF;}
-if (action==7){gamepad_state.circle_btn=0xFF;}
-if (action==8){gamepad_state.triangle_btn=0xFF;}
+if (action==5){gamepad_state.square_btn=0xFF; gamepad_state.square_axis=0xFF;}
+if (action==6){gamepad_state.cross_btn=0xFF; gamepad_state.cross_axis=0xFF;}
+if (action==7){gamepad_state.circle_btn=0xFF; gamepad_state.circle_axis=0xFF;}
+if (action==8){gamepad_state.triangle_btn=0xFF; gamepad_state.triangle_axis=0xFF;}
 
 //Autofire
 if (autofire==1){
 	if(auto_toggle==1){
-		if (action==24){gamepad_state.square_btn=0xFF;}
-		if (action==25){gamepad_state.cross_btn=0xFF;}
-		if (action==26){gamepad_state.circle_btn=0xFF;}
-		if (action==27){gamepad_state.triangle_btn=0xFF;}
+		if (action==24){gamepad_state.square_btn=0xFF; gamepad_state.square_axis=0xFF;}
+		if (action==25){gamepad_state.cross_btn=0xFF; gamepad_state.cross_axis=0xFF;}
+		if (action==26){gamepad_state.circle_btn=0xFF; gamepad_state.circle_axis=0xFF;}
+		if (action==27){gamepad_state.triangle_btn=0xFF; gamepad_state.triangle_axis=0xFF;}
 	}
 	//autofire delay
 	for(auto_cnt=0;auto_cnt < setting_delay_autofire;auto_cnt++){_delay_ms(1);}
 }	
 
 //PS3 Triggers
-if (action==9){gamepad_state.l1_btn=0xFF;}   		    //L1
-if (action==10){gamepad_state.r1_btn=0xFF;}  		    //R1					
-if (action==11){gamepad_state.l2_btn=0xFF;}  		    //L2
-if (action==12){gamepad_state.r2_btn=0xFF;}   			//R2
+if (action==9){gamepad_state.l1_btn=0xFF; gamepad_state.l1_axis=0xFF;}   		    //L1
+if (action==10){gamepad_state.r1_btn=0xFF; gamepad_state.r1_axis=0xFF;}  		    //R1
+if (action==11){gamepad_state.l2_btn=0xFF; gamepad_state.l2_axis=0xFF;}  		    //L2
+if (action==12){gamepad_state.r2_btn=0xFF; gamepad_state.r2_axis=0xFF;}   			//R2
 if (action==15){gamepad_state.l3_btn=0xFF;}  		    //L3
 if (action==16){gamepad_state.r3_btn=0xFF;}				//R3
 

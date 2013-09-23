@@ -175,10 +175,13 @@ def rmdir(dir_path):
   except: 
     pass
     
-def get_template(firmware, filetype):
+def get_template(firmware, filetype, extended=None):
   system = firmware.split("-")[1]
   if filetype == 'HTML':
-    with open('templates\\mapping_template.htm', 'r') as f:
+    template = 'templates\\mapping_template.htm'
+    if extended:
+      template = 'templates\\mapping_template_extended.htm'      
+    with open(template, 'r') as f:
       read_data = f.read().replace("{system}", system)
     f.closed  
   else:
@@ -217,11 +220,11 @@ def get_firmware_notes(firmware):
 def get_reserved(firmware):
   return sql_command('SELECT pin, class, description FROM reserved WHERE firmware = "%s"' % firmware)
 
-def generate_html(firmware, mappings, extra=None):
+def generate_html(firmware, mappings, extra=None, extended=None):
   pin_labels = get_pins()[2].split(",")
     
   user_html_file = os.path.join(get_path("ROOT"), "%s.htm" % firmware)  
-  html = get_template(firmware, "HTML")
+  html = get_template(firmware, "HTML", extended)
   html = html.replace("{title}",get_firmware_title(firmware))
   html = html.replace("{notes}",get_firmware_notes(firmware))
   for rsv in get_reserved(firmware):
@@ -247,8 +250,21 @@ def generate_html(firmware, mappings, extra=None):
   for pin in pin_labels: html = html.replace('{%sC}' % pin, '')
   for pin in pin_labels: html = html.replace('{%sM}' % pin, 'Yes')
   for pin in pin_labels: html = html.replace('{%s}' % pin, '')
-
+  
+  #show extended mappings (if there are any)
+  #if extended != [0]*24:
+  if extended:
+    desc = sql_command('SELECT long_description FROM library WHERE system = "%s"' % firmware)
+    ext_pins = 'P1_1','P1_2','P1_3','P2_1','P2_2','P2_3','P3_1','P3_2','P3_3','P4_1','P4_2','P4_3','P1_1S','P1_2S','P1_3S','P2_1S','P2_2S','P2_3S','P3_1S','P3_2S','P3_3S','P4_1S','P4_2S','P4_3S'
+    cnt = 0
+    for pin in ext_pins:
+      html = html.replace('{%s}' % pin, desc[extended[cnt]][0])
+      cnt += 1
+  else:
+    html = html.replace('{%s}' % pin, '')
+  
   html = html.replace("(Unused)", "")
+      
   f = open(user_html_file, 'w') 
   f.write(html)
   f.close()   
