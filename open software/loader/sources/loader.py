@@ -65,7 +65,10 @@ INSTALL_DIR = os.getcwd()
 class kadeLoader( gui.loader ):
   def __init__( self, parent ):
     gui.loader.__init__( self, parent )
-        
+       
+    #data file should exist 
+    assert os.path.exists(get_path("DATA"))
+      
     self.beta = self.isBeta()              
     self.Title = get_title(self.beta)
     self.pins = get_pins()[2].split(",")
@@ -256,7 +259,7 @@ class kadeLoader( gui.loader ):
 
   def flashEeprom(self):
     do_flash = False
-    if "custom" in self.firmware:
+    if "custom" in self.firmware or "extended" in self.firmware:
       from intelhex import IntelHex    
       eep_file = os.path.join(get_path("ROOT"), "eeprom.eep")
       map_file = os.path.join(get_path("ROOT"), "%s.map" % self.firmware)
@@ -362,7 +365,7 @@ class kadeLoader( gui.loader ):
   def onSelect(self, event):
     selected = self.m_list.GetFirstSelected()    
     self.firmware = self.m_list.GetItem(selected, 1).GetText()
-    if "custom" in self.firmware.lower():
+    if "custom" or "extended" in self.firmware.lower():
       self.m_custom.Enable()
     else:
       self.m_custom.Disable()
@@ -656,7 +659,7 @@ class kadeCustom( gui.custom ):
     #----------------------------------------------------------------------------------------
     
     # TO DO: settings to be added to DB
-    if self.firmware == 'kade-mame-custom' or self.firmware == 'kade-key-custom' or self.firmware == 'kade-pin-custom' or self.firmware == 'kade-rotary-custom':
+    if self.firmware == 'kade-mame-custom' or self.firmware == 'kade-key-custom' or self.firmware == 'kade-pin-custom' or self.firmware == 'kade-rotary-custom' or self.firmware == 'kade-mame-extended':
       self.m_settings0.Hide()
       self.m_settings1.Hide()
       
@@ -744,6 +747,11 @@ class kadeCustom( gui.custom ):
     self.updateInputFields()
             
   def loadCustom(self):
+    #v1.0.9.0 - makes sense to just copy the default map file when not found
+    if not os.path.exists(self.map_file):
+      copy_file(self.default_map_file, self.map_file)
+    #v1.0.9.0 - end
+      
     if os.path.exists(self.map_file):
       with open(self.map_file, 'r') as f: 
         mappings = f.read().split("\n")
@@ -1059,6 +1067,27 @@ class kadeExtendedInputs( gui.extended_inputs ):
   def onClear(self, event):
     for control in self.normal + self.shifted:
       control.SetSelection(0)
+      
+  def onDefault(self, event):
+    #load the mapping file into memory
+    mapping_file = os.path.join(get_path("ROOT"), "%s-default.map" % 'kade-mame-extended')
+    with open(mapping_file, 'r') as f: 
+      mappings = f.read().split("\n")
+    f.closed
+
+    #put extended maps into an array
+    ext_maps = []
+    try:
+      for i in range(69, 93):
+        ext_maps.append(int(mappings[i]))
+    except:
+      ext_maps = [0] * 24    
+    
+    #update fields with default values
+    i = 0
+    for control in self.normal + self.shifted:
+      control.SetSelection(ext_maps[i])
+      i += 1
       
   def onOK(self, event):
     self.Destroy()

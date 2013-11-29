@@ -116,6 +116,7 @@ import_hex("kade-ps3-custom",    os.path.join(sources_folder, "kade-ps3-custom\\
 import_hex("kade-joy-custom",    os.path.join(sources_folder, "kade-ps3-custom\\KADE-PS3-CUSTOM.hex"))
 import_hex("kade-psx-custom",    os.path.join(sources_folder, "kade-psx-custom\\KADE-PSX-CUSTOM.hex"))
 import_hex("kade-mame-custom",   os.path.join(sources_folder, "kade-mame-custom\\KADE-MAME-CUSTOM.hex"))
+import_hex("kade-mame-extended", os.path.join(sources_folder, "kade-mame-extended\\KADE-MAME-EXTENDED.hex"))
 import_hex("kade-key-custom",    os.path.join(sources_folder, "kade-key-custom\\KADE-KEY-CUSTOM.hex"))
 
 #third-party hex

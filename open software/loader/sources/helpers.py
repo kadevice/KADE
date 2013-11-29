@@ -163,6 +163,12 @@ def delete_file(filename):
   except:
     pass  
 
+def copy_file(src, dst):
+  from subprocess import call
+  try:
+    call('copy /Y "'+ src + '" "' + dst + '"', shell=True)
+  except:
+    pass
 def mkdir(dir_path):
   try: 
     os.mkdir(dir_path)
@@ -252,7 +258,6 @@ def generate_html(firmware, mappings, extra=None, extended=None):
   for pin in pin_labels: html = html.replace('{%s}' % pin, '')
   
   #show extended mappings (if there are any)
-  #if extended != [0]*24:
   if extended:
     desc = sql_command('SELECT long_description FROM library WHERE system = "%s"' % firmware)
     ext_pins = 'P1_1','P1_2','P1_3','P2_1','P2_2','P2_3','P3_1','P3_2','P3_3','P4_1','P4_2','P4_3','P1_1S','P1_2S','P1_3S','P2_1S','P2_2S','P2_3S','P3_1S','P3_2S','P3_3S','P4_1S','P4_2S','P4_3S'

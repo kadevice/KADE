@@ -987,22 +987,37 @@ class custom ( wx.Dialog ):
 		sbSizer10.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 		
 		self.m_preset_list0 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 0", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
-		sbSizer10.Add( self.m_preset_list0, 0, wx.ALL, 5 )
+		sbSizer10.Add( self.m_preset_list0, 0, wx.BOTTOM|wx.LEFT|wx.TOP, 5 )
+		
+		
+		sbSizer10.AddSpacer( ( 0, 0), 0, wx.ALL, 2 )
 		
 		self.m_preset_list1 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 1", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
-		sbSizer10.Add( self.m_preset_list1, 0, wx.ALL, 5 )
+		sbSizer10.Add( self.m_preset_list1, 0, wx.BOTTOM|wx.TOP, 5 )
+		
+		
+		sbSizer10.AddSpacer( ( 0, 0), 0, wx.ALL, 2 )
 		
 		self.m_preset_list2 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 2", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
-		sbSizer10.Add( self.m_preset_list2, 0, wx.ALL, 5 )
+		sbSizer10.Add( self.m_preset_list2, 0, wx.BOTTOM|wx.TOP, 5 )
+		
+		
+		sbSizer10.AddSpacer( ( 0, 0), 0, wx.ALL, 2 )
 		
 		self.m_preset_list3 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 3", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
-		sbSizer10.Add( self.m_preset_list3, 0, wx.ALL, 5 )
+		sbSizer10.Add( self.m_preset_list3, 0, wx.BOTTOM|wx.TOP, 5 )
 		
-		self.m_preset_list4 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 4", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
-		sbSizer10.Add( self.m_preset_list4, 0, wx.ALL, 5 )
 		
-		self.m_preset_list5 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 5", wx.DefaultPosition, wx.Size( 125,20 ), 0 )
-		sbSizer10.Add( self.m_preset_list5, 0, wx.ALL, 5 )
+		sbSizer10.AddSpacer( ( 0, 0), 0, wx.ALL, 2 )
+		
+		self.m_preset_list4 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 4", wx.DefaultPosition, wx.Size( 140,20 ), 0 )
+		sbSizer10.Add( self.m_preset_list4, 0, wx.BOTTOM|wx.TOP, 5 )
+		
+		
+		sbSizer10.AddSpacer( ( 0, 0), 0, wx.ALL, 2 )
+		
+		self.m_preset_list5 = wx.Button( self.m_settings_presets, wx.ID_ANY, u"Preset 5", wx.DefaultPosition, wx.Size( 140,20 ), 0 )
+		sbSizer10.Add( self.m_preset_list5, 0, wx.BOTTOM|wx.TOP, 5 )
 		
 		
 		sbSizer10.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
@@ -1816,7 +1831,7 @@ class programmed ( wx.Dialog ):
 class extended_inputs ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Extended Mappings", pos = wx.DefaultPosition, size = wx.Size( 460,480 ), style = wx.DEFAULT_DIALOG_STYLE )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Extended Mappings", pos = wx.DefaultPosition, size = wx.Size( 460,525 ), style = wx.DEFAULT_DIALOG_STYLE )
 		
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		
@@ -2074,6 +2089,9 @@ class extended_inputs ( wx.Dialog ):
 		self.m_button32 = wx.Button( self, wx.ID_ANY, u"Clear", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer57.Add( self.m_button32, 0, 0, 5 )
 		
+		self.m_button321 = wx.Button( self, wx.ID_ANY, u"Default", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer57.Add( self.m_button321, 0, wx.LEFT, 5 )
+		
 		
 		bSizer57.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 		
@@ -2116,6 +2134,7 @@ class extended_inputs ( wx.Dialog ):
 		self.P4_3.Bind( wx.EVT_CHOICE, self.onChoice )
 		self.P4_3S.Bind( wx.EVT_CHOICE, self.onChoice )
 		self.m_button32.Bind( wx.EVT_BUTTON, self.onClear )
+		self.m_button321.Bind( wx.EVT_BUTTON, self.onDefault )
 		self.m_button33.Bind( wx.EVT_BUTTON, self.onOK )
 		self.m_button34.Bind( wx.EVT_BUTTON, self.onCancel )
 	
@@ -2151,6 +2170,9 @@ class extended_inputs ( wx.Dialog ):
 	
 	
 	def onClear( self, event ):
+		event.Skip()
+	
+	def onDefault( self, event ):
 		event.Skip()
 	
 	def onOK( self, event ):
