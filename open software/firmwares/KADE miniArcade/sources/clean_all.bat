@@ -15,6 +15,9 @@ make clean
 cd %working_dir%\kade-mame-custom
 make clean
 
+cd %working_dir%\kade-mame-extended
+make clean
+
 cd %working_dir%\kade-pin-custom
 make clean
 

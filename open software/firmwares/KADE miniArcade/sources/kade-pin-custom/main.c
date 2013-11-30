@@ -95,10 +95,10 @@ int main(void)
 	for(cnt=0;cnt<40;cnt++){	
 		ass[cnt]=read_eeprom_byte(cnt);
 		
-		//set output pins
+		/*//set output pins
 		if ((ass[cnt]==28)||(ass[cnt]==29)){
 			#include "..\shared\outputs.c"		
-		}		
+		}*/		
 	}
 
 	// Initialize the USB

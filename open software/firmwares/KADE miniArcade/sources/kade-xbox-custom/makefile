@@ -12,12 +12,12 @@
 #
 #------------------------------------------------------------
 # For compiling production firmware:
-#TARGET       = KADE-XBOX-CUSTOM
-#CC_FLAGS     = -DUSE_LUFA_CONFIG_HEADER -IConfig/ 
+TARGET       = KADE-XBOX-CUSTOM
+CC_FLAGS     = -DUSE_LUFA_CONFIG_HEADER -IConfig/ 
 #------------------------------------------------------------
 # For test firmware (which can be tested on PC):
-TARGET       = KADE-XBOX-CUSTOM-T
-CC_FLAGS     = -DTESTMODE -DUSE_LUFA_CONFIG_HEADER -IConfig/ 
+#TARGET       = KADE-XBOX-CUSTOM-T
+#CC_FLAGS     = -DTESTMODE -DUSE_LUFA_CONFIG_HEADER -IConfig/ 
 #------------------------------------------------------------
 
 MCU          = at90usb162

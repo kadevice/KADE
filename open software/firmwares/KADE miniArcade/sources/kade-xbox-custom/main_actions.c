@@ -100,8 +100,7 @@ if (action==26){
 	bit_set(gamepad_state.l,0xFF);
 	bit_set(gamepad_state.r,0xFF);
 	bit_set(gamepad_state.black,0xFF);
-	bit_set(gamepad_state.white,0xFF);
-}
+	bit_set(gamepad_state.digital_buttons,0x20);} //back
 
 //check Disable start+back setting
 if (setting_disable_sb==1) {

@@ -20,6 +20,10 @@ cd %working_dir%\kade-mame-custom
 make clean
 make
 
+cd %working_dir%\kade-mame-extended
+make clean
+make
+
 cd %working_dir%\kade-pin-custom
 make clean
 make

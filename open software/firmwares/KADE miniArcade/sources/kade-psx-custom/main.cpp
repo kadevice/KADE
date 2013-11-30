@@ -53,7 +53,11 @@ int main(void) {
 	REGCR |= (1 << REGDIS);
 
 	// Set clock @ 8Mhz
-	CPU_PRESCALE(1);
+	//CPU_PRESCALE(1);
+	
+	//Jon 17/10/2013,  16mhz seems to fix issues,  works with psx/360 converters :D
+	// Set clock @ 16Mhz
+	CPU_PRESCALE(0);  
 
 	//Set initial pin states.  These are adjusted based on eeprom settings.
 	bit_clear(DDRD, 0x80); bit_set(PORTD, 0x80); //hwb
@@ -91,9 +95,9 @@ int main(void) {
 	uint8_t active=0, delay_power=0, led_active=0;
 	int up, down, left, right, sqre, cross, circle, triangle, select, start, l1, r1, l2, r2, l3, r3, lx, ly, rx, ry;
 	
-    //Flash LEDs
+	//Flash LEDs
 	//Commented out for testing of XBOX 360 adapter!!
-	//#include "..\shared\disco.c"
+	#include "..\shared\disco.c"
 
 	//read first 40 eeprom into an array (pins + shifted pins)
 	for(cnt=0;cnt<40;cnt++){	
@@ -106,6 +110,7 @@ int main(void) {
 		if (ass[cnt]==28){delay_power=1;}
 		
 	}
+
 	//Read other settings (40+ in Eeprom) 
 	setting_delay=read_eeprom_byte(41);
 
@@ -121,7 +126,7 @@ int main(void) {
 				#include "..\shared\showleds.c"
 			}
 		}
-	}	
+	}
 
 	// Init PS Pad emulator SPI hardware
 	pspad_init();
@@ -151,14 +156,19 @@ int main(void) {
 		r2=0;
 		l3=0;
 		r3=0;
-		lx=0x7F;
-		ly=0x7F;
-		rx=0x7F;
-		ry=0x7F;
+//		lx=0x7F;
+//		ly=0x7F;
+//		rx=0x7F;
+//		ry=0x7F;
+		lx=127;
+		ly=127;
+		rx=127;
+		ry=127;
 		invert=0;
 		restrict4=0;
 		autofire=0;		
 		
+
 		//pre-loop to deal with any switches/toggles		
 		pu=u; pd=d; pl=l; pr=r;
 		u=0; d=0; l=0; r=0;
@@ -268,16 +278,16 @@ int main(void) {
 					if (ass[pos]==14){start=1;}		//Start
 					
 					//Left Analog Stick
-					if (ass[pos]==17+invert){ly = 0x00;} 	//Left Analog Up
-					if (ass[pos]==18-invert){ly = 0xff;} 	//Left Analog Down
-					if (ass[pos]==19){lx = 0x00;} 			//Left Analog Left
-					if (ass[pos]==20){lx = 0xff;} 			//Left Analog Right
+					if (ass[pos]==17+invert){ly = 0;} 		//Left Analog Up
+					if (ass[pos]==18-invert){ly = 255;} 	//Left Analog Down
+					if (ass[pos]==19){lx = 0;} 			//Left Analog Left
+					if (ass[pos]==20){lx = 255;} 			//Left Analog Right
 
 					//Right Analog Stick
-					if (ass[pos]==29+invert){ly = 0x00;} 	//Right Analog Up
-					if (ass[pos]==30-invert){ly = 0xff;} 	//Right Analog Down
-					if (ass[pos]==31){lx = 0x00;} 			//Right Analog Left
-					if (ass[pos]==32){lx = 0xff;} 			//Right Analog Right	
+					if (ass[pos]==29+invert){ry = 0;} 		//Right Analog Up
+					if (ass[pos]==30-invert){ry = 255;} 	//Right Analog Down
+					if (ass[pos]==31){rx = 0;} 			//Right Analog Left
+					if (ass[pos]==32){rx = 255;} 			//Right Analog Right	
 
 //					//Enter programming mode
 //					if (ass[pos]==33){Jump_To_Bootloader();}					//Program mode									
@@ -287,6 +297,7 @@ int main(void) {
 			
 		pspad_set_pad_state(left, right, up, down, sqre, triangle, circle,
 			cross, select, start, l1, l2, r1, r2, l3, r3, lx, ly, rx, ry);
+
 		_delay_ms(2);  //debounce
 	}
 }
