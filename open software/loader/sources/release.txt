@@ -1,18 +1,17 @@
 KADE Loader Release Notes
 
-v1.0.9.0 29/11/2013
-  Add extended mappings to custom MAME firmware to provide additional inputs per player by utilising impossible input combination.
+v1.0.9.0 30/11/2013
+  Created a beta firnware for extended MAME to provide 3 additional inputs per player by utilising impossible input combination.
     e.g. Up+Down for player 1 could be assigned to "P1 Start".  Requires non-standard wiring.
     Option is accessed via a new "Extended Mappings" button in the customisation screen.
     Default extended mappings are created for all 4 players with 2 different presets.
-    The extended MAME firmware is available in Beta only at the moment.
   Mechanical Rotary Joytick firmware moved to public and documentation is added. 
-  For PS3 (and US/HID) set the axis values for pressure sensitive buttons (L and R triggers, cross, circle, triangle and square).
+  For PS3 (and USB/HID) set the axis values for pressure sensitive buttons (L and R triggers, cross, circle, triangle and square).
   Fix problem with program mode function on AT90USB162 due to an incorrectly set location for bootloader.
   Enable left and right analog stick functions on the PSX firmware.
   Run the PSX firmware at 16mhz for better compatibility with the console converters.
   Fix buy-in(key 2) and Coin 2(key 6) functions on the pinball firmware.
-  Changed the "Exit to Dashboard" combo on Xbox to LT+RT+Back+Black 
+  Changed the "Exit to Dashboard" combo on Xbox firmware to LT+RT+Back+Black 
 
 v1.0.8.0 16/05/2013
   Rotary joystick encoder has 2 player support and is optimised for MAME

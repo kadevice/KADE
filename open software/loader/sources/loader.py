@@ -1083,10 +1083,11 @@ class kadeExtendedInputs( gui.extended_inputs ):
     except:
       ext_maps = [0] * 24    
     
-    #update fields with default values
+    functions = sql_command('SELECT function FROM library WHERE system = "%s" ORDER BY sort' % 'kade-mame-extended')
+    #update fields with functions
     i = 0
     for control in self.normal + self.shifted:
-      control.SetSelection(ext_maps[i])
+      control.SetSelection(functions.index((ext_maps[i],)))
       i += 1
       
   def onOK(self, event):
