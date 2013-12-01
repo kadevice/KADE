@@ -1,6 +1,6 @@
 KADE Loader Release Notes
 
-v1.0.9.0 30/11/2013
+v1.0.9.0 01/12/2013
   Created a beta firnware for extended MAME to provide 3 additional inputs per player by utilising impossible input combination.
     e.g. Up+Down for player 1 could be assigned to "P1 Start".  Requires non-standard wiring.
     Option is accessed via a new "Extended Mappings" button in the customisation screen.
