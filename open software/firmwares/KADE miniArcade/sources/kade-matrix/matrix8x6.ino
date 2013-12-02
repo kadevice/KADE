@@ -36,6 +36,11 @@ Arduino Pins Mapped to the KADE pins on Minimus AVR:
       A10 |9        11| B2
     (Gnd) |         10| B1
           +-----------+
+		  
+Supports multiple key press. Using a diode with each button will prevent blocking and ghosting issues with the matrix.
+Recommend Schottkey diodes but general purpose diodes like 1N4148 will work.
+		  
+Here's a great reference to how a keypad matrix works: http://pcbheaven.com/wikipages/How_Key_Matrices_Works/ 
 */
 #include <Keypad.h>
 
