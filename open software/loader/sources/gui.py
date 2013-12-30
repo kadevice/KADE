@@ -348,7 +348,7 @@ class loader ( wx.Frame ):
 class config ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Board Configuation", pos = wx.DefaultPosition, size = wx.Size( 300,350 ), style = wx.DEFAULT_DIALOG_STYLE )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Board Configuation", pos = wx.DefaultPosition, size = wx.Size( 300,400 ), style = wx.DEFAULT_DIALOG_STYLE )
 		
 		self.SetSizeHintsSz( wx.Size( 300,350 ), wx.DefaultSize )
 		
@@ -473,13 +473,16 @@ class config ( wx.Dialog ):
 		
 		bSizer10.Add( sbSizer5, 0, wx.ALL|wx.EXPAND, 5 )
 		
+		
+		bSizer10.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
+		
 		m_sdbSizer1 = wx.StdDialogButtonSizer()
 		self.m_sdbSizer1OK = wx.Button( self, wx.ID_OK )
 		m_sdbSizer1.AddButton( self.m_sdbSizer1OK )
 		self.m_sdbSizer1Cancel = wx.Button( self, wx.ID_CANCEL )
 		m_sdbSizer1.AddButton( self.m_sdbSizer1Cancel )
 		m_sdbSizer1.Realize();
-		bSizer10.Add( m_sdbSizer1, 1, wx.EXPAND, 5 )
+		bSizer10.Add( m_sdbSizer1, 0, wx.ALIGN_BOTTOM|wx.EXPAND, 5 )
 		
 		bSizer9.Add( bSizer10, 1, wx.EXPAND, 5 )
 		
@@ -1284,7 +1287,7 @@ class update ( wx.Dialog ):
 class about ( wx.Dialog ):
 	
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"About KADE Loader <version>", pos = wx.DefaultPosition, size = wx.Size( 400,600 ), style = wx.DEFAULT_DIALOG_STYLE )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"About KADE Loader <version>", pos = wx.DefaultPosition, size = wx.Size( 420,620 ), style = wx.DEFAULT_DIALOG_STYLE )
 		
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		

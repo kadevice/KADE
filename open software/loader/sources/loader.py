@@ -259,7 +259,7 @@ class kadeLoader( gui.loader ):
 
   def flashEeprom(self):
     do_flash = False
-    if "custom" in self.firmware or "extended" in self.firmware:
+    if "custom" in self.firmware.lower() or "extended" in self.firmware.lower():
       from intelhex import IntelHex    
       eep_file = os.path.join(get_path("ROOT"), "eeprom.eep")
       map_file = os.path.join(get_path("ROOT"), "%s.map" % self.firmware)
@@ -365,7 +365,7 @@ class kadeLoader( gui.loader ):
   def onSelect(self, event):
     selected = self.m_list.GetFirstSelected()    
     self.firmware = self.m_list.GetItem(selected, 1).GetText()
-    if "custom" or "extended" in self.firmware.lower():
+    if "custom" in self.firmware.lower() or "extended" in self.firmware.lower():
       self.m_custom.Enable()
     else:
       self.m_custom.Disable()
