@@ -108,7 +108,10 @@ class Notification:
     #USB device inserted/removed so check to see if we know what is connected
     #check for AVR
     #If device is different to the one selected then popup message and change
-    boards = sql_command('SELECT name, product FROM boards WHERE family = "minimus"')
+    if not os.path.exists(get_path("BETA")):
+      boards = sql_command('SELECT name, product FROM boards WHERE public = "True" AND detect = "True"')
+    else:
+      boards = sql_command('SELECT name, product FROM boards WHERE detect = "True"')
     connected = False
     for board in boards:
       check = execute("check",'"%s" %s get family' % (get_path("DFU"), board[1]) )

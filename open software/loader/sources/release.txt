@@ -6,7 +6,7 @@ v1.1.1.0 07/04/2014
 	This change applies to all MAME firmwares.
   MAME multi-mode firmware split into 2 variants for 1 player (P1, P2, P3, P4) and 2 player (P1&2, P3&4) sets.
   Keyboard test utility updated to v0.1.0.8.
-  Add beta support for the in-development KADE fatArcade board.
+  Add beta support for the in-development KADE fatArcade board. Auto detect added.
 
 v1.1.0.0 04/02/2014
   Setup program detects a previous install of loader and recommends update. It is now possible to force a reinstall.
