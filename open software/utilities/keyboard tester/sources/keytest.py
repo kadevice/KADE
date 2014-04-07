@@ -232,12 +232,12 @@ class keyTest( gui.keytest ):
     if self.height != self.Size[1]:
       self.height = self.Size[1]
       if self.height < 372:
-        self.m_clear_list.Disable()
+        #self.m_clear_list.Disable()
         self.m_show_up.Disable()
         self.m_show_log.SetLabel("Show Activity Log")
         self.m_show_log.SetToolTipString("Show the keyboard activity log")
       else:
-        self.m_clear_list.Enable()
+        #self.m_clear_list.Enable()
         self.m_show_up.Enable()
         self.m_show_log.SetLabel("Hide Activity Log")
         self.m_show_log.SetToolTipString("Hide the keyboard activity log")

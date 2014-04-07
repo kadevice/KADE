@@ -6,8 +6,8 @@ if (ass[pos]==2){keyboard_keys[keycount++] = KEY_5;}
 
 if (p1<8){
 	if ((p1!=2)&&(p1!=5)){
-		if (ass[pos]==3){keyboard_keys[keycount++] = KEY_DOWN;}
-		if (ass[pos]==4){keyboard_keys[keycount++] = KEY_UP;}
+		if (ass[pos]==3){keyboard_keys[keycount++] = KEY_UP;}
+		if (ass[pos]==4){keyboard_keys[keycount++] = KEY_DOWN;}
 	}
 	if ((p1!=6)&&(p1!=7)){
 		if (ass[pos]==5){keyboard_keys[keycount++] = KEY_LEFT;}
@@ -47,12 +47,12 @@ if (ass[pos]==29){keyboard_keys[keycount++] = KEY_3;}
 if (ass[pos]==30){keyboard_keys[keycount++] = KEY_7;}
 if (p3<8){
 	if ((p3!=2)&&(p3!=5)){
-		if (ass[pos]==31){keyboard_keys[keycount++] = KEY_I;}
-		if (ass[pos]==32){keyboard_keys[keycount++] = KEY_K;}
+		if (ass[pos]==31){keyboard_keys[keycount++] = KEY_PAGE_UP;}
+		if (ass[pos]==32){keyboard_keys[keycount++] = KEY_PAGE_DOWN;}
 	}
 	if ((p3!=6)&&(p3!=7)){
-		if (ass[pos]==33){keyboard_keys[keycount++] = KEY_J;}
-		if (ass[pos]==34){keyboard_keys[keycount++] = KEY_L;}
+		if (ass[pos]==33){keyboard_keys[keycount++] = KEY_HOME;}
+		if (ass[pos]==34){keyboard_keys[keycount++] = KEY_END;}
 	}
 }
 if (ass[pos]==35){keyboard_keys[keycount++] = KEY_RIGHT_CTRL;}

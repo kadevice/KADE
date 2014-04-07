@@ -93,37 +93,41 @@ class Notification:
     )
 
   def detect(self, initial=False):
-        #show activity
-        self.gui.m_usb.SetLabel("--- Detecting USB ---")
+    #show activity
+    try:
+      self.gui.m_usb.SetLabel("--- Detecting USB ---")
+      image = wx.Image("images\\usb_on.png", wx.BITMAP_TYPE_PNG)
+      self.gui.m_usb_icon.SetBitmap(wx.BitmapFromImage(image))            
+    except:
+      #v1.1.0.0 - catch unknown error when attempting to load hex for an uninitialised device
+      pass
+    
+    #limit to one event every 2 seconds
+    self.clock = time.clock() - 2
+    
+    #USB device inserted/removed so check to see if we know what is connected
+    #check for AVR
+    #If device is different to the one selected then popup message and change
+    boards = sql_command('SELECT name, product FROM boards WHERE family = "minimus"')
+    connected = False
+    for board in boards:
+      check = execute("check",'"%s" %s get family' % (get_path("DFU"), board[1]) )
+      if check:
+        
+        connected = True
+        self.gui.m_usb.SetLabel("%s connected" % board[0])
+        #do we need to change board option
+        if board[0] != self.gui.m_choice.GetStringSelection():
+          self.gui.m_choice.SetStringSelection(board[0])   
+          self.gui.updateBoards(notify=not(initial))
+        time.sleep(2)
         image = wx.Image("images\\usb_on.png", wx.BITMAP_TYPE_PNG)
-        self.gui.m_usb_icon.SetBitmap(wx.BitmapFromImage(image))            
-        
-        #limit to one event every 2 seconds
-        self.clock = time.clock() - 2
-        
-        #USB device inserted/removed so check to see if we know what is connected
-        #check for AVR
-        #If device is different to the one selected then popup message and change
-        boards = sql_command('SELECT name, product FROM boards WHERE family = "minimus"')
-        connected = False
-        for board in boards:
-          check = execute("check",'"%s" %s get family' % (get_path("DFU"), board[1]) )
-          if check:
-            
-            connected = True
-            self.gui.m_usb.SetLabel("%s connected" % board[0])
-            #do we need to change board option
-            if board[0] != self.gui.m_choice.GetStringSelection():
-              self.gui.m_choice.SetStringSelection(board[0])   
-              self.gui.updateBoards(notify=not(initial))
-            time.sleep(2)
-            image = wx.Image("images\\usb_on.png", wx.BITMAP_TYPE_PNG)
-            self.gui.m_usb_icon.SetBitmap(wx.BitmapFromImage(image))                        
-            break
-        if not connected:
-          self.gui.m_usb.SetLabel("")          
-          image = wx.Image("images\\usb_off.png", wx.BITMAP_TYPE_PNG)
-          self.gui.m_usb_icon.SetBitmap(wx.BitmapFromImage(image))            
+        self.gui.m_usb_icon.SetBitmap(wx.BitmapFromImage(image))                        
+        break
+    if not connected:
+      self.gui.m_usb.SetLabel("")          
+      image = wx.Image("images\\usb_off.png", wx.BITMAP_TYPE_PNG)
+      self.gui.m_usb_icon.SetBitmap(wx.BitmapFromImage(image))            
     
     
   def onDeviceChange (self, hwnd, msg, wparam, lparam):

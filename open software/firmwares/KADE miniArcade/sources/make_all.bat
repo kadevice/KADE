@@ -16,6 +16,10 @@ cd %working_dir%\kade-mame
 make clean
 make
 
+cd %working_dir%\kade-mame-2p
+make clean
+make
+
 cd %working_dir%\kade-mame-custom
 make clean
 make

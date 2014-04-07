@@ -17,7 +17,7 @@ import wx.xrc
 class keytest ( wx.Frame ):
 	
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,330 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.RESIZE_BORDER|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Keyboard Input Tester", pos = wx.DefaultPosition, size = wx.Size( 800,597 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.RESIZE_BORDER|wx.STAY_ON_TOP|wx.TAB_TRAVERSAL )
 		
 		self.SetSizeHintsSz( wx.Size( 800,330 ), wx.Size( 800,-1 ) )
 		
@@ -1092,7 +1092,7 @@ class keytest ( wx.Frame ):
 		
 		bSizer26 = wx.BoxSizer( wx.HORIZONTAL )
 		
-		self.m_show_log = wx.Button( self.m_panel, wx.ID_ANY, u"Show Activity Log", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_show_log = wx.Button( self.m_panel, wx.ID_ANY, u"Hide Activity Log", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_show_log.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
 		self.m_show_log.SetToolTipString( u"Show the keyboard activity log" )
 		self.m_show_log.SetMinSize( wx.Size( 120,20 ) )
@@ -1101,7 +1101,6 @@ class keytest ( wx.Frame ):
 		
 		self.m_clear_list = wx.Button( self.m_panel, wx.ID_ANY, u"Clear Log", wx.DefaultPosition, wx.Size( 75,20 ), 0 )
 		self.m_clear_list.SetFont( wx.Font( 7, 70, 90, 90, False, wx.EmptyString ) )
-		self.m_clear_list.Enable( False )
 		self.m_clear_list.SetToolTipString( u"Clear the keyboard activity log" )
 		
 		bSizer26.Add( self.m_clear_list, 0, wx.ALL, 2 )

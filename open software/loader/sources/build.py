@@ -106,6 +106,7 @@ generate_keymaps("kade-rotary-custom", os.path.join(sources_folder, "kade-rotary
 
 #import latest hex into DB before building
 import_hex("kade-mame",          os.path.join(sources_folder, "kade-mame\\KADE-MAME.hex"))
+import_hex("kade-mame-2p",       os.path.join(sources_folder, "kade-mame\\KADE-MAME-2P.hex"))
 import_hex("kade-gen",           os.path.join(sources_folder, "kade-gen\\KADE-GEN.hex"))
 import_hex("kade-icade",         os.path.join(sources_folder, "kade-icade\\KADE-iCADE.hex"))
 import_hex("kade-rotary-custom", os.path.join(sources_folder, "kade-rotary-custom\\KADE-ROTARY-CUSTOM.hex"))

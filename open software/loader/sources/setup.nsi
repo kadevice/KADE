@@ -279,12 +279,11 @@ Function .onInit
 	  SetShellVarContext all
 		
     InitPluginsDir
-		#Check if install is valid
+		#Detect a previous install and prompt for action if necessary
   	IfFileExists "$APPDATA\KADE Loader\version" 0 +3		
-      MessageBox MB_OK "KADE Loader is already installed on your system.  Please check for updates in KADE Loader help menu." /SD IDOK
-      Quit			
-
-
+      MessageBox MB_YESNO "A previous installation of KADE Loader is detected on this system.  It is recommended that you update the existing software instead or reinstalling.  Do you wish to force a reinstall?" IDYES NoAbort
+        Quit
+			NoAbort:
 FunctionEnd
 
 # Uninstaller functions

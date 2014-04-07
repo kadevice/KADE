@@ -4,7 +4,7 @@ http://kadevice.com
 
 A general purpose keyboard test utility which will echo pressed keys to a virtual on-screen
 keyboard.  Currently the utility has UK and US visual keyboards but would support many
-different types of keybaord input - including encoders,  such as the KADE encoder.
+different types of keyboard input - including encoders,  such as the KADE encoder.
 
 The keyboard will stay on top of your other sessions and will continue to record keyboard 
 input when it is not in focus.
@@ -18,6 +18,12 @@ included the function that are assigned to key presses.
 Visit http://kadevice.com and http://kadevice.com/forum/ for more information.
 
 VERSION HISTORY:
+
+v0.1.0.8 - 07/04/2014
+  MAME key mappings changed for P3 direction keys - to prevent conflict with P2.
+
+v0.1.0.7 - 30/12/2013
+  Show activity log by default when program starts.
 
 v0.1.0.6 - 06/05/2013
   Removed the system menu and replaced with simple close icon.  The menu was being invoked by "Alt" and other key presses.

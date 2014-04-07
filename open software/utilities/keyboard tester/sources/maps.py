@@ -247,12 +247,16 @@ def get_func_map():
     ('MAME', 83,  'P2 Button 2'),                          \
     ('MAME', 81,  'P2 Button 3'),                          \
     ('MAME', 87,  'P2 Button 4'),                          \
-    ('MAME', 73,  'P2 Button 5 | P3 Up'),                  \
-    ('MAME', 75,  'P2 Button 6 | P3 Down'),                \
-    ('MAME', 74,  'P2 Button 7 | P3 Right'),               \
-    ('MAME', 76,  'P2 Button 8 | P3 Right'),               \
+    ('MAME', 73,  'P2 Button 5'),                  \
+    ('MAME', 75,  'P2 Button 6'),                \
+    ('MAME', 74,  'P2 Button 7'),               \
+    ('MAME', 76,  'P2 Button 8'),               \
     ('MAME', 51,  'P3 Start'),                             \
     ('MAME', 55,  'P3 Coin'),                              \
+    ('MAME', 33,  'P3 Up'),                          \
+    ('MAME', 34,  'P3 Down'),                          \
+    ('MAME', 36,  'P3 Left'),                          \
+    ('MAME', 35,  'P3 Right'),                          \
     ('MAME', 163, 'P3 Button 1'),                          \
     ('MAME', 161, 'P3 Button 2'),                          \
     ('MAME', 13,  'Select | P3 Button 3'),                 \
