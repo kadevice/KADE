@@ -1,9 +1,8 @@
 echo *** Build script for KADE Loader 
 echo ***
-echo *** Define local paths to your Python, NSIS and ECM signcode programs ***
+echo *** Define local paths to your Python, NSIS ***
 set python_path="c:\python26\python"
 set nsis_path="c:\program files\nsis\makensis"
-set sign_path="c:\program files\nsis\signcode"
 
 echo *** Make version information available to install scripts ***
 echo !define PRODUCTVERSION > nsis.tmp \
@@ -19,3 +18,16 @@ copy saystatic.exe dist
 echo *** Packaging files into installers ***
 %nsis_path% setup.nsi
 %nsis_path% update.nsi
+
+echo *** OPTIONAL: Code Signing
+echo *** Sign the executables - you will need to obtain your own code signing certificate ***
+echo *** Password is held in sign_pass variable which is set in the unprovided password.cmd file ***
+set sign_path="C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\signtool"
+call password.cmd
+%sign_path% sign /f certs\certificate.pfx /p %sign_pass% /t http://timestamp.comodoca.com/authenticode setup.exe
+%sign_path% sign /f certs\certificate.pfx /p %sign_pass% /t http://timestamp.comodoca.com/authenticode update.exe
+
+echo *** OPTIONAL: Make ZIP files
+set zip_path="C:\Program Files\7-Zip\7z"
+%zip_path% a -tzip setup.zip setup.exe
+%zip_path% a -tzip update.zip update.exe
