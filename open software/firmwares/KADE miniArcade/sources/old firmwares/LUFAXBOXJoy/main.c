@@ -76,7 +76,7 @@ int main(void) {
 	xbox_init(true);
 
     //flash them leds
-	#include "..\shared\disco.c"
+	#include "../shared/disco.c"
 
     #ifdef TESTMODE
         // Don't wait for pad detection in test mode

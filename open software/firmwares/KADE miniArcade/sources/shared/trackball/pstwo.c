@@ -23,7 +23,7 @@
 
 #include<avr/io.h>
 //#include "pstwo.h"
-#include "..\shared\trackball\pstwo.h"
+#include "../shared/trackball\pstwo.h"
 #include<util/delay.h>
 
 #define ACK 0

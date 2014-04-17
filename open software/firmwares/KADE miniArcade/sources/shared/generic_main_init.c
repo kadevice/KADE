@@ -132,7 +132,7 @@ uint8_t setting_tb2_but1s;
 uint8_t setting_tb2_but2s;
 uint8_t setting_tb2_but3s;
 //Flash LEDs
-#include "..\shared\disco.c"
+#include "../shared/disco.c"
 
 //read first 40 eeprom into an array (pins + shifted pins)
 for(cnt=0;cnt<40;cnt++){	
@@ -140,7 +140,7 @@ for(cnt=0;cnt<40;cnt++){
 
 	//set output pins
 	if ((ass[cnt]==func_ext_shift_led)||(ass[cnt]==func_ext_power_led)){
-		#include "..\shared\outputs.c"		
+		#include "../shared/outputs.c"		
 	}
 	if (ass[cnt]==func_ext_power_led){
 		delay_power=1;
@@ -191,7 +191,7 @@ if ((delay_power==1)&&(setting_delay_power>0)){
 	led_active=1;
 	for(cnt=0;cnt<40;cnt++){	
 		if (ass[cnt]==func_ext_power_led){
-			#include "..\shared\showleds.c"
+			#include "../shared/showleds.c"
 		}
 	}
 }

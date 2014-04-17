@@ -50,9 +50,9 @@ S21  XJj88  0u  1uY2.        X2k           .    k11E   v    7;ii:JuJvLvLvJ2:
 */ 
  
 #include "USBVirtuaStick.h"
-#include "..\shared\trackball\common.h"
-#include "..\shared\generic_header.c"    
-#include "..\shared\jump.c"        
+#include "../shared/trackball\common.h"
+#include "../shared/generic_header.c"    
+#include "../shared/jump.c"        
 #define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 
 int main(void) {
@@ -86,7 +86,7 @@ int main(void) {
 	uint8_t default_restrict   = 0;	
 	
 	//Generic main
-	#include "..\shared\generic_main_init.c"
+	#include "../shared/generic_main_init.c"
 	
 	// Init USB pad emulation
 	vs_init(true);
@@ -102,7 +102,7 @@ int main(void) {
 		vs_reset_watchdog();
 				
 		//generic stuff at start of main loop
-		#include "..\shared\generic_main_preloop.c"
+		#include "../shared/generic_main_preloop.c"
 
 		//set default button states - reset direction to centre
 		gamepad_state.direction=8;

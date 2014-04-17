@@ -32,7 +32,7 @@
 */  
 
 #include "USBVirtuaStick.h"
-#include "..\shared\jump.c"
+#include "../shared/jump.c"
 
 #define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 #define bit_set(p,m) ((p) |= (m)) 
@@ -73,7 +73,7 @@ int main(void) {
 	uint8_t active=0, delay_power=0;
 	
     //Flash LEDs
-	#include "..\shared\disco.c"
+	#include "../shared/disco.c"
 
 	//read first 40 eeprom into an array (pins + shifted pins)
 	for(cnt=0;cnt<40;cnt++){	
@@ -81,7 +81,7 @@ int main(void) {
 		
 		//set output pins
 		if ((ass[cnt]==28)||(ass[cnt]==29)){
-			#include "..\shared\outputs.c"		
+			#include "../shared/outputs.c"		
 		}
 		if (ass[cnt]==29){delay_power=1;}
 		
@@ -97,7 +97,7 @@ int main(void) {
 		active=1;
 		for(cnt=0;cnt<40;cnt++){	
 			if (ass[cnt]==29){
-				#include "..\shared\showleds.c"
+				#include "../shared/showleds.c"
 			}
 		}
 	}
@@ -110,10 +110,10 @@ int main(void) {
 		vs_reset_watchdog();
 		
 		//read KADE pin states into an array
-		#include "..\shared\state.c"		
+		#include "../shared/state.c"		
 		
 		//set shifted status and detect shift lock (double click)
-		#include "..\shared\shift.c"		
+		#include "../shared/shift.c"		
 
 		//set default button states
 		//reset direction to centre
@@ -160,7 +160,7 @@ int main(void) {
 			//Show the shift status LED(s) and power up externals with delay
 			if (ass[cnt]==28){
 				active = shift;
-				#include "..\shared\showleds.c"								
+				#include "../shared/showleds.c"								
 			}
 		}			
 

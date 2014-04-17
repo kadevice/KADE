@@ -98,7 +98,7 @@ int main(void)
 	usb_init();
 
     //flash them leds
-	#include "..\shared\disco.c"
+	#include "../shared/disco.c"
 
 	while(!usb_configured());
 

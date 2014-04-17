@@ -95,7 +95,7 @@ int main(void)
 	uint8_t shift=0, shift_last=0, shift_count=0, shift_lock=0;
 	
     //Flash LEDs
-	#include "..\shared\disco.c"
+	#include "../shared/disco.c"
 
 	//read first 40 eeprom into an array (pins + shifted pins)
 	for(cnt=0;cnt<40;cnt++){	
@@ -103,7 +103,7 @@ int main(void)
 		
 		/*//set output pins
 		if ((ass[cnt]==28)||(ass[cnt]==29)){
-			#include "..\shared\outputs.c"		
+			#include "../shared/outputs.c"		
 		}*/		
 	}
 
@@ -114,10 +114,10 @@ int main(void)
 
 	while(1) {
 		//read KADE pin states into an array
-		#include "..\shared\state.c"		
+		#include "../shared/state.c"		
 		
 		//set shifted status and detect shift lock (double click)
-		#include "..\shared\shift.c"
+		#include "../shared/shift.c"
 	
 		//loop through pins checking for inputs from those that are assigned a function
 		keycount = 0;
