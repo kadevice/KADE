@@ -50,8 +50,8 @@ S21  XJj88  0u  1uY2.        X2k           .    k11E   v    7;ii:JuJvLvLvJ2:
 */ 
 
 #include "XBOXPad.h"
-#include "../shared/trackball\common.h"
-#include "../shared/generic_header.c"    
+#include "../shared/trackball/common.h"
+#include "../shared/generic_header.c"
 #include "../shared/jump.c"
 
 #define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
