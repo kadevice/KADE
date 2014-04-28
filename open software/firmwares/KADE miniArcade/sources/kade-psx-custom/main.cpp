@@ -97,7 +97,7 @@ int main(void) {
 	
 	//Flash LEDs
 	//Commented out for testing of XBOX 360 adapter!!
-	#include "..\shared\disco.c"
+	#include "../shared/disco.c"
 
 	//read first 40 eeprom into an array (pins + shifted pins)
 	for(cnt=0;cnt<40;cnt++){	
@@ -105,7 +105,7 @@ int main(void) {
 		
 		//set output pins
 		if ((ass[cnt]==27)||(ass[cnt]==28)){
-			#include "..\shared\outputs.c"		
+			#include "../shared/outputs.c"
 		}
 		if (ass[cnt]==28){delay_power=1;}
 		
@@ -120,10 +120,10 @@ int main(void) {
 			_delay_ms(1000);
 		}
 		active=1;
-		for(cnt=0;cnt<40;cnt++){	
+		for(cnt=0;cnt<40;cnt++){
 			if (ass[cnt]==28){
 				led_active = shift;
-				#include "..\shared\showleds.c"
+				#include "../shared/showleds.c"
 			}
 		}
 	}
@@ -134,10 +134,10 @@ int main(void) {
 	for(;;) {
 
 		//read KADE pin states into an array
-		#include "..\shared\state.c"		
-		
+		#include "../shared/state.c"
+
 		//set shifted status and detect shift lock (double click)
-		#include "..\shared\shift.c"		
+		#include "../shared/shift.c"
 
 		//set default button states
 		up=0;
@@ -190,7 +190,7 @@ int main(void) {
 			//Show the shift status LED(s) and power up externals with delay
 			if (ass[cnt]==27){
 				active = shift;
-				#include "..\shared\showleds.c"								
+				#include "../shared/showleds.c"
 			}
 		}
 

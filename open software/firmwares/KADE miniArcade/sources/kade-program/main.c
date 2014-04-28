@@ -31,7 +31,7 @@
 */  
 
 #define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
-#include "..\shared\jump.c"
+#include "../shared/jump.c"
 
 int main(void) {
 	CPU_PRESCALE(0);			

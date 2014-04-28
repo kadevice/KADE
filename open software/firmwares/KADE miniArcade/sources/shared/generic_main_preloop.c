@@ -50,10 +50,10 @@ S21  XJj88  0u  1uY2.        X2k           .    k11E   v    7;ii:JuJvLvLvJ2:
 */ 
 
 //read KADE pin states into an array
-#include "..\shared\state.c"				
+#include "../shared/state.c"				
 
 //set shifted status and detect shift lock (double click)
-#include "..\shared\shift.c"		
+#include "../shared/shift.c"		
 
 //set flags for various inputs
 invert=0;
@@ -91,7 +91,7 @@ for(cnt=0;cnt<20;cnt++) {
 	//Show the shift status LED(s) and power up externals with delay
 	if (ass[cnt]==func_ext_shift_led){
 		led_active = shift;
-		#include "..\shared\showleds.c"								
+		#include "../shared/showleds.c"								
 	}
 }			
 

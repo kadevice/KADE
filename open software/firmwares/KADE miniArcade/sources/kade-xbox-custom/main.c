@@ -50,9 +50,9 @@ S21  XJj88  0u  1uY2.        X2k           .    k11E   v    7;ii:JuJvLvLvJ2:
 */ 
 
 #include "XBOXPad.h"
-#include "..\shared\trackball\common.h"
-#include "..\shared\generic_header.c"    
-#include "..\shared\jump.c"
+#include "../shared/trackball/common.h"
+#include "../shared/generic_header.c"
+#include "../shared/jump.c"
 
 #define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 
@@ -102,7 +102,7 @@ int main(void) {
 	uint8_t setting_disable_sb;
 
 	//Generic main
-	#include "..\shared\generic_main_init.c"
+	#include "../shared/generic_main_init.c"
 	
 	// Init Trackball if needed
 	if (setting_enable_tb1==1){	
@@ -130,7 +130,7 @@ int main(void) {
 		xbox_reset_watchdog();				
 		
 		//generic stuff at start of main loop
-		#include "..\shared\generic_main_preloop.c"
+		#include "../shared/generic_main_preloop.c"
 				
 		//set default button states
 		bit_clear(gamepad_state.digital_buttons,0xFF);
