@@ -3,11 +3,13 @@ KADE Loader Release Notes
 v1.1.2.0 12/05/2014
   Option to launch Windows Controller Test after loading USB/HID joystick firmwares. 
   Quatrature Input Firmwares added in Beta (Trackball/Spinner input)
+	Trackball/Spinner to USB mouse and keyboard firmware is added as "kade-track-mouse".
+      Firmware supports X, Y, Z mouse axis (2 quadrature inputs pins per axis), 3 mouse buttons and 11 MAME keys.
+	  Mouse sensitivity setting can be adjusted by momentary press of HWB. 
 	Trackball/Spinner to USB gamepad encoder firmware is added as "kade-track-usbjoy".
-      Firmware supports X, Y, Z analog axis (2 pins per axis/quadrature), D-pad and 10 buttons.
+      Firmware supports X, Y, Z analog axis (2 quadrature inputs pins per axis), D-pad and 10 buttons.
       Static mapping sheet added for kade-track-usbjoy.
-	Trackball/Spinner to USB mouse firmware is added as "kade-track-mouse".
-      Firmware supports X, Y, Z mouse axis (2 pins per axis/quadrature), and 3 mouse buttons.
+	  Auto-centering can be disabled by keeping HWB pressed down (or by adding switch between HWB and ground).
   External LED output (pin B10) added to single player MAME multimode firmware.
   Support for maxiArcade at90usb1286 board variant as well as the default at90usb646.  Fix the autodetection bug in v1.1.1.0
   Programming instructions for maxiArcade prototype board added.

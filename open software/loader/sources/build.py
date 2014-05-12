@@ -146,7 +146,6 @@ import_hex("kade-mamex4",        os.path.join(sources_folder, "mamex4\\KADE-MAME
 import_hex("kade-usbhidx2",      os.path.join(sources_folder, "usbhidx2\\KADE-USBHIDx2.hex"))
 import_hex("kade-usbhidx4",      os.path.join(sources_folder, "usbhidx4\\KADE-USBHIDx4.hex"))
 
-
 #clear the parameters
 refresh_params()
 
