@@ -162,6 +162,9 @@ class loader ( wx.Frame ):
 		self.m_menuItem18 = wx.MenuItem( self.m_menu61, wx.ID_ANY, u"Keyboard Input Tester", wx.EmptyString, wx.ITEM_NORMAL )
 		self.m_menu61.AppendItem( self.m_menuItem18 )
 		
+		self.m_menuItem181 = wx.MenuItem( self.m_menu61, wx.ID_ANY, u"Game Controller Test", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu61.AppendItem( self.m_menuItem181 )
+		
 		self.m_menubar1.Append( self.m_menu61, u"Utilities" ) 
 		
 		self.m_menu5 = wx.Menu()
@@ -245,6 +248,7 @@ class loader ( wx.Frame ):
 		self.Bind( wx.EVT_MENU, self.onConfig, id = self.m_menuItem10.GetId() )
 		self.Bind( wx.EVT_MENU, self.onTrackballs, id = self.m_menu_trackball.GetId() )
 		self.Bind( wx.EVT_MENU, self.onKIT, id = self.m_menuItem18.GetId() )
+		self.Bind( wx.EVT_MENU, self.onJoyTest, id = self.m_menuItem181.GetId() )
 		self.Bind( wx.EVT_MENU, self.onTest, id = self.m_menu_testing.GetId() )
 		self.Bind( wx.EVT_MENU, self.onBurnEZProgram, id = self.m_menu_ezprogram.GetId() )
 		self.Bind( wx.EVT_MENU, self.onBetaUpdates, id = self.m_menu_beta.GetId() )
@@ -302,6 +306,9 @@ class loader ( wx.Frame ):
 		event.Skip()
 	
 	def onKIT( self, event ):
+		event.Skip()
+	
+	def onJoyTest( self, event ):
 		event.Skip()
 	
 	def onTest( self, event ):

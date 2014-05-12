@@ -100,7 +100,7 @@ int main(void) {
 	vs_init(true);
 
     //flash them leds
-	#include "../shared/disco.c"
+	//#include "../shared/disco.c"
 
 	// Pins polling and gamepad status updates
 	for (;;) {

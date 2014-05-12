@@ -53,8 +53,6 @@
 //LED flash
 #include <avr/wdt.h>
 #include <avr/power.h>
-#define LED_A 6  //red  - unused
-#define LED_B 5  //blue - mode change
 
 //eeprom
 #define read_eeprom_byte(address) eeprom_read_byte ((const uint8_t*)address)
@@ -80,8 +78,8 @@ int main(void)
 	// Configure all ports as inputs with pullup resistors.
 	DDRB = 0x00;
 	DDRC = 0x00;
-	DDRD = 0x60; // D5,D6 - OUTPUT (LED)
-	PORTB = 0xFF;
+	DDRD = 0x00; 
+	PORTB = 0xFF; 
 	PORTC = 0xFF;
 	PORTD = 0xFF;
 
@@ -114,7 +112,8 @@ int main(void)
 		  keycount = 0;
 		  modecount = 0;  //HWB to toggle active mode
 
-		  if(!(c & 0x10)) { keyboard_keys[keycount++] = map[19]; } //PIN B10
+		  //if(!(c & 0x10)) //Pin B10 can be connected to external LED indicator
+		  
 		  if(!(c & 0x20)) { keyboard_keys[keycount++] = map[18]; } //PIN B9
 		  if(!(c & 0x40)) { keyboard_keys[keycount++] = map[17]; } //PIN B8
 		  if(!(c & 0x80)) { keyboard_keys[keycount++] = map[16]; } //PIN B7

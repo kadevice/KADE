@@ -45,6 +45,12 @@ make clean
 cd %working_dir%\kade-icade
 make clean
 
+cd %working_dir%\kade-trackball-usbjoy
+make clean
+
+cd %working_dir%\kade-trackball-mouse
+make clean
+
 cd %working_dir%\tests\minimus
 make clean
 

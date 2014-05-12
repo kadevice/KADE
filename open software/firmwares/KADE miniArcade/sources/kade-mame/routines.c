@@ -1,4 +1,4 @@
-/*afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2afrdg2
+/*
 DEGENATRONS ARCADE ENCODER: 20 Input Keyboard Encoder 
 by Degenatrons
 https://sites.google.com/site/degenatrons/
@@ -52,20 +52,25 @@ void flash_leds(void){
   }
       
   //Flash LEDs x times to indicate mode
-  DDRD = (1<<LED_B);
+  DDRD = (1<<5);
+  DDRC = (1<<4);
   
   uint8_t flash_cnt = 0;
   while(flash_cnt < flashes) {
-    PORTD = (1<<LED_B);	
+    PORTD = (1<<5);	
+    PORTC = (1<<4);	
     _delay_ms(160);
-    PORTD = (0<<LED_B);
+    PORTD = (0<<5);
+    PORTC = (0<<4);
     _delay_ms(160);
 	
 	flash_cnt++;
   }
 	
   //Reset LEDs
-  DDRD = 0x60; // D5,D6 - OUTPUT (LED)
+  DDRD = 0x00;
+  DDRC = 0x00;
   PORTD = 0xFF;  
+  PORTC = 0xFF;  
 
 }

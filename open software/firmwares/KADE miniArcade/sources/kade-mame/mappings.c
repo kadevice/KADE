@@ -27,9 +27,9 @@ void A1(void)
   map[14] = KEY_ENTER;
   map[15] = KEY_P;
   map[16] = KEY_F7;
-  map[17] = KEY_TILDE;
-  map[18] = KEY_TAB;
-  map[19] = KEY_ESC;
+  map[17] = KEY_TAB;
+  map[18] = KEY_ESC;
+  map[19] = KEY_NONE;
 } 
 
 //----------------------------------------------------------------------------
@@ -54,9 +54,9 @@ void A2(void)
   map[14] = KEY_ENTER;
   map[15] = KEY_P;
   map[16] = KEY_F7;
-  map[17] = KEY_TILDE;
-  map[18] = KEY_TAB;
-  map[19] = KEY_ESC;
+  map[17] = KEY_TAB;
+  map[18] = KEY_ESC;
+  map[19] = KEY_NONE;
 } 
 //----------------------------------------------------------------------------
 //Mode 3: Player 3 MAME Compatible
@@ -80,9 +80,9 @@ void A3(void)
   map[14] = KEY_ENTER;
   map[15] = KEY_P;
   map[16] = KEY_F7;
-  map[17] = KEY_TILDE;
-  map[18] = KEY_TAB;
-  map[19] = KEY_ESC;
+  map[17] = KEY_TAB;
+  map[18] = KEY_ESC;
+  map[19] = KEY_NONE;
 } 
 
 
@@ -108,8 +108,8 @@ void A4(void)
   map[14] = KEY_ENTER;
   map[15] = KEY_P;
   map[16] = KEY_F7;
-  map[17] = KEY_TILDE;
-  map[18] = KEY_TAB;
-  map[19] = KEY_ESC;
+  map[17] = KEY_TAB;
+  map[18] = KEY_ESC;
+  map[19] = KEY_NONE;
 } 
 

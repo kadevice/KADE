@@ -53,8 +53,6 @@
 //LED flash
 #include <avr/wdt.h>
 #include <avr/power.h>
-#define LED_A 6  //red  - unused
-#define LED_B 5  //blue - mode change
 
 //eeprom
 #define read_eeprom_byte(address) eeprom_read_byte ((const uint8_t*)address)

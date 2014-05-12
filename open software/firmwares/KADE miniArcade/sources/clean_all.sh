@@ -18,6 +18,8 @@ FIRMWARE_DIRS=(
     'kade-rotary-custom'
     'kade-wii'
     'kade-xbox-custom'
+    'kade-trackball-usbjoy'
+    'kade-trackball-mouse'
     'tests/minimus'
 )
 working_dir=$(pwd)

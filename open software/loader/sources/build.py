@@ -99,6 +99,7 @@ if os.path.exists('dist\\templates'): os.system('rmdir dist\\templates /S /Q')
 if os.path.exists('dist\\images'): os.system('rmdir dist\\images /S /Q')
 os.system('del dist\\*.exe')
 
+#miniArcade Sources-------------------------------------------
 sources_folder = "..\\..\\firmwares\\KADE miniArcade\\sources"
 
 #generate key mappings for keyboard based firmwares -to do: add other firmwares
@@ -106,7 +107,7 @@ generate_keymaps("kade-rotary-custom", os.path.join(sources_folder, "kade-rotary
 
 #import latest hex into DB before building
 import_hex("kade-mame",          os.path.join(sources_folder, "kade-mame\\KADE-MAME.hex"))
-import_hex("kade-mame-2p",       os.path.join(sources_folder, "kade-mame\\KADE-MAME-2P.hex"))
+import_hex("kade-mame-2p",       os.path.join(sources_folder, "kade-mame-2p\\KADE-MAME-2P.hex"))
 import_hex("kade-gen",           os.path.join(sources_folder, "kade-gen\\KADE-GEN.hex"))
 import_hex("kade-icade",         os.path.join(sources_folder, "kade-icade\\KADE-iCADE.hex"))
 import_hex("kade-rotary-custom", os.path.join(sources_folder, "kade-rotary-custom\\KADE-ROTARY-CUSTOM.hex"))
@@ -119,6 +120,8 @@ import_hex("kade-psx-custom",    os.path.join(sources_folder, "kade-psx-custom\\
 import_hex("kade-mame-custom",   os.path.join(sources_folder, "kade-mame-custom\\KADE-MAME-CUSTOM.hex"))
 import_hex("kade-mame-extended", os.path.join(sources_folder, "kade-mame-extended\\KADE-MAME-EXTENDED.hex"))
 import_hex("kade-key-custom",    os.path.join(sources_folder, "kade-key-custom\\KADE-KEY-CUSTOM.hex"))
+import_hex("kade-track-usbjoy",  os.path.join(sources_folder, "kade-trackball-usbjoy\\kade-trackball-usbjoy.hex"))
+import_hex("kade-track-mouse",   os.path.join(sources_folder, "kade-trackball-mouse\\kade-trackball-mouse.hex"))
 
 #third-party hex
 import_hex("kade-ps360",         os.path.join(sources_folder, "third-party\\ps360_plus\\OfficialVer1.3.hex"))
@@ -134,6 +137,15 @@ import_hex("kade-xbox-custom",   os.path.join(sources_folder, "kade-xbox-custom\
 
 #import EZ-programming hex
 import_hex("kade-program",       os.path.join(sources_folder, "kade-program\\KADE-PROGRAM.hex"))
+
+#maxArcade Sources-------------------------------------------
+sources_folder = "..\\..\\firmwares\\KADE maxArcade\\sources"
+
+#import maxArcade hex
+import_hex("kade-mamex4",        os.path.join(sources_folder, "mamex4\\KADE-MAMEx4.hex"))
+import_hex("kade-usbhidx2",      os.path.join(sources_folder, "usbhidx2\\KADE-USBHIDx2.hex"))
+import_hex("kade-usbhidx4",      os.path.join(sources_folder, "usbhidx4\\KADE-USBHIDx4.hex"))
+
 
 #clear the parameters
 refresh_params()

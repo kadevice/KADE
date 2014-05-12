@@ -86,7 +86,7 @@ class kadeLoader( gui.loader ):
     self.SetIcon(favicon)
         
     #load icons for list
-    self.image_lookup = ['console', 'joystick', 'keyboard', 'led', 'test', 'keypad', 'user', 'ipad']
+    self.image_lookup = ['console', 'joystick', 'keyboard', 'led', 'test', 'keypad', 'user', 'ipad', 'trackball']
     self.il = wx.ImageList(18, 16)
     for i in self.image_lookup:
       try:
@@ -492,6 +492,9 @@ class kadeLoader( gui.loader ):
   def onKIT(self, event): 
     call_keyboard_test()
     
+  def onJoyTest(self, event): 
+    os.startfile("joy.cpl")
+
   def onKADEWebsite(self, event):
     browse("http://kadevice.com")
     
@@ -595,13 +598,27 @@ class kadeAbout( gui.about ):
 class kadeProgrammed( gui.programmed ):
   def __init__( self, parent, firmware ):
     gui.programmed.__init__( self, parent )
-    test_tool = sql_single('SELECT test_tool FROM firmwares WHERE name = "%s"' % firmware)    
-    if test_tool <> 'keytest':
+    self.test_tool = sql_single('SELECT test_tool FROM firmwares WHERE name = "%s"' % firmware)    
+    if self.test_tool:
+      test_label = sql_single('SELECT msgtext FROM messages WHERE id = "%s"' % self.test_tool)
+      if test_label:
+        self.m_kit.SetLabel(test_label)
+      else:
+        self.m_kit.Hide()
+    else:
       self.m_kit.Hide()              
       
   def onOK(self, event):
-    if self.m_kit.GetValue():
-      call_keyboard_test()
+    use_tool = self.m_kit.GetValue()
+    if use_tool:
+      if self.test_tool == 'keytest':
+        call_keyboard_test()
+      else:
+        #attempt to launch the specified Windows program (e.g. joy.cpl)
+        try:
+          os.startfile(self.test_tool)
+        except:
+          pass
     self.Close()        
     
 #==========================================================================================
