@@ -58,7 +58,7 @@ uint8_t old_tbZ=0, old_tbZ_pinc, old_tbZ_pind;
 uint8_t tb=0;
 uint8_t update_cycles = 0;
 
-uint8_t centering = 1;
+uint8_t centering = 0;
 uint8_t sensitivity = 1;
 uint8_t resistance = 1;
 
@@ -116,9 +116,9 @@ int main(void) {
 
 		//HWB switches the auto-centering and resistance
 		if (!(PIND&0x80)) {
-			centering = 0;
-		} else {
 			centering = 1;
+		} else {
+			centering = 0;
 		}
 
 		//X Axis - Read quadrative state from pins A1 and A2
