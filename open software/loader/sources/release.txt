@@ -1,19 +1,19 @@
 KADE Loader Release Notes
 
-v1.1.2.0 12/05/2014
+v1.1.2.0 15/05/2014
   Option to launch Windows Controller Test after loading USB/HID joystick firmwares. 
-  Quatrature Input Firmwares added in Beta (Trackball/Spinner input)
+  Quadrature Input Firmwares added in Beta (Trackball/Spinner input)
 	Trackball/Spinner to USB mouse and keyboard firmware is added as "kade-track-mouse".
       Firmware supports X, Y, Z mouse axis (2 quadrature inputs pins per axis), 3 mouse buttons and 11 MAME keys.
 	  Mouse sensitivity setting can be adjusted by momentary press of HWB. 
 	Trackball/Spinner to USB gamepad encoder firmware is added as "kade-track-usbjoy".
       Firmware supports X, Y, Z analog axis (2 quadrature inputs pins per axis), D-pad and 10 buttons.
       Static mapping sheet added for kade-track-usbjoy.
-	  Auto-centering can be disabled by keeping HWB pressed down (or by adding switch between HWB and ground).
+	  Auto-centering can be enabled by keeping HWB pressed down (or by adding switch between HWB and ground).
   External LED output (pin B10) added to single player MAME multimode firmware.
-  Support for maxiArcade at90usb1286 board variant as well as the default at90usb646.  Fix the autodetection bug in v1.1.1.0
-  Programming instructions for maxiArcade prototype board added.
-  Static firmwares for maxiArcade are included with mapping reference sheet. 
+  Support for maxArcade at90usb1286 board variant as well as the default at90usb646.  Fix the autodetection bug in v1.1.1.0
+  Programming instructions for maxArcade prototype board added.
+  Static firmwares for maxArcade are included with mapping reference sheet. 
   * 4 Player MAME/Keyboard
   * Multiple USBHID with 2 gamepads and analog.
   * Multiple USBHID with 4 gamepads.
@@ -24,7 +24,7 @@ v1.1.1.0 07/04/2014
 	This change applies to all MAME firmwares.
   MAME multi-mode firmware split into 2 variants for 1 player (P1, P2, P3, P4) and 2 player (P1&2, P3&4) sets.
   Keyboard test utility updated to v0.1.0.8.
-  Add beta support for the in-development KADE maxiArcade board. Auto detect added.
+  Add beta support for the in-development KADE maxArcade board. Auto detect added.
 
 v1.1.0.0 04/02/2014
   Setup program detects a previous install of loader and recommends update. It is now possible to force a reinstall.
