@@ -1,0 +1,89 @@
+KADE miniArace open hardware BOM
+
+-------------------
+AVR
+
+AT90USB162
+1 ea
+http://minimususb.com/
+
+  or
+
+ATMEGA32U2
+1 ea
+http://minimususb.com/
+
+-------------------
+Connecting AVR to PCB
+
+male (typically on PCB)
+
+Pin header, 12 position, .1" (2.54mm) spacing
+
+68000-112HLF (Straight)
+2 ea
+FCI
+http://www.digikey.com/product-search/en?keywords=68000-112HLF
+  or
+22-03-2121 (Straight)
+2 ea
+
+
+female (typically on AVR)
+Pin socket, 12 position, .1"/2.54mm terminal spacing
+	
+M20-7821242
+2 ea
+Harwin Inc
+http://www.digikey.com/product-search/en?keywords=M20-7821242
+
+Screw terminals for PCB
+
+-------------------
+Screw terminals, 2 position, 5mm terminal spacing
+
+OSTTC020162
+5 ea
+On Shore Technology Inc
+http://www.digikey.com/product-search/en?keywords=OSTTC020162
+
+-------------------
+Screw terminals, 3 position, 5mm terminal spacing
+
+OSTTC030162
+5 ea
+On Shore Technology Inc
+http://www.digikey.com/product-search/en?keywords=OSTTC030162
+
+
+--------------------------------------
+
+(Alternate configuration with pin headers soldered to the AVR)
+4 wire .100 header wiring harness
+http://www.paradisearcadeshop.com/jamma-harnesses/301-4-wire-100-header-wiring-harness.html
+6 ea.
+Paradise Arcade Shop 
+
+
+-------------------
+
+Atlernative headers for AVR
+
+Molex
+
+1-103670-1 (Shrouded)
+2 ea
+TE Connectivity / AMP
+
+  or
+
+6-104362-1 (Shrouded)
+2 ea
+TE Connectivity / AMP
+
+  or
+
+22-05-2121 (Right angle -- use with 4-wire harness below for low-profile installation)
+2 ea
+Molex
+
