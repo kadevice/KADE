@@ -53,11 +53,11 @@ int main(void) {
 	REGCR |= (1 << REGDIS);
 
 	// Set clock @ 8Mhz
-	//CPU_PRESCALE(1);
+	CPU_PRESCALE(1);
 	
 	//Jon 17/10/2013,  16mhz seems to fix issues,  works with psx/360 converters :D
 	// Set clock @ 16Mhz
-	CPU_PRESCALE(0);  
+	//CPU_PRESCALE(0);
 
 	//Set initial pin states.  These are adjusted based on eeprom settings.
 	bit_clear(DDRD, 0x80); bit_set(PORTD, 0x80); //hwb
@@ -129,7 +129,7 @@ int main(void) {
 	}
 
 	// Init PS Pad emulator SPI hardware
-	pspad_init();
+	pspad_init(PSPADEMU_MODE_ANALOG);
 
 	for(;;) {
 
@@ -293,6 +293,10 @@ int main(void) {
 //					if (ass[pos]==33){Jump_To_Bootloader();}					//Program mode									
 				}
 			}
+		}
+
+		if(select && start) {
+			pspad_toggle_mode();
 		}
 			
 		pspad_set_pad_state(left, right, up, down, sqre, triangle, circle,

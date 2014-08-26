@@ -30,7 +30,15 @@ typedef uint8_t byte;
 #define bit_clear(p,m) ((p) &= ~(m))
 #define bit_write(c,p,m) (c ? bit_set(p,m) : bit_clear(p,m))
 
-void pspad_init(void);
+void pspad_init(int mode);
+void pspad_ss_int_handler(void);
 void pspad_set_pad_state(int left, int right, int up, int down, int square, int triangle, int circle, int cross, int select, int start, int l1, int l2, int r1, int r2, int l3, int r3, int lx, int ly, int rx, int ry);
+void pspad_set_spi_callback(void (*callback)(void));
+void pspad_set_mode(int mode);
+void pspad_toggle_mode(void);
+int pspad_get_mode(void);
+
+#define PSPADEMU_MODE_ANALOG  0
+#define PSPADEMU_MODE_DIGITAL 1
 
 #endif /* PSPADEMU_H_ */
