@@ -13286,7 +13286,7 @@
                                         <property name="gripper">0</property>
                                         <property name="hidden">0</property>
                                         <property name="id">wxID_ANY</property>
-                                        <property name="label">A firmware programming utility for KADE devices &#x0A;by Jon Wilson&#x0A;&#x0A;KADE Development Team:&#x0A;• Jon Wilson (degenatrons@gmail.com)&#x0A;• Bruno Freitas (bootsector@ig.com.br)&#x0A;• Kevin Mackett (kevin@sharpfork.com)&#x0A;&#x0A;Testers and Contributors:&#x0A;• Rodney Black&#x0A;• Scott Hutchinson&#x0A;• John McNaught&#x0A;&#x0A;If you like our open source software and hardware&#x0A;then please consider making a small donation to help &#x0A;us improve KADE.&#x0A;</property>
+                                        <property name="label">A firmware programming utility for KADE devices &#x0A;by Jon Wilson&#x0A;&#x0A;KADE Development Team:&#x0A;• Jon Wilson (degenatrons@gmail.com)&#x0A;• Bruno Freitas (bruno@brunofreitas.com)&#x0A;• Kevin Mackett (kevin@sharpfork.com)&#x0A;&#x0A;Testers and Contributors:&#x0A;• Rodney Black&#x0A;• Scott Hutchinson&#x0A;• John McNaught&#x0A;&#x0A;If you like our open source software and hardware&#x0A;then please consider making a small donation to help &#x0A;us improve KADE.&#x0A;</property>
                                         <property name="layer"></property>
                                         <property name="max_size"></property>
                                         <property name="maximize_button">0</property>

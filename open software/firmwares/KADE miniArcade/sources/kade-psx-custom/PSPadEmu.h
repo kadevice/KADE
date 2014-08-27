@@ -1,6 +1,6 @@
 /*
  * KADE - Kick Ass Dynamic Encoder
- * Copyright (c) 2012 Bruno Freitas - bootsector@ig.com.br
+ * Copyright (c) 2012 Bruno Freitas - bruno@brunofreitas.com
  *                    Jon Wilson    - degenatrons@gmail.com
  *                    Kevin Mackett - kevin@sharpfork.com
  *

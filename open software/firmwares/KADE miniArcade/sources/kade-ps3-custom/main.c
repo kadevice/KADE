@@ -19,7 +19,7 @@ S21  XJj88  0u  1uY2.        X2k           .    k11E   v    7;ii:JuJvLvLvJ2:
 * KADE - Kick Ass Dynamic Encoder
 *
 * Copyright (c) 2013 
-* Bruno Freitas - bootsector@ig.com.br
+* Bruno Freitas - bruno@brunofreitas.com
 * Jon Wilson    - degenatrons@gmail.com
 * Kevin Mackett - kevin@sharpfork.com
 *
