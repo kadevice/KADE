@@ -20,7 +20,7 @@ S21  XJj88  0u  1uY2.        X2k           .    k11E   v    7;ii:JuJvLvLvJ2:
 *
 * Copyright (c) 2014
 * Jon Wilson    - degenatrons@gmail.com
-* Bruno Freitas - bootsector@ig.com.br
+* Bruno Freitas - bruno@brunofreitas.com
 * Kevin Mackett - kevin@sharpfork.com
 *
 * This program is free software: you can redistribute it and/or modify

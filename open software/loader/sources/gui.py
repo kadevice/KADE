@@ -1310,7 +1310,7 @@ class about ( wx.Dialog ):
 		
 		bSizer41.AddSpacer( ( 0, 5), 0, wx.EXPAND, 5 )
 		
-		self.m_staticText39 = wx.StaticText( self, wx.ID_ANY, u"A firmware programming utility for KADE devices \nby Jon Wilson\n\nKADE Development Team:\n• Jon Wilson (degenatrons@gmail.com)\n• Bruno Freitas (bootsector@ig.com.br)\n• Kevin Mackett (kevin@sharpfork.com)\n\nTesters and Contributors:\n• Rodney Black\n• Scott Hutchinson\n• John McNaught\n\nIf you like our open source software and hardware\nthen please consider making a small donation to help \nus improve KADE.\n", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText39 = wx.StaticText( self, wx.ID_ANY, u"A firmware programming utility for KADE devices \nby Jon Wilson\n\nKADE Development Team:\n• Jon Wilson (degenatrons@gmail.com)\n• Bruno Freitas (bruno@brunofreitas.com)\n• Kevin Mackett (kevin@sharpfork.com)\n\nTesters and Contributors:\n• Rodney Black\n• Scott Hutchinson\n• John McNaught\n\nIf you like our open source software and hardware\nthen please consider making a small donation to help \nus improve KADE.\n", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText39.Wrap( -1 )
 		self.m_staticText39.SetFont( wx.Font( 9, 70, 90, 90, False, wx.EmptyString ) )
 		
